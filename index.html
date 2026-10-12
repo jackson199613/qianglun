@@ -255,7 +255,7 @@ section{position:relative}
 .nitem p{font-size:13.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
 /* ---------- 询盘 ---------- */
-.inq{background:linear-gradient(100deg,rgba(11,11,12,.96),rgba(11,11,12,.82)),url("https://sc04.alicdn.com/kf/H8f835571502e4cb49e7ae0a830363453F/231545640/H8f835571502e4cb49e7ae0a830363453F.jpg") center/cover;color:#fff}
+.inq{background:linear-gradient(100deg,rgba(11,11,12,.96),rgba(11,11,12,.82)),url("inq-yarn.webp") center/cover;color:#fff}
 .inq .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
 .inq h2{font-family:"Noto Serif SC",serif;font-size:clamp(28px,3vw,42px);line-height:1.35}
 .inq h2 em{font-style:normal;color:var(--gold)}
@@ -434,6 +434,19 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
 @media (max-width:1600px){.stock{display:none}}@media (max-width:1440px){.menu a{padding:10px 11px;font-size:15px}}
 @media (max-width:1280px){.hphone .num{display:none}.hphone{padding-left:12px}}
 @media (max-width:960px){.menu a{padding:14px 4px}.hphone{display:none}}
+
+/* ---------- 新图版式 ---------- */
+.slide .bg{left:auto;width:62%;background-position:center right}
+.slide::after{background:linear-gradient(90deg,#000 0%,#000 36%,rgba(0,0,0,.72) 48%,rgba(0,0,0,.15) 72%,rgba(0,0,0,0) 100%),linear-gradient(0deg,rgba(0,0,0,.75),transparent 35%)}
+.hero{background:#000}
+.rd::after{content:"";position:absolute;inset:0;background:url("rd-sem.webp") center/cover;opacity:.16;mix-blend-mode:screen;pointer-events:none;mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%)}
+.rd>.wrap{position:relative;z-index:1}
+.micro{background:linear-gradient(160deg,rgba(11,11,12,.75),rgba(11,11,12,.55)),url("rd-sem.webp") center/cover;backdrop-filter:blur(2px)}
+.app:nth-child(1) .bg{background-position:center 40%}
+@media (max-width:960px){
+  .slide .bg{width:100%}
+  .slide::after{background:linear-gradient(0deg,#000 0%,rgba(0,0,0,.85) 40%,rgba(0,0,0,.35) 100%)}
+}
 </style>
 </head>
 <body>
@@ -504,9 +517,9 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
 <main id="top">
 <!-- ============ HERO ============ -->
 <section class="hero" aria-label="首屏">
-  <div class="slide on"><div class="bg" style="background-image:url('https://sc04.alicdn.com/kf/H03776b1952c642989d2a1b8b81e8b8faY/231545640/H03776b1952c642989d2a1b8b81e8b8faY.jpg')"></div></div>
-  <div class="slide"><div class="bg" style="background-image:url('https://sc04.alicdn.com/kf/H8f835571502e4cb49e7ae0a830363453F/231545640/H8f835571502e4cb49e7ae0a830363453F.jpg')"></div></div>
-  <div class="slide"><div class="bg" style="background-image:url('https://www.qlfiber.com/assets/images/products/p73_1.jpg')"></div></div>
+  <div class="slide on"><div class="bg" style="background-image:url('hero-fiber.webp')"></div></div>
+  <div class="slide"><div class="bg" style="background-image:url('hero-lab.webp')"></div></div>
+  <div class="slide"><div class="bg" style="background-image:url('hero-felt.webp')"></div></div>
 
   <div class="wrap hero-in">
     <div class="hero-copy" id="heroCopy">
@@ -686,12 +699,12 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
       <a class="more" href="#">全部应用方案 <svg class="i"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="apps">
-      <a class="app rv" href="#"><div class="bg" style="background-image:url('https://www.qlfiber.com/assets/images/apps/energy.jpg')"></div><div class="app-in"><div class="n">01</div><h3>过滤分离</h3><p>化纤熔体、石油化工、高温烟气等工况的精密过滤与分离</p></div></a>
-      <a class="app rv d1" href="#"><div class="bg" style="background-image:url('https://www.qlfiber.com/assets/images/apps/glass.jpg')"></div><div class="app-in"><div class="n">02</div><h3>玻璃深加工</h3><p>耐高温编织带与衬垫，保护玻璃表面</p></div></a>
-      <a class="app rv d2" href="#"><div class="bg" style="background-image:url('https://www.qlfiber.com/assets/images/apps/shielding.jpg')"></div><div class="app-in"><div class="n">03</div><h3>电磁屏蔽与防静电</h3><p>导电纤维与织物，消除静电、屏蔽干扰</p></div></a>
-      <a class="app rv d1" href="#"><div class="bg" style="background-image:url('https://www.qlfiber.com/assets/images/apps/aerospace.jpg')"></div><div class="app-in"><div class="n">04</div><h3>航空航天与特种材料</h3><p>满足严苛环境下的耐温、耐腐蚀与可靠性要求</p></div></a>
-      <a class="app rv d2" href="#"><div class="bg" style="background-image:url('https://www.qlfiber.com/assets/images/apps/auto.jpg')"></div><div class="app-in"><div class="n">05</div><h3>汽车工业</h3><p>汽车玻璃成型、座椅加热等应用</p></div></a>
-      <a class="app rv d3" href="#"><div class="bg" style="background-image:url('https://www.qlfiber.com/assets/images/apps/textile.jpg')"></div><div class="app-in"><div class="n">06</div><h3>功能纺织与智能穿戴</h3><p>发热服饰、可穿戴传感与导电面料</p></div></a>
+      <a class="app rv" href="#"><div class="bg" style="background-image:url('app-filter.webp')"></div><div class="app-in"><div class="n">01</div><h3>过滤分离</h3><p>化纤熔体、石油化工、高温烟气等工况的精密过滤与分离</p></div></a>
+      <a class="app rv d1" href="#"><div class="bg" style="background-image:url('app-glass.webp')"></div><div class="app-in"><div class="n">02</div><h3>玻璃深加工</h3><p>耐高温编织带与衬垫，保护玻璃表面</p></div></a>
+      <a class="app rv d2" href="#"><div class="bg" style="background-image:url('app-shield.webp')"></div><div class="app-in"><div class="n">03</div><h3>电磁屏蔽与防静电</h3><p>导电纤维与织物，消除静电、屏蔽干扰</p></div></a>
+      <a class="app rv d1" href="#"><div class="bg" style="background-image:url('app-aero.webp')"></div><div class="app-in"><div class="n">04</div><h3>航空航天与特种材料</h3><p>满足严苛环境下的耐温、耐腐蚀与可靠性要求</p></div></a>
+      <a class="app rv d2" href="#"><div class="bg" style="background-image:url('app-auto.webp')"></div><div class="app-in"><div class="n">05</div><h3>汽车工业</h3><p>汽车玻璃成型、座椅加热等应用</p></div></a>
+      <a class="app rv d3" href="#"><div class="bg" style="background-image:url('app-textile.webp')"></div><div class="app-in"><div class="n">06</div><h3>功能纺织与智能穿戴</h3><p>发热服饰、可穿戴传感与导电面料</p></div></a>
     </div>
   </div>
 </section>
