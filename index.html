@@ -450,6 +450,11 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
   .slide .bg{width:100%}
   .slide::after{background:linear-gradient(0deg,#000 0%,rgba(0,0,0,.85) 40%,rgba(0,0,0,.35) 100%)}
 }
+.dots{right:100px}
+.apps{grid-auto-rows:280px}
+.app:nth-child(5),.app:nth-child(6){grid-column:span 2}
+@media (max-width:960px){.apps{grid-auto-rows:auto}.app:nth-child(5),.app:nth-child(6){grid-column:auto}}
+@media (max-width:600px){.app:nth-child(n){grid-column:auto}}
 </style>
 </head>
 <body>
