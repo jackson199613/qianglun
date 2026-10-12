@@ -9,13 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;700;900&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Barlow+Condensed:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"Organization","name":"福建强纶新材料股份有限公司","alternateName":"强纶新材","url":"https://www.qlfiber.com/","logo":"https://www.qlfiber.com/assets/images/logo.png","foundingDate":"2002","address":{"@type":"PostalAddress","streetAddress":"高新区曲潭路6号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"},"telephone":"+86-18159821773","description":"专注金属纤维及其制品、过滤成套装备研发、生产、销售与技术服务的国家级高新技术企业。"},
-{"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"强纶的不锈钢纤维最细能做到多少？","acceptedAnswer":{"@type":"Answer","text":"强纶超细不锈钢纤维直径可低至2μm，并已实现稳定量产。"}},
-{"@type":"Question","name":"金属纤维烧结毡适合哪些过滤场景？","acceptedAnswer":{"@type":"Answer","text":"适用于化纤熔体、石油化工、高温气体等对耐温、耐腐蚀和纳污量要求较高的过滤场景，可加工成滤芯、滤盘等元器件。"}},
-{"@type":"Question","name":"是否支持非标定制？","acceptedAnswer":{"@type":"Answer","text":"支持根据过滤精度、工况温度、尺寸接口等参数进行定制设计与打样。"}}
-]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "福建强纶新材料股份有限公司", "alternateName": "强纶新材", "url": "https://qianglun.netlify.app/", "logo": "https://www.qlfiber.com/assets/images/logo.png", "foundingDate": "2002", "address": {"@type": "PostalAddress", "streetAddress": "高新区曲潭路6号", "addressLocality": "龙岩市", "addressRegion": "福建省", "addressCountry": "CN"}, "telephone": "+86-18159821773", "description": "专注金属纤维及其制品、过滤成套装备研发、生产、销售与技术服务的国家级专精特新“小巨人”企业，证券代码872336。"}, {"@type": "ItemList", "name": "强纶产品线", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "金属纤维纱线"}, {"@type": "ListItem", "position": 2, "name": "金属纤维烧结毡"}, {"@type": "ListItem", "position": 3, "name": "金属纤维织物"}, {"@type": "ListItem", "position": 4, "name": "过滤元器件"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "强纶的不锈钢纤维最细能做到多少？", "acceptedAnswer": {"@type": "Answer", "text": "强纶超细不锈钢纤维直径可低至2μm，并已实现稳定量产。"}}, {"@type": "Question", "name": "烧结毡和滤布怎么选？", "acceptedAnswer": {"@type": "Answer", "text": "高温、高粘度或腐蚀性工况下，金属纤维烧结毡耐温、耐腐蚀且可清洗再生；常温、低要求工况可考虑滤布，具体以介质、温度与精度要求为准。"}}, {"@type": "Question", "name": "化纤熔体过滤该选多少精度？", "acceptedAnswer": {"@type": "Answer", "text": "取决于纤维品种、纺丝规格与熔体洁净度要求，建议提供产品规格与现用滤材情况，由强纶工程师结合叶片滤盘与烧结滤芯给出精度方案。"}}, {"@type": "Question", "name": "金属纤维滤芯能清洗再用吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。金属纤维烧结滤材耐高温、耐腐蚀，可反复清洗再生。"}}, {"@type": "Question", "name": "是否支持非标定制与打样？", "acceptedAnswer": {"@type": "Answer", "text": "支持，可根据过滤精度、工况温度、介质、尺寸与接口等参数定制并提供样品测试。"}}]}]}
 </script>
 <style>
 :root{
@@ -411,6 +405,162 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
 @media (max-width:600px){#intro .meta{flex-direction:column;gap:6px;align-items:center;bottom:30px}}
 
 
+/* ---------- v3：按导图补齐 ---------- */
+.util{background:var(--ink);color:#bdbab3;font-size:12px;transition:margin .4s}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:34px}
+.util b{color:var(--gold);font-weight:500;font-size:13px}
+.util nav{display:flex;gap:22px}
+.util a:hover{color:#fff}
+.util .en{color:#fff;border-left:1px solid var(--line-d);padding-left:22px}
+header.solid .util{margin-top:-34px}
+header{background:rgba(245,243,238,.0)}
+.icon-b{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:transparent;display:grid;place-items:center;transition:all .3s}
+.icon-b:hover{border-color:var(--ink)}
+.icon-b svg{width:18px;height:18px}
+.tel{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.tel svg{width:17px;height:17px;color:var(--champ)}
+.tel .num{font-size:19px;font-weight:500}
+.menu a{padding:10px 13px}
+.search{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0 16px}
+.search .wrap:first-child{display:flex;align-items:center;gap:14px}
+.search input{flex:1;font:inherit;font-size:20px;border:0;background:transparent;padding:8px 0;outline:none;font-family:"Noto Serif SC",serif}
+.search .hot{font-size:13px;color:var(--muted);margin-top:10px;display:flex;gap:16px;flex-wrap:wrap}
+.search .hot a{color:var(--graphite);border-bottom:1px solid var(--line)}
+.hero{padding-top:150px}
+.hero-meta.m4{grid-template-columns:repeat(4,auto)}
+.hero-meta .tbd b{color:#c3b9a6}
+.hero-meta em,.kpi em,.tbdm{font-style:normal;font-size:11px;letter-spacing:.08em;color:var(--champ-ink);border:1px dashed rgba(179,139,29,.55);border-radius:20px;padding:0 7px;margin-left:4px;white-space:nowrap}
+.sh-r{justify-self:end;max-width:520px}
+.sh-r p{color:var(--muted);font-size:16px;margin-bottom:18px}
+.plat-h{display:flex;align-items:baseline;justify-content:space-between;margin:110px 0 26px;border-bottom:1px solid var(--line);padding-bottom:18px}
+.plat-h h3{font-family:"Noto Serif SC",serif;font-size:clamp(24px,2.2vw,32px);font-weight:900}
+.plat-h span{color:var(--muted);font-size:14px}
+.plats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.plat{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:3/4;background:#111;color:#fff;display:flex;align-items:flex-end}
+.plat i{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.2s var(--ease)}
+.plat:hover i{transform:scale(1.06)}
+.plat::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,12,.92) 0%,rgba(10,10,12,.25) 55%,rgba(10,10,12,.05))}
+.plat>div{position:relative;z-index:2;padding:26px 24px}
+.plat b{font-family:"Barlow Condensed",sans-serif;font-weight:300;font-size:44px;line-height:1;color:var(--gold)}
+.plat h4{font-family:"Noto Serif SC",serif;font-size:22px;font-weight:700;margin-top:10px}
+.plat p{font-size:14px;color:#d9d7d1;margin-top:4px}
+.plat span{display:block;font-size:12px;color:#a9a7a1;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.15)}
+.rd3{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:16px;margin-top:16px}
+.inst{position:relative;border-radius:4px;overflow:hidden;min-height:220px;color:#fff;display:flex;align-items:flex-end}
+.inst i{position:absolute;inset:0;background-size:cover;background-position:center 62%}
+.inst::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,.82),rgba(10,10,12,.15))}
+.inst>div{position:relative;z-index:2;padding:26px 28px}
+.inst small{font-size:12px;letter-spacing:.3em;color:var(--gold)}
+.inst b{display:block;font-family:"Noto Serif SC",serif;font-size:24px;margin:6px 0 4px}
+.inst span{font-size:13px;color:#d4d2cc}
+.kpi{border:1px dashed #c8bfae;border-radius:4px;padding:26px 24px;background:repeating-linear-gradient(135deg,rgba(179,139,29,.04) 0 10px,transparent 10px 20px)}
+.kpi b{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:300;font-size:52px;line-height:1;color:#c3b9a6}
+.kpi h4{font-size:17px;font-weight:500;margin-top:12px}
+.kpi p{font-size:13px;color:var(--muted)}
+.kpi em{display:inline-block;margin:12px 0 0}
+.lines{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.line{display:grid;grid-template-columns:1fr 1.15fr;background:var(--white);border-radius:4px;overflow:hidden;border:1px solid var(--line);transition:box-shadow .5s var(--ease),transform .5s var(--ease)}
+.line:hover{box-shadow:0 40px 80px -40px rgba(14,15,17,.35);transform:translateY(-4px)}
+.lim{position:relative;background:#141416;min-height:300px;overflow:hidden}
+.lim img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.line:hover .lim img{transform:scale(1.06)}
+.lno{position:absolute;left:18px;top:14px;z-index:2;font-size:40px;font-weight:300;color:var(--gold)}
+.lbody{padding:30px 30px 28px;display:flex;flex-direction:column}
+.lbody .cat{font-size:11.5px;letter-spacing:.24em;color:var(--champ-ink)}
+.lbody h3{font-family:"Noto Serif SC",serif;font-size:26px;font-weight:900;margin:8px 0 16px}
+.lbody dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+.lbody dt{color:var(--muted);white-space:nowrap}
+.lbody dd{color:var(--ink)}
+.sku{font-size:12.5px;color:var(--muted);margin-top:14px;line-height:1.7}
+.lbody .more{margin-top:auto;padding-top:18px;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;transition:gap .3s}
+.lbody .more svg{width:16px;height:16px}
+.line:hover .more{gap:14px;color:var(--champ-ink)}
+.pnote{font-size:12.5px;color:var(--muted);margin-top:22px}
+.sel-alt{font-size:13.5px;color:var(--muted);margin-top:24px;padding-top:18px;border-top:1px dashed var(--line)}
+.sel-alt a{color:var(--ink);border-bottom:1px solid var(--champ)}
+.pan .pain,.pan .rec{font-size:15px;color:#e1dfd9;max-width:520px;margin-top:6px}
+.pan .pain b,.pan .rec b{display:inline-block;font-size:11.5px;letter-spacing:.14em;color:var(--ink);background:var(--gold);border-radius:3px;padding:0 7px;margin-right:10px;font-weight:500}
+.pan .rec b{background:#fff}
+.cases{background:var(--paper)}
+.clist{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.case{background:var(--white);border-radius:4px;padding:32px 30px;border:1px solid var(--line)}
+.ctop{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.ind{font-size:12px;letter-spacing:.14em;background:var(--ink);color:#fff;padding:3px 12px;border-radius:30px}
+.ctop em{font-style:normal;font-size:11.5px;color:var(--champ-ink);border:1px dashed rgba(179,139,29,.55);padding:1px 9px;border-radius:20px}
+.case h3{font-family:"Noto Serif SC",serif;font-size:21px;font-weight:700;line-height:1.45}
+.case dl{display:grid;grid-template-columns:auto 1fr;gap:12px 16px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:14px}
+.case dt{font-family:"Barlow Condensed","Noto Sans SC",sans-serif;color:var(--champ-ink);letter-spacing:.1em}
+.case dd{color:var(--muted)}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.colh{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:14px}
+.colh h3{font-family:"Noto Serif SC",serif;font-size:24px;font-weight:900}
+.art{display:grid;grid-template-columns:110px auto 1fr;gap:16px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line)}
+.art .dt{font-size:15px;color:var(--muted)}
+.art .tg{font-size:11.5px;letter-spacing:.1em;color:var(--champ-ink);border:1px solid rgba(179,139,29,.4);border-radius:20px;padding:0 9px;white-space:nowrap}
+.art h4{font-size:17px;font-weight:500;line-height:1.55;transition:color .3s}
+.art:hover h4{color:var(--champ-ink)}
+.art.plan h4{color:var(--muted)}
+.art.plan .dt{font-size:12.5px;color:var(--champ-ink)}
+.nfeat2{display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.nfeat2 i{display:block;aspect-ratio:4/3;border-radius:4px;background-size:cover;background-position:center}
+.nfeat2 .dt{font-size:14px;color:var(--muted)}
+.nfeat2 h4{font-size:18px;font-weight:500;line-height:1.55;margin-top:6px}
+.nfeat2:hover h4{color:var(--champ-ink)}
+.wx{display:flex;gap:16px;align-items:center;margin-top:30px;padding:18px;border:1px dashed var(--line-d);border-radius:4px;max-width:420px}
+.wx .qr{width:64px;height:64px;border-radius:4px;background:#fff;color:var(--ink);display:grid;place-items:center}
+.wx .qr svg{width:28px;height:28px}
+.wx b{display:block;color:#fff;font-weight:500}
+.wx span{font-size:13px;color:var(--muted-d)}
+.cta .tbdm{color:var(--gold);border-color:rgba(234,202,2,.4)}
+form.card{grid-template-columns:1fr 1fr}
+.fqr{display:flex;gap:14px;margin-top:26px}
+.fqr div{text-align:center;font-size:12px}
+.fqr i{display:grid;place-items:center;width:64px;height:64px;border:1px dashed var(--line-d);border-radius:4px;margin-bottom:6px;color:var(--gold)}
+.ft{grid-template-columns:1.6fr 1fr 1fr 1fr 1fr}
+.mbar{display:none}
+@media (max-width:1280px){.tel .num{display:none}.menu a{padding:10px 9px;font-size:14.5px}}
+@media (max-width:1200px){.plats{grid-template-columns:1fr 1fr}.rd3{grid-template-columns:1fr 1fr 1fr}.inst{grid-column:1/-1}.lines{grid-template-columns:1fr}.ft{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:980px){
+  .util{display:none}
+  .hero{padding-top:100px}
+  .hero-meta.m4{grid-template-columns:repeat(4,1fr)}
+  .tel{display:none}
+  .sh-r{justify-self:start}
+  .clist,.cols2{grid-template-columns:1fr}
+  .float{display:none}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--ink);padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:58px;color:#e9e7e1;font-size:12px}
+  .mbar a svg{width:20px;height:20px}
+  .mbar a.hl{background:var(--gold);color:var(--ink);font-weight:500}
+  footer{padding-bottom:60px}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .hero-meta.m4{grid-template-columns:1fr 1fr;row-gap:20px}
+  .hero-meta.m4 div:nth-child(odd){border-left:0;padding-left:0}
+  .hero-meta.m4 div:nth-child(3){border-left:0;padding-left:0}
+  .plats{grid-template-columns:1fr 1fr;gap:10px}
+  .plat>div{padding:16px}.plat h4{font-size:17px}.plat b{font-size:32px}.plat span{display:none}
+  .rd3{grid-template-columns:1fr 1fr}
+  .kpi:last-child{grid-column:1/-1}
+  .line{grid-template-columns:1fr}.lim{min-height:220px}
+  .art{grid-template-columns:1fr auto;gap:6px 12px}.art h4{grid-column:1/-1}
+  .nfeat2{grid-template-columns:1fr}
+  form.card{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr}
+}
+
+.menu a{white-space:nowrap;padding:10px 11px;font-size:14.5px}
+.menu{gap:0}
+.brand small,.brand strong{white-space:nowrap}
+.nav{gap:24px}
+.nav-r{gap:12px}
+.hero-meta.m4 div{padding:0 22px}
+.hero-meta.m4 div:first-child{padding-left:0}
+.hero-meta span{white-space:nowrap}
+@media (max-width:1500px){.tel .num{display:none}}
+@media (max-width:1180px){.menu a{padding:10px 8px;font-size:14px}.brand small{display:none}}
+@media (max-width:600px){.hero-meta.m4 div{padding:0 12px}}
 /* ---------- 响应式 ---------- */
 @media (max-width:1200px){
   .stock{display:none}
@@ -586,55 +736,70 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
   <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></symbol>
   <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20M12 22 8 9l4-6 4 6z"/></symbol>
   <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1A2 2 0 1 1 4.3 17l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1A2 2 0 1 1 7 4.3l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1A2 2 0 1 1 19.7 7l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m10 9 5 3-5 3z"/></symbol>
 </svg>
 
 <header id="hdr">
+  <div class="util">
+    <div class="wrap">
+      <span>福建强纶新材料股份有限公司 · 新三板 <b class="num">872336</b></span>
+      <nav><a href="#">纱线事业部</a><a href="#">淘宝官方店</a><a href="#">1688 工厂店</a><a href="#" class="en">English</a></nav>
+    </div>
+  </div>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="强纶新材 首页">
       <img src="https://www.qlfiber.com/assets/images/logo.png" alt="强纶新材 logo" width="42" height="42">
       <span><strong>强纶新材</strong><small>QIANGLUN · SINCE 2002</small></span>
     </a>
     <nav class="menu" id="menu">
-      <a class="on" href="#top">首页</a>
       <a href="rd.html">科研创新</a>
-      <a href="#select">工况选型</a>
-      <a href="#products">产品</a>
-      <a href="#apps">应用</a>
-      <a href="#about">关于强纶</a>
-      <a href="#news">资讯</a>
+      <a href="#products">产品中心</a>
+      <a href="#apps">应用方案</a>
+      <a href="#select">选型中心</a>
+      <a href="#column">技术专栏</a>
+      <a href="#faq">常见问题</a>
+      <a href="#contact">联系我们</a>
     </nav>
     <div class="nav-r">
-      <span class="stock">证券代码<b>872336</b></span>
-      <a class="pill pill-ink" href="#select">按工况选型<svg class="i"><use href="#i-arrow"/></svg></a>
+      <button class="icon-b" id="searchBtn" aria-label="站内搜索"><svg class="i"><use href="#i-search"/></svg></button>
+      <a class="tel" href="tel:18159821773"><svg class="i"><use href="#i-phone"/></svg><span class="num">181 5982 1773</span></a>
+      <a class="pill pill-ink" href="#contact">在线询价<svg class="i"><use href="#i-arrow"/></svg></a>
       <button class="burger" id="burger" aria-label="打开菜单"><svg class="i"><use href="#i-menu"/></svg></button>
     </div>
+  </div>
+  <div class="search" id="search" hidden>
+    <div class="wrap"><svg class="i"><use href="#i-search"/></svg><input id="q" type="search" placeholder="搜索产品、工况或技术问题，例如：化纤熔体过滤精度" aria-label="站内搜索"><button class="icon-b" id="searchX" aria-label="关闭搜索"><svg class="i"><use href="#i-x"/></svg></button></div>
+    <div class="wrap hot">热门：<a href="#select">按工况选型</a><a href="#products">烧结毡</a><a href="#products">烧结滤芯</a><a href="rd.html">2μm 超细纤维</a><a href="#faq">能否清洗再用</a></div>
   </div>
 </header>
 
 <main id="top">
-<!-- ============ HERO ============ -->
+<!-- 01 首屏 -->
 <section class="hero" aria-label="首屏">
   <div class="ghost" aria-hidden="true">QIANGLUN</div>
   <div class="wrap">
     <div class="hero-l">
       <div class="eyebrow it">Precision in every micron.</div>
-      <h1><span class="ln"><span>以<em>微米</em>之纤</span></span><span class="ln"><span>织就工业之精</span></span></h1>
+      <h1><span class="ln"><span>以<em>微米</em>之纤</span></span><span class="ln"><span>成就精密过滤</span></span></h1>
       <p class="lead">二十余年专注金属纤维及其制品、过滤成套装备的研发与制造。从 2μm 超细不锈钢纤维，到烧结毡、滤芯滤盘与成套装备，为化纤、石化、玻璃、新能源与航空航天提供可靠的材料方案。</p>
       <div class="ctas">
-        <a class="pill pill-ink" href="#select">按工况选型<svg class="i"><use href="#i-arrow"/></svg></a>
-        <a class="pill pill-line" href="#products">浏览产品</a>
-        <a class="tlink" href="rd.html">科研实力<svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="pill pill-ink" href="#products">浏览产品<svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="pill pill-line" href="rd.html">科研实力</a>
+        <a class="tlink" href="#contact">在线询价<svg class="i"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="hero-meta">
+      <div class="hero-meta m4">
         <div><b class="num">2002</b><span>公司创立</span></div>
-        <div><b class="num">2<sup>μm</sup></b><span>纤维最小直径</span></div>
-        <div><b class="num">4<sup>项</sup></b><span>国家级资质认定</span></div>
+        <div><b class="num">2<sup>μm</sup></b><span>纤维最细直径</span></div>
+        <div><b class="num">4<sup>条</sup></b><span>产品线</span></div>
+        <div class="tbd"><b class="num">—</b><span>授权专利 <em>待提供</em></span></div>
       </div>
     </div>
     <div class="window" id="win">
       <div class="sl on"><i style="background-image:url('hero-fiber.webp')"></i></div>
-      <div class="sl"><i style="background-image:url('hero-lab.webp')"></i></div>
       <div class="sl"><i style="background-image:url('hero-felt.webp')"></i></div>
+      <div class="sl"><i style="background-image:url('hero-lab.webp')"></i></div>
       <div class="win-tag num">METAL FIBER · QIANGLUN</div>
       <div class="win-cap">
         <div class="t" id="winT">01 · MICRO FIBER<b>超细不锈钢纤维</b></div>
@@ -644,19 +809,20 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
   </div>
 </section>
 
+<!-- 02 资质信任条 -->
 <div class="marq" aria-label="资质荣誉">
   <div class="marq-track">
-    <span>国家级专精特新"小巨人"企业</span><span>国家级高新技术企业</span><span>国家知识产权示范企业</span><span>中国航发商发合格供应商</span><span>强纶新材料创新研究院</span><span>证券代码 872336</span>
-    <span>国家级专精特新"小巨人"企业</span><span>国家级高新技术企业</span><span>国家知识产权示范企业</span><span>中国航发商发合格供应商</span><span>强纶新材料创新研究院</span><span>证券代码 872336</span>
+    <span>国家级专精特新"小巨人"企业</span><span>国家高新技术企业</span><span>国家知识产权示范企业</span><span>中国航发商发合格供应商</span><span>新三板挂牌 · 872336</span>
+    <span>国家级专精特新"小巨人"企业</span><span>国家高新技术企业</span><span>国家知识产权示范企业</span><span>中国航发商发合格供应商</span><span>新三板挂牌 · 872336</span>
   </div>
 </div>
 
-<!-- ============ 科研 ============ -->
+<!-- 03 科研实力 -->
 <section class="sec lab" id="rd">
   <div class="wrap">
     <div class="sh rv">
-      <div><div class="idx"><b>01</b>R&amp;D · 科研创新</div><h2>把金属，做到<br>比发丝细<em>约 35 倍</em></h2></div>
-      <div style="justify-self:end;max-width:520px"><p style="color:var(--muted);font-size:16px">依托强纶新材料创新研究院，掌握超细不锈钢纤维制备与超级不锈钢制备技术，打通从纤维、烧结成型到过滤装备的完整技术链。</p><a class="tlink" href="rd.html" style="margin-top:18px">进入科研创新<svg class="i"><use href="#i-arrow"/></svg></a></div>
+      <div><div class="idx"><b>01</b>R&amp;D · 科研实力</div><h2>把金属，做到<br>比发丝细<em>约 35 倍</em></h2></div>
+      <div class="sh-r"><p>依托强纶新材料创新研究院，掌握超细不锈钢纤维制备与超级不锈钢制备技术，打通从纤维、烧结成型到过滤装备的完整技术链。</p><a class="tlink" href="rd.html">进入科研创新<svg class="i"><use href="#i-arrow"/></svg></a></div>
     </div>
     <div class="lab-top">
       <div class="micron rv">
@@ -671,7 +837,7 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
           <circle class="c-wool" cx="170" cy="170" r="40"/>
           <circle class="pulse" cx="170" cy="170" r="4"/>
           <circle class="c-ql" cx="170" cy="170" r="4"/>
-          <line x1="310" y1="120" x2="350" y2="96" stroke="#8e8a82" stroke-width="1"/><text x="352" y="92">人类头发</text><text x="352" y="108" class="num">≈ 70μm</text>
+          <line x1="310" y1="120" x2="350" y2="96" stroke="#8e8a82" stroke-width="1"/><text x="352" y="92">人类头发</text><text x="352" y="108">≈ 70μm</text>
           <line x1="205" y1="190" x2="350" y2="214" stroke="#b5b0a6" stroke-width="1"/><text x="352" y="210">羊毛纤维</text><text x="352" y="226">≈ 20μm</text>
           <line x1="174" y1="172" x2="250" y2="290" stroke="#b38b1d" stroke-width="1"/><text x="252" y="300" class="b">强纶超细纤维 2μm</text>
         </svg>
@@ -679,106 +845,109 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
       </div>
     </div>
 
-    <div class="lab-mid">
-      <figure class="sem rv"><figcaption><small class="num">SEM · MICROSTRUCTURE</small><b>不锈钢纤维微观形貌（示意）</b></figcaption></figure>
-      <div>
-        <h3 class="caps-h rv">四大核心技术平台<br>支撑从纤维到装备的全链条创新</h3>
-        <p class="caps-p rv">成果已应用于<b>化纤、石油化工、玻璃制造、节能环保、智能穿戴与航空航天</b>等领域。</p>
-        <div class="cap rv"><span class="n">01</span><div><h4>超细纤维制备</h4><p>微米级不锈钢纤维稳定量产，直径低至 2μm，均匀性与一致性可控。</p></div><svg class="i"><use href="#i-arrow"/></svg></div>
-        <div class="cap rv"><span class="n">02</span><div><h4>烧结成型技术</h4><p>多层梯度孔径结构烧结毡，兼顾过滤精度与纳污量，耐高温、可清洗再生。</p></div><svg class="i"><use href="#i-arrow"/></svg></div>
-        <div class="cap rv"><span class="n">03</span><div><h4>过滤成套装备</h4><p>从滤芯、滤盘到成套过滤系统的设计、制造与技术服务能力。</p></div><svg class="i"><use href="#i-arrow"/></svg></div>
-        <div class="cap rv"><span class="n">04</span><div><h4>导电发热应用</h4><p>导电纱、发热线等功能材料，拓展智能穿戴与电子领域新场景。</p></div><svg class="i"><use href="#i-arrow"/></svg></div>
-      </div>
+    <div class="plat-h rv"><h3>四大技术平台</h3><span>每一项技术，对应一条产品线</span></div>
+    <div class="plats">
+      <a class="plat rv" href="rd.html#tech"><i style="background-image:url('hero-fiber.webp')"></i><div><b class="num">01</b><h4>超细纤维制备</h4><p>直径低至 2μm，稳定量产</p><span>对应：纤维纱线 · 烧结毡</span></div></a>
+      <a class="plat rv d1" href="rd.html#tech"><i style="background-image:url('prod-felt.webp')"></i><div><b class="num">02</b><h4>烧结成型</h4><p>多层梯度孔结构</p><span>对应：烧结毡 · 滤芯</span></div></a>
+      <a class="plat rv d2" href="rd.html#tech"><i style="background-image:url('app-filter.webp')"></i><div><b class="num">03</b><h4>过滤设备</h4><p>滤芯、叶片滤盘到成套系统</p><span>对应：化纤 · 石化 · 薄膜</span></div></a>
+      <a class="plat rv d3" href="rd.html#tech"><i style="background-image:url('prod-heatline.webp')"></i><div><b class="num">04</b><h4>导电发热应用</h4><p>导电纱、发热丝</p><span>对应：智能穿戴 · 座椅加热</span></div></a>
     </div>
 
-    <div class="honors">
-      <div class="hon rv"><div class="seal"><svg class="i"><use href="#i-award"/></svg></div><h4>国家级专精特新<br>"小巨人"企业</h4><p>工业和信息化部认定</p></div>
-      <div class="hon rv d1"><div class="seal"><svg class="i"><use href="#i-shield"/></svg></div><h4>国家级<br>高新技术企业</h4><p>持续研发投入与成果转化</p></div>
-      <div class="hon rv d2"><div class="seal"><svg class="i"><use href="#i-bulb"/></svg></div><h4>国家知识产权<br>示范企业</h4><p>自主知识产权体系</p></div>
-      <div class="hon rv d3"><span class="yr">2026</span><div class="seal"><svg class="i"><use href="#i-rocket"/></svg></div><h4>中国航发商发<br>合格供应商</h4><p>进入航空发动机供应体系</p></div>
+    <div class="rd3">
+      <div class="inst rv"><i style="background-image:url('building.webp')"></i><div><small class="num">R&amp;D CENTER</small><b>强纶新材料创新研究院</b><span>龙岩高新区 · 新材料创新创业园</span></div></div>
+      <div class="kpi rv d1"><b class="num">—</b><h4>授权专利</h4><p>发明 / 实用新型</p><em>待提供</em></div>
+      <div class="kpi rv d2"><b class="num">—</b><h4>研发人员</h4><p>研发团队规模</p><em>待提供</em></div>
+      <div class="kpi rv d3"><b class="num">—</b><h4>实验室</h4><p>面积 · 检测项目</p><em>待提供</em></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 产业链 ============ -->
+<!-- 04 全产业链 -->
 <section class="chain" id="chain">
   <div class="chain-pin" id="chainPin">
     <div class="wrap chain-head">
-      <div><div class="idx" style="color:var(--muted-d)"><b style="color:var(--gold)">02</b>INDUSTRIAL CHAIN · 产业链</div><h2>从<em>一根纤维</em>，<br>到一套过滤装备</h2></div>
-      <p>原丝、纱线、烧结、元器件到成套装备全部自主完成——品质可追溯，交期更可控。</p>
+      <div><div class="idx" style="color:var(--muted-d)"><b style="color:var(--gold)">02</b>INDUSTRIAL CHAIN · 全产业链</div><h2>从<em>一根纤维</em>，<br>到一套过滤装备</h2></div>
+      <p>金属纤维、纱线与织物、烧结毡、过滤元件到过滤设备与技术服务，全部自主完成——品质可追溯，交期更可控。</p>
     </div>
     <div class="track" id="track">
       <div class="step"><div class="im"><i style="background-image:url('hero-fiber.webp')"></i></div><div class="row"><b>01</b><h4>金属纤维</h4></div><p>微米级不锈钢纤维，直径低至 2μm，是一切产品的起点。</p></div>
-      <div class="step"><div class="im"><i style="background-image:url('prod-316l.webp')"></i></div><div class="row"><b>02</b><h4>纱线 · 织物</h4></div><p>导电纱、编织带与功能织物，导电、耐高温、柔软可织造。</p></div>
-      <div class="step"><div class="im"><i style="background-image:url('prod-felt.webp')"></i></div><div class="row"><b>03</b><h4>烧结毡</h4></div><p>多层梯度孔径高温烧结，兼顾精度与纳污量。</p></div>
-      <div class="step"><div class="im"><i style="background-image:url('prod-cartridge.webp')"></i></div><div class="row"><b>04</b><h4>过滤元器件</h4></div><p>滤芯、滤盘与叶片过滤器，耐高温、可清洗再生。</p></div>
-      <div class="step"><div class="im"><i style="background-image:url('app-filter.webp')"></i></div><div class="row"><b>05</b><h4>成套装备</h4></div><p>过滤系统设计、制造与现场技术服务。</p></div>
-      <div class="step end"><h4 class="serif">一个供应商，<br>解决从材料到系统</h4><p>告诉我们您的工况，获取完整的选型方案。</p><a class="pill pill-gold" href="#contact" style="align-self:flex-start">提交需求<svg class="i"><use href="#i-arrow"/></svg></a></div>
+      <div class="step"><div class="im"><i style="background-image:url('prod-316l.webp')"></i></div><div class="row"><b>02</b><h4>纱线与织物</h4></div><p>导电纱、编织带与功能织物，导电、耐高温、柔软可织造。</p></div>
+      <div class="step"><div class="im"><i style="background-image:url('prod-felt.webp')"></i></div><div class="row"><b>03</b><h4>烧结毡</h4></div><p>多层梯度孔结构高温烧结，兼顾精度与纳污量。</p></div>
+      <div class="step"><div class="im"><i style="background-image:url('prod-cartridge.webp')"></i></div><div class="row"><b>04</b><h4>过滤元件</h4></div><p>烧结滤芯、叶片滤盘，耐高温、可清洗再生。</p></div>
+      <div class="step"><div class="im"><i style="background-image:url('app-filter.webp')"></i></div><div class="row"><b>05</b><h4>过滤设备与技术服务</h4></div><p>成套过滤系统设计、制造与现场技术服务。</p></div>
+      <div class="step end"><h4 class="serif">一个供应商，<br>解决从材料到系统</h4><p>告诉我们您的工况，获取完整的选型方案。</p><a class="pill pill-gold" href="#select" style="align-self:flex-start">按工况选型<svg class="i"><use href="#i-arrow"/></svg></a></div>
     </div>
     <div class="chain-bar"><i id="chainBar"></i></div>
   </div>
 </section>
 
-<!-- ============ 产品 ============ -->
+<!-- 05 产品中心：四条产品线 -->
 <section class="sec prod" id="products">
   <div class="wrap">
     <div class="sh rv">
-      <div><div class="idx"><b>03</b>PRODUCTS · 产品</div><h2>四大产品线<br>覆盖<em>纤维到元器件</em></h2></div>
-      <p>每款产品均可按过滤精度、工况温度、尺寸接口等参数定制，并提供样品测试。</p>
+      <div><div class="idx"><b>03</b>PRODUCTS · 产品中心</div><h2>四条产品线<br>覆盖<em>纤维到元器件</em></h2></div>
+      <p>每条产品线均可按工况参数定制，并提供样品测试。点击进入产品线，查看完整型号与参数。</p>
     </div>
-    <div class="chips rv" id="chips">
-      <button class="on" data-c="all">全部</button><button data-c="yarn">金属纤维纱线</button><button data-c="felt">烧结毡</button><button data-c="fabric">金属纤维织物</button><button data-c="filter">过滤元器件</button>
+    <div class="lines">
+      <a class="line rv" href="#">
+        <div class="lim"><img loading="lazy" src="prod-316l.webp" alt="金属纤维纱线"><span class="lno num">01</span></div>
+        <div class="lbody"><div class="cat">METAL FIBER YARN</div><h3>金属纤维纱线</h3>
+          <dl><dt>核心参数</dt><dd>100% 316L 不锈钢 · 纤维直径低至 2μm</dd><dt>典型用途</dt><dd>防静电织物 · 电磁屏蔽 · 导电发热</dd></dl>
+          <div class="sku">316L 纤维纱 · 导电线 · 导电发热线 · 耐高温发热丝</div>
+          <span class="more">进入产品线<svg class="i"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="line rv d1" href="#">
+        <div class="lim"><img loading="lazy" src="prod-felt.webp" alt="金属纤维烧结毡"><span class="lno num">02</span></div>
+        <div class="lbody"><div class="cat">SINTERED FIBER FELT</div><h3>金属纤维烧结毡</h3>
+          <dl><dt>核心参数</dt><dd>多层梯度孔结构 · 耐高温 · 可清洗再生</dd><dt>典型用途</dt><dd>化纤熔体 · 高温气体 · 石油化工过滤</dd></dl>
+          <div class="sku">不锈钢纤维烧结毡 · 多层梯度烧结毡</div>
+          <span class="more">进入产品线<svg class="i"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="line rv d2" href="#">
+        <div class="lim"><img loading="lazy" src="prod-tape.webp" alt="金属纤维织物"><span class="lno num">03</span></div>
+        <div class="lbody"><div class="cat">METAL FIBER FABRIC</div><h3>金属纤维织物</h3>
+          <dl><dt>核心参数</dt><dd>100% 不锈钢纤维编织 · 耐高温 · 防静电</dd><dt>典型用途</dt><dd>玻璃深加工 · 汽车玻璃成型 · 印刷</dd></dl>
+          <div class="sku">防静电编织带 · 编织套管</div>
+          <span class="more">进入产品线<svg class="i"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="line rv d3" href="#">
+        <div class="lim"><img loading="lazy" src="prod-disc.webp" alt="过滤元器件"><span class="lno num">04</span></div>
+        <div class="lbody"><div class="cat">FILTER ELEMENTS</div><h3>过滤元器件</h3>
+          <dl><dt>核心参数</dt><dd>以烧结毡为滤材 · 整体烧结成型 · 可再生</dd><dt>典型用途</dt><dd>化纤 · 薄膜 · 高粘度熔体过滤</dd></dl>
+          <div class="sku">金属纤维烧结滤芯 · 叶片滤盘</div>
+          <span class="more">进入产品线<svg class="i"><use href="#i-arrow"/></svg></span></div>
+      </a>
     </div>
-    <div class="bento" id="bento">
-      <a class="tile big rv" data-c="felt" href="#"><img loading="lazy" src="prod-felt.webp" alt="不锈钢纤维烧结毡"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">SINTERED FELT · 烧结毡</div><h3>不锈钢纤维烧结毡</h3><div class="sp"><span>多层梯度孔径</span><span>耐高温</span><span>可清洗再生</span><span>熔体 / 高温气体过滤</span></div></div></a>
-      <a class="tile rv d1" data-c="filter" href="#"><img loading="lazy" src="prod-cartridge.webp" alt="金属纤维烧结滤芯"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">FILTER · 过滤元器件</div><h3>金属纤维烧结滤芯</h3><div class="sp"><span>整体成型</span><span>寿命长</span></div></div></a>
-      <a class="tile rv d2" data-c="filter" href="#"><img loading="lazy" src="prod-disc.webp" alt="烧结叶片过滤器 滤盘"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">FILTER · 过滤元器件</div><h3>滤盘（烧结叶片过滤器）</h3><div class="sp"><span>高粘度熔体</span><span>过滤面积大</span></div></div></a>
-      <a class="tile rv d1" data-c="yarn" href="#"><img loading="lazy" src="prod-316l.webp" alt="100% 316L 不锈钢纤维纱"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>100% 316L 不锈钢纤维纱</h3><div class="sp"><span>导电</span><span>耐腐蚀</span></div></div></a>
-      <a class="tile rv d2" data-c="fabric" href="#"><img loading="lazy" src="prod-tape.webp" alt="不锈钢纤维防静电编织带"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">FABRIC · 织物</div><h3>不锈钢纤维防静电编织带</h3><div class="sp"><span>耐高温</span><span>玻璃制造</span></div></div></a>
-      <a class="tile rv" data-c="yarn" href="#"><img loading="lazy" src="prod-yarn.webp" alt="不锈钢金属导电线"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>不锈钢金属导电线</h3><div class="sp"><span>导电稳定</span><span>智能穿戴</span></div></div></a>
-      <a class="tile rv d1" data-c="yarn" href="#"><img loading="lazy" src="prod-heatline.webp" alt="不锈钢纤维导电发热线"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>不锈钢纤维导电发热线</h3><div class="sp"><span>发热均匀</span><span>可弯折</span></div></div></a>
-      <a class="tile rv d2" data-c="yarn" href="#"><img loading="lazy" src="prod-heatwire.webp" alt="耐高温金属纤维发热丝"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>耐高温金属纤维发热丝</h3><div class="sp"><span>耐高温</span><span>寿命长</span></div></div></a>
-      <a class="tile cta rv d3" href="#contact"><b>需要非标定制？<br>按工况为您选型</b><span>提交需求<svg class="i"><use href="#i-arrow"/></svg></span></a>
-    </div>
+    <p class="pnote rv">* 具体过滤精度、孔隙率、透气度、耐温等实测参数，以各产品详情页及检测报告为准（待强纶提供）。</p>
   </div>
 </section>
 
-
-<!-- ============ 按工况选型 ============ -->
+<!-- 06 按工况选型 -->
 <section class="sec selx" id="select">
   <div class="wrap">
     <div class="sh rv">
-      <div><div class="idx"><b>—</b>SELECTOR · 按工况选型</div><h2>三步，<br>找到<em>适合您工况</em>的方案</h2></div>
-      <p>选择应用场景与工况条件，系统给出初步推荐；一键把条件发给强纶工程师，获取正式选型与报价。</p>
+      <div><div class="idx"><b>04</b>SELECTOR · 按工况选型</div><h2>三步，<br>找到<em>对的过滤方案</em></h2></div>
+      <p>选择介质、温度与过滤精度，即时给出推荐产品线；一键带着条件询价，工程师按工况出正式方案。</p>
     </div>
     <div class="sel rv" id="sel">
       <div class="sel-q">
-        <div class="q"><div class="qh"><b class="num">01</b>应用场景</div>
-          <div class="opts" data-k="use">
-            <button class="on" data-v="filter">过滤分离</button><button data-v="esd">防静电 / 电磁屏蔽</button><button data-v="heat">导电发热</button><button data-v="glass">玻璃高温衬垫</button>
-          </div></div>
-        <div class="q" data-for="filter"><div class="qh"><b class="num">02</b>过滤介质</div>
-          <div class="opts" data-k="med">
-            <button class="on" data-v="melt">聚合物熔体</button><button data-v="gas">气体 / 烟气</button><button data-v="liq">液体</button>
-          </div></div>
-        <div class="q"><div class="qh"><b class="num">03</b>工况温度</div>
-          <div class="opts" data-k="temp">
-            <button data-v="low">≤ 150 ℃</button><button class="on" data-v="mid">150 – 400 ℃</button><button data-v="high">&gt; 400 ℃</button>
-          </div></div>
-        <div class="q" data-for="filter"><div class="qh"><b class="num">04</b>期望形态</div>
-          <div class="opts" data-k="form">
-            <button class="on" data-v="auto">不确定，帮我推荐</button><button data-v="cart">滤芯</button><button data-v="disc">滤盘</button><button data-v="felt">烧结毡（自行加工）</button>
-          </div></div>
+        <div class="q"><div class="qh"><b class="num">01</b>过滤介质</div>
+          <div class="opts" data-k="med"><button class="on" data-v="melt">聚合物熔体</button><button data-v="gas">气体 / 烟气</button><button data-v="liq">液体</button></div></div>
+        <div class="q"><div class="qh"><b class="num">02</b>工况温度</div>
+          <div class="opts" data-k="temp"><button data-v="low">≤ 150 ℃</button><button class="on" data-v="mid">150 – 400 ℃</button><button data-v="high">&gt; 400 ℃</button></div></div>
+        <div class="q"><div class="qh"><b class="num">03</b>过滤精度</div>
+          <div class="opts" data-k="acc"><button data-v="c">粗滤 · &gt; 20 μm</button><button class="on" data-v="m">中精度 · 5 – 20 μm</button><button data-v="f">高精度 · &lt; 5 μm</button></div></div>
+        <p class="sel-alt">不是过滤需求？导电纱、发热线、防静电织物请 <a href="#contact">直接询价</a> 或前往 <a href="#">纱线事业部</a>。</p>
       </div>
       <div class="sel-r" aria-live="polite">
         <div class="r-im"><img id="rImg" src="prod-disc.webp" alt=""></div>
         <div class="r-tx">
-          <small class="num">RECOMMENDED · 初步推荐</small>
-          <h3 id="rT">滤盘（烧结叶片过滤器）</h3>
-          <p id="rP">高粘度聚合物熔体过滤，过滤面积大、可清洗再生。</p>
+          <small class="num">RECOMMENDED · 推荐产品线</small>
+          <h3 id="rT">过滤元器件 · 叶片滤盘</h3>
+          <p id="rP"></p>
           <div class="r-alt" id="rAlt"></div>
           <p class="r-note" id="rN"></p>
-          <button class="pill pill-gold" id="rGo" type="button">把条件发给工程师<svg class="i"><use href="#i-arrow"/></svg></button>
+          <button class="pill pill-gold" id="rGo" type="button">带着这些条件询价<svg class="i"><use href="#i-arrow"/></svg></button>
           <p class="r-disc">* 推荐基于常见工况，仅供参考，以工程师确认的正式选型为准。</p>
         </div>
       </div>
@@ -786,102 +955,111 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
   </div>
 </section>
 
-<!-- ============ 应用 ============ -->
+<!-- 07 行业方案 -->
 <section class="sec apps" id="apps">
   <div class="wrap">
     <div class="sh rv">
-      <div><div class="idx"><b>04</b>APPLICATIONS · 应用</div><h2>在最苛刻的工况里<br><em>经受检验</em></h2></div>
-      <p>从化纤熔体到航空发动机，强纶材料服务六大行业，悬停或点击查看详情。</p>
+      <div><div class="idx"><b>05</b>SOLUTIONS · 行业方案</div><h2>在最苛刻的工况里<br><em>经受检验</em></h2></div>
+      <p>六个行业，各有痛点。悬停或点击查看强纶的应对方案与推荐产品。</p>
     </div>
     <div class="acc rv" id="acc">
-      <div class="pan on" tabindex="0"><i class="bg" style="background-image:url('app-filter.webp')"></i><div class="vt"><b>01</b>过滤分离</div><div class="full"><div class="n">01 / 06</div><h3>过滤分离</h3><p>化纤熔体、石油化工、高温烟气等工况的精密过滤与分离。</p></div></div>
-      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-aero.webp')"></i><div class="vt"><b>02</b>航空航天</div><div class="full"><div class="n">02 / 06</div><h3>航空航天与特种材料</h3><p>满足严苛环境下的耐温、耐腐蚀与可靠性要求。</p></div></div>
-      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-glass.webp')"></i><div class="vt"><b>03</b>玻璃深加工</div><div class="full"><div class="n">03 / 06</div><h3>玻璃深加工</h3><p>耐高温编织带与衬垫，在高温成型中保护玻璃表面。</p></div></div>
-      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-auto.webp')"></i><div class="vt"><b>04</b>汽车工业</div><div class="full"><div class="n">04 / 06</div><h3>汽车工业</h3><p>汽车玻璃成型、座椅加热等关键应用。</p></div></div>
-      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-shield.webp')"></i><div class="vt"><b>05</b>电磁屏蔽</div><div class="full"><div class="n">05 / 06</div><h3>电磁屏蔽与防静电</h3><p>导电纤维与织物，消除静电、屏蔽干扰。</p></div></div>
-      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-textile.webp')"></i><div class="vt"><b>06</b>智能穿戴</div><div class="full"><div class="n">06 / 06</div><h3>功能纺织与智能穿戴</h3><p>发热服饰、可穿戴传感与导电面料。</p></div></div>
+      <div class="pan on" tabindex="0"><i class="bg" style="background-image:url('app-filter.webp')"></i><div class="vt"><b>01</b>过滤分离</div><div class="full"><div class="n">01 / 06 · 化纤熔体 · 石化 · 高温烟气</div><h3>过滤分离</h3><p class="pain"><b>痛点</b>高温、高粘度工况下，传统滤材易堵塞、寿命短。</p><p class="rec"><b>推荐</b>叶片滤盘 · 烧结滤芯 · 烧结毡</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-glass.webp')"></i><div class="vt"><b>02</b>玻璃深加工</div><div class="full"><div class="n">02 / 06</div><h3>玻璃深加工</h3><p class="pain"><b>痛点</b>高温成型与输送中，玻璃表面容易划伤、留痕。</p><p class="rec"><b>推荐</b>耐高温不锈钢纤维编织带 · 金属纤维织物</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-shield.webp')"></i><div class="vt"><b>03</b>电磁屏蔽</div><div class="full"><div class="n">03 / 06</div><h3>电磁屏蔽与防静电</h3><p class="pain"><b>痛点</b>静电积聚与电磁干扰，影响生产安全与设备稳定。</p><p class="rec"><b>推荐</b>316L 不锈钢纤维纱 · 不锈钢导电线</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-aero.webp')"></i><div class="vt"><b>04</b>航空航天</div><div class="full"><div class="n">04 / 06</div><h3>航空航天与特种材料</h3><p class="pain"><b>痛点</b>严苛环境下，对耐温、耐腐蚀与批次一致性要求极高。</p><p class="rec"><b>推荐</b>金属纤维烧结毡 · 过滤元器件</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-auto.webp')"></i><div class="vt"><b>05</b>汽车</div><div class="full"><div class="n">05 / 06 · 座椅加热 · 玻璃成型</div><h3>汽车</h3><p class="pain"><b>痛点</b>座椅加热需要柔性、均匀发热；玻璃成型需耐高温不留痕。</p><p class="rec"><b>推荐</b>导电发热线 · 耐高温编织带</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-textile.webp')"></i><div class="vt"><b>06</b>智能穿戴</div><div class="full"><div class="n">06 / 06</div><h3>功能纺织与智能穿戴</h3><p class="pain"><b>痛点</b>导电与发热材料既要可靠，又要柔软、耐弯折。</p><p class="rec"><b>推荐</b>导电发热线 · 耐高温发热丝 · 导电纱</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 关于 ============ -->
-<section class="sec about" id="about">
-  <div class="band" id="band"><i></i><div class="tag"><small class="num">LONGYAN · FUJIAN</small><b>龙岩高新区<br>强纶新材料创新研究院</b></div></div>
-  <div class="wrap about-g">
-    <div class="txt rv">
-      <div class="idx"><b>05</b>ABOUT · 关于强纶</div>
-      <h2>二十余年，<br>只专注一根纤维</h2>
-      <p>福建强纶新材料股份有限公司创立于 2002 年，位于福建省龙岩市高新区，证券代码 872336。公司专注金属纤维及其制品、过滤成套装备的研发、生产、销售与技术服务。</p>
-      <p>主要产品包括金属纤维纱线、金属纤维烧结毡、金属纤维织物与过滤元器件，服务于化纤、石油化工、玻璃制造、节能环保、智能穿戴、航空航天等行业客户。</p>
-      <a class="pill pill-line" href="#">了解强纶<svg class="i"><use href="#i-arrow"/></svg></a>
+<!-- 08 客户案例 -->
+<section class="sec cases" id="cases">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><div class="idx"><b>06</b>CASES · 客户案例</div><h2>每个案例，<br>都讲清<em>工况与效果</em></h2></div>
+      <p>按"行业 · 工况 · 方案 · 效果"四段式呈现，客户名称可脱敏。以下为案例模板，素材待强纶提供。</p>
     </div>
-    <div class="stats rv d1">
-      <div><b class="num">2002</b><span>公司创立 / 年</span></div>
-      <div><b class="num">20<sup>+</sup></b><span>行业经验 / 年</span></div>
-      <div><b class="num">2<sup>μm</sup></b><span>超细纤维最小直径</span></div>
-      <div><b class="num">4<sup>大</sup></b><span>产品线</span></div>
-      <div><b class="num">6<sup>大</sup></b><span>应用领域</span></div>
-      <div><b class="num">872336</b><span>证券代码</span></div>
+    <div class="clist">
+      <article class="case rv"><div class="ctop"><span class="ind">化纤</span><em>案例模板 · 素材待提供</em></div><h3>某化纤企业 · 聚合物熔体过滤</h3>
+        <dl><dt>工况</dt><dd>介质 · 温度 · 粘度 · 原用滤材问题</dd><dt>方案</dt><dd>选用的强纶产品与规格</dd><dt>效果</dt><dd>更换周期、良品率等可量化变化</dd></dl></article>
+      <article class="case rv d1"><div class="ctop"><span class="ind">玻璃</span><em>案例模板 · 素材待提供</em></div><h3>某玻璃深加工企业 · 高温成型衬垫</h3>
+        <dl><dt>工况</dt><dd>成型温度 · 玻璃类型 · 原有问题</dd><dt>方案</dt><dd>编织带 / 织物规格</dd><dt>效果</dt><dd>表面缺陷率、使用寿命变化</dd></dl></article>
+      <article class="case rv d2"><div class="ctop"><span class="ind">航空</span><em>案例模板 · 素材待提供</em></div><h3>航空领域 · 特种材料配套</h3>
+        <dl><dt>工况</dt><dd>应用部位与环境要求（经授权）</dd><dt>方案</dt><dd>产品与认证情况</dd><dt>效果</dt><dd>通过的验证与供货情况</dd></dl></article>
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
+<!-- 09 常见问题 -->
 <section class="sec faq" id="faq">
   <div class="wrap faq-g">
     <aside class="rv">
-      <div class="idx"><b>06</b>FAQ · 常见问题</div>
+      <div class="idx"><b>07</b>FAQ · 常见问题</div>
       <div class="sh" style="display:block;margin:0"><h2>采购前，<br>先读懂这几点</h2></div>
       <p>工程师整理的高频问题，直接给出答案。</p>
-      <div class="geo"><b>为 AI 搜索而设计：</b>本模块采用 FAQ 结构化数据编写，豆包、DeepSeek、文心一言等 AI 平台可直接识别并引用强纶的答案。</div>
+      <div class="geo"><b>为 AI 搜索而设计：</b>本模块带 FAQ 结构化数据，豆包、DeepSeek、文心一言等 AI 平台可直接识别并引用强纶的答案。</div>
     </aside>
     <div class="rv d1" id="faqList">
       <div class="qa open"><button aria-expanded="true"><span class="n">01</span>强纶的不锈钢纤维最细能做到多少？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>强纶超细不锈钢纤维直径可低至 2μm，并已实现稳定量产，可用于高精度烧结毡、导电纱线与功能织物。</p></div></div></div>
-      <div class="qa"><button aria-expanded="false"><span class="n">02</span>金属纤维烧结毡适合哪些过滤场景？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>适用于化纤熔体、石油化工、高温气体等对耐温、耐腐蚀与纳污量要求较高的场景，可进一步加工为滤芯、滤盘等元器件。</p></div></div></div>
-      <div class="qa"><button aria-expanded="false"><span class="n">03</span>是否支持非标定制与打样？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>支持。可根据过滤精度、工况温度、介质、尺寸与接口等参数定制设计，并提供样品测试。</p></div></div></div>
-      <div class="qa"><button aria-expanded="false"><span class="n">04</span>金属纤维滤芯相比传统滤材有什么优势？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>金属纤维滤材耐高温、耐腐蚀、孔隙率高、可反复清洗再生，在高温、高粘度等苛刻工况下使用寿命更长。</p></div></div></div>
-      <div class="qa"><button aria-expanded="false"><span class="n">05</span>如何获取报价与技术资料？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>可在下方提交询盘表单，或拨打 181 5982 1773（微信同号），技术人员将根据您的工况提供选型建议与报价。</p></div></div></div>
+      <div class="qa"><button aria-expanded="false"><span class="n">02</span>烧结毡和滤布怎么选？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>在高温、高粘度或腐蚀性工况下，金属纤维烧结毡耐温、耐腐蚀且可清洗再生；常温、低要求工况可考虑滤布。具体以介质、温度与精度要求为准，可通过"按工况选型"获取建议。</p></div></div></div>
+      <div class="qa"><button aria-expanded="false"><span class="n">03</span>化纤熔体过滤该选多少精度？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>取决于纤维品种、纺丝规格与熔体洁净度要求。建议提供产品规格与现用滤材情况，由强纶工程师结合叶片滤盘与烧结滤芯给出精度方案。</p></div></div></div>
+      <div class="qa"><button aria-expanded="false"><span class="n">04</span>金属纤维滤芯能清洗再用吗？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>可以。金属纤维烧结滤材耐高温、耐腐蚀，可反复清洗再生，在苛刻工况下使用寿命更长。</p></div></div></div>
+      <div class="qa"><button aria-expanded="false"><span class="n">05</span>是否支持非标定制与打样？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>支持。可根据过滤精度、工况温度、介质、尺寸与接口等参数定制设计，并提供样品测试。</p></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 资讯 ============ -->
-<section class="sec news" id="news">
+<!-- 10 技术专栏与新闻 -->
+<section class="sec news" id="column">
   <div class="wrap">
     <div class="sh rv">
-      <div><div class="idx"><b>07</b>NEWS · 资讯</div><h2>强纶动态</h2></div>
-      <p style="justify-self:end"><a class="tlink" href="#">全部资讯<svg class="i"><use href="#i-arrow"/></svg></a></p>
+      <div><div class="idx"><b>08</b>INSIGHTS · 技术专栏与新闻</div><h2>技术专栏<em>与</em>强纶动态</h2></div>
+      <p>技术专栏回答工程师的真实问题，也是 AI 平台引用强纶的主要入口。</p>
     </div>
-    <div class="nlist">
-      <a class="nc rv" href="#"><div class="dt"><b class="num">06.18</b><span>2026 · 企业动态</span></div><div class="ph"><i style="background-image:url('app-aero.webp')"></i></div><h3>喜讯｜福建强纶新材料股份有限公司获评中国航发商发合格供应商</h3><p>强纶正式进入中国航发商发供应体系，金属纤维材料在航空领域的应用迈出关键一步。</p></a>
-      <a class="nc rv d1" href="#"><div class="dt"><b class="num">12.10</b><span>2024 · 行业知识</span></div><div class="ph"><i style="background-image:url('prod-felt.webp')"></i></div><h3>不锈钢金属纤维烧结毡在高温过滤领域的技术趋势</h3><p>高温工况对滤材提出更高要求，金属纤维烧结毡凭借耐温与可再生优势成为重要方向。</p></a>
-      <a class="nc rv d2" href="#"><div class="dt"><b class="num">12.02</b><span>2024 · 应用案例</span></div><div class="ph"><i style="background-image:url('app-textile.webp')"></i></div><h3>金属纤维导电纱在智能可穿戴领域的应用</h3><p>柔软、导电、可水洗的金属纤维导电纱，为智能服装与可穿戴设备提供新材料选择。</p></a>
+    <div class="cols2">
+      <div class="col rv">
+        <div class="colh"><h3>技术专栏</h3><a class="tlink" href="#">全部文章<svg class="i"><use href="#i-arrow"/></svg></a></div>
+        <a class="art" href="#"><span class="dt num">2024.12.10</span><span class="tg">应用类</span><h4>不锈钢金属纤维烧结毡在高温过滤领域的技术趋势</h4></a>
+        <a class="art" href="#"><span class="dt num">2024.12.02</span><span class="tg">应用类</span><h4>金属纤维导电纱在智能可穿戴领域的应用</h4></a>
+        <a class="art plan" href="#"><span class="dt">选题规划</span><span class="tg">原理类</span><h4>2μm 不锈钢纤维是怎么做出来的？</h4></a>
+      </div>
+      <div class="col rv d1">
+        <div class="colh"><h3>新闻动态</h3><a class="tlink" href="#">全部新闻<svg class="i"><use href="#i-arrow"/></svg></a></div>
+        <a class="nfeat2" href="#"><i style="background-image:url('app-aero.webp')"></i><div><span class="dt num">2026.06.18 · 企业新闻</span><h4>喜讯｜福建强纶新材料股份有限公司获评中国航发商发合格供应商</h4></div></a>
+        <a class="art plan" href="#"><span class="dt">待更新</span><span class="tg">展会活动</span><h4>建议每月不少于 2 篇，补齐 2024 年底以来的更新空档</h4></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
+<!-- 11 询盘区 -->
 <section class="sec cta" id="contact">
   <div class="wrap">
     <div class="rv">
-      <div class="idx"><b>08</b>CONTACT · 联系我们</div>
-      <h2>让每一微米，<br><em>都经得起检验</em></h2>
-      <p class="lead">告诉我们您的介质、温度与精度要求，技术工程师将为您提供选型建议、样品与报价。</p>
+      <div class="idx"><b>09</b>CONTACT · 在线询价</div>
+      <h2>告诉我们<br><em>您的工况</em></h2>
+      <p class="lead">填写介质、温度与精度，技术工程师将为您提供选型建议、样品与报价。留言实时推送至企业微信与邮箱。</p>
       <div class="ct">
         <div><small>电话 / 微信</small><span class="num">181 5982 1773</span></div>
-        <div><small>邮箱</small><span>3756335070@qq.com</span></div>
+        <div><small>企业邮箱</small><span>企业域名邮箱 <em class="tbdm">待开通</em></span></div>
         <div><small>地址</small><span>福建省龙岩市高新区曲潭路 6 号</span></div>
       </div>
+      <div class="wx"><div class="qr"><svg class="i"><use href="#i-wechat"/></svg></div><div><b>企业微信咨询</b><span>扫码添加工程师 · 二维码待提供</span></div></div>
     </div>
     <form class="card rv d1" id="inqForm">
-      <h3>在线询盘</h3>
+      <h3>工况询价</h3>
       <label>姓名 *<input required name="n" autocomplete="name"></label>
       <label>手机 *<input required name="p" type="tel" autocomplete="tel"></label>
-      <label>公司名称<input name="c" autocomplete="organization"></label>
-      <label>意向产品<select name="t"><option>金属纤维烧结毡</option><option>过滤元器件（滤芯 / 滤盘）</option><option>金属纤维纱线</option><option>金属纤维织物</option><option>其他 / 定制</option></select></label>
-      <label class="full">需求描述<textarea name="m" placeholder="过滤介质、温度、精度要求、尺寸、用量等"></textarea></label>
-      <button class="pill pill-ink" type="submit">提交询盘<svg class="i"><use href="#i-arrow"/></svg></button>
-      <p class="ok" id="ok">提交成功（演示），正式上线后询盘将实时推送至企业微信 / 邮箱。</p>
+      <label>公司<input name="c" autocomplete="organization"></label>
+      <label>产品类别<select name="t" id="fT"><option>过滤元器件（滤芯 / 滤盘）</option><option>金属纤维烧结毡</option><option>金属纤维纱线</option><option>金属纤维织物</option><option>不确定 / 请工程师推荐</option></select></label>
+      <label>介质<select name="med" id="fM"><option>聚合物熔体</option><option>气体 / 烟气</option><option>液体</option><option>其他</option></select></label>
+      <label>温度<select name="temp" id="fTe"><option>≤ 150 ℃</option><option selected>150 – 400 ℃</option><option>&gt; 400 ℃</option></select></label>
+      <label>过滤精度<select name="acc" id="fA"><option>粗滤 · &gt; 20 μm</option><option selected>中精度 · 5 – 20 μm</option><option>高精度 · &lt; 5 μm</option><option>不确定</option></select></label>
+      <label>压力 / 流量<input name="pf" placeholder="选填"></label>
+      <label class="full">补充说明<textarea name="m" placeholder="设备型号、现用滤材、尺寸接口、用量等；也可在工程师联系时提供图纸"></textarea></label>
+      <button class="pill pill-ink" type="submit">提交询价<svg class="i"><use href="#i-arrow"/></svg></button>
+      <p class="ok" id="ok">提交成功（演示），正式上线后询盘将实时推送至企业微信与邮箱。</p>
     </form>
   </div>
 </section>
@@ -892,20 +1070,23 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
     <div>
       <a class="brand" href="#top"><img src="https://www.qlfiber.com/assets/images/logo.png" alt="强纶新材 logo" width="42" height="42"><span><strong>强纶新材</strong><small>QIANGLUN · SINCE 2002</small></span></a>
       <p>专注金属纤维及其制品、过滤成套装备研发、生产、销售与技术服务。</p>
+      <div class="fqr"><div><i><svg class="i"><use href="#i-wechat"/></svg></i>公众号</div><div><i><svg class="i"><use href="#i-msg"/></svg></i>视频号</div><div><i><svg class="i"><use href="#i-play"/></svg></i>抖音</div></div>
     </div>
-    <div><h5>产品</h5><ul><li><a href="#products">金属纤维纱线</a></li><li><a href="#products">金属纤维烧结毡</a></li><li><a href="#products">金属纤维织物</a></li><li><a href="#products">过滤元器件</a></li></ul></div>
-    <div><h5>应用</h5><ul><li><a href="#apps">过滤分离</a></li><li><a href="#apps">航空航天</a></li><li><a href="#apps">玻璃深加工</a></li><li><a href="#apps">智能穿戴</a></li></ul></div>
-    <div><h5>强纶</h5><ul><li><a href="#about">企业简介</a></li><li><a href="#rd">科研创新</a></li><li><a href="#news">新闻资讯</a></li><li><a href="#contact">联系我们</a></li></ul></div>
+    <div><h5>产品中心</h5><ul><li><a href="#products">金属纤维纱线</a></li><li><a href="#products">金属纤维烧结毡</a></li><li><a href="#products">金属纤维织物</a></li><li><a href="#products">过滤元器件</a></li></ul></div>
+    <div><h5>应用方案</h5><ul><li><a href="#apps">过滤分离</a></li><li><a href="#apps">玻璃深加工</a></li><li><a href="#apps">航空航天</a></li><li><a href="#apps">智能穿戴</a></li></ul></div>
+    <div><h5>科研与支持</h5><ul><li><a href="rd.html">科研创新</a></li><li><a href="#select">选型中心</a></li><li><a href="#column">技术专栏</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+    <div><h5>关于强纶</h5><ul><li><a href="#">企业简介</a></li><li><a href="#">资质荣誉</a></li><li><a href="#">投资者关系</a></li><li><a href="#contact">联系我们</a></li></ul></div>
   </div>
-  <div class="wrap fb"><span>© 2026 福建强纶新材料股份有限公司 版权所有 · 闽ICP备2022016209号-1</span><span>网站地图 · 隐私政策 · 法律声明</span></div>
+  <div class="wrap fb"><span>© 2026 福建强纶新材料股份有限公司 版权所有 · 闽ICP备2022016209号-1</span><span><a href="#">网站地图</a> · <a href="#">隐私政策</a> · <a href="#">法律声明</a></span></div>
   <div class="huge" aria-hidden="true">QIANGLUN</div>
 </footer>
 
 <div class="float">
   <a href="tel:18159821773" aria-label="电话咨询"><svg class="i"><use href="#i-phone"/></svg><span class="tipx">181 5982 1773</span></a>
-  <a href="#contact" aria-label="在线询盘"><svg class="i"><use href="#i-msg"/></svg><span class="tipx">在线询盘</span></a>
+  <a href="#contact" aria-label="在线询价"><svg class="i"><use href="#i-msg"/></svg><span class="tipx">在线询价</span></a>
   <button id="toTop" aria-label="返回顶部"><svg class="i"><use href="#i-up"/></svg></button>
 </div>
+<nav class="mbar" aria-label="快捷操作"><a href="tel:18159821773"><svg class="i"><use href="#i-phone"/></svg>电话</a><a href="#contact"><svg class="i"><use href="#i-wechat"/></svg>微信</a><a href="#contact" class="hl"><svg class="i"><use href="#i-msg"/></svg>询价</a></nav>
 
 <script>
 window.addEventListener('error',function(){document.querySelectorAll('.rv,#scale').forEach(function(e){e.classList.add('in')})});
@@ -914,90 +1095,67 @@ window.addEventListener('error',function(){document.querySelectorAll('.rv,#scale
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(!document.body.classList.contains('pre'))document.body.classList.add('go');
 
-  /* 首屏窗口轮播 */
-  const sl=$$('#win .sl'),pb=$$('#prog button'),cap=[
-    '01 · MICRO FIBER<b>超细不锈钢纤维</b>','02 · R&amp;D<b>科研创新 · 精密检测</b>','03 · SINTERED FELT<b>金属纤维烧结毡</b>'];
+  /* 首屏轮播 */
+  const sl=$$('#win .sl'),pb=$$('#prog button'),cap=['01 · MICRO FIBER<b>超细不锈钢纤维</b>','02 · SINTERED FELT<b>金属纤维烧结毡</b>','03 · R&amp;D<b>科研创新 · 精密检测</b>'];
   let cur=0,tm;
   function go(i){sl[cur].classList.remove('on');pb[cur].classList.remove('on');cur=i;sl[i].classList.add('on');void pb[i].offsetWidth;pb[i].classList.add('on');$('#winT').innerHTML=cap[i]}
   function auto(){clearInterval(tm);if(!reduce)tm=setInterval(()=>go((cur+1)%sl.length),6500)}
   pb.forEach((b,i)=>b.onclick=()=>{go(i);auto()});auto();
   document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(tm):auto());
 
-  /* 头部 + 导航高亮 + 返回顶部 + 视差 + 横向产业链 */
+  /* 搜索 */
+  const sb=$('#search');
+  $('#searchBtn').onclick=()=>{sb.hidden=!sb.hidden;if(!sb.hidden)$('#q').focus()};
+  $('#searchX').onclick=()=>{sb.hidden=true};
+  $('#q').addEventListener('keydown',e=>{if(e.key==='Escape')sb.hidden=true;if(e.key==='Enter'){sb.hidden=true;document.getElementById('select').scrollIntoView({behavior:reduce?'auto':'smooth'})}});
+
+  /* 头部/导航/视差/横向产业链 */
   const hdr=$('#hdr'),top=$('#toTop'),links=$$('.menu a');
   const secs=links.map(a=>{const h=a.getAttribute('href')||'';if(h.charAt(0)!=='#'||h.length<2)return null;try{return document.querySelector(h)}catch(e){return null}});
-  const band=$('#band i'),chain=$('#chain'),pin=$('#chainPin'),track=$('#track'),bar=$('#chainBar');
+  const chain=$('#chain'),track=$('#track'),bar=$('#chainBar');
   const desk=()=>innerWidth>980&&!reduce;
-  function sizeChain(){
-    if(desk()){const extra=track.scrollWidth-innerWidth+80;chain.style.height=(innerHeight+Math.max(0,extra))+'px'}
-    else{chain.style.height='';track.style.transform=''}
-  }
+  function sizeChain(){if(desk()){const extra=track.scrollWidth-innerWidth+80;chain.style.height=(innerHeight+Math.max(0,extra))+'px'}else{chain.style.height='';track.style.transform=''}}
   function onScroll(){
-    const y=scrollY;hdr.classList.toggle('solid',y>30);top.classList.toggle('show',y>800);
-    let idx=0;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<180)idx=i});links.forEach((a,i)=>a.classList.toggle('on',i===idx));
-    if(!reduce&&band){const r=band.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)band.style.transform='translateY('+(r.top*-0.12)+'px)'}
+    const y=scrollY;hdr.classList.toggle('solid',y>30);if(top)top.classList.toggle('show',y>800);
+    let idx=-1;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<180)idx=i});links.forEach((a,i)=>a.classList.toggle('on',i===idx));
     if(desk()){const r=chain.getBoundingClientRect(),tot=chain.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,-r.top/tot)),max=track.scrollWidth-innerWidth+80;
       track.style.transform='translateX('+(-p*Math.max(0,max))+'px)';bar.style.width=(p*100)+'%'}
   }
   addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',()=>{sizeChain();onScroll()});
   addEventListener('load',()=>{sizeChain();onScroll()});sizeChain();onScroll();
-  top.onclick=()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+  if(top)top.onclick=()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'});
   $('#burger').onclick=()=>$('#menu').classList.toggle('open');
   links.forEach(a=>a.addEventListener('click',()=>$('#menu').classList.remove('open')));
 
-  /* 产品筛选 */
-  $$('#chips button').forEach(b=>b.onclick=()=>{
-    $$('#chips button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
-    const c=b.dataset.c;$$('#bento .tile[data-c]').forEach(t=>t.classList.toggle('dim',c!=='all'&&t.dataset.c!==c));
-  });
-
-
-  /* 按工况选型 */
-  const st={use:'filter',med:'melt',temp:'mid',form:'auto'};
+  /* 按工况选型：介质 → 温度 → 精度 */
+  const st={med:'melt',temp:'mid',acc:'m'};
   const P={
-    disc:{img:'prod-disc.webp',t:'滤盘（烧结叶片过滤器）',p:'适合高粘度聚合物熔体过滤，过滤面积大、可清洗再生，常用于化纤与薄膜生产线。'},
-    cart:{img:'prod-cartridge.webp',t:'金属纤维烧结滤芯',p:'整体烧结成型，耐温、耐腐蚀、可反复清洗，适用于气体、液体与熔体过滤。'},
-    felt:{img:'prod-felt.webp',t:'不锈钢纤维烧结毡',p:'多层梯度孔径结构，兼顾精度与纳污量，可按需裁切加工为自有滤材。'},
-    yarn:{img:'prod-316l.webp',t:'316L 不锈钢纤维纱 / 导电线',p:'导电稳定、耐腐蚀、柔软可织造，用于防静电织物与电磁屏蔽材料。'},
-    tape:{img:'prod-tape.webp',t:'不锈钢纤维防静电编织带',p:'耐高温、防静电、不伤玻璃表面，用于玻璃深加工与汽车玻璃成型。'},
-    heat:{img:'prod-heatline.webp',t:'不锈钢纤维导电发热线',p:'发热均匀、可弯折，用于加热服饰、座椅加热等柔性发热场景。'}
+    disc:{img:'prod-disc.webp',t:'过滤元器件 · 叶片滤盘',p:'适合高粘度聚合物熔体过滤，过滤面积大、可清洗再生，常用于化纤与薄膜生产线。',line:0},
+    cart:{img:'prod-cartridge.webp',t:'过滤元器件 · 烧结滤芯',p:'整体烧结成型，耐温、耐腐蚀、可反复清洗，适用于气体、液体与熔体过滤。',line:0},
+    felt:{img:'prod-felt.webp',t:'金属纤维烧结毡',p:'多层梯度孔结构，兼顾精度与纳污量，可按需裁切加工为自有滤材。',line:1}
   };
-  const L={filter:'过滤分离',esd:'防静电 / 电磁屏蔽',heat:'导电发热',glass:'玻璃高温衬垫',melt:'聚合物熔体',gas:'气体 / 烟气',liq:'液体',low:'≤150℃',mid:'150–400℃',high:'>400℃',auto:'由工程师推荐',cart:'滤芯',disc:'滤盘',felt:'烧结毡'};
-  function pick(){
-    let main,alt=[];
-    if(st.use==='filter'){
-      if(st.form!=='auto')main=st.form;
-      else main=st.med==='melt'?'disc':'cart';
-      alt=['disc','cart','felt'].filter(x=>x!==main);
-    }else if(st.use==='esd'){main='yarn';alt=['tape']}
-    else if(st.use==='heat'){main='heat';alt=['yarn']}
-    else{main='tape';alt=['felt']}
-    return {main,alt};
-  }
+  const L={melt:'聚合物熔体',gas:'气体 / 烟气',liq:'液体',low:'≤ 150 ℃',mid:'150 – 400 ℃',high:'> 400 ℃',c:'粗滤 · > 20 μm',m:'中精度 · 5 – 20 μm',f:'高精度 · < 5 μm'};
+  function pick(){const main=st.med==='melt'?'disc':'cart';return{main,alt:['disc','cart','felt'].filter(x=>x!==main)}}
   function render(){
-    $$('#sel .q[data-for]').forEach(q=>q.classList.toggle('off',q.dataset.for!==st.use));
     const r=pick(),d=P[r.main],im=$('#rImg');im.classList.add('fade');
+    const notes=[];if(st.acc==='f')notes.push('高精度需求：建议采用多层梯度烧结毡结构，请注明目标精度。');if(st.temp==='high')notes.push('高温工况：请注明具体温度与气氛，工程师将核对材质与结构。');
     setTimeout(()=>{im.src=d.img;im.alt=d.t;$('#rT').textContent=d.t;$('#rP').textContent=d.p;
-      $('#rAlt').innerHTML=r.alt.map(x=>'<span>也可考虑：'+P[x].t+'</span>').join('');
-      $('#rN').textContent=st.temp==='high'?'高温工况：请在需求中注明具体温度与气氛，工程师将核对材质与结构。':'';
-      im.classList.remove('fade')},reduce?0:220);
+      $('#rAlt').innerHTML=r.alt.map(x=>'<span>也可考虑：'+P[x].t+'</span>').join('');$('#rN').textContent=notes.join(' ');im.classList.remove('fade')},reduce?0:220);
   }
-  $$('#sel .opts').forEach(g=>g.querySelectorAll('button').forEach(b=>b.onclick=()=>{
-    g.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');st[g.dataset.k]=b.dataset.v;render()}));
+  $$('#sel .opts').forEach(g=>g.querySelectorAll('button').forEach(b=>b.onclick=()=>{g.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');st[g.dataset.k]=b.dataset.v;render()}));
+  const setSel=(el,txt)=>{[...el.options].forEach((o,i)=>{if(o.text.replace(/\s/g,'')===txt.replace(/\s/g,''))el.selectedIndex=i})};
   $('#rGo').onclick=()=>{
-    const r=pick();let t='【按工况选型】应用场景：'+L[st.use];
-    if(st.use==='filter')t+='；介质：'+L[st.med]+'；期望形态：'+L[st.form];
-    t+='；温度：'+L[st.temp]+'。初步推荐：'+P[r.main].t+'。';
-    const f=$('#inqForm');f.querySelector('textarea').value=t+'\n补充说明：';
-    const sel=f.querySelector('select');[...sel.options].forEach((o,i)=>{if(P[r.main].t.indexOf(o.text.slice(0,4))>-1)sel.selectedIndex=i});
+    const r=pick();setSel($('#fM'),L[st.med]);setSel($('#fTe'),L[st.temp]);setSel($('#fA'),L[st.acc]);
+    $('#fT').selectedIndex=P[r.main].line;
+    $('#inqForm textarea').value='【按工况选型】推荐：'+P[r.main].t+'。\n补充说明：';
     document.getElementById('contact').scrollIntoView({behavior:reduce?'auto':'smooth'});
-    setTimeout(()=>f.querySelector('input').focus({preventScroll:true}),reduce?0:800);
+    setTimeout(()=>$('#inqForm input').focus({preventScroll:true}),reduce?0:800);
   };
   render();
 
-  /* 应用展开条 */
+  /* 行业方案展开条 */
   const pans=$$('#acc .pan');
-  pans.forEach(p=>{const act=()=>{pans.forEach(x=>x.classList.toggle('on',x===p))};
+  pans.forEach(p=>{const act=()=>pans.forEach(x=>x.classList.toggle('on',x===p));
     p.addEventListener('mouseenter',()=>{if(innerWidth>980)act()});p.addEventListener('click',act);p.addEventListener('focus',act);
     p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act()}})});
 
@@ -1009,7 +1167,7 @@ window.addEventListener('error',function(){document.querySelectorAll('.rv,#scale
 
   /* 入场 */
   if('IntersectionObserver' in window&&!reduce){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.18});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
     $$('.rv,#scale').forEach(el=>io.observe(el));
   }else{$$('.rv,#scale').forEach(el=>el.classList.add('in'))}
 })();
