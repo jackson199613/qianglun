@@ -7,9 +7,7 @@
 <meta name="description" content="福建强纶新材料股份有限公司（证券代码 872336）创立于2002年，专注金属纤维及其制品、过滤成套装备的研发、生产、销售与技术服务。超细不锈钢纤维直径低至2μm并稳定量产。">
 <meta name="keywords" content="金属纤维,不锈钢纤维,金属纤维烧结毡,烧结滤芯,滤盘,不锈钢纤维纱,导电纱,金属纤维发热线,强纶新材">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@600;900&family=Barlow+Condensed:wght@300;500;600&display=swap" rel="stylesheet">
-
-<!-- GEO：企业 + FAQ 结构化数据，便于 AI 平台与搜索引擎准确识别 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;700;900&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Barlow+Condensed:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","name":"福建强纶新材料股份有限公司","alternateName":"强纶新材","url":"https://www.qlfiber.com/","logo":"https://www.qlfiber.com/assets/images/logo.png","foundingDate":"2002","address":{"@type":"PostalAddress","streetAddress":"高新区曲潭路6号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"},"telephone":"+86-18159821773","description":"专注金属纤维及其制品、过滤成套装备研发、生产、销售与技术服务的国家级高新技术企业。"},
@@ -19,443 +17,344 @@
 {"@type":"Question","name":"是否支持非标定制？","acceptedAnswer":{"@type":"Answer","text":"支持根据过滤精度、工况温度、尺寸接口等参数进行定制设计与打样。"}}
 ]}]}
 </script>
-
 <style>
 :root{
-  --ink:#0b0b0c; --ink-2:#141416; --ink-3:#1d1d20; --line-d:rgba(255,255,255,.1);
-  --gold:#eaca02; --gold-2:#c9a800; --gold-soft:rgba(234,202,2,.12);
-  --red:#c8161d;
-  --paper:#ffffff; --paper-2:#f5f5f3; --paper-3:#ecebe7; --line:#e3e2dd;
-  --text:#16161a; --muted:#6c6c72; --muted-d:#a3a3aa;
-  --steel:linear-gradient(135deg,#f7f7f7 0%,#c9cbcf 35%,#f2f2f2 55%,#a9adb3 100%);
-  --wrap:1280px; --r:4px;
+  --paper:#f5f3ee; --paper-2:#ece8df; --white:#fff;
+  --ink:#0e0f11; --ink-2:#17181b; --ink-3:#22242a; --graphite:#3b3d42;
+  --muted:#6e6a63; --muted-d:#a5a39d; --line:#dcd6ca; --line-d:rgba(255,255,255,.12);
+  --gold:#eaca02; --gold-2:#c9a800; --champ:#b38b1d; --champ-ink:#86680c;
+  --steel:linear-gradient(135deg,#5b5f66 0%,#c9cbcf 30%,#f4f4f4 48%,#9ea2a8 70%,#40444a 100%);
+  --wrap:1320px; --ease:cubic-bezier(.2,.8,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--text);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:"Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:400;color:var(--ink);background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-button{font:inherit;cursor:pointer}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
-.num{font-family:"Barlow Condensed","Noto Sans SC",sans-serif;font-weight:500;letter-spacing:.01em}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-svg.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+button{font:inherit;cursor:pointer;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 40px}
+.num{font-family:"Barlow Condensed","Noto Sans SC",sans-serif;font-weight:400;letter-spacing:.01em}
+.it{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;letter-spacing:.01em}
+.serif{font-family:"Noto Serif SC",serif}
+:focus-visible{outline:2px solid var(--champ);outline-offset:3px}
+svg.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
-/* ---------- 顶栏 + 导航 ---------- */
-.topbar{background:#000;color:var(--muted-d);font-size:12.5px}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;gap:16px}
-.topbar .l,.topbar .r{display:flex;gap:22px;align-items:center}
-.topbar b{color:var(--gold);font-weight:500}
-.topbar a:hover{color:#fff}
-header{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-d);transition:background .3s}
-header.solid{background:rgba(11,11,12,.97)}
-.nav{display:flex;align-items:center;height:82px;gap:40px}
-.brand{display:flex;align-items:center;gap:12px;color:#fff}
-.brand img{width:46px;height:46px;border-radius:50%;background:#fff}
-.brand strong{display:block;font-size:20px;letter-spacing:.12em;font-weight:700;line-height:1.2}
-.brand small{display:block;font-size:10px;letter-spacing:.32em;color:var(--muted-d);font-weight:400}
-.menu{display:flex;gap:6px;margin-left:auto}
-.menu a{position:relative;color:#e9e9ec;font-size:15.5px;padding:10px 16px;transition:color .2s}
-.menu a::after{content:"";position:absolute;left:16px;right:16px;bottom:2px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .25s}
-.menu a:hover,.menu a.on{color:var(--gold)}
-.menu a:hover::after,.menu a.on::after{transform:scaleX(1)}
-.nav-cta{display:flex;align-items:center;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 28px;border-radius:var(--r);font-size:15px;font-weight:500;border:1px solid transparent;transition:all .25s;white-space:nowrap}
-.btn-gold{background:var(--gold);color:#111}
-.btn-gold:hover{background:#ffe033;transform:translateY(-1px);box-shadow:0 10px 30px rgba(234,202,2,.25)}
-.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.btn-line{border-color:var(--text);color:var(--text)}
-.btn-line:hover{background:var(--text);color:#fff}
-.lang{height:40px;padding:0 16px;border:1px solid rgba(255,255,255,.25);border-radius:40px;color:#fff;display:flex;align-items:center;gap:6px;font-size:13px}
-.lang:hover{border-color:var(--gold);color:var(--gold)}
-.burger{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.25);border-radius:var(--r);background:transparent;color:#fff;align-items:center;justify-content:center}
+/* ---------- Header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,box-shadow .4s,transform .4s}
+header.solid{background:rgba(245,243,238,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;height:88px;gap:36px;transition:height .4s}
+header.solid .nav{height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.brand strong{display:block;font-family:"Noto Serif SC",serif;font-size:19px;letter-spacing:.18em;font-weight:900;line-height:1.15}
+.brand small{display:block;font-size:9.5px;letter-spacing:.42em;color:var(--muted)}
+.menu{display:flex;gap:4px;margin:0 auto}
+.menu a{position:relative;font-size:15px;padding:10px 16px;color:var(--graphite);transition:color .25s}
+.menu a::after{content:"";position:absolute;left:50%;bottom:4px;width:4px;height:4px;border-radius:50%;background:var(--champ);transform:translateX(-50%) scale(0);transition:transform .3s var(--ease)}
+.menu a:hover,.menu a.on{color:var(--ink)}
+.menu a.on::after,.menu a:hover::after{transform:translateX(-50%) scale(1)}
+.nav-r{display:flex;align-items:center;gap:18px}
+.stock{font-size:12px;color:var(--muted);letter-spacing:.08em;white-space:nowrap}
+.stock b{font-family:"Barlow Condensed",sans-serif;font-size:17px;font-weight:500;color:var(--ink);margin-left:4px;letter-spacing:.06em}
+.pill{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 26px;border-radius:48px;font-size:14.5px;font-weight:500;white-space:nowrap;transition:all .35s var(--ease);border:1px solid transparent}
+.pill-ink{background:var(--ink);color:#fff}
+.pill-ink:hover{background:var(--champ);transform:translateY(-1px);box-shadow:0 14px 30px -14px rgba(179,139,29,.8)}
+.pill-line{border-color:var(--ink);color:var(--ink)}
+.pill-line:hover{background:var(--ink);color:#fff}
+.pill-gold{background:var(--gold);color:var(--ink)}
+.pill-gold:hover{background:#fff;transform:translateY(-1px)}
+.pill svg{width:16px;height:16px;transition:transform .3s}
+.pill:hover svg{transform:translateX(3px)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:transparent;align-items:center;justify-content:center}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;height:calc(100vh - 118px);min-height:700px;max-height:920px;background:var(--ink);color:#fff;overflow:hidden}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
-.slide.on{opacity:1}
-.slide .bg{position:absolute;top:0;bottom:0;right:0;width:min(62%,1100px);background-size:cover;background-position:center;transform:scale(1.06);transition:transform 8s ease;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%)}
-.slide.on .bg{transform:scale(1)}
-.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,1) 0%,rgba(11,11,12,.55) 45%,rgba(11,11,12,0) 70%),linear-gradient(0deg,rgba(11,11,12,.85),transparent 35%)}
-.hero{background:radial-gradient(900px 600px at 78% 45%,#1c1a14,var(--ink) 70%)}
-.hero-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding-top:40px;padding-bottom:150px}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
-.eyebrow::before{content:"";width:40px;height:1px;background:var(--gold)}
-.hero h1{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(38px,5.4vw,76px);line-height:1.18;margin:22px 0 22px;letter-spacing:.04em;max-width:820px}
-.hero h1 em{font-style:normal;background:linear-gradient(100deg,#fff6b8,var(--gold) 45%,#b89400);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{font-size:clamp(15px,1.25vw,18px);color:#d4d4d8;max-width:620px;font-weight:300}
-.hero .ctas{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
-.hero-copy{transition:opacity .8s,transform .8s}
-.hero-copy.out{opacity:0;transform:translateY(16px)}
-.dots{position:absolute;z-index:3;right:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px}
-.dots button{width:44px;height:44px;background:none;border:0;display:flex;align-items:center;justify-content:flex-end;color:rgba(255,255,255,.5);font-size:13px}
-.dots button span{display:inline-block;width:22px;height:1px;background:currentColor;margin-left:10px;transition:width .3s}
-.dots button.on{color:var(--gold)}
-.dots button.on span{width:44px}
-.hero-stats{position:absolute;z-index:3;left:0;right:0;bottom:0;border-top:1px solid var(--line-d);background:rgba(0,0,0,.45);backdrop-filter:blur(8px)}
-.hero-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.hs{padding:26px 0 24px 28px;border-left:1px solid var(--line-d)}
-.hs:first-child{border-left:0;padding-left:0}
-.hs b{display:block;font-size:44px;line-height:1;color:#fff}
-.hs b sup{font-size:18px;color:var(--gold);margin-left:4px;vertical-align:top;position:relative;top:4px}
-.hs>span{display:block;margin-top:8px;font-size:13.5px;color:var(--muted-d)}
-.scroll-cue{position:absolute;z-index:3;left:50%;bottom:132px;transform:translateX(-50%);font-size:11px;letter-spacing:.35em;color:rgba(255,255,255,.55);display:flex;flex-direction:column;align-items:center;gap:10px}
-.scroll-cue i{width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:drip 2s infinite}
-@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.hero{position:relative;min-height:100vh;padding:128px 0 48px;overflow:hidden;background:
+  radial-gradient(900px 500px at 12% 18%,rgba(234,202,2,.07),transparent 60%),var(--paper)}
+.hero .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:stretch;min-height:calc(100vh - 176px)}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:20px 0;position:relative;z-index:2}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:20px;color:var(--champ-ink)}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--champ)}
+.hero h1{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(42px,5.1vw,82px);line-height:1.16;letter-spacing:.02em;margin:26px 0 28px}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,#7a5c06,#c99d1f 40%,#e8c766 52%,#b38b1d 64%,#7a5c06);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:16.5px;color:var(--graphite);max-width:480px;font-weight:300}
+.hero .ctas{display:flex;gap:14px;align-items:center;margin-top:40px;flex-wrap:wrap}
+.tlink{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;padding:12px 4px;border-bottom:1px solid var(--ink);transition:gap .3s,color .3s,border-color .3s}
+.tlink:hover{gap:14px;color:var(--champ-ink);border-color:var(--champ)}
+.tlink svg{width:16px;height:16px}
+.hero-meta{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:auto;padding-top:48px}
+.hero-meta div{padding:0 32px;border-left:1px solid var(--line)}
+.hero-meta div:first-child{padding-left:0;border-left:0}
+.hero-meta b{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:400;font-size:40px;line-height:1;color:var(--ink)}
+.hero-meta b sup{font-size:.45em;color:var(--champ);margin-left:3px;vertical-align:top;position:relative;top:4px}
+.hero-meta span{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+.window{position:relative;border-radius:4px;overflow:hidden;background:var(--ink);min-height:560px;box-shadow:0 60px 120px -60px rgba(14,15,17,.55)}
+.window .sl{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.window .sl.on{opacity:1}
+.window .sl i{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.1);transition:transform 9s linear}
+.window .sl.on i{transform:scale(1)}
+.window::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,15,17,.75),transparent 40%);pointer-events:none}
+.win-cap{position:absolute;left:32px;right:32px;bottom:30px;z-index:2;color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.win-cap .t{font-size:13px;letter-spacing:.2em;color:rgba(255,255,255,.7)}
+.win-cap .t b{display:block;font-family:"Noto Serif SC",serif;font-size:22px;letter-spacing:.06em;color:#fff;font-weight:700;margin-top:6px}
+.prog{display:flex;gap:10px}
+.prog button{width:56px;height:30px;background:none;border:0;padding:0;position:relative;color:rgba(255,255,255,.55);font-family:"Barlow Condensed",sans-serif;font-size:13px;text-align:left}
+.prog button::before{content:"";position:absolute;left:0;right:0;bottom:4px;height:2px;background:rgba(255,255,255,.25)}
+.prog button::after{content:"";position:absolute;left:0;bottom:4px;height:2px;width:0;background:var(--gold)}
+.prog button.on{color:#fff}
+.prog button.on::after{animation:fill 6.5s linear forwards}
+@keyframes fill{to{width:100%}}
+.win-tag{position:absolute;right:24px;top:24px;z-index:2;font-size:11px;letter-spacing:.3em;color:rgba(255,255,255,.75);writing-mode:vertical-rl}
+.ghost{position:absolute;left:-1vw;bottom:-7.5vw;font-family:"Barlow Condensed",sans-serif;font-weight:500;font-size:19vw;line-height:1;letter-spacing:-.01em;color:transparent;-webkit-text-stroke:1px rgba(14,15,17,.06);white-space:nowrap;pointer-events:none;user-select:none;z-index:0}
 
-/* ---------- 通用版块 ---------- */
-section{position:relative}
-.sec{padding:120px 0}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
-.sec-head .en{font-family:"Barlow Condensed",sans-serif;font-size:15px;letter-spacing:.4em;color:var(--gold-2);text-transform:uppercase}
-.sec-head h2{font-family:"Noto Serif SC",serif;font-size:clamp(30px,3.2vw,46px);line-height:1.25;font-weight:900;margin-top:10px;letter-spacing:.03em}
-.sec-head p{max-width:520px;color:var(--muted);font-size:15.5px}
-.dark{background:var(--ink);color:#fff}
-.dark .sec-head p{color:var(--muted-d)}
-.dark .sec-head .en{color:var(--gold)}
-.more{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:500;color:var(--text);transition:gap .25s,color .25s}
-.more:hover{gap:14px;color:var(--gold-2)}
-.dark .more{color:#fff}.dark .more:hover{color:var(--gold)}
+/* ---------- Marquee ---------- */
+.marq{background:var(--ink);color:#e8e6e1;overflow:hidden;border-top:1px solid var(--ink)}
+.marq-track{display:flex;width:max-content;animation:marq 42s linear infinite}
+.marq:hover .marq-track{animation-play-state:paused}
+.marq span{display:flex;align-items:center;gap:30px;padding:22px 30px;font-size:15px;letter-spacing:.12em;white-space:nowrap}
+.marq span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+@keyframes marq{to{transform:translateX(-50%)}}
 
-/* ---------- 产品中心 ---------- */
-.cats{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:40px;overflow-x:auto;scrollbar-width:none}
-.cats::-webkit-scrollbar{display:none}
-.cats button{background:none;border:0;padding:16px 26px;font-size:16px;color:var(--muted);position:relative;white-space:nowrap;min-height:44px}
-.cats button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .25s}
-.cats button.on{color:var(--text);font-weight:700}
-.cats button.on::after{transform:scaleX(1)}
-.cats button:hover{color:var(--text)}
-.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.pcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s,border-color .35s}
-.pcard:hover{transform:translateY(-6px);box-shadow:0 24px 50px -20px rgba(0,0,0,.25);border-color:transparent}
-.pimg{aspect-ratio:1/1;background:#141416;overflow:hidden;position:relative}
-.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.pcard:hover .pimg img{transform:scale(1.06)}
-.ptag{position:absolute;left:14px;top:14px;background:rgba(11,11,12,.85);color:var(--gold);font-size:12px;padding:4px 10px;border-radius:2px;letter-spacing:.05em}
-.pbody{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
-.pbody h3{font-size:17px;font-weight:700;line-height:1.45}
-.spec{margin:14px 0 18px;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px}
-.spec dt{color:var(--muted)}
-.spec dd{color:var(--text);font-weight:500}
-.pbody .more{margin-top:auto;font-size:14px}
-.pcard.hide{display:none}
+/* ---------- 通用 ---------- */
+.sec{padding:140px 0;position:relative}
+.sh{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:72px}
+.idx{display:flex;align-items:center;gap:14px;font-size:13px;letter-spacing:.24em;color:var(--muted);text-transform:uppercase;margin-bottom:22px}
+.idx b{font-family:"Barlow Condensed",sans-serif;font-weight:500;font-size:15px;color:var(--champ-ink);letter-spacing:.1em}
+.idx::after{content:"";width:60px;height:1px;background:var(--line)}
+.sh h2{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(32px,3.5vw,54px);line-height:1.22;letter-spacing:.02em}
+.sh h2 em{font-style:normal;color:var(--champ)}
+.sh p{color:var(--muted);font-size:16px;max-width:520px;justify-self:end}
+.dk{background:var(--ink);color:#f2f0eb}
+.dk .idx{color:var(--muted-d)}.dk .idx::after{background:var(--line-d)}.dk .idx b{color:var(--gold)}
+.dk .sh p{color:var(--muted-d)}.dk .sh h2 em{color:var(--gold)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
-/* ---------- 科研创新 ---------- */
-.rd{background:radial-gradient(1200px 600px at 85% 10%,rgba(234,202,2,.09),transparent 60%),var(--ink);color:#fff;overflow:hidden}
-.rd::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 1px,transparent 1px 22px);mask-image:linear-gradient(90deg,transparent,#000 60%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%);pointer-events:none}
-.rd-top{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center;position:relative}
-.micro{position:relative;border:1px solid var(--line-d);border-radius:6px;padding:40px 36px 34px;background:linear-gradient(160deg,rgba(11,11,12,.72),rgba(11,11,12,.92) 60%),url('rd-sem.webp') center/cover;overflow:hidden}
-.micro .sem-tag{position:absolute;right:16px;top:14px;font-size:11px;letter-spacing:.15em;color:rgba(255,255,255,.45)}
-.micro-label{font-size:13px;color:var(--muted-d);letter-spacing:.15em}
-.micro-big{display:flex;align-items:baseline;gap:8px;margin:8px 0 6px}
-.micro-big b{font-size:clamp(96px,11vw,150px);line-height:.9;background:var(--steel);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
-.micro-big span{font-size:40px;color:var(--gold);font-family:"Barlow Condensed",sans-serif}
-.micro p{color:#cfcfd4;font-size:15px}
-.compare{margin-top:30px;display:grid;gap:16px}
-.cmp{display:grid;grid-template-columns:118px 1fr 70px;align-items:center;gap:14px;font-size:13px;color:var(--muted-d)}
-.cmp .bar{height:10px;border-radius:10px;background:rgba(255,255,255,.08);overflow:hidden}
-.cmp .bar i{display:block;height:100%;border-radius:10px;background:linear-gradient(90deg,#8b8f96,#e7e8ea);width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
-.cmp.me .bar i{background:linear-gradient(90deg,var(--gold-2),#fff3a0)}
-.cmp.me{color:#fff}
-.cmp em{font-style:normal;text-align:right;font-family:"Barlow Condensed",sans-serif;font-size:16px}
-.cmp-note{font-size:12px;color:#77777e;margin-top:6px}
-.rd-copy h3{font-family:"Noto Serif SC",serif;font-size:clamp(26px,2.6vw,38px);line-height:1.35;font-weight:900}
-.rd-copy h3 em{font-style:normal;color:var(--gold)}
-.rd-copy>p{margin:20px 0 34px;color:#c4c4ca;font-size:15.5px}
-.caps{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-d);border:1px solid var(--line-d)}
-.cap{background:var(--ink-2);padding:24px 22px;transition:background .3s}
-.cap:hover{background:var(--ink-3)}
-.cap svg.i{width:28px;height:28px;color:var(--gold)}
-.cap h4{margin:14px 0 6px;font-size:16px;font-weight:700}
-.cap p{font-size:13.5px;color:var(--muted-d);line-height:1.65}
-.honors{margin-top:90px;position:relative}
-.honors-h{display:flex;align-items:center;gap:16px;margin-bottom:28px;font-size:14px;letter-spacing:.2em;color:var(--muted-d)}
-.honors-h::after{content:"";flex:1;height:1px;background:var(--line-d)}
-.hgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.honor{position:relative;padding:30px 26px;border:1px solid rgba(234,202,2,.25);border-radius:6px;background:linear-gradient(180deg,rgba(234,202,2,.07),rgba(234,202,2,0) 70%);overflow:hidden;transition:transform .3s,border-color .3s}
-.honor:hover{transform:translateY(-4px);border-color:var(--gold)}
-.honor::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;border:1px solid rgba(234,202,2,.18)}
-.honor svg.i{width:34px;height:34px;color:var(--gold)}
-.honor h4{margin-top:18px;font-size:17px;line-height:1.45;font-weight:700}
-.honor p{margin-top:6px;font-size:13px;color:var(--muted-d)}
-.honor .yr{position:absolute;right:20px;bottom:16px;font-size:13px;color:var(--gold)}
+/* ---------- 科研 ---------- */
+.lab{background:var(--white)}
+.lab-top{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.micron .big{display:flex;align-items:flex-start;line-height:.8}
+.micron .big b{font-family:"Barlow Condensed",sans-serif;font-weight:300;font-size:clamp(180px,22vw,320px);background:var(--steel);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em}
+.micron .big span{font-family:"Barlow Condensed",sans-serif;font-size:clamp(40px,4vw,64px);color:var(--champ);margin:.25em 0 0 .1em;font-weight:400}
+.micron h3{font-family:"Noto Serif SC",serif;font-size:clamp(24px,2.2vw,32px);font-weight:700;margin:26px 0 12px;line-height:1.4}
+.micron p{color:var(--muted);max-width:460px}
+.scale{position:relative;background:var(--paper);border-radius:4px;padding:40px;aspect-ratio:1/0.86}
+.scale svg{width:100%;height:100%;overflow:visible}
+.scale .c-hair{fill:none;stroke:#8e8a82;stroke-width:1;stroke-dasharray:880;stroke-dashoffset:880;transition:stroke-dashoffset 2.2s var(--ease)}
+.scale .c-wool{fill:none;stroke:#b5b0a6;stroke-width:1;stroke-dasharray:4 5}
+.scale .c-ql{fill:var(--gold);transform-origin:center;transform-box:fill-box;transform:scale(0);transition:transform .8s var(--ease) 1.6s}
+.scale.in .c-hair{stroke-dashoffset:0}
+.scale.in .c-ql{transform:scale(1)}
+.scale .pulse{fill:none;stroke:var(--gold);opacity:0}
+.scale.in .pulse{animation:pulse 2.4s ease-out 2.2s infinite}
+@keyframes pulse{0%{opacity:.9;r:4}100%{opacity:0;r:40}}
+.scale text{font-family:"Noto Sans SC",sans-serif;font-size:12px;fill:var(--muted)}
+.scale text.b{fill:var(--ink);font-weight:700;font-size:13px}
+.scale .note{position:absolute;left:40px;bottom:22px;font-size:11.5px;color:var(--muted)}
+.lab-mid{display:grid;grid-template-columns:5fr 7fr;gap:80px;margin-top:130px;align-items:start}
+.sem{position:sticky;top:110px;border-radius:4px;overflow:hidden;aspect-ratio:4/5;background:#111 url('rd-sem.webp') center/cover}
+.sem::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,15,17,.8),transparent 50%)}
+.sem figcaption{position:absolute;left:28px;right:28px;bottom:26px;z-index:2;color:#fff}
+.sem figcaption small{font-size:11px;letter-spacing:.3em;color:rgba(255,255,255,.6)}
+.sem figcaption b{display:block;font-family:"Noto Serif SC",serif;font-size:21px;margin-top:6px;font-weight:700}
+.caps-h{font-family:"Noto Serif SC",serif;font-size:clamp(24px,2.3vw,34px);font-weight:900;line-height:1.4;margin-bottom:14px}
+.caps-p{color:var(--muted);margin-bottom:40px}
+.caps-p b{color:var(--ink);font-weight:500}
+.cap{display:grid;grid-template-columns:64px 1fr 40px;gap:20px;align-items:start;padding:30px 0;border-top:1px solid var(--line);transition:padding .4s var(--ease)}
+.cap:last-child{border-bottom:1px solid var(--line)}
+.cap .n{font-family:"Barlow Condensed",sans-serif;font-size:15px;color:var(--champ-ink);padding-top:6px;letter-spacing:.1em}
+.cap h4{font-size:20px;font-weight:500;letter-spacing:.02em}
+.cap p{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:520px}
+.cap svg{width:22px;height:22px;color:var(--champ);margin-top:6px;transition:transform .4s var(--ease)}
+.cap:hover{padding-left:12px}
+.cap:hover svg{transform:rotate(-45deg)}
+.honors{margin-top:120px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hon{padding:40px 32px 36px;border-left:1px solid var(--line);position:relative;transition:background .4s}
+.hon:first-child{border-left:0}
+.hon:hover{background:var(--paper)}
+.seal{width:64px;height:64px;border-radius:50%;border:1px solid var(--champ);display:grid;place-items:center;color:var(--champ);position:relative}
+.seal::after{content:"";position:absolute;inset:5px;border-radius:50%;border:1px dashed rgba(179,139,29,.5)}
+.seal svg{width:26px;height:26px}
+.hon h4{margin-top:26px;font-family:"Noto Serif SC",serif;font-size:19px;line-height:1.45;font-weight:700}
+.hon p{font-size:13px;color:var(--muted);margin-top:6px}
+.hon .yr{position:absolute;right:26px;top:36px;font-family:"Barlow Condensed",sans-serif;color:var(--champ-ink);font-size:15px}
 
-/* ---------- 全产业链 ---------- */
-.chain{background:var(--paper-2)}
-.flow{display:grid;grid-template-columns:repeat(5,1fr);position:relative;counter-reset:s}
-.flow::before{content:"";position:absolute;top:43px;left:10%;right:10%;height:1px;background:repeating-linear-gradient(90deg,var(--gold-2) 0 6px,transparent 6px 12px)}
-.step{text-align:center;padding:0 12px;position:relative}
-.step .c{width:86px;height:86px;margin:0 auto;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;position:relative;transition:all .3s}
-.step:hover .c{background:var(--ink);border-color:var(--ink);color:var(--gold)}
-.step .c svg.i{width:32px;height:32px}
-.step .c::after{counter-increment:s;content:"0" counter(s);position:absolute;top:-6px;right:-6px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:#111;font:600 13px/28px "Barlow Condensed",sans-serif}
-.step h4{margin-top:22px;font-size:17px}
-.step p{margin-top:6px;font-size:13.5px;color:var(--muted)}
+/* ---------- 产业链 横向滚动 ---------- */
+.chain{background:var(--ink);color:#f2f0eb;position:relative}
+.chain-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.chain-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:46px}
+.chain-head h2{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(30px,3.3vw,50px);line-height:1.25}
+.chain-head h2 em{font-style:normal;color:var(--gold)}
+.chain-head p{color:var(--muted-d);max-width:380px;font-size:15px}
+.track{display:flex;gap:28px;padding-left:max(40px,calc((100vw - var(--wrap))/2 + 40px));will-change:transform}
+.step{flex:none;width:min(440px,76vw);position:relative}
+.step .im{aspect-ratio:4/4.4;border-radius:4px;overflow:hidden;background:#000}
+.step .im i{display:block;width:100%;height:100%;background-size:cover;background-position:center;transition:transform 1.2s var(--ease)}
+.step:hover .im i{transform:scale(1.06)}
+.step .row{display:flex;gap:18px;align-items:baseline;margin-top:24px}
+.step .row b{font-family:"Barlow Condensed",sans-serif;font-weight:300;font-size:56px;line-height:1;color:var(--gold)}
+.step h4{font-family:"Noto Serif SC",serif;font-size:24px;font-weight:700}
+.step p{color:var(--muted-d);font-size:14.5px;margin-top:8px;max-width:380px}
+.step.end{width:min(380px,70vw);display:flex;flex-direction:column;justify-content:center;padding:40px;border:1px solid var(--line-d);border-radius:4px}
+.step.end h4{font-size:30px;line-height:1.4}
+.step.end p{margin:16px 0 28px}
+.chain-bar{position:absolute;left:max(40px,calc((100vw - var(--wrap))/2 + 40px));right:max(40px,calc((100vw - var(--wrap))/2 + 40px));bottom:6vh;height:1px;background:var(--line-d)}
+.chain-bar i{display:block;height:100%;width:0;background:var(--gold)}
 
-/* ---------- 应用领域 ---------- */
-.apps{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:280px 280px;gap:16px}
-.app{position:relative;overflow:hidden;border-radius:var(--r);color:#fff;background:#222}
-.app:nth-child(1){grid-column:span 2;grid-row:span 2}
-.app:nth-child(4){grid-column:span 2}
-.app .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s}
-.app:hover .bg{transform:scale(1.07)}
-.app::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.15) 60%,rgba(0,0,0,.05));transition:background .4s}
-.app:hover::after{background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.45) 100%)}
-.app-in{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:28px}
-.app-in .n{font-family:"Barlow Condensed",sans-serif;color:var(--gold);font-size:15px;letter-spacing:.2em}
-.app-in h3{font-size:22px;margin-top:4px}
-.app:nth-child(1) .app-in h3{font-size:30px}
-.app-in p{font-size:14px;color:#d6d6da;max-height:0;opacity:0;overflow:hidden;transition:all .4s}
-.app:hover .app-in p,.app:focus-within .app-in p{max-height:80px;opacity:1;margin-top:8px}
-.app:nth-child(1) .app-in p{max-height:80px;opacity:1;margin-top:8px}
+/* ---------- 产品 bento ---------- */
+.prod{background:var(--paper)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.chips button{height:42px;padding:0 20px;border-radius:42px;border:1px solid var(--line);background:transparent;font-size:14px;color:var(--graphite);transition:all .3s}
+.chips button:hover{border-color:var(--ink);color:var(--ink)}
+.chips button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:300px;gap:16px}
+.tile{position:relative;border-radius:4px;overflow:hidden;background:#141416;color:#fff;transition:opacity .4s,filter .4s}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.tile:hover img{transform:scale(1.05)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,12,.88) 0%,rgba(10,10,12,.2) 45%,transparent 70%)}
+.tile .tx{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+.tile .cat{font-size:11.5px;letter-spacing:.22em;color:var(--gold)}
+.tile h3{font-size:18px;font-weight:500;margin-top:6px;line-height:1.4}
+.tile.big h3{font-family:"Noto Serif SC",serif;font-size:32px;font-weight:700}
+.tile .sp{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .4s}
+.tile.big .sp,.tile:hover .sp,.tile:focus-within .sp{max-height:80px;opacity:1}
+.tile .sp span{font-size:12px;padding:4px 10px;border:1px solid rgba(255,255,255,.25);border-radius:30px;color:#e7e5df}
+.tile .go{position:absolute;right:20px;top:20px;z-index:2;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);display:grid;place-items:center;transform:scale(.6);opacity:0;transition:all .4s var(--ease)}
+.tile:hover .go{transform:none;opacity:1}
+.tile .go svg{width:16px;height:16px;transform:rotate(-45deg)}
+.tile.dim{opacity:.18;filter:grayscale(1)}
+.tile.cta{background:var(--champ);display:flex;flex-direction:column;justify-content:space-between;padding:28px;color:#fff}
+.tile.cta::after{display:none}
+.tile.cta b{font-family:"Noto Serif SC",serif;font-size:24px;line-height:1.4;font-weight:700}
+.tile.cta span{display:flex;justify-content:space-between;align-items:center;font-size:14px}
+.tile.cta:hover{background:var(--ink)}
+
+/* ---------- 应用 展开条 ---------- */
+.apps{background:var(--white)}
+.acc{display:flex;gap:12px;height:600px}
+.pan{position:relative;flex:1;min-width:0;border-radius:4px;overflow:hidden;background:#111;color:#fff;transition:flex .8s var(--ease);cursor:pointer;outline:none}
+.pan.on{flex:4.2}
+.pan i.bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.2s var(--ease),filter .8s}
+.pan:not(.on) i.bg{filter:grayscale(.6) brightness(.6)}
+.pan::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,12,.9),rgba(10,10,12,.05) 55%)}
+.pan .vt{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);z-index:2;writing-mode:vertical-rl;font-size:17px;letter-spacing:.2em;white-space:nowrap;transition:opacity .4s}
+.pan .vt b{font-family:"Barlow Condensed",sans-serif;font-weight:400;color:var(--gold);margin-bottom:14px;letter-spacing:.1em}
+.pan.on .vt{opacity:0}
+.pan .full{position:absolute;left:40px;right:40px;bottom:38px;z-index:2;opacity:0;transform:translateY(20px);transition:opacity .5s,transform .6s var(--ease)}
+.pan.on .full{opacity:1;transform:none;transition-delay:.3s}
+.pan .full .n{font-family:"Barlow Condensed",sans-serif;color:var(--gold);font-size:16px;letter-spacing:.14em}
+.pan .full h3{font-family:"Noto Serif SC",serif;font-size:36px;font-weight:700;margin:6px 0 10px}
+.pan .full p{color:#d8d6d0;max-width:440px;font-size:15px}
 
 /* ---------- 关于 ---------- */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-img{position:relative}
-.about-img .main{aspect-ratio:16/9.5;border-radius:var(--r);background-size:cover;background-position:center}
-.about-img .badge{position:absolute;right:-28px;bottom:-34px;background:var(--ink);color:#fff;padding:28px 30px;border-radius:var(--r);border-top:3px solid var(--gold);box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
-.about-img .badge b{font-size:56px;line-height:1;display:block}
-.about-img .badge b sup{font-size:22px;color:var(--gold)}
-.about-img .badge span{font-size:13px;color:var(--muted-d)}
-.about-img .frame{position:absolute;left:-18px;top:-18px;width:120px;height:120px;border-left:3px solid var(--gold);border-top:3px solid var(--gold)}
-.about-copy p{color:#45454b;font-size:15.5px;margin-bottom:16px}
-.ticks{margin:26px 0 36px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.ticks li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-size:14.5px}
-.ticks svg.i{color:var(--gold-2);margin-top:3px;width:18px;height:18px}
+.about{background:var(--paper);padding-top:0}
+.band{position:relative;height:min(64vh,540px);overflow:hidden}
+.band i{position:absolute;inset:-12% 0;background:url('building.webp') center 62%/cover;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(245,243,238,1) 0%,rgba(245,243,238,0) 30%),linear-gradient(90deg,rgba(14,15,17,.45),transparent 50%)}
+.band .tag{position:absolute;left:max(40px,calc((100vw - var(--wrap))/2 + 40px));top:120px;z-index:2;color:#fff}
+.band .tag small{display:block;font-size:12px;letter-spacing:.3em;opacity:.85}
+.band .tag b{display:block;font-family:"Noto Serif SC",serif;font-size:clamp(24px,2.6vw,38px);font-weight:900;margin-top:10px;line-height:1.35;text-shadow:0 2px 20px rgba(0,0,0,.35)}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:90px;margin-top:-40px;position:relative;z-index:2}
+.about-g h2{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(30px,3.2vw,48px);line-height:1.3}
+.about-g .txt p{color:var(--graphite);margin-top:22px}
+.about-g .txt .pill{margin-top:36px}
+.stats{display:grid;grid-template-columns:1fr 1fr;align-self:end;border-top:1px solid var(--line)}
+.stats div{padding:30px 0 28px;border-bottom:1px solid var(--line)}
+.stats div:nth-child(odd){padding-right:24px;border-right:1px solid var(--line)}
+.stats div:nth-child(even){padding-left:32px}
+.stats b{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:300;font-size:64px;line-height:1}
+.stats b sup{font-size:.36em;color:var(--champ);margin-left:4px;vertical-align:top;position:relative;top:8px;font-weight:400}
+.stats span{font-size:13px;color:var(--muted)}
 
 /* ---------- FAQ ---------- */
-.faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
-.faq-side .tip{margin-top:30px;padding:22px;border:1px dashed var(--line);border-radius:var(--r);font-size:13.5px;color:var(--muted);background:#fff}
-.faq-side .tip b{color:var(--text)}
-.qa{border-bottom:1px solid var(--line)}
-.qa button{width:100%;background:none;border:0;text-align:left;padding:24px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:17px;font-weight:500;color:var(--text);min-height:44px}
-.qa button .pm{width:34px;height:34px;flex:none;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:all .3s}
-.qa.open button .pm{background:var(--gold);border-color:var(--gold);transform:rotate(45deg)}
-.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.faq{background:var(--white)}
+.faq-g{display:grid;grid-template-columns:4fr 8fr;gap:90px}
+.faq-g aside p{color:var(--muted);margin-top:18px}
+.geo{margin-top:34px;padding:22px 24px;border-left:2px solid var(--champ);background:var(--paper);font-size:13.5px;color:var(--muted)}
+.geo b{color:var(--ink);font-weight:500}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa button{width:100%;background:none;border:0;text-align:left;padding:30px 0;display:grid;grid-template-columns:56px 1fr 40px;gap:10px;align-items:center;font-size:18px;font-weight:500;min-height:44px}
+.qa button .n{font-family:"Barlow Condensed",sans-serif;color:var(--champ-ink);font-size:15px;font-weight:400}
+.qa .pm{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:all .4s var(--ease)}
+.qa .pm svg{width:14px;height:14px}
+.qa.open .pm{background:var(--ink);border-color:var(--ink);color:#fff;transform:rotate(45deg)}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
 .qa.open .ans{grid-template-rows:1fr}
-.qa .ans>div{overflow:hidden;color:var(--muted);font-size:15px}
-.qa .ans>div p{padding:0 50px 24px 0}
+.qa .ans>div{overflow:hidden}
+.qa .ans p{padding:0 56px 30px 66px;color:var(--muted);font-size:15.5px}
 
 /* ---------- 新闻 ---------- */
-.news{display:grid;grid-template-columns:1.25fr 1fr;gap:28px}
-.nfeat{position:relative;border-radius:var(--r);overflow:hidden;min-height:440px;color:#fff;display:flex;align-items:flex-end}
-.nfeat .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s}
-.nfeat:hover .bg{transform:scale(1.05)}
-.nfeat::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.05) 70%)}
-.nfeat .in{position:relative;z-index:2;padding:36px}
-.date{font-family:"Barlow Condensed",sans-serif;font-size:15px;color:var(--gold-2);letter-spacing:.08em}
-.nfeat .date{color:var(--gold)}
-.nfeat h3{font-size:24px;line-height:1.45;margin:10px 0 10px}
-.nfeat p{color:#d0d0d5;font-size:14.5px}
-.nlist{display:flex;flex-direction:column}
-.nitem{display:grid;grid-template-columns:120px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line);align-items:center}
-.nitem:first-child{padding-top:0}
-.nitem .th{aspect-ratio:1/1;border-radius:var(--r);background-size:cover;background-position:center}
-.nitem h4{font-size:16.5px;line-height:1.5;margin:4px 0 6px;transition:color .25s}
-.nitem:hover h4{color:var(--gold-2)}
-.nitem p{font-size:13.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.news{background:var(--paper)}
+.nlist{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.nc{display:flex;flex-direction:column;border-top:1px solid var(--ink);padding-top:24px}
+.nc .dt{display:flex;justify-content:space-between;align-items:baseline}
+.nc .dt b{font-family:"Barlow Condensed",sans-serif;font-weight:300;font-size:46px;line-height:1}
+.nc .dt span{font-size:12px;letter-spacing:.16em;color:var(--muted)}
+.nc .ph{aspect-ratio:16/10;border-radius:4px;overflow:hidden;margin:22px 0;background:#111}
+.nc .ph i{display:block;width:100%;height:100%;background-size:cover;background-position:center;transition:transform 1s var(--ease)}
+.nc:hover .ph i{transform:scale(1.05)}
+.nc h3{font-size:18.5px;font-weight:500;line-height:1.55;transition:color .3s}
+.nc:hover h3{color:var(--champ-ink)}
+.nc p{font-size:14px;color:var(--muted);margin-top:10px}
 
-/* ---------- 询盘 ---------- */
-.inq{background:linear-gradient(100deg,rgba(11,11,12,.96),rgba(11,11,12,.82)),url("inq-yarn.webp") center/cover;color:#fff}
-.inq .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
-.inq h2{font-family:"Noto Serif SC",serif;font-size:clamp(28px,3vw,42px);line-height:1.35}
-.inq h2 em{font-style:normal;color:var(--gold)}
-.inq .lead{margin:18px 0 30px;color:#c8c8ce}
-.contact-l{display:grid;gap:16px}
-.contact-l div{display:flex;gap:14px;align-items:center;font-size:15px}
-.contact-l .ic{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-d);display:grid;place-items:center;color:var(--gold)}
-.contact-l small{display:block;color:var(--muted-d);font-size:12px}
-form.card{background:#fff;color:var(--text);padding:36px;border-radius:6px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
-form.card h3{grid-column:1/-1;font-size:20px}
-form.card label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted)}
-form.card label.full{grid-column:1/-1}
-form.card input,form.card select,form.card textarea{font:inherit;font-size:15px;color:var(--text);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;background:var(--paper-2);transition:border-color .2s,background .2s;min-height:46px}
-form.card input:focus,form.card select:focus,form.card textarea:focus{outline:none;border-color:var(--gold-2);background:#fff}
-form.card textarea{min-height:96px;resize:vertical}
-form.card .btn{grid-column:1/-1;justify-content:center;height:52px;font-size:16px}
-form.card .ok{grid-column:1/-1;font-size:14px;color:#1e7d4f;display:none}
+/* ---------- CTA + 询盘 ---------- */
+.cta{background:var(--ink);color:#f2f0eb;overflow:hidden}
+.cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.cta h2{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(36px,4.2vw,64px);line-height:1.22}
+.cta h2 em{font-style:normal;color:var(--gold)}
+.cta .lead{color:var(--muted-d);margin:24px 0 40px;max-width:460px}
+.ct{display:grid;gap:22px}
+.ct div{display:grid;grid-template-columns:120px 1fr;border-top:1px solid var(--line-d);padding-top:16px;font-size:15.5px}
+.ct small{color:var(--muted-d);font-size:12.5px;letter-spacing:.1em}
+.ct .num{font-size:24px;letter-spacing:.04em}
+form.card{background:var(--paper);color:var(--ink);border-radius:4px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}
+form.card h3{grid-column:1/-1;font-family:"Noto Serif SC",serif;font-size:24px;font-weight:700}
+form.card label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+form.card .full{grid-column:1/-1}
+form.card input,form.card select,form.card textarea{font:inherit;font-size:15.5px;color:var(--ink);border:0;border-bottom:1px solid var(--line);background:transparent;padding:10px 0;min-height:44px;border-radius:0;transition:border-color .3s}
+form.card input:focus,form.card select:focus,form.card textarea:focus{outline:none;border-color:var(--ink)}
+form.card textarea{min-height:90px;resize:vertical}
+form.card .pill{grid-column:1/-1;justify-content:center;height:56px;font-size:16px;margin-top:6px}
+form.card .ok{grid-column:1/-1;font-size:14px;color:#2b7a4b;display:none}
 
-/* ---------- 页脚 ---------- */
-footer{background:#000;color:var(--muted-d);font-size:14px}
-.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:40px;padding:80px 0 56px}
-.ft h5{color:#fff;font-size:15px;margin-bottom:18px;font-weight:500}
-.ft ul{list-style:none;display:grid;gap:10px}
+/* ---------- Footer ---------- */
+footer{background:var(--ink-2);color:var(--muted-d);font-size:14px}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding:90px 0 60px;border-bottom:1px solid var(--line-d)}
+.ft .brand strong{color:#fff}.ft .brand small{color:var(--muted-d)}.ft .brand img{box-shadow:none}
+.ft p{margin-top:22px;max-width:320px;line-height:1.8}
+.ft h5{color:#fff;font-size:14px;font-weight:500;margin-bottom:20px;letter-spacing:.1em}
+.ft ul{list-style:none;display:grid;gap:12px}
 .ft a:hover{color:var(--gold)}
-.ft .brand{margin-bottom:20px}
-.qr{display:flex;gap:14px}
-.qr div{text-align:center;font-size:12px}
-.qr i{display:grid;place-items:center;width:76px;height:76px;margin-bottom:6px;border-radius:4px;border:1px dashed rgba(255,255,255,.25);color:var(--gold)}.qr i svg{width:26px;height:26px}
-.fb{border-top:1px solid var(--line-d);padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
+.fb{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:24px 0;font-size:12.5px}
+.huge{font-family:"Barlow Condensed",sans-serif;font-weight:500;font-size:16vw;line-height:.82;letter-spacing:-.01em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.08);text-align:center;padding-top:40px;user-select:none;white-space:nowrap;overflow:hidden}
 
-/* ---------- 悬浮栏 ---------- */
-.float{position:fixed;right:18px;bottom:24px;z-index:60;display:flex;flex-direction:column;gap:8px}
-.float a,.float button{width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;border:1px solid var(--line-d);display:grid;place-items:center;position:relative;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);transition:background .25s,color .25s}
-.float a:hover,.float button:hover{background:var(--gold);color:#111}
-.float .tipx{position:absolute;right:62px;top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;font-size:13px;padding:8px 14px;border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
-.float a:hover .tipx,.float button:hover .tipx{opacity:1}
+/* ---------- 悬浮 ---------- */
+.float{position:fixed;right:22px;bottom:24px;z-index:60;display:flex;flex-direction:column;gap:10px}
+.float a,.float button{width:50px;height:50px;border-radius:50%;background:var(--ink);color:#fff;border:0;display:grid;place-items:center;position:relative;box-shadow:0 14px 30px -12px rgba(0,0,0,.45);transition:background .3s,color .3s}
+.float a:hover,.float button:hover{background:var(--gold);color:var(--ink)}
+.float svg{width:19px;height:19px}
+.float .tipx{position:absolute;right:60px;top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;font-size:13px;padding:8px 14px;border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.float a:hover .tipx{opacity:1}
 #toTop{opacity:0;pointer-events:none;transition:opacity .3s}
 #toTop.show{opacity:1;pointer-events:auto}
 
-/* ---------- 入场动画 ---------- */
-.rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
-.rv.in{opacity:1;transform:none}
-.statcard.rv{transform:translateY(110px)}
-.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+/* ---------- 首屏入场 ---------- */
+body.pre .hero-l>*,body.pre .window{opacity:0}
+body.pre .hero h1 .ln>span{transform:translateY(110%)}
+body.go .hero-l>*{opacity:1;transition:opacity 1s ease}
+body.go .hero h1 .ln>span{transform:none;transition:transform 1.2s var(--ease)}
+body.go .hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
+body.go .hero .lead{transition-delay:.3s}body.go .hero .ctas{transition-delay:.42s}body.go .hero-meta{transition-delay:.56s}
+body.go .window{opacity:1;clip-path:inset(0 0 0 0);transition:clip-path 1.6s var(--ease) .1s,opacity .4s}
+body.pre .window{clip-path:inset(0 0 0 100%)}
+body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
+@keyframes shine{0%{background-position:100% 0}100%{background-position:0 0}}
 
-/* ---------- 响应式 ---------- */
-@media (max-width:1180px){
-  .menu{gap:0}.menu a{padding:10px 11px;font-size:15px}
-  .nav-cta .btn{display:none}
-  .pgrid{grid-template-columns:repeat(3,1fr)}
-  .hgrid{grid-template-columns:repeat(2,1fr)}
-  .ft{grid-template-columns:1fr 1fr 1fr}
-}
-@media (max-width:960px){
-  .wrap{padding:0 20px}
-  .menu{display:none;position:absolute;top:82px;left:0;right:0;flex-direction:column;background:var(--ink);padding:10px 20px 20px;border-bottom:1px solid var(--line-d)}
-  .menu.open{display:flex}
-  .menu a{padding:14px 4px;border-bottom:1px solid var(--line-d)}
-  .menu a::after{display:none}
-  .burger{display:flex}
-  .topbar .l span:not(:first-child){display:none}
-  .hero{height:auto;min-height:0;max-height:none}
-  .hero-in{padding-top:90px;padding-bottom:250px}
-  .hero-stats .wrap{grid-template-columns:repeat(2,1fr)}
-  .hs{padding:18px 0 18px 18px}.hs:nth-child(3){border-left:0;padding-left:0}
-  .hs:nth-child(n+3){border-top:1px solid var(--line-d)}
-  .hs b{font-size:34px}
-  .dots,.scroll-cue{display:none}
-  .slide .bg{-webkit-mask-image:none;mask-image:none}
-  .sec{padding:80px 0}
-  .rd-top,.about,.faq-wrap,.inq .wrap,.news{grid-template-columns:1fr;gap:50px}
-  .pgrid{grid-template-columns:repeat(2,1fr);gap:16px}
-  .flow{grid-template-columns:1fr;gap:28px}
-  .flow::before{top:0;bottom:0;left:43px;right:auto;width:1px;height:auto;background:repeating-linear-gradient(180deg,var(--gold-2) 0 6px,transparent 6px 12px)}
-  .step{display:grid;grid-template-columns:86px 1fr;gap:22px;text-align:left;align-items:center;padding:0}
-  .step .c{margin:0}.step h4{margin-top:0}
-  .apps{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .app{min-height:220px}
-  .app:nth-child(1){grid-column:span 2;grid-row:auto;min-height:320px}
-  .app:nth-child(4){grid-column:auto}
-  .app-in p{max-height:80px;opacity:1;margin-top:6px}
-  .about-img .badge{right:12px;bottom:-30px}
-  .ft{grid-template-columns:1fr 1fr}
-}
-@media (max-width:600px){
-  .topbar .r a:not(:last-child){display:none}
-  .nav{height:70px;gap:12px}
-  .menu{top:70px}
-  .brand img{width:40px;height:40px}.brand strong{font-size:17px}
-  .lang{display:none}
-  .hero-in{padding-top:70px;padding-bottom:230px}
-  .hero .ctas .btn{flex:1;justify-content:center;padding:0 16px}
-  .pgrid{grid-template-columns:1fr 1fr;gap:12px}
-  .pbody{padding:16px}.pbody h3{font-size:15px}.spec{font-size:12px;gap:4px 10px}
-  .caps,.hgrid{grid-template-columns:1fr}
-  .apps{grid-template-columns:1fr}
-  .app:nth-child(1){grid-column:auto}
-  .ticks{grid-template-columns:1fr}
-  .cmp{grid-template-columns:92px 1fr 54px;font-size:12px}
-  form.card{grid-template-columns:1fr;padding:24px}
-  .nitem{grid-template-columns:88px 1fr;gap:16px}
-  .ft{grid-template-columns:1fr}
-  .float{right:12px;bottom:14px}
-  .float a,.float button{width:46px;height:46px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .rv{opacity:1;transform:none}
-}
-
-/* ---------- 借鉴惠同并升级 ---------- */
-
-.stock{display:flex;flex-direction:column;line-height:1.2;padding-left:18px;border-left:1px solid var(--line-d);margin-left:-18px}
-.stock small{font-size:11px;color:var(--muted-d);letter-spacing:.1em}
-.stock b{color:var(--gold);font-size:19px;letter-spacing:.06em}
-.hphone{display:flex;align-items:center;gap:8px;color:#fff;padding-left:18px;border-left:1px solid var(--line-d);height:40px}
-.hphone .num{font-size:20px;font-weight:600;letter-spacing:.02em}
-.hphone svg{color:var(--gold);width:22px;height:22px}
-.hphone:hover .num{color:var(--gold)}
-.div-show{display:grid;grid-template-columns:240px 1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#f7f7f5,#ecebe7);border-radius:6px;padding:48px;margin-bottom:70px;position:relative;overflow:hidden}
-.div-show::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(234,202,2,.18),transparent 70%)}
-.div-tabs{list-style:none;position:relative;border-left:1px dashed #c9c7bf;padding-left:0}
-.div-tabs button{display:flex;gap:14px;align-items:center;width:100%;background:none;border:0;padding:16px 0 16px 26px;font-size:16px;color:var(--muted);text-align:left;position:relative;min-height:44px;transition:color .25s}
-.div-tabs button::before{content:"";position:absolute;left:-5px;top:50%;width:9px;height:9px;border-radius:50%;background:#c9c7bf;transform:translateY(-50%);transition:all .25s}
-.div-tabs button span{font-size:14px;color:#b0aea6}
-.div-tabs button.on{color:var(--text);font-size:19px;font-weight:700}
-.div-tabs button.on::before{width:15px;height:15px;left:-8px;background:var(--gold);box-shadow:0 0 0 5px rgba(234,202,2,.25)}
-.div-tabs button.on span{color:var(--gold-2)}
-.div-tabs button:hover{color:var(--text)}
-.div-tabs .pager{padding:24px 0 0 26px;color:var(--muted);font-size:15px}
-.div-tabs .pager b{font-size:34px;color:var(--text);font-weight:500}
-.div-stage{position:relative;z-index:1}
-.div-img{aspect-ratio:1/1;border-radius:50%;background:#141416;box-shadow:0 40px 80px -30px rgba(0,0,0,.55),0 0 0 1px rgba(234,202,2,.45),0 0 0 12px #1b1b1e;overflow:hidden;max-width:440px;margin:0 auto}
-.div-img img{width:100%;height:100%;object-fit:cover;transition:opacity .4s,transform .6s}
-.div-img img.fade{opacity:0;transform:scale(1.05)}
-.div-info{position:relative;z-index:1;transition:opacity .4s}
-.div-info.fade{opacity:0}
-.div-info .en{font-size:14px;letter-spacing:.3em;color:var(--gold-2)}
-.div-info h3{font-family:"Noto Serif SC",serif;font-size:32px;margin:8px 0 14px}
-.div-info p{color:#4a4a50;font-size:15px}
-.div-info ul{list-style:none;margin:20px 0 28px;display:grid;gap:10px}
-.div-info li{display:flex;gap:10px;font-size:14.5px;align-items:flex-start}
-.div-info li svg{color:var(--gold-2);width:18px;height:18px;margin-top:3px}
-.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--gold);color:#111}
-.sub-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;padding-bottom:16px;border-bottom:1px solid var(--line)}
-.sub-h span{font-size:20px;font-weight:700}
-#about{padding-bottom:0}
-.statcard{position:relative;z-index:2;transform:translateY(80px);margin-top:20px;background:#fff;border-radius:6px;box-shadow:0 30px 70px -30px rgba(0,0,0,.3);display:grid;grid-template-columns:repeat(5,1fr);padding:40px 20px;border-bottom:3px solid var(--gold)}
-.statcard.rv.in{transform:translateY(80px)}
-.statcard div{text-align:center;border-left:1px solid var(--line)}
-.statcard div:first-child{border-left:0}
-.statcard b{display:block;font-size:52px;line-height:1;color:var(--text)}
-.statcard sup{font-size:20px;color:var(--gold-2);margin-left:3px}
-.statcard span{display:block;margin-top:10px;font-size:13.5px;color:var(--muted)}
-#faq{padding-top:200px}
-@media (max-width:1180px){.stock{display:none}.hphone .num{font-size:17px}}
-@media (max-width:960px){
-  .hphone{display:none}
-  .div-show{grid-template-columns:1fr;padding:28px;gap:28px}
-  .div-tabs{display:flex;border-left:0;border-bottom:1px dashed #c9c7bf;overflow-x:auto;scrollbar-width:none}
-  .div-tabs li{flex:none}
-  .div-tabs button{padding:12px 16px;font-size:15px}
-  .div-tabs button.on{font-size:16px}
-  .div-tabs button::before{display:none}
-  .div-tabs .pager{display:none}
-  .div-img{max-width:300px}
-  .statcard{grid-template-columns:repeat(3,1fr);row-gap:28px}
-  .statcard div:nth-child(4){border-left:0}
-  .statcard b{font-size:40px}
-}
-@media (max-width:600px){.statcard{grid-template-columns:1fr 1fr}.statcard div:nth-child(odd){border-left:0}.statcard div:nth-child(4){border-left:1px solid var(--line)}.statcard div:last-child{grid-column:span 2}}
-@media (prefers-reduced-motion:reduce){.statcard.rv{transform:translateY(80px)}}
-.nav{gap:26px}
-.menu a{white-space:nowrap;padding:10px 13px}
-.menu a::after{left:13px;right:13px}
-.hphone{white-space:nowrap}
-@media (max-width:1600px){.stock{display:none}}@media (max-width:1440px){.menu a{padding:10px 11px;font-size:15px}}
-@media (max-width:1280px){.hphone .num{display:none}.hphone{padding-left:12px}}
-@media (max-width:960px){.menu a{padding:14px 4px}.hphone{display:none}}
-
-/* ---------- 新图版式 ---------- */
-.slide .bg{left:auto;width:62%;background-position:center right}
-.slide::after{background:linear-gradient(90deg,#000 0%,#000 36%,rgba(0,0,0,.72) 48%,rgba(0,0,0,.15) 72%,rgba(0,0,0,0) 100%),linear-gradient(0deg,rgba(0,0,0,.75),transparent 35%)}
-.hero{background:#000}
-.rd::after{content:"";position:absolute;inset:0;background:url("rd-sem.webp") center/cover;opacity:.16;mix-blend-mode:screen;pointer-events:none;mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%)}
-.rd>.wrap{position:relative;z-index:1}
-.micro{background:linear-gradient(160deg,rgba(11,11,12,.9),rgba(11,11,12,.72)),url("rd-sem.webp") center/cover;backdrop-filter:blur(2px)}
-.app:nth-child(1) .bg{background-position:center 40%}
-@media (max-width:960px){
-  .slide .bg{width:100%}
-  .slide::after{background:linear-gradient(0deg,#000 0%,rgba(0,0,0,.85) 40%,rgba(0,0,0,.35) 100%)}
-}
-.dots{right:100px}
-.apps{grid-auto-rows:280px}
-.app:nth-child(5),.app:nth-child(6){grid-column:span 2}
-@media (max-width:960px){.apps{grid-auto-rows:auto}.app:nth-child(5),.app:nth-child(6){grid-column:auto}}
-@media (max-width:600px){.app:nth-child(n){grid-column:auto}}
-
+/* ---------- 进站过场（保留） ---------- */
 /* ---------- 进站过场 ---------- */
 #intro{position:fixed;inset:0;z-index:9999;background:#050506;color:#fff;overflow:hidden;--r:0px;-webkit-mask-image:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 1px));mask-image:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 1px))}
 #intro canvas{position:absolute;inset:0;width:100%;height:100%}
@@ -481,48 +380,82 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
 #intro .skip:hover{border-color:var(--gold);color:var(--gold)}
 #intro .bar{position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold-2),#fff3a0)}
 @media (max-width:600px){#intro .meta{flex-direction:column;gap:6px;align-items:center;bottom:30px}}
-/* 首屏入场 */
-body.pre .hero .eyebrow,body.pre .hero h1,body.pre .hero .lead,body.pre .hero .ctas,body.pre .hero-stats{opacity:0;transform:translateY(30px)}
-body.go .hero .eyebrow,body.go .hero h1,body.go .hero .lead,body.go .hero .ctas,body.go .hero-stats{opacity:1;transform:none;transition:opacity 1s ease,transform 1.1s cubic-bezier(.2,.8,.2,1)}
-body.go .hero h1{transition-delay:.12s}body.go .hero .lead{transition-delay:.28s}body.go .hero .ctas{transition-delay:.42s}body.go .hero-stats{transition-delay:.6s}
-body.go .hero h1 em{background-size:250% 100%;animation:shine 2.2s ease .9s 1 both}
-@keyframes shine{0%{background-position:100% 0}100%{background-position:0 0}}
-.cap-tag{position:absolute;left:18px;top:18px;display:flex;gap:8px;align-items:center;background:rgba(11,11,12,.78);backdrop-filter:blur(6px);color:#fff;font-size:12.5px;padding:8px 14px;border-radius:40px;border:1px solid rgba(234,202,2,.35)}
-.cap-tag svg{width:14px;height:14px;color:var(--gold)}
-@media (prefers-reduced-motion:reduce){#intro{display:none!important}body.pre .hero *{opacity:1!important;transform:none!important}}
 
-/* ========== 浅色系（参照强纶原站：深色头部 + 浅色内容区 + 明黄点缀）========== */
-:root{--gold-ink:#a88600}
-.rd{background:linear-gradient(180deg,#fbfaf6 0%,#f3f1ea 100%);color:var(--text)}
-.rd::before{background-image:repeating-linear-gradient(115deg,rgba(0,0,0,.035) 0 1px,transparent 1px 22px)}
-.rd::after{opacity:.07;mix-blend-mode:multiply;filter:grayscale(1)}
-.rd .sec-head .en{color:var(--gold-ink)}
-.rd .sec-head p{color:var(--muted)}
-.rd-copy h3{color:var(--text)}
-.rd-copy h3 em{color:var(--gold-ink)}
-.rd-copy>p{color:#4a4a50}
-.rd-copy>p b{color:var(--text)!important}
-.micro{box-shadow:0 40px 80px -36px rgba(0,0,0,.55);border-color:transparent;color:#fff}
-.caps{background:var(--line);border-color:var(--line);border-radius:6px;overflow:hidden}
-.cap{background:#fff}
-.cap:hover{background:#fffcee}
-.cap svg.i{color:var(--gold-ink)}
-.cap p{color:var(--muted)}
-.honors-h{color:var(--muted)}
-.honors-h::after{background:var(--line)}
-.honor{background:#fff;border-color:rgba(201,168,0,.35);box-shadow:0 18px 40px -28px rgba(0,0,0,.35)}
-.honor::after{border-color:rgba(201,168,0,.2)}
-.honor svg.i,.honor .yr{color:var(--gold-ink)}
-.honor p{color:var(--muted)}
-.inq{background:linear-gradient(100deg,rgba(248,247,243,.98) 0%,rgba(248,247,243,.94) 45%,rgba(248,247,243,.78) 100%),url("inq-yarn.webp") center/cover;color:var(--text)}
-.inq .eyebrow{color:var(--gold-ink)}.inq .eyebrow::before{background:var(--gold-ink)}
-.inq h2 em{color:var(--gold-ink)}
-.inq .lead{color:var(--muted)}
-.contact-l .ic{border-color:var(--line);background:#fff;color:var(--gold-ink)}
-.contact-l small{color:var(--muted)}
-form.card{box-shadow:0 30px 70px -34px rgba(0,0,0,.35);border:1px solid var(--line)}
-.chain{background:#fff}
-#about{background:var(--paper-2)!important}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1200px){
+  .stock{display:none}
+  .menu a{padding:10px 11px}
+  .bento{grid-template-columns:repeat(3,1fr)}
+  .honors{grid-template-columns:repeat(2,1fr)}
+  .hon:nth-child(3){border-left:0}
+  .hon:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:980px){
+  .wrap{padding:0 22px}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);padding:10px 22px 22px;border-bottom:1px solid var(--line)}
+  .menu.open{display:flex}
+  .menu a{padding:14px 2px;border-bottom:1px solid var(--line)}
+  .menu a::after{display:none}
+  .burger{display:flex}
+  header{background:rgba(245,243,238,.9);backdrop-filter:blur(14px)}
+  .nav,header.solid .nav{height:68px}
+  .nav-r .pill{display:none}
+  .hero{padding-top:96px}
+  .hero .wrap{grid-template-columns:1fr;gap:34px;min-height:0}
+  .window{min-height:0;aspect-ratio:4/4.2}
+  .hero-meta{padding-top:36px}
+  .hero-meta div{padding:0 18px}.hero-meta b{font-size:32px}
+  .sec{padding:96px 0}
+  .sh,.lab-top,.lab-mid,.about-g,.faq-g,.cta .wrap{grid-template-columns:1fr;gap:40px}
+  .sh p{justify-self:start}
+  .sem{position:relative;top:0;aspect-ratio:16/11}
+  .lab-mid{margin-top:80px}
+  .chain-pin{position:relative;height:auto;padding:96px 0}
+  .track{flex-direction:column;padding:0 22px;transform:none!important}
+  .step,.step.end{width:100%}
+  .chain-bar{display:none}
+  .chain-head{flex-direction:column;align-items:flex-start;padding:0}
+  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:240px}
+  .acc{flex-direction:column;height:auto}
+  .pan,.pan.on{flex:none;height:300px}
+  .pan .vt{display:none}
+  .pan .full{opacity:1;transform:none;left:24px;right:24px;bottom:24px}
+  .pan .full h3{font-size:26px}
+  .pan:not(.on) i.bg{filter:none}
+  .about-g{margin-top:0}
+  .nlist{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .nav-r .stock{display:none}
+  .hero h1{font-size:40px}
+  .hero-meta{grid-template-columns:repeat(3,1fr)}
+  .hero-meta div{padding:0 10px}.hero-meta b{font-size:28px}
+  .win-cap{left:20px;right:20px;bottom:20px;flex-direction:column;align-items:flex-start}
+  .bento{grid-template-columns:1fr}
+  .tile.big{grid-column:auto;grid-row:span 2}
+  .honors{grid-template-columns:1fr}
+  .hon{border-left:0!important;border-top:1px solid var(--line)}
+  .hon:first-child{border-top:0}
+  .stats b{font-size:48px}
+  .qa button{grid-template-columns:40px 1fr 40px;font-size:16px}
+  .qa .ans p{padding:0 0 26px 50px}
+  form.card{grid-template-columns:1fr;padding:28px}
+  .ft{grid-template-columns:1fr}
+  .float{right:14px;bottom:14px}.float a,.float button{width:46px;height:46px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .marq-track{animation:none}
+  .chain-pin{position:relative;height:auto;padding:110px 0}
+  .track{flex-wrap:wrap;transform:none!important}
+  #intro{display:none!important}
+  body.pre .hero-l>*,body.pre .window{opacity:1;clip-path:none}
+  body.pre .hero h1 .ln>span{transform:none}
+  .scale .c-hair{stroke-dashoffset:0}.scale .c-ql{transform:none}
+}
 </style>
 </head>
 <body>
@@ -598,7 +531,6 @@ form.card{box-shadow:0 30px 70px -34px rgba(0,0,0,.35);border:1px solid var(--li
 })();
 </script>
 
-<!-- SVG 图标库 -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
@@ -627,35 +559,24 @@ form.card{box-shadow:0 30px 70px -34px rgba(0,0,0,.35);border:1px solid var(--li
   <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1A2 2 0 1 1 4.3 17l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1A2 2 0 1 1 7 4.3l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1A2 2 0 1 1 19.7 7l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
 </svg>
 
-<div class="topbar">
-  <div class="wrap">
-    <div class="l"><span>证券代码 <b class="num">872336</b></span><span>国家级专精特新"小巨人"企业</span><span>国家级高新技术企业</span></div>
-    <div class="r">
-      <a href="#">纱线事业部</a><a href="#">淘宝官方店</a><a href="#">1688 工厂直供</a>
-      <a href="tel:18159821773" style="display:flex;gap:6px;align-items:center"><svg class="i" style="width:14px;height:14px"><use href="#i-phone"/></svg><span class="num" style="font-size:14px;color:#fff">181 5982 1773</span></a>
-    </div>
-  </div>
-</div>
-
 <header id="hdr">
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="强纶新材 首页">
-      <img src="https://www.qlfiber.com/assets/images/logo.png" alt="强纶新材 logo" width="46" height="46">
-      <span><strong>强纶新材</strong><small>FUJIAN QIANGLUN</small></span>
+      <img src="https://www.qlfiber.com/assets/images/logo.png" alt="强纶新材 logo" width="42" height="42">
+      <span><strong>强纶新材</strong><small>QIANGLUN · SINCE 2002</small></span>
     </a>
-    <div class="stock"><small>证券代码</small><b class="num">872336</b></div>
     <nav class="menu" id="menu">
       <a class="on" href="#top">首页</a>
       <a href="#rd">科研创新</a>
-      <a href="#products">产品中心</a>
-      <a href="#apps">应用领域</a>
+      <a href="#chain">产业链</a>
+      <a href="#products">产品</a>
+      <a href="#apps">应用</a>
       <a href="#about">关于强纶</a>
-      <a href="#news">新闻中心</a>
-      <a href="#contact">联系我们</a>
+      <a href="#news">资讯</a>
     </nav>
-    <div class="nav-cta">
-      <a class="lang" href="#"><svg class="i" style="width:15px;height:15px"><use href="#i-globe"/></svg>EN</a>
-      <a class="hphone" href="tel:18159821773"><svg class="i"><use href="#i-phone"/></svg><span class="num">181 5982 1773</span></a>
+    <div class="nav-r">
+      <span class="stock">证券代码<b>872336</b></span>
+      <a class="pill pill-ink" href="#contact">获取选型方案<svg class="i"><use href="#i-arrow"/></svg></a>
       <button class="burger" id="burger" aria-label="打开菜单"><svg class="i"><use href="#i-menu"/></svg></button>
     </div>
   </div>
@@ -664,291 +585,229 @@ form.card{box-shadow:0 30px 70px -34px rgba(0,0,0,.35);border:1px solid var(--li
 <main id="top">
 <!-- ============ HERO ============ -->
 <section class="hero" aria-label="首屏">
-  <div class="slide on"><div class="bg" style="background-image:url('hero-fiber.webp')"></div></div>
-  <div class="slide"><div class="bg" style="background-image:url('hero-lab.webp')"></div></div>
-  <div class="slide"><div class="bg" style="background-image:url('hero-felt.webp')"></div></div>
-
-  <div class="wrap hero-in">
-    <div class="hero-copy" id="heroCopy">
-      <div class="eyebrow" id="hEy">Metal Fiber Since 2002</div>
-      <h1 id="hT">以微米之纤<br>成就<em>精密过滤</em></h1>
-      <p class="lead" id="hP">二十余年专注金属纤维及其制品、过滤成套装备的研发与制造。从 2μm 超细不锈钢纤维，到烧结毡、滤芯滤盘与成套装备，为化纤、石化、玻璃、新能源与航空航天提供可靠材料方案。</p>
+  <div class="ghost" aria-hidden="true">QIANGLUN</div>
+  <div class="wrap">
+    <div class="hero-l">
+      <div class="eyebrow it">Precision in every micron.</div>
+      <h1><span class="ln"><span>以<em>微米</em>之纤</span></span><span class="ln"><span>织就工业之精</span></span></h1>
+      <p class="lead">二十余年专注金属纤维及其制品、过滤成套装备的研发与制造。从 2μm 超细不锈钢纤维，到烧结毡、滤芯滤盘与成套装备，为化纤、石化、玻璃、新能源与航空航天提供可靠的材料方案。</p>
+      <div class="ctas">
+        <a class="pill pill-ink" href="#products">探索产品<svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="tlink" href="#rd">科研实力<svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="hero-meta">
+        <div><b class="num">2002</b><span>公司创立</span></div>
+        <div><b class="num">2<sup>μm</sup></b><span>纤维最小直径</span></div>
+        <div><b class="num">20<sup>+</sup></b><span>年行业积累</span></div>
+      </div>
     </div>
-    <div class="ctas">
-      <a class="btn btn-gold" href="#products">浏览产品 <svg class="i"><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="#rd">科研实力</a>
-    </div>
-  </div>
-
-  <div class="dots" id="dots">
-    <button class="on" aria-label="第 1 屏"><b class="num">01</b><span></span></button>
-    <button aria-label="第 2 屏"><b class="num">02</b><span></span></button>
-    <button aria-label="第 3 屏"><b class="num">03</b><span></span></button>
-  </div>
-  
-  <div class="hero-stats">
-    <div class="wrap">
-      <div class="hs"><b class="num" data-count="2002">2002</b><span>公司创立</span></div>
-      <div class="hs"><b class="num"><i data-count="20" style="font-style:normal">20</i><sup>+</sup></b><span>年金属纤维制造经验</span></div>
-      <div class="hs"><b class="num"><i data-count="2" style="font-style:normal">2</i><sup>μm</sup></b><span>超细不锈钢纤维 · 稳定量产</span></div>
-      <div class="hs"><b class="num">4<sup>大</sup></b><span>产品线 · 纤维到成套装备</span></div>
+    <div class="window" id="win">
+      <div class="sl on"><i style="background-image:url('hero-fiber.webp')"></i></div>
+      <div class="sl"><i style="background-image:url('hero-lab.webp')"></i></div>
+      <div class="sl"><i style="background-image:url('hero-felt.webp')"></i></div>
+      <div class="win-tag num">METAL FIBER · QIANGLUN</div>
+      <div class="win-cap">
+        <div class="t" id="winT">01 · MICRO FIBER<b>超细不锈钢纤维</b></div>
+        <div class="prog" id="prog"><button class="on" aria-label="第 1 张">01</button><button aria-label="第 2 张">02</button><button aria-label="第 3 张">03</button></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 科研创新 ============ -->
-<section class="sec rd" id="rd">
+<div class="marq" aria-label="资质荣誉">
+  <div class="marq-track">
+    <span>国家级专精特新"小巨人"企业</span><span>国家级高新技术企业</span><span>国家知识产权示范企业</span><span>中国航发商发合格供应商</span><span>强纶新材料创新研究院</span><span>证券代码 872336</span>
+    <span>国家级专精特新"小巨人"企业</span><span>国家级高新技术企业</span><span>国家知识产权示范企业</span><span>中国航发商发合格供应商</span><span>强纶新材料创新研究院</span><span>证券代码 872336</span>
+  </div>
+</div>
+
+<!-- ============ 科研 ============ -->
+<section class="sec lab" id="rd">
   <div class="wrap">
-    <div class="sec-head rv" style="position:relative">
-      <div><div class="en">R&amp;D · Innovation</div><h2>科研创新 · 以技术定义材料边界</h2></div>
-      <p>坚持自主研发，打通从超细纤维制备、烧结成型到过滤装备的完整技术链，以知识产权和资质认证构筑核心竞争力。</p>
+    <div class="sh rv">
+      <div><div class="idx"><b>01</b>R&amp;D · 科研创新</div><h2>把金属，做到<br>比发丝细<em>约 35 倍</em></h2></div>
+      <p>依托强纶新材料创新研究院，掌握超细不锈钢纤维制备与超级不锈钢制备技术，打通从纤维、烧结成型到过滤装备的完整技术链。</p>
+    </div>
+    <div class="lab-top">
+      <div class="micron rv">
+        <div class="big"><b>2</b><span>μm</span></div>
+        <h3>超细不锈钢纤维，已稳定量产</h3>
+        <p>纤维越细，比表面积越大、过滤精度越高；制成的烧结毡更均匀，纱线与织物也更柔软。这是强纶全部产品的起点。</p>
+      </div>
+      <div class="scale rv d1" id="scale" aria-label="纤维直径按比例对比示意">
+        <svg viewBox="0 0 400 340" role="img">
+          <title>人类头发约70μm、羊毛约20μm与强纶纤维2μm的直径比例对比</title>
+          <circle class="c-hair" cx="170" cy="170" r="140"/>
+          <circle class="c-wool" cx="170" cy="170" r="40"/>
+          <circle class="pulse" cx="170" cy="170" r="4"/>
+          <circle class="c-ql" cx="170" cy="170" r="4"/>
+          <line x1="310" y1="120" x2="350" y2="96" stroke="#8e8a82" stroke-width="1"/><text x="352" y="92">人类头发</text><text x="352" y="108" class="num">≈ 70μm</text>
+          <line x1="205" y1="190" x2="350" y2="214" stroke="#b5b0a6" stroke-width="1"/><text x="352" y="210">羊毛纤维</text><text x="352" y="226">≈ 20μm</text>
+          <line x1="174" y1="172" x2="250" y2="290" stroke="#b38b1d" stroke-width="1"/><text x="252" y="300" class="b">强纶超细纤维 2μm</text>
+        </svg>
+        <div class="note">* 截面按真实比例绘制；头发、羊毛为常见参考值</div>
+      </div>
     </div>
 
-    <div class="rd-top">
-      <div class="micro rv">
-        <span class="sem-tag num">SEM · 微观形貌示意</span>
-        <div class="micro-label">超细不锈钢纤维 · 最小直径</div>
-        <div class="micro-big"><b class="num">2</b><span>μm</span></div>
-        <p>已实现稳定量产。纤维越细，比表面积越大、过滤精度越高，制成的烧结毡和织物更柔软、更均匀。</p>
-        <div class="compare" id="cmp">
-          <div class="cmp"><span>人类头发</span><div class="bar"><i data-w="100"></i></div><em>≈70μm</em></div>
-          <div class="cmp"><span>普通羊毛纤维</span><div class="bar"><i data-w="30"></i></div><em>≈20μm</em></div>
-          <div class="cmp me"><span>强纶超细纤维</span><div class="bar"><i data-w="3"></i></div><em>2μm</em></div>
-        </div>
-        <div class="cmp-note">* 头发、羊毛数值为常见参考范围，仅作直观对比</div>
-      </div>
-
-      <div class="rd-copy rv d1">
-        <h3>四大核心技术平台<br>支撑<em>从纤维到装备</em>的全链条创新</h3>
-        <p>依托<b style="color:#fff">强纶新材料创新研究院</b>，掌握超细不锈钢纤维制备与超级不锈钢制备技术，围绕金属纤维"更细、更均匀、更耐用"持续攻关，成果已应用于化纤、石油化工、玻璃、环保、智能穿戴与航空航天等领域。</p>
-        <div class="caps">
-          <div class="cap"><svg class="i"><use href="#i-micro"/></svg><h4>超细纤维制备</h4><p>微米级不锈钢纤维稳定量产，直径低至 2μm</p></div>
-          <div class="cap"><svg class="i"><use href="#i-layers"/></svg><h4>烧结成型技术</h4><p>多层梯度结构烧结毡，兼顾精度与纳污量</p></div>
-          <div class="cap"><svg class="i"><use href="#i-filter"/></svg><h4>过滤成套装备</h4><p>滤芯、滤盘到成套装备的设计与制造能力</p></div>
-          <div class="cap"><svg class="i"><use href="#i-bolt"/></svg><h4>导电发热应用</h4><p>导电纱、发热线拓展智能穿戴新场景</p></div>
-        </div>
+    <div class="lab-mid">
+      <figure class="sem rv"><figcaption><small class="num">SEM · MICROSTRUCTURE</small><b>不锈钢纤维微观形貌（示意）</b></figcaption></figure>
+      <div>
+        <h3 class="caps-h rv">四大核心技术平台<br>支撑从纤维到装备的全链条创新</h3>
+        <p class="caps-p rv">成果已应用于<b>化纤、石油化工、玻璃制造、节能环保、智能穿戴与航空航天</b>等领域。</p>
+        <div class="cap rv"><span class="n">01</span><div><h4>超细纤维制备</h4><p>微米级不锈钢纤维稳定量产，直径低至 2μm，均匀性与一致性可控。</p></div><svg class="i"><use href="#i-arrow"/></svg></div>
+        <div class="cap rv"><span class="n">02</span><div><h4>烧结成型技术</h4><p>多层梯度孔径结构烧结毡，兼顾过滤精度与纳污量，耐高温、可清洗再生。</p></div><svg class="i"><use href="#i-arrow"/></svg></div>
+        <div class="cap rv"><span class="n">03</span><div><h4>过滤成套装备</h4><p>从滤芯、滤盘到成套过滤系统的设计、制造与技术服务能力。</p></div><svg class="i"><use href="#i-arrow"/></svg></div>
+        <div class="cap rv"><span class="n">04</span><div><h4>导电发热应用</h4><p>导电纱、发热线等功能材料，拓展智能穿戴与电子领域新场景。</p></div><svg class="i"><use href="#i-arrow"/></svg></div>
       </div>
     </div>
 
     <div class="honors">
-      <div class="honors-h rv">资质与荣誉 · QUALIFICATIONS</div>
-      <div class="hgrid">
-        <div class="honor rv"><svg class="i"><use href="#i-award"/></svg><h4>国家级专精特新<br>"小巨人"企业</h4><p>工业和信息化部认定</p></div>
-        <div class="honor rv d1"><svg class="i"><use href="#i-shield"/></svg><h4>国家级<br>高新技术企业</h4><p>持续研发投入与成果转化</p></div>
-        <div class="honor rv d2"><svg class="i"><use href="#i-bulb"/></svg><h4>国家知识产权<br>示范企业</h4><p>自主知识产权体系</p></div>
-        <div class="honor rv d3"><svg class="i"><use href="#i-rocket"/></svg><h4>中国航发商发<br>合格供应商</h4><p>进入航空发动机供应体系</p><span class="yr num">2026</span></div>
-      </div>
+      <div class="hon rv"><div class="seal"><svg class="i"><use href="#i-award"/></svg></div><h4>国家级专精特新<br>"小巨人"企业</h4><p>工业和信息化部认定</p></div>
+      <div class="hon rv d1"><div class="seal"><svg class="i"><use href="#i-shield"/></svg></div><h4>国家级<br>高新技术企业</h4><p>持续研发投入与成果转化</p></div>
+      <div class="hon rv d2"><div class="seal"><svg class="i"><use href="#i-bulb"/></svg></div><h4>国家知识产权<br>示范企业</h4><p>自主知识产权体系</p></div>
+      <div class="hon rv d3"><span class="yr">2026</span><div class="seal"><svg class="i"><use href="#i-rocket"/></svg></div><h4>中国航发商发<br>合格供应商</h4><p>进入航空发动机供应体系</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 产品中心 ============ -->
-<section class="sec" id="products">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div><div class="en">Products</div><h2>产品中心</h2></div>
-      <p>覆盖金属纤维纱线、烧结毡、织物与过滤元器件四大产品线，每款产品均提供关键参数与应用场景，支持按工况定制。</p>
+<!-- ============ 产业链 ============ -->
+<section class="chain" id="chain">
+  <div class="chain-pin" id="chainPin">
+    <div class="wrap chain-head">
+      <div><div class="idx" style="color:var(--muted-d)"><b style="color:var(--gold)">02</b>INDUSTRIAL CHAIN · 产业链</div><h2>从<em>一根纤维</em>，<br>到一套过滤装备</h2></div>
+      <p>原丝、纱线、烧结、元器件到成套装备全部自主完成——品质可追溯，交期更可控。</p>
     </div>
-    <div class="div-show rv" id="divShow">
-      <ol class="div-tabs" role="tablist">
-        <li><button class="on" data-i="0"><span class="num">01</span>金属纤维纱线</button></li>
-        <li><button data-i="1"><span class="num">02</span>金属纤维烧结毡</button></li>
-        <li><button data-i="2"><span class="num">03</span>金属纤维织物</button></li>
-        <li><button data-i="3"><span class="num">04</span>过滤元器件</button></li>
-        <li class="pager num"><b id="divNo">1</b> / 4</li>
-      </ol>
-      <div class="div-stage">
-        <div class="div-img"><img id="divImg" src="prod-316l.webp" alt="金属纤维纱线"></div>
-      </div>
-      <div class="div-info">
-        <div class="en num" id="divEn">METAL FIBER YARN</div>
-        <h3 id="divT">金属纤维纱线</h3>
-        <p id="divP">以超细不锈钢纤维为原料纺制，导电、耐高温、耐腐蚀，柔软可织造。广泛用于防静电、电磁屏蔽、导电发热与智能穿戴等领域。</p>
-        <ul id="divL"></ul>
-        <a class="btn btn-dark" href="#">了解事业部 <svg class="i"><use href="#i-arrow"/></svg></a>
-      </div>
+    <div class="track" id="track">
+      <div class="step"><div class="im"><i style="background-image:url('hero-fiber.webp')"></i></div><div class="row"><b>01</b><h4>金属纤维</h4></div><p>微米级不锈钢纤维，直径低至 2μm，是一切产品的起点。</p></div>
+      <div class="step"><div class="im"><i style="background-image:url('prod-316l.webp')"></i></div><div class="row"><b>02</b><h4>纱线 · 织物</h4></div><p>导电纱、编织带与功能织物，导电、耐高温、柔软可织造。</p></div>
+      <div class="step"><div class="im"><i style="background-image:url('prod-felt.webp')"></i></div><div class="row"><b>03</b><h4>烧结毡</h4></div><p>多层梯度孔径高温烧结，兼顾精度与纳污量。</p></div>
+      <div class="step"><div class="im"><i style="background-image:url('prod-cartridge.webp')"></i></div><div class="row"><b>04</b><h4>过滤元器件</h4></div><p>滤芯、滤盘与叶片过滤器，耐高温、可清洗再生。</p></div>
+      <div class="step"><div class="im"><i style="background-image:url('app-filter.webp')"></i></div><div class="row"><b>05</b><h4>成套装备</h4></div><p>过滤系统设计、制造与现场技术服务。</p></div>
+      <div class="step end"><h4 class="serif">一个供应商，<br>解决从材料到系统</h4><p>告诉我们您的工况，获取完整的选型方案。</p><a class="pill pill-gold" href="#contact" style="align-self:flex-start">提交需求<svg class="i"><use href="#i-arrow"/></svg></a></div>
     </div>
-    <div class="sub-h rv"><span>热门产品</span><a class="more" href="#">全部产品 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-    <div class="pgrid" id="pgrid">
-      <article class="pcard rv" data-c="felt">
-        <div class="pimg"><span class="ptag">烧结毡</span><img loading="lazy" src="prod-felt.webp" alt="强纶不锈钢纤维烧结毡"></div>
-        <div class="pbody"><h3>不锈钢纤维烧结毡</h3>
-          <dl class="spec"><dt>结构</dt><dd>多层梯度孔径</dd><dt>特点</dt><dd>耐高温 · 纳污量大</dd><dt>用途</dt><dd>熔体 / 高温气体过滤</dd></dl>
-          <a class="more" href="#">查看参数 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      </article>
-      <article class="pcard rv d1" data-c="filter">
-        <div class="pimg"><span class="ptag">过滤元器件</span><img loading="lazy" src="prod-cartridge.webp" alt="金属纤维烧结滤芯"></div>
-        <div class="pbody"><h3>金属纤维烧结滤芯</h3>
-          <dl class="spec"><dt>工艺</dt><dd>烧结 · 整体成型</dd><dt>特点</dt><dd>可清洗 · 寿命长</dd><dt>用途</dt><dd>化纤 / 石化过滤</dd></dl>
-          <a class="more" href="#">查看参数 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      </article>
-      <article class="pcard rv d2" data-c="filter">
-        <div class="pimg"><span class="ptag">过滤元器件</span><img loading="lazy" src="prod-disc.webp" alt="烧结叶片过滤器 滤盘"></div>
-        <div class="pbody"><h3>滤盘（烧结叶片过滤器）</h3>
-          <dl class="spec"><dt>适用</dt><dd>高粘度熔体</dd><dt>特点</dt><dd>过滤面积大</dd><dt>用途</dt><dd>薄膜 / 熔体过滤</dd></dl>
-          <a class="more" href="#">查看参数 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      </article>
-      <article class="pcard rv d3" data-c="yarn">
-        <div class="pimg"><span class="ptag">纱线</span><img loading="lazy" src="prod-316l.webp" alt="100% 316L 不锈钢纤维纱"></div>
-        <div class="pbody"><h3>100% 316L 不锈钢纤维纱</h3>
-          <dl class="spec"><dt>材质</dt><dd>316L 不锈钢</dd><dt>特点</dt><dd>导电 · 耐腐蚀</dd><dt>用途</dt><dd>防静电 / 屏蔽织物</dd></dl>
-          <a class="more" href="#">查看参数 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      </article>
-      <article class="pcard rv" data-c="fabric">
-        <div class="pimg"><span class="ptag">织物</span><img loading="lazy" src="prod-tape.webp" alt="不锈钢纤维防静电编织带"></div>
-        <div class="pbody"><h3>不锈钢纤维防静电编织带</h3>
-          <dl class="spec"><dt>材质</dt><dd>100% 不锈钢纤维</dd><dt>特点</dt><dd>耐高温 · 防静电</dd><dt>用途</dt><dd>玻璃制造 / 印刷</dd></dl>
-          <a class="more" href="#">查看参数 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      </article>
-      <article class="pcard rv d1" data-c="yarn">
-        <div class="pimg"><span class="ptag">纱线</span><img loading="lazy" src="prod-yarn.webp" alt="不锈钢金属导电线"></div>
-        <div class="pbody"><h3>不锈钢金属导电线</h3>
-          <dl class="spec"><dt>特点</dt><dd>柔软 · 导电稳定</dd><dt>形态</dt><dd>多股复合</dd><dt>用途</dt><dd>智能穿戴 / 电子</dd></dl>
-          <a class="more" href="#">查看参数 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      </article>
-      <article class="pcard rv d2" data-c="yarn">
-        <div class="pimg"><span class="ptag">纱线</span><img loading="lazy" src="prod-heatline.webp" alt="不锈钢纤维导电发热线"></div>
-        <div class="pbody"><h3>不锈钢纤维导电发热线</h3>
-          <dl class="spec"><dt>特点</dt><dd>发热均匀 · 可弯折</dd><dt>形态</dt><dd>线材</dd><dt>用途</dt><dd>加热服饰 / 座椅</dd></dl>
-          <a class="more" href="#">查看参数 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      </article>
-      <article class="pcard rv d3" data-c="yarn">
-        <div class="pimg"><span class="ptag">纱线</span><img loading="lazy" src="prod-heatwire.webp" alt="耐高温不锈钢金属纤维发热线"></div>
-        <div class="pbody"><h3>耐高温金属纤维发热丝</h3>
-          <dl class="spec"><dt>特点</dt><dd>耐高温 · 寿命长</dd><dt>形态</dt><dd>纤维丝</dd><dt>用途</dt><dd>智能服装发热片</dd></dl>
-          <a class="more" href="#">查看参数 <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      </article>
-    </div>
-      </div>
+    <div class="chain-bar"><i id="chainBar"></i></div>
+  </div>
 </section>
 
-<!-- ============ 全产业链 ============ -->
-<section class="sec chain">
+<!-- ============ 产品 ============ -->
+<section class="sec prod" id="products">
   <div class="wrap">
-    <div class="sec-head rv">
-      <div><div class="en">Industrial Chain</div><h2>一站式金属纤维产业链</h2></div>
-      <p>从原丝到成套装备自主完成，品质可追溯、交期更可控，一个供应商解决从材料到系统的全部需求。</p>
+    <div class="sh rv">
+      <div><div class="idx"><b>03</b>PRODUCTS · 产品</div><h2>四大产品线<br>覆盖<em>纤维到元器件</em></h2></div>
+      <p>每款产品均可按过滤精度、工况温度、尺寸接口等参数定制，并提供样品测试。</p>
     </div>
-    <div class="flow">
-      <div class="step rv"><div class="c"><svg class="i"><use href="#i-fiber"/></svg></div><div><h4>金属纤维</h4><p>微米级不锈钢纤维</p></div></div>
-      <div class="step rv d1"><div class="c"><svg class="i"><use href="#i-yarn"/></svg></div><div><h4>纱线 · 织物</h4><p>导电纱、编织带、织物</p></div></div>
-      <div class="step rv d2"><div class="c"><svg class="i"><use href="#i-layers"/></svg></div><div><h4>烧结毡</h4><p>多层梯度烧结成型</p></div></div>
-      <div class="step rv d3"><div class="c"><svg class="i"><use href="#i-filter"/></svg></div><div><h4>过滤元器件</h4><p>滤芯、滤盘、叶片</p></div></div>
-      <div class="step rv"><div class="c"><svg class="i"><use href="#i-gear"/></svg></div><div><h4>成套装备</h4><p>过滤系统与技术服务</p></div></div>
+    <div class="chips rv" id="chips">
+      <button class="on" data-c="all">全部</button><button data-c="yarn">金属纤维纱线</button><button data-c="felt">烧结毡</button><button data-c="fabric">金属纤维织物</button><button data-c="filter">过滤元器件</button>
+    </div>
+    <div class="bento" id="bento">
+      <a class="tile big rv" data-c="felt" href="#"><img loading="lazy" src="prod-felt.webp" alt="不锈钢纤维烧结毡"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">SINTERED FELT · 烧结毡</div><h3>不锈钢纤维烧结毡</h3><div class="sp"><span>多层梯度孔径</span><span>耐高温</span><span>可清洗再生</span><span>熔体 / 高温气体过滤</span></div></div></a>
+      <a class="tile rv d1" data-c="filter" href="#"><img loading="lazy" src="prod-cartridge.webp" alt="金属纤维烧结滤芯"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">FILTER · 过滤元器件</div><h3>金属纤维烧结滤芯</h3><div class="sp"><span>整体成型</span><span>寿命长</span></div></div></a>
+      <a class="tile rv d2" data-c="filter" href="#"><img loading="lazy" src="prod-disc.webp" alt="烧结叶片过滤器 滤盘"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">FILTER · 过滤元器件</div><h3>滤盘（烧结叶片过滤器）</h3><div class="sp"><span>高粘度熔体</span><span>过滤面积大</span></div></div></a>
+      <a class="tile rv d1" data-c="yarn" href="#"><img loading="lazy" src="prod-316l.webp" alt="100% 316L 不锈钢纤维纱"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>100% 316L 不锈钢纤维纱</h3><div class="sp"><span>导电</span><span>耐腐蚀</span></div></div></a>
+      <a class="tile rv d2" data-c="fabric" href="#"><img loading="lazy" src="prod-tape.webp" alt="不锈钢纤维防静电编织带"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">FABRIC · 织物</div><h3>不锈钢纤维防静电编织带</h3><div class="sp"><span>耐高温</span><span>玻璃制造</span></div></div></a>
+      <a class="tile rv" data-c="yarn" href="#"><img loading="lazy" src="prod-yarn.webp" alt="不锈钢金属导电线"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>不锈钢金属导电线</h3><div class="sp"><span>导电稳定</span><span>智能穿戴</span></div></div></a>
+      <a class="tile rv d1" data-c="yarn" href="#"><img loading="lazy" src="prod-heatline.webp" alt="不锈钢纤维导电发热线"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>不锈钢纤维导电发热线</h3><div class="sp"><span>发热均匀</span><span>可弯折</span></div></div></a>
+      <a class="tile rv d2" data-c="yarn" href="#"><img loading="lazy" src="prod-heatwire.webp" alt="耐高温金属纤维发热丝"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>耐高温金属纤维发热丝</h3><div class="sp"><span>耐高温</span><span>寿命长</span></div></div></a>
+      <a class="tile cta rv d3" href="#contact"><b>需要非标定制？<br>按工况为您选型</b><span>提交需求<svg class="i"><use href="#i-arrow"/></svg></span></a>
     </div>
   </div>
 </section>
 
-<!-- ============ 应用领域 ============ -->
-<section class="sec" id="apps">
+<!-- ============ 应用 ============ -->
+<section class="sec apps" id="apps">
   <div class="wrap">
-    <div class="sec-head rv">
-      <div><div class="en">Applications</div><h2>应用领域</h2></div>
-      <a class="more" href="#">全部应用方案 <svg class="i"><use href="#i-arrow"/></svg></a>
+    <div class="sh rv">
+      <div><div class="idx"><b>04</b>APPLICATIONS · 应用</div><h2>在最苛刻的工况里<br><em>经受检验</em></h2></div>
+      <p>从化纤熔体到航空发动机，强纶材料服务六大行业，悬停或点击查看详情。</p>
     </div>
-    <div class="apps">
-      <a class="app rv" href="#"><div class="bg" style="background-image:url('app-filter.webp')"></div><div class="app-in"><div class="n">01</div><h3>过滤分离</h3><p>化纤熔体、石油化工、高温烟气等工况的精密过滤与分离</p></div></a>
-      <a class="app rv d1" href="#"><div class="bg" style="background-image:url('app-glass.webp')"></div><div class="app-in"><div class="n">02</div><h3>玻璃深加工</h3><p>耐高温编织带与衬垫，保护玻璃表面</p></div></a>
-      <a class="app rv d2" href="#"><div class="bg" style="background-image:url('app-shield.webp')"></div><div class="app-in"><div class="n">03</div><h3>电磁屏蔽与防静电</h3><p>导电纤维与织物，消除静电、屏蔽干扰</p></div></a>
-      <a class="app rv d1" href="#"><div class="bg" style="background-image:url('app-aero.webp')"></div><div class="app-in"><div class="n">04</div><h3>航空航天与特种材料</h3><p>满足严苛环境下的耐温、耐腐蚀与可靠性要求</p></div></a>
-      <a class="app rv d2" href="#"><div class="bg" style="background-image:url('app-auto.webp')"></div><div class="app-in"><div class="n">05</div><h3>汽车工业</h3><p>汽车玻璃成型、座椅加热等应用</p></div></a>
-      <a class="app rv d3" href="#"><div class="bg" style="background-image:url('app-textile.webp')"></div><div class="app-in"><div class="n">06</div><h3>功能纺织与智能穿戴</h3><p>发热服饰、可穿戴传感与导电面料</p></div></a>
+    <div class="acc rv" id="acc">
+      <div class="pan on" tabindex="0"><i class="bg" style="background-image:url('app-filter.webp')"></i><div class="vt"><b>01</b>过滤分离</div><div class="full"><div class="n">01 / 06</div><h3>过滤分离</h3><p>化纤熔体、石油化工、高温烟气等工况的精密过滤与分离。</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-aero.webp')"></i><div class="vt"><b>02</b>航空航天</div><div class="full"><div class="n">02 / 06</div><h3>航空航天与特种材料</h3><p>满足严苛环境下的耐温、耐腐蚀与可靠性要求。</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-glass.webp')"></i><div class="vt"><b>03</b>玻璃深加工</div><div class="full"><div class="n">03 / 06</div><h3>玻璃深加工</h3><p>耐高温编织带与衬垫，在高温成型中保护玻璃表面。</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-auto.webp')"></i><div class="vt"><b>04</b>汽车工业</div><div class="full"><div class="n">04 / 06</div><h3>汽车工业</h3><p>汽车玻璃成型、座椅加热等关键应用。</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-shield.webp')"></i><div class="vt"><b>05</b>电磁屏蔽</div><div class="full"><div class="n">05 / 06</div><h3>电磁屏蔽与防静电</h3><p>导电纤维与织物，消除静电、屏蔽干扰。</p></div></div>
+      <div class="pan" tabindex="0"><i class="bg" style="background-image:url('app-textile.webp')"></i><div class="vt"><b>06</b>智能穿戴</div><div class="full"><div class="n">06 / 06</div><h3>功能纺织与智能穿戴</h3><p>发热服饰、可穿戴传感与导电面料。</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 关于强纶 ============ -->
-<section class="sec" id="about" style="background:var(--paper-2)">
-  <div class="wrap about">
-    <div class="about-img rv">
-      <div class="frame"></div>
-      <div class="main" style="background-image:url('building.webp')" role="img" aria-label="强纶新材园区与强纶新材料创新研究院"></div>
-      <div class="cap-tag"><svg class="i"><use href="#i-pin"/></svg>龙岩高新区 · 强纶新材料创新研究院</div>
-      <div class="badge"><b class="num">20<sup>+</sup></b><span>年专注金属纤维</span></div>
-    </div>
-    <div class="about-copy rv d1">
-      <div class="sec-head" style="margin-bottom:28px"><div><div class="en">About Qianglun</div><h2>关于强纶</h2></div></div>
+<!-- ============ 关于 ============ -->
+<section class="sec about" id="about">
+  <div class="band" id="band"><i></i><div class="tag"><small class="num">LONGYAN · FUJIAN</small><b>龙岩高新区<br>强纶新材料创新研究院</b></div></div>
+  <div class="wrap about-g">
+    <div class="txt rv">
+      <div class="idx"><b>05</b>ABOUT · 关于强纶</div>
+      <h2>二十余年，<br>只专注一根纤维</h2>
       <p>福建强纶新材料股份有限公司创立于 2002 年，位于福建省龙岩市高新区，证券代码 872336。公司专注金属纤维及其制品、过滤成套装备的研发、生产、销售与技术服务。</p>
-      <p>主要产品包括金属纤维纱线、金属纤维烧结毡、金属纤维织物与过滤元器件，广泛服务于化纤、石油化工、玻璃制造、节能环保、智能穿戴、航空航天等行业客户。</p>
-      <ul class="ticks">
-        <li><svg class="i"><use href="#i-check"/></svg>从纤维到装备全产业链自主生产</li>
-        <li><svg class="i"><use href="#i-check"/></svg>支持按工况参数非标定制</li>
-        <li><svg class="i"><use href="#i-check"/></svg>航空发动机供应体系认可</li>
-        <li><svg class="i"><use href="#i-check"/></svg>研发 · 生产 · 技术服务一体化</li>
-      </ul>
-      <a class="btn btn-line" href="#">了解强纶 <svg class="i"><use href="#i-arrow"/></svg></a>
+      <p>主要产品包括金属纤维纱线、金属纤维烧结毡、金属纤维织物与过滤元器件，服务于化纤、石油化工、玻璃制造、节能环保、智能穿戴、航空航天等行业客户。</p>
+      <a class="pill pill-line" href="#">了解强纶<svg class="i"><use href="#i-arrow"/></svg></a>
     </div>
-  </div>
-  <div class="wrap">
-    <div class="statcard rv">
+    <div class="stats rv d1">
       <div><b class="num">2002</b><span>公司创立 / 年</span></div>
       <div><b class="num">20<sup>+</sup></b><span>行业经验 / 年</span></div>
       <div><b class="num">2<sup>μm</sup></b><span>超细纤维最小直径</span></div>
       <div><b class="num">4<sup>大</sup></b><span>产品线</span></div>
       <div><b class="num">6<sup>大</sup></b><span>应用领域</span></div>
+      <div><b class="num">872336</b><span>证券代码</span></div>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="sec" id="faq">
-  <div class="wrap faq-wrap">
-    <div class="faq-side rv">
-      <div class="sec-head" style="margin-bottom:0;display:block"><div class="en">FAQ</div><h2>常见问题</h2><p style="margin-top:14px">采购前最关心的问题，这里给出直接答案。</p></div>
-      <div class="tip"><b>为 AI 搜索而设计：</b>本模块采用 FAQ 结构化数据（Schema）编写，豆包、DeepSeek、文心一言等 AI 平台可直接识别并引用强纶的答案。</div>
-    </div>
+<section class="sec faq" id="faq">
+  <div class="wrap faq-g">
+    <aside class="rv">
+      <div class="idx"><b>06</b>FAQ · 常见问题</div>
+      <div class="sh" style="display:block;margin:0"><h2>采购前，<br>先读懂这几点</h2></div>
+      <p>工程师整理的高频问题，直接给出答案。</p>
+      <div class="geo"><b>为 AI 搜索而设计：</b>本模块采用 FAQ 结构化数据编写，豆包、DeepSeek、文心一言等 AI 平台可直接识别并引用强纶的答案。</div>
+    </aside>
     <div class="rv d1" id="faqList">
-      <div class="qa open"><button aria-expanded="true">强纶的不锈钢纤维最细能做到多少？<span class="pm"><svg class="i" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>强纶超细不锈钢纤维直径可低至 2μm，并已实现稳定量产，可用于高精度烧结毡、导电纱线与功能织物。</p></div></div></div>
-      <div class="qa"><button aria-expanded="false">金属纤维烧结毡适合哪些过滤场景？<span class="pm"><svg class="i" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>适用于化纤熔体、石油化工、高温气体等对耐温、耐腐蚀与纳污量要求较高的场景，可进一步加工为滤芯、滤盘等元器件。</p></div></div></div>
-      <div class="qa"><button aria-expanded="false">是否支持非标定制与打样？<span class="pm"><svg class="i" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>支持。可根据过滤精度、工况温度、介质、尺寸与接口等参数定制设计，并提供样品测试。</p></div></div></div>
-      <div class="qa"><button aria-expanded="false">金属纤维滤芯相比传统滤材有什么优势？<span class="pm"><svg class="i" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>金属纤维滤材耐高温、耐腐蚀、孔隙率高、可反复清洗再生，在高温、高粘度等苛刻工况下使用寿命更长。</p></div></div></div>
-      <div class="qa"><button aria-expanded="false">如何获取报价与技术资料？<span class="pm"><svg class="i" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>可在下方提交询盘表单，或拨打 181 5982 1773（微信同号），技术人员将根据您的工况提供选型建议与报价。</p></div></div></div>
+      <div class="qa open"><button aria-expanded="true"><span class="n">01</span>强纶的不锈钢纤维最细能做到多少？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>强纶超细不锈钢纤维直径可低至 2μm，并已实现稳定量产，可用于高精度烧结毡、导电纱线与功能织物。</p></div></div></div>
+      <div class="qa"><button aria-expanded="false"><span class="n">02</span>金属纤维烧结毡适合哪些过滤场景？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>适用于化纤熔体、石油化工、高温气体等对耐温、耐腐蚀与纳污量要求较高的场景，可进一步加工为滤芯、滤盘等元器件。</p></div></div></div>
+      <div class="qa"><button aria-expanded="false"><span class="n">03</span>是否支持非标定制与打样？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>支持。可根据过滤精度、工况温度、介质、尺寸与接口等参数定制设计，并提供样品测试。</p></div></div></div>
+      <div class="qa"><button aria-expanded="false"><span class="n">04</span>金属纤维滤芯相比传统滤材有什么优势？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>金属纤维滤材耐高温、耐腐蚀、孔隙率高、可反复清洗再生，在高温、高粘度等苛刻工况下使用寿命更长。</p></div></div></div>
+      <div class="qa"><button aria-expanded="false"><span class="n">05</span>如何获取报价与技术资料？<span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></button><div class="ans"><div><p>可在下方提交询盘表单，或拨打 181 5982 1773（微信同号），技术人员将根据您的工况提供选型建议与报价。</p></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 新闻 ============ -->
-<section class="sec" id="news" style="background:var(--paper-2)">
+<!-- ============ 资讯 ============ -->
+<section class="sec news" id="news">
   <div class="wrap">
-    <div class="sec-head rv">
-      <div><div class="en">News Center</div><h2>新闻中心</h2></div>
-      <a class="more" href="#">更多资讯 <svg class="i"><use href="#i-arrow"/></svg></a>
+    <div class="sh rv">
+      <div><div class="idx"><b>07</b>NEWS · 资讯</div><h2>强纶动态</h2></div>
+      <p style="justify-self:end"><a class="tlink" href="#">全部资讯<svg class="i"><use href="#i-arrow"/></svg></a></p>
     </div>
-    <div class="news">
-      <a class="nfeat rv" href="#">
-        <div class="bg" style="background-image:url('app-aero.webp'),linear-gradient(135deg,#2a2a2e,#0b0b0c)"></div>
-        <div class="in"><div class="date">2026.06.18 · 企业动态</div><h3>喜讯｜福建强纶新材料股份有限公司获评中国航发商发合格供应商</h3><p>强纶正式进入中国航发商发供应体系，金属纤维材料在航空领域的应用迈出关键一步。</p></div>
-      </a>
-      <div class="nlist rv d1">
-        <a class="nitem" href="#"><div class="th" style="background-image:url('https://www.qlfiber.com/assets/images/cdn/TVSUDfGQ3p.jpg')"></div><div><div class="date">2024.12.10 · 行业知识</div><h4>不锈钢金属纤维烧结毡在高温过滤领域的技术趋势</h4><p>高温工况对滤材提出更高要求，金属纤维烧结毡凭借耐温与可再生优势成为重要方向。</p></div></a>
-        <a class="nitem" href="#"><div class="th" style="background-image:url('https://www.qlfiber.com/assets/images/cdn/6Pfr8OdTgN.jpg')"></div><div><div class="date">2024.12.02 · 应用案例</div><h4>金属纤维导电纱在智能可穿戴领域的应用</h4><p>柔软、导电、可水洗的金属纤维导电纱，为智能服装与可穿戴设备提供新材料选择。</p></div></a>
-        <a class="nitem" href="#"><div class="th" style="background-image:url('prod-cartridge.webp')"></div><div><div class="date">技术专栏</div><h4>如何为化纤熔体过滤选择合适精度的烧结滤芯？</h4><p>从熔体粘度、过滤精度与压降三个维度，给出滤芯选型的实用参考。</p></div></a>
-      </div>
+    <div class="nlist">
+      <a class="nc rv" href="#"><div class="dt"><b class="num">06.18</b><span>2026 · 企业动态</span></div><div class="ph"><i style="background-image:url('app-aero.webp')"></i></div><h3>喜讯｜福建强纶新材料股份有限公司获评中国航发商发合格供应商</h3><p>强纶正式进入中国航发商发供应体系，金属纤维材料在航空领域的应用迈出关键一步。</p></a>
+      <a class="nc rv d1" href="#"><div class="dt"><b class="num">12.10</b><span>2024 · 行业知识</span></div><div class="ph"><i style="background-image:url('prod-felt.webp')"></i></div><h3>不锈钢金属纤维烧结毡在高温过滤领域的技术趋势</h3><p>高温工况对滤材提出更高要求，金属纤维烧结毡凭借耐温与可再生优势成为重要方向。</p></a>
+      <a class="nc rv d2" href="#"><div class="dt"><b class="num">12.02</b><span>2024 · 应用案例</span></div><div class="ph"><i style="background-image:url('app-textile.webp')"></i></div><h3>金属纤维导电纱在智能可穿戴领域的应用</h3><p>柔软、导电、可水洗的金属纤维导电纱，为智能服装与可穿戴设备提供新材料选择。</p></a>
     </div>
   </div>
 </section>
 
-<!-- ============ 询盘 ============ -->
-<section class="sec inq" id="contact">
+<!-- ============ CTA ============ -->
+<section class="sec cta" id="contact">
   <div class="wrap">
     <div class="rv">
-      <div class="eyebrow">Contact Us</div>
-      <h2 style="margin-top:16px">告诉我们您的工况<br><em>获取专属选型方案</em></h2>
-      <p class="lead">提交需求后，技术工程师将尽快与您联系，提供产品选型建议、样品与报价。</p>
-      <div class="contact-l">
-        <div><span class="ic"><svg class="i"><use href="#i-phone"/></svg></span><span><small>电话 / 微信同号</small><b class="num" style="font-size:20px">181 5982 1773</b></span></div>
-        <div><span class="ic"><svg class="i"><use href="#i-mail"/></svg></span><span><small>邮箱</small>3756335070@qq.com</span></div>
-        <div><span class="ic"><svg class="i"><use href="#i-pin"/></svg></span><span><small>地址</small>福建省龙岩市高新区曲潭路 6 号</span></div>
+      <div class="idx"><b>08</b>CONTACT · 联系我们</div>
+      <h2>让每一微米，<br><em>都经得起检验</em></h2>
+      <p class="lead">告诉我们您的介质、温度与精度要求，技术工程师将为您提供选型建议、样品与报价。</p>
+      <div class="ct">
+        <div><small>电话 / 微信</small><span class="num">181 5982 1773</span></div>
+        <div><small>邮箱</small><span>3756335070@qq.com</span></div>
+        <div><small>地址</small><span>福建省龙岩市高新区曲潭路 6 号</span></div>
       </div>
     </div>
     <form class="card rv d1" id="inqForm">
       <h3>在线询盘</h3>
-      <label>姓名 *<input required name="n" placeholder="您的称呼"></label>
-      <label>手机 *<input required name="p" type="tel" placeholder="便于工程师联系"></label>
-      <label>公司名称<input name="c" placeholder="选填"></label>
+      <label>姓名 *<input required name="n" autocomplete="name"></label>
+      <label>手机 *<input required name="p" type="tel" autocomplete="tel"></label>
+      <label>公司名称<input name="c" autocomplete="organization"></label>
       <label>意向产品<select name="t"><option>金属纤维烧结毡</option><option>过滤元器件（滤芯 / 滤盘）</option><option>金属纤维纱线</option><option>金属纤维织物</option><option>其他 / 定制</option></select></label>
-      <label class="full">需求描述<textarea name="m" placeholder="例如：过滤介质、温度、精度要求、尺寸、用量等"></textarea></label>
-      <button class="btn btn-gold" type="submit">提交询盘 <svg class="i"><use href="#i-arrow"/></svg></button>
+      <label class="full">需求描述<textarea name="m" placeholder="过滤介质、温度、精度要求、尺寸、用量等"></textarea></label>
+      <button class="pill pill-ink" type="submit">提交询盘<svg class="i"><use href="#i-arrow"/></svg></button>
       <p class="ok" id="ok">提交成功（演示），正式上线后询盘将实时推送至企业微信 / 邮箱。</p>
     </form>
   </div>
@@ -958,106 +817,83 @@ form.card{box-shadow:0 30px 70px -34px rgba(0,0,0,.35);border:1px solid var(--li
 <footer>
   <div class="wrap ft">
     <div>
-      <a class="brand" href="#top"><img src="https://www.qlfiber.com/assets/images/logo.png" alt="强纶新材 logo" width="46" height="46"><span><strong>强纶新材</strong><small>FUJIAN QIANGLUN</small></span></a>
-      <p style="max-width:280px">专注金属纤维及其制品、过滤成套装备研发、生产、销售与技术服务。</p>
+      <a class="brand" href="#top"><img src="https://www.qlfiber.com/assets/images/logo.png" alt="强纶新材 logo" width="42" height="42"><span><strong>强纶新材</strong><small>QIANGLUN · SINCE 2002</small></span></a>
+      <p>专注金属纤维及其制品、过滤成套装备研发、生产、销售与技术服务。</p>
     </div>
-    <div><h5>产品中心</h5><ul><li><a href="#">金属纤维纱线</a></li><li><a href="#">金属纤维烧结毡</a></li><li><a href="#">金属纤维织物</a></li><li><a href="#">过滤元器件</a></li></ul></div>
-    <div><h5>应用领域</h5><ul><li><a href="#">过滤分离</a></li><li><a href="#">玻璃深加工</a></li><li><a href="#">电磁屏蔽与防静电</a></li><li><a href="#">航空航天</a></li></ul></div>
-    <div><h5>关于强纶</h5><ul><li><a href="#">企业简介</a></li><li><a href="#">科研创新</a></li><li><a href="#">资质荣誉</a></li><li><a href="#">新闻中心</a></li></ul></div>
-    <div><h5>关注我们</h5><div class="qr"><div><i><svg class="i"><use href="#i-wechat"/></svg></i>公众号</div><div><i><svg class="i"><use href="#i-msg"/></svg></i>视频号</div><div><i><svg class="i"><use href="#i-phone"/></svg></i>抖音</div></div></div>
+    <div><h5>产品</h5><ul><li><a href="#products">金属纤维纱线</a></li><li><a href="#products">金属纤维烧结毡</a></li><li><a href="#products">金属纤维织物</a></li><li><a href="#products">过滤元器件</a></li></ul></div>
+    <div><h5>应用</h5><ul><li><a href="#apps">过滤分离</a></li><li><a href="#apps">航空航天</a></li><li><a href="#apps">玻璃深加工</a></li><li><a href="#apps">智能穿戴</a></li></ul></div>
+    <div><h5>强纶</h5><ul><li><a href="#about">企业简介</a></li><li><a href="#rd">科研创新</a></li><li><a href="#news">新闻资讯</a></li><li><a href="#contact">联系我们</a></li></ul></div>
   </div>
-  <div class="wrap fb">
-    <span>© 2026 福建强纶新材料股份有限公司 版权所有 · 闽ICP备2022016209号-1</span>
-    <span>网站地图 · 隐私政策 · 法律声明</span>
-  </div>
+  <div class="wrap fb"><span>© 2026 福建强纶新材料股份有限公司 版权所有 · 闽ICP备2022016209号-1</span><span>网站地图 · 隐私政策 · 法律声明</span></div>
+  <div class="huge" aria-hidden="true">QIANGLUN</div>
 </footer>
 
 <div class="float">
   <a href="tel:18159821773" aria-label="电话咨询"><svg class="i"><use href="#i-phone"/></svg><span class="tipx">181 5982 1773</span></a>
-  <a href="#" aria-label="微信咨询"><svg class="i"><use href="#i-wechat"/></svg><span class="tipx">微信同号 18159821773</span></a>
   <a href="#contact" aria-label="在线询盘"><svg class="i"><use href="#i-msg"/></svg><span class="tipx">在线询盘</span></a>
   <button id="toTop" aria-label="返回顶部"><svg class="i"><use href="#i-up"/></svg></button>
 </div>
 
 <script>
 (function(){
-  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!document.body.classList.contains('pre'))document.body.classList.add('go');
 
-  /* Hero 轮播 */
-  const copy=[
-    {e:'Metal Fiber Since 2002',t:'以微米之纤<br>成就<em>精密过滤</em>',p:'二十余年专注金属纤维及其制品、过滤成套装备的研发与制造。从 2μm 超细不锈钢纤维，到烧结毡、滤芯滤盘与成套装备，为化纤、石化、玻璃、新能源与航空航天提供可靠材料方案。'},
-    {e:'R&D · Innovation',t:'国家级专精特新<br><em>"小巨人"企业</em>',p:'国家级高新技术企业、国家知识产权示范企业，并获评中国航发商发合格供应商。以持续研发投入，推动金属纤维材料迈向更高端的应用领域。'},
-    {e:'Sintered Fiber Felt',t:'金属纤维烧结毡<br>耐高温 · <em>可再生</em>',p:'多层梯度孔径结构，兼顾过滤精度与纳污量，可清洗再生、使用寿命长，适用于化纤熔体与高温气体等苛刻工况。'}
-  ];
-  const slides=$$('.slide'),dots=$$('#dots button');let cur=0,timer;
-  function go(i){
-    if(i===cur)return;
-    slides[cur].classList.remove('on');dots[cur].classList.remove('on');
-    cur=i;slides[cur].classList.add('on');dots[cur].classList.add('on');
-    const hc=$('#heroCopy');hc.classList.add('out');
-    setTimeout(()=>{$('#hEy').textContent=copy[i].e;$('#hT').innerHTML=copy[i].t;$('#hP').textContent=copy[i].p;hc.classList.remove('out')},reduce?0:450);
-  }
-  function auto(){clearInterval(timer);if(!reduce)timer=setInterval(()=>go((cur+1)%slides.length),6500)}
-  dots.forEach((d,i)=>d.onclick=()=>{go(i);auto()});auto();
-  document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(timer):auto());
+  /* 首屏窗口轮播 */
+  const sl=$$('#win .sl'),pb=$$('#prog button'),cap=[
+    '01 · MICRO FIBER<b>超细不锈钢纤维</b>','02 · R&amp;D LAB<b>强纶新材料创新研究院</b>','03 · SINTERED FELT<b>金属纤维烧结毡</b>'];
+  let cur=0,tm;
+  function go(i){sl[cur].classList.remove('on');pb[cur].classList.remove('on');cur=i;sl[i].classList.add('on');void pb[i].offsetWidth;pb[i].classList.add('on');$('#winT').innerHTML=cap[i]}
+  function auto(){clearInterval(tm);if(!reduce)tm=setInterval(()=>go((cur+1)%sl.length),6500)}
+  pb.forEach((b,i)=>b.onclick=()=>{go(i);auto()});auto();
+  document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(tm):auto());
 
-  /* 头部 / 返回顶部 / 导航高亮 */
+  /* 头部 + 导航高亮 + 返回顶部 + 视差 + 横向产业链 */
   const hdr=$('#hdr'),top=$('#toTop'),links=$$('.menu a');
-  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
-  addEventListener('scroll',()=>{
-    const y=scrollY;hdr.classList.toggle('solid',y>40);top.classList.toggle('show',y>600);
-    let idx=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<160)idx=i});
-    links.forEach((a,i)=>a.classList.toggle('on',i===idx));
-  },{passive:true});
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  const band=$('#band i'),chain=$('#chain'),pin=$('#chainPin'),track=$('#track'),bar=$('#chainBar');
+  const desk=()=>innerWidth>980&&!reduce;
+  function sizeChain(){
+    if(desk()){const extra=track.scrollWidth-innerWidth+80;chain.style.height=(innerHeight+Math.max(0,extra))+'px'}
+    else{chain.style.height='';track.style.transform=''}
+  }
+  function onScroll(){
+    const y=scrollY;hdr.classList.toggle('solid',y>30);top.classList.toggle('show',y>800);
+    let idx=0;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<180)idx=i});links.forEach((a,i)=>a.classList.toggle('on',i===idx));
+    if(!reduce&&band){const r=band.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)band.style.transform='translateY('+(r.top*-0.12)+'px)'}
+    if(desk()){const r=chain.getBoundingClientRect(),tot=chain.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,-r.top/tot)),max=track.scrollWidth-innerWidth+80;
+      track.style.transform='translateX('+(-p*Math.max(0,max))+'px)';bar.style.width=(p*100)+'%'}
+  }
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',()=>{sizeChain();onScroll()});
+  addEventListener('load',()=>{sizeChain();onScroll()});sizeChain();onScroll();
   top.onclick=()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'});
   $('#burger').onclick=()=>$('#menu').classList.toggle('open');
   links.forEach(a=>a.addEventListener('click',()=>$('#menu').classList.remove('open')));
 
-  /* 产品事业部 */
-  const divs=[
-    {en:'METAL FIBER YARN',t:'金属纤维纱线',img:'prod-316l.webp',p:'以超细不锈钢纤维为原料纺制，导电、耐高温、耐腐蚀，柔软可织造。广泛用于防静电、电磁屏蔽、导电发热与智能穿戴等领域。',l:['100% 316L 不锈钢纤维纱','不锈钢金属导电线 · 导电发热线','耐高温金属纤维发热丝']},
-    {en:'SINTERED FIBER FELT',t:'金属纤维烧结毡',img:'prod-felt.webp',p:'由微米级金属纤维经无纺铺制、叠层与高温烧结而成，多层梯度孔径结构兼顾过滤精度与纳污量，耐高温、可清洗再生。',l:['多层梯度孔径结构','耐高温 · 耐腐蚀 · 可再生','适用熔体与高温气体过滤']},
-    {en:'METAL FIBER FABRIC',t:'金属纤维织物',img:'prod-tape.webp',p:'以不锈钢纤维编织而成的带材、套管与织物，耐高温、防静电、不伤玻璃表面，是玻璃深加工与汽车玻璃成型的关键耗材。',l:['不锈钢纤维防静电编织带','编织套管','玻璃制造 · 印刷 · 防静电']},
-    {en:'FILTER ELEMENTS',t:'过滤元器件',img:'prod-cartridge.webp',p:'以金属纤维烧结毡为核心滤材，制成滤芯、滤盘与叶片过滤器，并可提供过滤成套装备，服务化纤、薄膜与石油化工等行业。',l:['金属纤维烧结滤芯','滤盘（烧结叶片过滤器）','过滤成套装备与技术服务']}
-  ];
-  const tabs=$$('#divShow .div-tabs button');let di=0,dt;
-  const ck='<svg class="i"><use href="#i-check"/></svg>';
-  function showDiv(i){
-    di=i;tabs.forEach((b,k)=>b.classList.toggle('on',k===i));$('#divNo').textContent=i+1;
-    const img=$('#divImg'),info=$('.div-info');img.classList.add('fade');info.classList.add('fade');
-    setTimeout(()=>{const d=divs[i];img.src=d.img;img.alt=d.t;$('#divEn').textContent=d.en;$('#divT').textContent=d.t;$('#divP').textContent=d.p;$('#divL').innerHTML=d.l.map(x=>'<li>'+ck+x+'</li>').join('');img.classList.remove('fade');info.classList.remove('fade')},reduce?0:300);
-  }
-  $('#divL').innerHTML=divs[0].l.map(x=>'<li>'+ck+x+'</li>').join('');
-  const divAuto=()=>{clearInterval(dt);if(!reduce)dt=setInterval(()=>showDiv((di+1)%4),5000)};
-  tabs.forEach((b,i)=>b.onclick=()=>{showDiv(i);divAuto()});
-  $('#divShow').addEventListener('mouseenter',()=>clearInterval(dt));
-  $('#divShow').addEventListener('mouseleave',divAuto);divAuto();
-  divs.forEach(d=>{const im=new Image();im.src=d.img});
-
-  /* FAQ */
-  $$('#faqList .qa').forEach(q=>q.querySelector('button').onclick=()=>{
-    const open=!q.classList.contains('open');q.classList.toggle('open',open);q.querySelector('button').setAttribute('aria-expanded',open);
+  /* 产品筛选 */
+  $$('#chips button').forEach(b=>b.onclick=()=>{
+    $$('#chips button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+    const c=b.dataset.c;$$('#bento .tile[data-c]').forEach(t=>t.classList.toggle('dim',c!=='all'&&t.dataset.c!==c));
   });
 
-  /* 表单（演示） */
+  /* 应用展开条 */
+  const pans=$$('#acc .pan');
+  pans.forEach(p=>{const act=()=>{pans.forEach(x=>x.classList.toggle('on',x===p))};
+    p.addEventListener('mouseenter',()=>{if(innerWidth>980)act()});p.addEventListener('click',act);p.addEventListener('focus',act);
+    p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act()}})});
+
+  /* FAQ */
+  $$('#faqList .qa').forEach(q=>q.querySelector('button').onclick=()=>{const o=!q.classList.contains('open');q.classList.toggle('open',o);q.querySelector('button').setAttribute('aria-expanded',o)});
+
+  /* 表单 */
   $('#inqForm').onsubmit=e=>{e.preventDefault();$('#ok').style.display='block';e.target.reset()};
 
-  /* 入场动画 + 数字滚动 + 纤维对比条 */
-  const countUp=el=>{
-    const end=+el.dataset.count;if(reduce||end<10){el.textContent=end;return}
-    const start=end>1000?end-60:0,t0=performance.now(),dur=1400;
-    const tick=t=>{const k=Math.min(1,(t-t0)/dur),v=Math.round(start+(end-start)*(1-Math.pow(1-k,3)));el.textContent=v;if(k<1)requestAnimationFrame(tick)};
-    requestAnimationFrame(tick);
-  };
-  $$('[data-count]').forEach(countUp);
+  /* 入场 */
   if('IntersectionObserver' in window&&!reduce){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){
-      e.target.classList.add('in');
-      if(e.target.id==='cmp'||e.target.querySelector('#cmp'))$$('#cmp i').forEach(i=>i.style.width=i.dataset.w+'%');
-      io.unobserve(e.target)}}),{threshold:.15});
-    $$('.rv').forEach(el=>io.observe(el));
-  }else{$$('.rv').forEach(el=>el.classList.add('in'));$$('#cmp i').forEach(i=>i.style.width=i.dataset.w+'%')}
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.18});
+    $$('.rv,#scale').forEach(el=>io.observe(el));
+  }else{$$('.rv,#scale').forEach(el=>el.classList.add('in'))}
 })();
 </script>
 </body>
