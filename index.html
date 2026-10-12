@@ -366,11 +366,12 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
 }
 
 /* ---------- 借鉴惠同并升级 ---------- */
+
 .stock{display:flex;flex-direction:column;line-height:1.2;padding-left:18px;border-left:1px solid var(--line-d);margin-left:-18px}
 .stock small{font-size:11px;color:var(--muted-d);letter-spacing:.1em}
 .stock b{color:var(--gold);font-size:19px;letter-spacing:.06em}
 .hphone{display:flex;align-items:center;gap:8px;color:#fff;padding-left:18px;border-left:1px solid var(--line-d);height:40px}
-.hphone .num{font-size:21px;font-weight:600;letter-spacing:.02em}
+.hphone .num{font-size:20px;font-weight:600;letter-spacing:.02em}
 .hphone svg{color:var(--gold);width:22px;height:22px}
 .hphone:hover .num{color:var(--gold)}
 .div-show{display:grid;grid-template-columns:240px 1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#f7f7f5,#ecebe7);border-radius:6px;padding:48px;margin-bottom:70px;position:relative;overflow:hidden}
@@ -426,6 +427,13 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
 }
 @media (max-width:600px){.statcard{grid-template-columns:1fr 1fr}.statcard div:nth-child(odd){border-left:0}.statcard div:nth-child(4){border-left:1px solid var(--line)}.statcard div:last-child{grid-column:span 2}}
 @media (prefers-reduced-motion:reduce){.statcard.rv{transform:translateY(80px)}}
+.nav{gap:26px}
+.menu a{white-space:nowrap;padding:10px 13px}
+.menu a::after{left:13px;right:13px}
+.hphone{white-space:nowrap}
+@media (max-width:1600px){.stock{display:none}}@media (max-width:1440px){.menu a{padding:10px 11px;font-size:15px}}
+@media (max-width:1280px){.hphone .num{display:none}.hphone{padding-left:12px}}
+@media (max-width:960px){.menu a{padding:14px 4px}.hphone{display:none}}
 </style>
 </head>
 <body>
