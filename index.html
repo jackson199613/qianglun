@@ -75,9 +75,10 @@ header.solid{background:rgba(11,11,12,.97)}
 .hero{position:relative;height:calc(100vh - 118px);min-height:700px;max-height:920px;background:var(--ink);color:#fff;overflow:hidden}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
 .slide.on{opacity:1}
-.slide .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);transition:transform 7s ease}
+.slide .bg{position:absolute;top:0;bottom:0;right:0;width:min(62%,1100px);background-size:cover;background-position:center;transform:scale(1.06);transition:transform 8s ease;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%)}
 .slide.on .bg{transform:scale(1)}
-.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.62) 45%,rgba(0,0,0,.15) 100%),linear-gradient(0deg,rgba(0,0,0,.7),transparent 40%)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,1) 0%,rgba(11,11,12,.55) 45%,rgba(11,11,12,0) 70%),linear-gradient(0deg,rgba(11,11,12,.85),transparent 35%)}
+.hero{background:radial-gradient(900px 600px at 78% 45%,#1c1a14,var(--ink) 70%)}
 .hero-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding-top:40px;padding-bottom:150px}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
 .eyebrow::before{content:"";width:40px;height:1px;background:var(--gold)}
@@ -144,7 +145,8 @@ section{position:relative}
 .rd{background:radial-gradient(1200px 600px at 85% 10%,rgba(234,202,2,.09),transparent 60%),var(--ink);color:#fff;overflow:hidden}
 .rd::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 1px,transparent 1px 22px);mask-image:linear-gradient(90deg,transparent,#000 60%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%);pointer-events:none}
 .rd-top{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center;position:relative}
-.micro{position:relative;border:1px solid var(--line-d);border-radius:6px;padding:40px 36px 34px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,0))}
+.micro{position:relative;border:1px solid var(--line-d);border-radius:6px;padding:40px 36px 34px;background:linear-gradient(160deg,rgba(11,11,12,.72),rgba(11,11,12,.92) 60%),url('rd-sem.webp') center/cover;overflow:hidden}
+.micro .sem-tag{position:absolute;right:16px;top:14px;font-size:11px;letter-spacing:.15em;color:rgba(255,255,255,.45)}
 .micro-label{font-size:13px;color:var(--muted-d);letter-spacing:.15em}
 .micro-big{display:flex;align-items:baseline;gap:8px;margin:8px 0 6px}
 .micro-big b{font-size:clamp(96px,11vw,150px);line-height:.9;background:var(--steel);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
@@ -324,6 +326,7 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
   .hs:nth-child(n+3){border-top:1px solid var(--line-d)}
   .hs b{font-size:34px}
   .dots,.scroll-cue{display:none}
+  .slide .bg{-webkit-mask-image:none;mask-image:none}
   .sec{padding:80px 0}
   .rd-top,.about,.faq-wrap,.inq .wrap,.news{grid-template-columns:1fr;gap:50px}
   .pgrid{grid-template-columns:repeat(2,1fr);gap:16px}
@@ -441,7 +444,7 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
 .hero{background:#000}
 .rd::after{content:"";position:absolute;inset:0;background:url("rd-sem.webp") center/cover;opacity:.16;mix-blend-mode:screen;pointer-events:none;mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%)}
 .rd>.wrap{position:relative;z-index:1}
-.micro{background:linear-gradient(160deg,rgba(11,11,12,.75),rgba(11,11,12,.55)),url("rd-sem.webp") center/cover;backdrop-filter:blur(2px)}
+.micro{background:linear-gradient(160deg,rgba(11,11,12,.9),rgba(11,11,12,.72)),url("rd-sem.webp") center/cover;backdrop-filter:blur(2px)}
 .app:nth-child(1) .bg{background-position:center 40%}
 @media (max-width:960px){
   .slide .bg{width:100%}
@@ -559,6 +562,7 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
 
     <div class="rd-top">
       <div class="micro rv">
+        <span class="sem-tag num">SEM · 微观形貌示意</span>
         <div class="micro-label">超细不锈钢纤维 · 最小直径</div>
         <div class="micro-big"><b class="num">2</b><span>μm</span></div>
         <p>已实现稳定量产。纤维越细，比表面积越大、过滤精度越高，制成的烧结毡和织物更柔软、更均匀。</p>
@@ -767,7 +771,7 @@ footer{background:#000;color:var(--muted-d);font-size:14px}
     </div>
     <div class="news">
       <a class="nfeat rv" href="#">
-        <div class="bg" style="background-image:url('https://www.qlfiber.com/assets/images/apps/aerospace.jpg'),linear-gradient(135deg,#2a2a2e,#0b0b0c)"></div>
+        <div class="bg" style="background-image:url('app-aero.webp'),linear-gradient(135deg,#2a2a2e,#0b0b0c)"></div>
         <div class="in"><div class="date">2026.06.18 · 企业动态</div><h3>喜讯｜福建强纶新材料股份有限公司获评中国航发商发合格供应商</h3><p>强纶正式进入中国航发商发供应体系，金属纤维材料在航空领域的应用迈出关键一步。</p></div>
       </a>
       <div class="nlist rv d1">
