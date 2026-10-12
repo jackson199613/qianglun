@@ -354,6 +354,35 @@ body.pre .window{clip-path:inset(0 0 0 100%)}
 body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
 @keyframes shine{0%{background-position:100% 0}100%{background-position:0 0}}
 
+
+/* ---------- 按工况选型 ---------- */
+.selx{background:var(--white)}
+.sel{display:grid;grid-template-columns:1.25fr 1fr;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.sel-q{padding:44px}
+.q{padding:22px 0;border-bottom:1px solid var(--line)}
+.q:first-child{padding-top:0}.q:last-child{border-bottom:0;padding-bottom:0}
+.q.off{display:none}
+.qh{display:flex;align-items:center;gap:14px;font-size:16px;font-weight:500;margin-bottom:16px}
+.qh b{font-size:15px;color:var(--champ-ink)}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{min-height:44px;padding:0 20px;border-radius:44px;border:1px solid var(--line);background:#fff;font-size:14.5px;color:var(--graphite);transition:all .25s}
+.opts button:hover{border-color:var(--ink);color:var(--ink)}
+.opts button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.sel-r{background:var(--ink);color:#f2f0eb;display:flex;flex-direction:column}
+.r-im{aspect-ratio:16/10;overflow:hidden;background:#141416}
+.r-im img{width:100%;height:100%;object-fit:cover;transition:opacity .35s,transform .6s var(--ease)}
+.r-im img.fade{opacity:0;transform:scale(1.04)}
+.r-tx{padding:34px 38px 36px;display:flex;flex-direction:column;gap:10px;flex:1}
+.r-tx small{font-size:12.5px;letter-spacing:.24em;color:var(--gold)}
+.r-tx h3{font-family:"Noto Serif SC",serif;font-size:28px;font-weight:700;line-height:1.35}
+.r-tx p{color:#c9c7c1;font-size:15px}
+.r-alt{display:flex;flex-wrap:wrap;gap:8px}
+.r-alt span{font-size:12.5px;padding:4px 12px;border:1px solid var(--line-d);border-radius:30px;color:#dcdad4}
+.r-note{color:var(--gold)!important;font-size:13.5px!important}
+.r-note:empty{display:none}
+.r-tx .pill{align-self:flex-start;margin-top:10px}
+.r-disc{font-size:12px!important;color:#8d8b85!important;margin-top:auto;padding-top:10px}
+@media (max-width:980px){.sel{grid-template-columns:1fr}.sel-q{padding:26px}.r-tx{padding:26px}}
 /* ---------- 进站过场（保留） ---------- */
 /* ---------- 进站过场 ---------- */
 #intro{position:fixed;inset:0;z-index:9999;background:#050506;color:#fff;overflow:hidden;--r:0px;-webkit-mask-image:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 1px));mask-image:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 1px))}
@@ -567,8 +596,8 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
     </a>
     <nav class="menu" id="menu">
       <a class="on" href="#top">首页</a>
-      <a href="#rd">科研创新</a>
-      <a href="#chain">产业链</a>
+      <a href="rd.html">科研创新</a>
+      <a href="#select">工况选型</a>
       <a href="#products">产品</a>
       <a href="#apps">应用</a>
       <a href="#about">关于强纶</a>
@@ -576,7 +605,7 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
     </nav>
     <div class="nav-r">
       <span class="stock">证券代码<b>872336</b></span>
-      <a class="pill pill-ink" href="#contact">获取选型方案<svg class="i"><use href="#i-arrow"/></svg></a>
+      <a class="pill pill-ink" href="#select">按工况选型<svg class="i"><use href="#i-arrow"/></svg></a>
       <button class="burger" id="burger" aria-label="打开菜单"><svg class="i"><use href="#i-menu"/></svg></button>
     </div>
   </div>
@@ -592,13 +621,14 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
       <h1><span class="ln"><span>以<em>微米</em>之纤</span></span><span class="ln"><span>织就工业之精</span></span></h1>
       <p class="lead">二十余年专注金属纤维及其制品、过滤成套装备的研发与制造。从 2μm 超细不锈钢纤维，到烧结毡、滤芯滤盘与成套装备，为化纤、石化、玻璃、新能源与航空航天提供可靠的材料方案。</p>
       <div class="ctas">
-        <a class="pill pill-ink" href="#products">探索产品<svg class="i"><use href="#i-arrow"/></svg></a>
-        <a class="tlink" href="#rd">科研实力<svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="pill pill-ink" href="#select">按工况选型<svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="pill pill-line" href="#products">浏览产品</a>
+        <a class="tlink" href="rd.html">科研实力<svg class="i"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="hero-meta">
         <div><b class="num">2002</b><span>公司创立</span></div>
         <div><b class="num">2<sup>μm</sup></b><span>纤维最小直径</span></div>
-        <div><b class="num">20<sup>+</sup></b><span>年行业积累</span></div>
+        <div><b class="num">4<sup>项</sup></b><span>国家级资质认定</span></div>
       </div>
     </div>
     <div class="window" id="win">
@@ -626,7 +656,7 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
   <div class="wrap">
     <div class="sh rv">
       <div><div class="idx"><b>01</b>R&amp;D · 科研创新</div><h2>把金属，做到<br>比发丝细<em>约 35 倍</em></h2></div>
-      <p>依托强纶新材料创新研究院，掌握超细不锈钢纤维制备与超级不锈钢制备技术，打通从纤维、烧结成型到过滤装备的完整技术链。</p>
+      <div style="justify-self:end;max-width:520px"><p style="color:var(--muted);font-size:16px">依托强纶新材料创新研究院，掌握超细不锈钢纤维制备与超级不锈钢制备技术，打通从纤维、烧结成型到过滤装备的完整技术链。</p><a class="tlink" href="rd.html" style="margin-top:18px">进入科研创新<svg class="i"><use href="#i-arrow"/></svg></a></div>
     </div>
     <div class="lab-top">
       <div class="micron rv">
@@ -709,6 +739,49 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
       <a class="tile rv d1" data-c="yarn" href="#"><img loading="lazy" src="prod-heatline.webp" alt="不锈钢纤维导电发热线"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>不锈钢纤维导电发热线</h3><div class="sp"><span>发热均匀</span><span>可弯折</span></div></div></a>
       <a class="tile rv d2" data-c="yarn" href="#"><img loading="lazy" src="prod-heatwire.webp" alt="耐高温金属纤维发热丝"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><div class="tx"><div class="cat">YARN · 纱线</div><h3>耐高温金属纤维发热丝</h3><div class="sp"><span>耐高温</span><span>寿命长</span></div></div></a>
       <a class="tile cta rv d3" href="#contact"><b>需要非标定制？<br>按工况为您选型</b><span>提交需求<svg class="i"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 按工况选型 ============ -->
+<section class="sec selx" id="select">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><div class="idx"><b>—</b>SELECTOR · 按工况选型</div><h2>三步，<br>找到<em>适合您工况</em>的方案</h2></div>
+      <p>选择应用场景与工况条件，系统给出初步推荐；一键把条件发给强纶工程师，获取正式选型与报价。</p>
+    </div>
+    <div class="sel rv" id="sel">
+      <div class="sel-q">
+        <div class="q"><div class="qh"><b class="num">01</b>应用场景</div>
+          <div class="opts" data-k="use">
+            <button class="on" data-v="filter">过滤分离</button><button data-v="esd">防静电 / 电磁屏蔽</button><button data-v="heat">导电发热</button><button data-v="glass">玻璃高温衬垫</button>
+          </div></div>
+        <div class="q" data-for="filter"><div class="qh"><b class="num">02</b>过滤介质</div>
+          <div class="opts" data-k="med">
+            <button class="on" data-v="melt">聚合物熔体</button><button data-v="gas">气体 / 烟气</button><button data-v="liq">液体</button>
+          </div></div>
+        <div class="q"><div class="qh"><b class="num">03</b>工况温度</div>
+          <div class="opts" data-k="temp">
+            <button data-v="low">≤ 150 ℃</button><button class="on" data-v="mid">150 – 400 ℃</button><button data-v="high">&gt; 400 ℃</button>
+          </div></div>
+        <div class="q" data-for="filter"><div class="qh"><b class="num">04</b>期望形态</div>
+          <div class="opts" data-k="form">
+            <button class="on" data-v="auto">不确定，帮我推荐</button><button data-v="cart">滤芯</button><button data-v="disc">滤盘</button><button data-v="felt">烧结毡（自行加工）</button>
+          </div></div>
+      </div>
+      <div class="sel-r" aria-live="polite">
+        <div class="r-im"><img id="rImg" src="prod-disc.webp" alt=""></div>
+        <div class="r-tx">
+          <small class="num">RECOMMENDED · 初步推荐</small>
+          <h3 id="rT">滤盘（烧结叶片过滤器）</h3>
+          <p id="rP">高粘度聚合物熔体过滤，过滤面积大、可清洗再生。</p>
+          <div class="r-alt" id="rAlt"></div>
+          <p class="r-note" id="rN"></p>
+          <button class="pill pill-gold" id="rGo" type="button">把条件发给工程师<svg class="i"><use href="#i-arrow"/></svg></button>
+          <p class="r-disc">* 推荐基于常见工况，仅供参考，以工程师确认的正式选型为准。</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -876,6 +949,50 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
     $$('#chips button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
     const c=b.dataset.c;$$('#bento .tile[data-c]').forEach(t=>t.classList.toggle('dim',c!=='all'&&t.dataset.c!==c));
   });
+
+
+  /* 按工况选型 */
+  const st={use:'filter',med:'melt',temp:'mid',form:'auto'};
+  const P={
+    disc:{img:'prod-disc.webp',t:'滤盘（烧结叶片过滤器）',p:'适合高粘度聚合物熔体过滤，过滤面积大、可清洗再生，常用于化纤与薄膜生产线。'},
+    cart:{img:'prod-cartridge.webp',t:'金属纤维烧结滤芯',p:'整体烧结成型，耐温、耐腐蚀、可反复清洗，适用于气体、液体与熔体过滤。'},
+    felt:{img:'prod-felt.webp',t:'不锈钢纤维烧结毡',p:'多层梯度孔径结构，兼顾精度与纳污量，可按需裁切加工为自有滤材。'},
+    yarn:{img:'prod-316l.webp',t:'316L 不锈钢纤维纱 / 导电线',p:'导电稳定、耐腐蚀、柔软可织造，用于防静电织物与电磁屏蔽材料。'},
+    tape:{img:'prod-tape.webp',t:'不锈钢纤维防静电编织带',p:'耐高温、防静电、不伤玻璃表面，用于玻璃深加工与汽车玻璃成型。'},
+    heat:{img:'prod-heatline.webp',t:'不锈钢纤维导电发热线',p:'发热均匀、可弯折，用于加热服饰、座椅加热等柔性发热场景。'}
+  };
+  const L={filter:'过滤分离',esd:'防静电 / 电磁屏蔽',heat:'导电发热',glass:'玻璃高温衬垫',melt:'聚合物熔体',gas:'气体 / 烟气',liq:'液体',low:'≤150℃',mid:'150–400℃',high:'>400℃',auto:'由工程师推荐',cart:'滤芯',disc:'滤盘',felt:'烧结毡'};
+  function pick(){
+    let main,alt=[];
+    if(st.use==='filter'){
+      if(st.form!=='auto')main=st.form;
+      else main=st.med==='melt'?'disc':'cart';
+      alt=['disc','cart','felt'].filter(x=>x!==main);
+    }else if(st.use==='esd'){main='yarn';alt=['tape']}
+    else if(st.use==='heat'){main='heat';alt=['yarn']}
+    else{main='tape';alt=['felt']}
+    return {main,alt};
+  }
+  function render(){
+    $$('#sel .q[data-for]').forEach(q=>q.classList.toggle('off',q.dataset.for!==st.use));
+    const r=pick(),d=P[r.main],im=$('#rImg');im.classList.add('fade');
+    setTimeout(()=>{im.src=d.img;im.alt=d.t;$('#rT').textContent=d.t;$('#rP').textContent=d.p;
+      $('#rAlt').innerHTML=r.alt.map(x=>'<span>也可考虑：'+P[x].t+'</span>').join('');
+      $('#rN').textContent=st.temp==='high'?'高温工况：请在需求中注明具体温度与气氛，工程师将核对材质与结构。':'';
+      im.classList.remove('fade')},reduce?0:220);
+  }
+  $$('#sel .opts').forEach(g=>g.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    g.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');st[g.dataset.k]=b.dataset.v;render()}));
+  $('#rGo').onclick=()=>{
+    const r=pick();let t='【按工况选型】应用场景：'+L[st.use];
+    if(st.use==='filter')t+='；介质：'+L[st.med]+'；期望形态：'+L[st.form];
+    t+='；温度：'+L[st.temp]+'。初步推荐：'+P[r.main].t+'。';
+    const f=$('#inqForm');f.querySelector('textarea').value=t+'\n补充说明：';
+    const sel=f.querySelector('select');[...sel.options].forEach((o,i)=>{if(P[r.main].t.indexOf(o.text.slice(0,4))>-1)sel.selectedIndex=i});
+    document.getElementById('contact').scrollIntoView({behavior:reduce?'auto':'smooth'});
+    setTimeout(()=>f.querySelector('input').focus({preventScroll:true}),reduce?0:800);
+  };
+  render();
 
   /* 应用展开条 */
   const pans=$$('#acc .pan');
