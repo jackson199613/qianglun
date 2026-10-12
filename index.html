@@ -842,7 +842,7 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
 
   /* 首屏窗口轮播 */
   const sl=$$('#win .sl'),pb=$$('#prog button'),cap=[
-    '01 · MICRO FIBER<b>超细不锈钢纤维</b>','02 · R&amp;D LAB<b>强纶新材料创新研究院</b>','03 · SINTERED FELT<b>金属纤维烧结毡</b>'];
+    '01 · MICRO FIBER<b>超细不锈钢纤维</b>','02 · R&amp;D<b>科研创新 · 精密检测</b>','03 · SINTERED FELT<b>金属纤维烧结毡</b>'];
   let cur=0,tm;
   function go(i){sl[cur].classList.remove('on');pb[cur].classList.remove('on');cur=i;sl[i].classList.add('on');void pb[i].offsetWidth;pb[i].classList.add('on');$('#winT').innerHTML=cap[i]}
   function auto(){clearInterval(tm);if(!reduce)tm=setInterval(()=>go((cur+1)%sl.length),6500)}
