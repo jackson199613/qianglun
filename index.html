@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>强论 · 有观点的社区</title>
+<meta name="description" content="强论 —— 一个讲道理、有观点的中文讨论社区。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --surface:#ffffff; --surface-2:#efece4; --text:#1c1b19; --muted:#6b675e;
+    --line:#e2ded3; --brand:#c0392b; --brand-ink:#ffffff; --accent:#1f4e5f; --tag:#f3e3df;
+    --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.04),0 6px 24px rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141413; --surface:#1d1c1a; --surface-2:#262522; --text:#ecebe6; --muted:#a19d93;
+      --line:#33312d; --brand:#e2574a; --accent:#7fb3c4; --tag:#3a2422; --shadow:none;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141413; --surface:#1d1c1a; --surface-2:#262522; --text:#ecebe6; --muted:#a19d93;
+    --line:#33312d; --brand:#e2574a; --accent:#7fb3c4; --tag:#3a2422; --shadow:none;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:"Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:20px;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Noto Serif SC",serif;font-weight:900;font-size:22px;letter-spacing:.06em}
+  .logo-mark{width:34px;height:34px;border-radius:9px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-size:18px}
+  .links{display:flex;gap:4px}
+  .links a{padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:500;font-size:15px}
+  .links a:hover,.links a.on{color:var(--text);background:var(--surface-2)}
+  .search{flex:1;max-width:340px;margin-left:auto;position:relative}
+  .search input{width:100%;height:40px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:0 16px 0 38px;font:inherit;font-size:14px;outline:none}
+  .search input:focus{border-color:var(--accent)}
+  .search svg{position:absolute;left:13px;top:11px;color:var(--muted)}
+  .btn{height:40px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-weight:500;font-size:14px;cursor:pointer;white-space:nowrap}
+  .btn.primary{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+  .btn:hover{filter:brightness(.97)}
+  .icon-btn{width:40px;padding:0;display:grid;place-items:center}
+  .menu-btn{display:none}
+
+  /* Hero */
+  .hero{padding:56px 0 36px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+  .hero h1{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(34px,5vw,56px);line-height:1.15;letter-spacing:.02em}
+  .hero h1 em{font-style:normal;color:var(--brand)}
+  .hero p{margin-top:16px;color:var(--muted);font-size:17px;max-width:520px}
+  .hero-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero-cta .btn{height:46px;padding:0 24px;font-size:15px}
+  .debate{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+  .debate .label{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--brand)}
+  .debate h3{font-family:"Noto Serif SC",serif;font-size:21px;margin:8px 0 16px;line-height:1.4}
+  .bar{display:flex;height:10px;border-radius:999px;overflow:hidden;background:var(--surface-2)}
+  .bar .pro{background:var(--accent)} .bar .con{background:var(--brand)}
+  .sides{display:flex;justify-content:space-between;margin-top:10px;font-size:14px;color:var(--muted)}
+  .sides b{color:var(--text)}
+  .vote{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  .vote .btn{width:100%}
+  .vote .btn.voted{outline:2px solid var(--accent)}
+
+  /* Layout */
+  .main{display:grid;grid-template-columns:1fr 320px;gap:28px;padding-bottom:60px}
+  h2.sec{font-size:18px;font-weight:700;margin:8px 0 14px;display:flex;align-items:center;justify-content:space-between}
+  h2.sec a{font-size:14px;font-weight:500;color:var(--muted)}
+
+  .boards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px}
+  .board{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;transition:transform .15s,border-color .15s}
+  .board:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .board .em{font-size:22px}
+  .board h4{margin-top:6px;font-size:16px}
+  .board p{font-size:13px;color:var(--muted)}
+  .board small{display:block;margin-top:8px;font-size:12px;color:var(--muted)}
+
+  .tabs{display:flex;gap:6px;margin-bottom:12px}
+  .tab{padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:inherit;font-size:14px;cursor:pointer}
+  .tab.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+  .threads{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .thread{display:grid;grid-template-columns:44px 1fr auto;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line);align-items:center}
+  .thread:last-child{border-bottom:0}
+  .thread:hover{background:var(--surface-2)}
+  .avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700}
+  .thread h5{font-size:16px;font-weight:600;line-height:1.45}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:4px;font-size:13px;color:var(--muted)}
+  .tagc{background:var(--tag);color:var(--brand);padding:1px 8px;border-radius:6px;font-size:12px;font-weight:500}
+  .stats{text-align:right;font-size:13px;color:var(--muted);min-width:64px}
+  .stats b{display:block;font-size:17px;color:var(--text)}
+  .hot{color:var(--brand);font-weight:700;font-size:12px}
+
+  aside .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:16px}
+  aside h6{font-size:15px;margin-bottom:12px}
+  .nums{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+  .nums b{display:block;font-size:20px;font-family:"Noto Serif SC",serif}
+  .nums span{font-size:12px;color:var(--muted)}
+  .notice li{list-style:none;font-size:14px;padding:7px 0;border-bottom:1px dashed var(--line)}
+  .notice li:last-child{border:0}
+  .users li{list-style:none;display:flex;align-items:center;gap:10px;padding:6px 0;font-size:14px}
+  .users .avatar{width:30px;height:30px;font-size:13px}
+  .users em{margin-left:auto;font-style:normal;font-size:12px;color:var(--muted)}
+  .rules{font-size:13px;color:var(--muted)}
+  .rules ol{padding-left:18px}
+
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media (max-width:960px){
+    .hero{grid-template-columns:1fr;padding-top:36px}
+    .main{grid-template-columns:1fr}
+    .boards{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:720px){
+    .links,.search{display:none}
+    .menu-btn{display:grid}
+    .nav{gap:10px}.nav .btn.login{display:none}
+    .nav .right{margin-left:auto;display:flex;gap:8px}
+    .thread{grid-template-columns:36px 1fr;padding:14px}
+    .thread .avatar{width:36px;height:36px;font-size:14px}
+    .stats{display:none}
+    .mobile-menu.open{display:flex}
+  }
+  .right{display:flex;gap:8px}
+  .mobile-menu{display:none;flex-direction:column;padding:8px 16px 14px;gap:4px;border-top:1px solid var(--line)}
+  .mobile-menu a{padding:10px 8px;border-radius:8px}
+  .mobile-menu a:hover{background:var(--surface-2)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">论</span>强论</a>
+    <nav class="links">
+      <a class="on" href="#">首页</a><a href="#boards">板块</a><a href="#threads">热帖</a><a href="#">辩题</a>
+    </nav>
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" placeholder="搜索话题、用户…" id="q">
+    </label>
+    <div class="right">
+      <button class="btn icon-btn" id="theme" aria-label="切换深浅色">◐</button>
+      <button class="btn login">登录</button>
+      <button class="btn primary">注册</button>
+      <button class="btn icon-btn menu-btn" id="menu" aria-label="菜单">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="#">首页</a><a href="#boards">板块</a><a href="#threads">热帖</a><a href="#">辩题</a><a href="#">登录</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>观点要<em>强</em>，<br>论证要<em>硬</em>。</h1>
+      <p>强论是一个讲道理的讨论社区。在这里，你可以提出观点、拿出证据、接受反驳——让好论点胜出，而不是嗓门大的人。</p>
+      <div class="hero-cta">
+        <button class="btn primary">发起讨论</button>
+        <a class="btn" href="#threads" style="display:inline-flex;align-items:center">浏览热帖</a>
+      </div>
+    </div>
+    <div class="debate">
+      <div class="label">今日辩题</div>
+      <h3>远程办公会成为未来的主流工作方式吗？</h3>
+      <div class="bar"><div class="pro" id="proBar"></div><div class="con" id="conBar"></div></div>
+      <div class="sides"><span>正方 <b id="proPct"></b></span><span id="total"></span><span><b id="conPct"></b> 反方</span></div>
+      <div class="vote">
+        <button class="btn" data-side="pro">支持正方</button>
+        <button class="btn" data-side="con">支持反方</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="main">
+    <div>
+      <h2 class="sec" id="boards">热门板块 <a href="#">全部板块 →</a></h2>
+      <div class="boards" id="boardList"></div>
+
+      <h2 class="sec" id="threads">讨论</h2>
+      <div class="tabs">
+        <button class="tab on" data-sort="hot">最热</button>
+        <button class="tab" data-sort="new">最新</button>
+        <button class="tab" data-sort="replies">回复最多</button>
+      </div>
+      <div class="threads" id="threadList"></div>
+    </div>
+
+    <aside>
+      <div class="card">
+        <h6>社区数据</h6>
+        <div class="nums">
+          <div><b>12.8k</b><span>成员</span></div>
+          <div><b>3,420</b><span>主题</span></div>
+          <div><b>286</b><span>在线</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h6>📢 公告</h6>
+        <ul class="notice">
+          <li>强论社区正式上线，欢迎各位！</li>
+          <li>每周辩题征集中，入选有奖</li>
+          <li>新版发帖编辑器已支持 Markdown</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h6>活跃用户</h6>
+        <ul class="users" id="userList"></ul>
+      </div>
+      <div class="card rules">
+        <h6 style="color:var(--text)">讨论守则</h6>
+        <ol>
+          <li>对事不对人，禁止人身攻击</li>
+          <li>引用数据请注明来源</li>
+          <li>允许被说服，也允许坚持</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> 强论 · 有观点的社区</span>
+    <span>关于我们 · 社区守则 · 联系方式</span>
+  </div>
+</footer>
+
+<script>
+  // ===== 示例数据：以后接后端时替换这里即可 =====
+  const boards = [
+    {em:"💡",name:"思辨广场",desc:"哲学、逻辑与价值观",n:1240},
+    {em:"📈",name:"财经时评",desc:"经济、投资与商业",n:860},
+    {em:"🔬",name:"科技前沿",desc:"AI、互联网与新科技",n:1530},
+    {em:"🏛️",name:"社会议题",desc:"教育、城市与公共政策",n:972},
+    {em:"📚",name:"读书交流",desc:"书评、观点与推荐",n:540},
+    {em:"☕",name:"闲聊灌水",desc:"轻松话题，随便聊聊",n:2210},
+  ];
+  const colors=["#c0392b","#1f4e5f","#8e6c3a","#5b4b8a","#2e7d5b","#b0573a"];
+  const threads = [
+    {t:"AI 写作普及之后，「原创」这个词还有意义吗？",b:"科技前沿",u:"林间",r:184,v:5210,h:98,ago:"2 小时前",m:120},
+    {t:"年轻人「反向消费」是理性回归还是被动降级？",b:"财经时评",u:"老周",r:142,v:3980,h:91,ago:"5 小时前",m:300},
+    {t:"如果只能保留一种教育评价方式，你选考试还是综合评价？",b:"社会议题",u:"白鹭",r:121,v:3102,h:85,ago:"昨天",m:1440},
+    {t:"「电车难题」到底在测试我们的什么？",b:"思辨广场",u:"苏格拉底不在家",r:97,v:2450,h:80,ago:"1 小时前",m:60},
+    {t:"今年读过最改变你想法的一本书是哪本？",b:"读书交流",u:"纸页",r:76,v:1820,h:62,ago:"30 分钟前",m:30},
+    {t:"城市该不该全面取消限购？来摆数据",b:"社会议题",u:"规划师小王",r:203,v:6120,h:88,ago:"3 天前",m:4320},
+    {t:"周一早上大家都靠什么续命？",b:"闲聊灌水",u:"咖啡因",r:58,v:980,h:40,ago:"10 分钟前",m:10},
+  ];
+  const users=[["林间",86],["规划师小王",74],["白鹭",61],["老周",55],["纸页",42]];
+
+  const $=s=>document.querySelector(s);
+  const av=(name,i)=>`<span class="avatar" style="background:${colors[i%colors.length]}">${name[0]}</span>`;
+
+  $("#boardList").innerHTML=boards.map(b=>`
+    <a class="board" href="#"><div class="em">${b.em}</div><h4>${b.name}</h4><p>${b.desc}</p><small>${b.n.toLocaleString()} 个主题</small></a>`).join("");
+
+  function renderThreads(sort="hot",q=""){
+    let list=[...threads].filter(x=>!q||x.t.includes(q)||x.b.includes(q)||x.u.includes(q));
+    if(sort==="hot")list.sort((a,b)=>b.h-a.h);
+    if(sort==="new")list.sort((a,b)=>a.m-b.m);
+    if(sort==="replies")list.sort((a,b)=>b.r-a.r);
+    $("#threadList").innerHTML=list.length?list.map((x,i)=>`
+      <a class="thread" href="#">${av(x.u,threads.indexOf(x))}
+        <div><h5>${x.t}</h5>
+          <div class="meta"><span class="tagc">${x.b}</span><span>${x.u}</span><span>${x.ago}</span>${x.h>85?'<span class="hot">🔥 热议</span>':''}</div>
+        </div>
+        <div class="stats"><b>${x.r}</b>回复</div></a>`).join("")
+      :`<div style="padding:28px;text-align:center;color:var(--muted)">没有找到相关讨论</div>`;
+  }
+  let curSort="hot";
+  renderThreads();
+  document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));
+    t.classList.add("on");curSort=t.dataset.sort;renderThreads(curSort,$("#q").value.trim());
+  });
+  $("#q").addEventListener("input",e=>renderThreads(curSort,e.target.value.trim()));
+
+  $("#userList").innerHTML=users.map((u,i)=>`<li>${av(u[0],i)}${u[0]}<em>${u[1]} 帖</em></li>`).join("");
+
+  // 辩题投票（仅本机演示）
+  let votes={pro:1268,con:1032},voted=null;
+  try{const s=JSON.parse(localStorage.getItem("ql_vote")||"null");if(s){votes=s.votes;voted=s.voted}}catch(e){}
+  function renderVote(){
+    const tot=votes.pro+votes.con,p=Math.round(votes.pro/tot*100);
+    $("#proBar").style.width=p+"%";$("#conBar").style.width=(100-p)+"%";
+    $("#proPct").textContent=p+"%";$("#conPct").textContent=(100-p)+"%";
+    $("#total").textContent=tot.toLocaleString()+" 人参与";
+    document.querySelectorAll("[data-side]").forEach(b=>b.classList.toggle("voted",b.dataset.side===voted));
+  }
+  document.querySelectorAll("[data-side]").forEach(b=>b.onclick=()=>{
+    const s=b.dataset.side;if(voted===s)return;
+    if(voted)votes[voted]--;votes[s]++;voted=s;
+    try{localStorage.setItem("ql_vote",JSON.stringify({votes,voted}))}catch(e){}
+    renderVote();
+  });
+  renderVote();
+
+  // 深浅色切换
+  $("#theme").onclick=()=>{
+    const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+    r.dataset.theme=dark?"light":"dark";
+  };
+  $("#menu").onclick=()=>$("#mm").classList.toggle("open");
+  $("#yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
