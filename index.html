@@ -490,6 +490,39 @@ body.go .hero h1 em{background-size:250% 100%;animation:shine 2.2s ease .9s 1 bo
 .cap-tag{position:absolute;left:18px;top:18px;display:flex;gap:8px;align-items:center;background:rgba(11,11,12,.78);backdrop-filter:blur(6px);color:#fff;font-size:12.5px;padding:8px 14px;border-radius:40px;border:1px solid rgba(234,202,2,.35)}
 .cap-tag svg{width:14px;height:14px;color:var(--gold)}
 @media (prefers-reduced-motion:reduce){#intro{display:none!important}body.pre .hero *{opacity:1!important;transform:none!important}}
+
+/* ========== 浅色系（参照强纶原站：深色头部 + 浅色内容区 + 明黄点缀）========== */
+:root{--gold-ink:#a88600}
+.rd{background:linear-gradient(180deg,#fbfaf6 0%,#f3f1ea 100%);color:var(--text)}
+.rd::before{background-image:repeating-linear-gradient(115deg,rgba(0,0,0,.035) 0 1px,transparent 1px 22px)}
+.rd::after{opacity:.07;mix-blend-mode:multiply;filter:grayscale(1)}
+.rd .sec-head .en{color:var(--gold-ink)}
+.rd .sec-head p{color:var(--muted)}
+.rd-copy h3{color:var(--text)}
+.rd-copy h3 em{color:var(--gold-ink)}
+.rd-copy>p{color:#4a4a50}
+.rd-copy>p b{color:var(--text)!important}
+.micro{box-shadow:0 40px 80px -36px rgba(0,0,0,.55);border-color:transparent;color:#fff}
+.caps{background:var(--line);border-color:var(--line);border-radius:6px;overflow:hidden}
+.cap{background:#fff}
+.cap:hover{background:#fffcee}
+.cap svg.i{color:var(--gold-ink)}
+.cap p{color:var(--muted)}
+.honors-h{color:var(--muted)}
+.honors-h::after{background:var(--line)}
+.honor{background:#fff;border-color:rgba(201,168,0,.35);box-shadow:0 18px 40px -28px rgba(0,0,0,.35)}
+.honor::after{border-color:rgba(201,168,0,.2)}
+.honor svg.i,.honor .yr{color:var(--gold-ink)}
+.honor p{color:var(--muted)}
+.inq{background:linear-gradient(100deg,rgba(248,247,243,.98) 0%,rgba(248,247,243,.94) 45%,rgba(248,247,243,.78) 100%),url("inq-yarn.webp") center/cover;color:var(--text)}
+.inq .eyebrow{color:var(--gold-ink)}.inq .eyebrow::before{background:var(--gold-ink)}
+.inq h2 em{color:var(--gold-ink)}
+.inq .lead{color:var(--muted)}
+.contact-l .ic{border-color:var(--line);background:#fff;color:var(--gold-ink)}
+.contact-l small{color:var(--muted)}
+form.card{box-shadow:0 30px 70px -34px rgba(0,0,0,.35);border:1px solid var(--line)}
+.chain{background:#fff}
+#about{background:var(--paper-2)!important}
 </style>
 </head>
 <body>
