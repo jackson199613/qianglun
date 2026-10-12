@@ -908,6 +908,7 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
 </div>
 
 <script>
+window.addEventListener('error',function(){document.querySelectorAll('.rv,#scale').forEach(function(e){e.classList.add('in')})});
 (function(){
   const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -924,7 +925,7 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
 
   /* 头部 + 导航高亮 + 返回顶部 + 视差 + 横向产业链 */
   const hdr=$('#hdr'),top=$('#toTop'),links=$$('.menu a');
-  const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  const secs=links.map(a=>{const h=a.getAttribute('href')||'';if(h.charAt(0)!=='#'||h.length<2)return null;try{return document.querySelector(h)}catch(e){return null}});
   const band=$('#band i'),chain=$('#chain'),pin=$('#chainPin'),track=$('#track'),bar=$('#chainBar');
   const desk=()=>innerWidth>980&&!reduce;
   function sizeChain(){

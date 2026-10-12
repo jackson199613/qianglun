@@ -804,10 +804,11 @@ header{background:rgba(245,243,238,.86);backdrop-filter:blur(16px);-webkit-backd
 </div>
 
 <script>
+window.addEventListener('error',function(){document.querySelectorAll('.rv,#scale').forEach(function(e){e.classList.add('in')})});
 (function(){
   const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const top=$('#toTop'),sub=$$('.subnav a'),secs=sub.map(a=>document.querySelector(a.getAttribute('href')));
+  const top=$('#toTop'),sub=$$('.subnav a'),secs=sub.map(a=>{const h=a.getAttribute('href')||'';if(h.charAt(0)!=='#')return null;try{return document.querySelector(h)}catch(e){return null}});
   addEventListener('scroll',()=>{top.classList.toggle('show',scrollY>800);
     let k=0;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<200)k=i});sub.forEach((a,i)=>a.classList.toggle('on',i===k))},{passive:true});
   top.onclick=()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'});
