@@ -6,7 +6,7 @@ from layout import head, header, crumb, page_hero, footer, SITE
 from common import w, ENDCTA
 
 IND = [
- dict(f="a-filtration.html", en="FILTRATION", zh="过滤分离", img="img/media-10.webp", hero="img/fts-scene-01.webp",
+ dict(f="a-filtration.html", gal=[("img/fts-site-huayou.webp","大流量槽体方案"),("img/fts-bamo-03.webp","槽体与管路"),("img/fts-tank-02.webp","罐式收油系统"),("img/fts-scene-03.webp","过滤与除油联合装置")], en="FILTRATION", zh="过滤分离", img="img/media-10.webp", hero="img/fts-scene-01.webp",
       claim="高温、高粘、强腐蚀，<em>常规滤材扛不住的地方</em>",
       pain="化纤熔体与黏胶工况下，传统滤纸滤布不耐高温高压、金属网易堵塞易碎；萃取料液中的微米级乳化油又会污染后端树脂与膜。",
       sol="以金属纤维烧结毡/烧结网为滤材的滤芯、滤盘与成套过滤器，配合 FTS 收油系统完成预除油，形成「除油 + 精滤」的完整链条。",
@@ -47,7 +47,7 @@ IND = [
              ("过滤元器件","p-element.html","尾气微粒过滤与高温气体除尘元件")],
       kpis=[("1–100","Ω","米电阻可调"),("1000","芯","最大芯数"),("350–850","℃","耐温范围")],
       cases="汽车座椅加热、SCR 加热系统、尾气微粒过滤"),
- dict(f="a-textile.html", gal=[("img/yarn-rfid.webp","RFID 耐水洗标签"),("img/yarn-heatpad.webp","金属纤维发热片"),("img/yarn-wearable.webp","智能穿戴应用")], en="SMART TEXTILE", zh="功能纺织与智能穿戴", img="img/yarn-wearable.webp", hero="img/yarn-wearable.webp",
+ dict(f="a-textile.html", gal=[("img/yarn-rfid.webp","RFID 耐水洗标签"),("img/yarn-heatpad.webp","金属纤维发热片"),("img/yarn-thread.webp","金属纤维缝纫线")], en="SMART TEXTILE", zh="功能纺织与智能穿戴", img="img/yarn-wearable.webp", hero="img/yarn-wearable.webp",
       claim="把金属<em>织进衣服里</em>",
       pain="智能穿戴的发热与信号传输要求材料柔软、耐水洗、弯折寿命长，普通金属丝难以兼顾。",
       sol="金属纤维可纺可织，制成导电纱、信号线、发热织物与吸音材料，兼具透气性与抗静电功能；公司金属纱线在电热面料领域市占率全国第一，发热服已用于冬奥会并出口俄罗斯等国家。",
@@ -89,7 +89,7 @@ w('applications.html', head(
  + ENDCTA + footer())
 
 for n, i in enumerate(IND):
-    gal = ('<div class="sec-h" style="margin:84px 0 24px"><h2>现场与产品实拍</h2></div><div class="gal">' + ''.join(f'<figure><img src="{g[0]}" alt="{g[1]}" loading="lazy"><figcaption>{g[1]}</figcaption></figure>' for g in i['gal']) + '</div>') if i.get('gal') else ''
+    gal = ('<div class="sec-h" style="margin:84px 0 24px"><h2>现场与产品实拍</h2></div><div class="gal' + ('' if len(i['gal']) % 4 == 0 else ' c3') + '">' + ''.join(f'<figure><img src="{g[0]}" alt="{g[1]}" loading="lazy"><figcaption>{g[1]}</figcaption></figure>' for g in i['gal']) + '</div>') if i.get('gal') else ''
     prod_cards = "".join(f'<a class="card rv" href="{u}"><h3>{t}</h3><p>{d}</p><span class="more">了解产品线<svg class="i"><use href="#i-arrow"/></svg></span></a>' for t, u, d in i['prods'])
     kpi = [(a, b, c) for a, b, c in i['kpis']]
     w(i['f'], head(

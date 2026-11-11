@@ -97,12 +97,13 @@ w('news.html', head(
   </nav>
   <div class="g3">{cards}</div>
   <div class="sec-h" style="margin:80px 0 24px"><h2>展会与交流</h2><p>公司每年参加国内外过滤分离、湿法冶金与新材料领域的专业展会与技术交流活动。</p></div>
-  <div class="gal">
+  <div class="gal c3">
     <figure><img src="img/expo-filtech2024.webp" alt="2024 年德国科隆 FILTECH 过滤展" loading="lazy"><figcaption>FILTECH 科隆 · 2024</figcaption></figure>
     <figure><img src="img/expo-hydromet14.webp" alt="第十四届全国湿法冶金工程技术交流会" loading="lazy"><figcaption>全国湿法冶金交流会</figcaption></figure>
     <figure><img src="img/expo-booth-a57.webp" alt="强纶新材展台产品陈列" loading="lazy"><figcaption>展台产品陈列</figcaption></figure>
     <figure><img src="img/expo-booth-brand.webp" alt="福建品牌展区强纶展位" loading="lazy"><figcaption>福建品牌展区</figcaption></figure>
     <figure><img src="img/expo-forum2026.webp" alt="新材料与技术论坛交流现场" loading="lazy"><figcaption>新材料技术论坛</figcaption></figure>
+    <figure><img src="img/expo-booth-fair.webp" alt="国际展会强纶展位" loading="lazy"><figcaption>国际展会展位</figcaption></figure>
   </div>
 
   <div class="note" style="margin-top:44px"><b>媒体报道</b>：公司相关报道见于龙岩市新罗区人民政府网、《闽西日报》、《海峡通讯》及龙岩高新区（经开区）等平台。</div>
