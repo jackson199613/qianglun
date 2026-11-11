@@ -15,11 +15,11 @@ w('article.html', head(
  + header('insights.html')
  + crumb([("技术专栏", "insights.html"), ("技术文章", "insights.html"), ("烧结毡和滤布怎么选", None)])
  + """<article class="sec" style="padding-top:132px"><div class="wrap art-wrap">
-  <header class="art-head rv">
+  <div class="art-head rv">
     <div class="idx"><b>选型</b>TECHNICAL ARTICLE</div>
     <h1>烧结毡和滤布到底怎么选？四个判断条件</h1>
     <div class="art-meta"><span class="num">2026-10-28</span><i>·</i><span>强纶技术团队</span><i>·</i><span>约 6 分钟</span></div>
-  </header>
+  </div>
   <figure class="art-fig rv"><img src="img/media-05.webp" alt="金属纤维烧结毡"><figcaption>金属纤维烧结毡：多层梯度孔结构</figcaption></figure>
   <div class="prose art-body rv">
     <p class="lede">这是询盘里最常见的一个问题。答案并不是「烧结毡一定更好」，而是取决于四件事：介质温度、腐蚀性、精度要求，以及你是否需要清洗再生。</p>
@@ -65,11 +65,11 @@ w('qa.html', head(
  + header('insights.html')
  + crumb([("技术专栏", "insights.html"), ("常见问题库", "faq.html"), ("滤芯能否清洗再用", None)])
  + """<article class="sec" style="padding-top:132px"><div class="wrap art-wrap">
-  <header class="art-head rv">
+  <div class="art-head rv">
     <div class="idx"><b>滤芯</b>Q&amp;A</div>
     <h1>金属纤维滤芯能清洗再用吗？</h1>
     <div class="art-meta"><span>常见问题库</span><i>·</i><span>强纶技术团队</span></div>
-  </header>
+  </div>
   <div class="qa-answer rv"><b>可以。</b>金属纤维烧结滤材耐高温、耐腐蚀，可反复清洗再生，这正是它相对滤纸滤布的核心优势之一。</div>
   <div class="prose art-body rv">
     <h3>为什么能再生</h3>

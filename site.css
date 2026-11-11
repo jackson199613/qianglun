@@ -20,10 +20,10 @@ button{font:inherit;cursor:pointer;color:inherit}
 svg.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
 /* ---------- Header ---------- */
-header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,box-shadow .4s,transform .4s}
-header.solid{background:rgba(245,243,238,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
+#hdr{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,box-shadow .4s,transform .4s}
+#hdr.solid{background:rgba(245,243,238,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
 .nav{display:flex;align-items:center;height:88px;gap:36px;transition:height .4s}
-header.solid .nav{height:72px}
+#hdr.solid .nav{height:72px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand img{width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px var(--line)}
 .brand strong{display:block;font-family:"Noto Serif SC",serif;font-size:19px;letter-spacing:.18em;font-weight:900;line-height:1.15}
@@ -398,8 +398,8 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
 .util nav{display:flex;gap:22px}
 .util a:hover{color:#fff}
 .util .en{color:#fff;border-left:1px solid var(--line-d);padding-left:22px}
-header.solid .util{margin-top:-34px}
-header{background:rgba(245,243,238,.0)}
+#hdr.solid .util{margin-top:-34px}
+#hdr{background:rgba(245,243,238,.0)}
 .icon-b{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:transparent;display:grid;place-items:center;transition:all .3s}
 .icon-b:hover{border-color:var(--ink)}
 .icon-b svg{width:18px;height:18px}

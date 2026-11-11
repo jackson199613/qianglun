@@ -57,11 +57,11 @@ w('news-detail.html', head(
  + header('news.html')
  + crumb([("新闻动态", "news.html"), ("企业新闻", "news.html"), ("入围中国创新创业大赛全国赛", None)])
  + """<article class="sec" style="padding-top:132px"><div class="wrap art-wrap">
-  <header class="art-head rv">
+  <div class="art-head rv">
     <div class="idx"><b>企业新闻</b>NEWS</div>
     <h1>创新驱动 装备向新｜强纶新材入围第十五届中国创新创业大赛新材料全国赛</h1>
     <div class="art-meta"><span class="num">2026-11-10</span><i>·</i><span>强纶新材</span></div>
-  </header>
+  </div>
   <figure class="art-fig rv"><img src="img/expo-forum2026.webp" alt="强纶新材参加新材料技术论坛"><figcaption>公司技术团队参加新材料与技术论坛</figcaption></figure>
   <div class="prose art-body rv">
     <p class="lede">近日，第十五届中国创新创业大赛新材料行业赛结果公布，福建强纶新材料股份有限公司以新材料方向项目入围全国赛。</p>
@@ -124,11 +124,11 @@ w('job-detail.html', head(
  + header('')
  + crumb([("人才招聘", "jobs.html"), ("材料研发工程师", None)])
  + """<section class="sec" style="padding-top:132px"><div class="wrap art-wrap">
-  <header class="art-head rv">
+  <div class="art-head rv">
     <div class="idx"><b>全职</b>研发中心 · 龙岩</div>
     <h1>材料研发工程师</h1>
     <div class="art-meta"><span>研发中心</span><i>·</i><span>福建省龙岩市</span><i>·</i><span>若干名</span></div>
-  </header>
+  </div>
   <div class="prose art-body rv">
     <h3>岗位职责</h3>
     <ul>
