@@ -109,3 +109,12 @@ form.card{background:#f4f5f7}
 .chips button.on,.opts button.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .chips button.on{box-shadow:inset 0 -3px 0 var(--gold)}
 ::selection{background:var(--gold);color:var(--ink)}
+
+/* 行业方案面板：查看完整方案入口 */
+.pan-go{display:inline-block;margin-top:14px;font-size:14px;font-weight:500;color:var(--gold);border-bottom:1px solid rgba(255,212,0,.5);padding-bottom:2px;transition:gap .3s}
+.pan-go:hover{color:#fff;border-color:#fff}
+/* 首页科研 KPI 改为可点击卡片 */
+a.kpi{display:block;transition:border-color .3s,transform .4s var(--ease)}
+a.kpi:hover{border-color:var(--gold);transform:translateY(-3px)}
+a.kpi b.num{color:var(--ink)!important}
+a.kpi b sup{font-size:.4em;color:var(--champ);margin-left:3px;vertical-align:top;position:relative;top:4px}

@@ -1,0 +1,73 @@
+# 福建强纶新材料股份有限公司 · 中文官网
+# 放行搜索引擎与国内主流 AI 平台爬虫
+
+User-agent: *
+Allow: /
+
+# ── 搜索引擎 ──
+User-agent: Baiduspider
+Allow: /
+User-agent: Baiduspider-render
+Allow: /
+User-agent: 360Spider
+Allow: /
+User-agent: HaosouSpider
+Allow: /
+User-agent: Sogou web spider
+Allow: /
+User-agent: Sogou inst spider
+Allow: /
+User-agent: bingbot
+Allow: /
+User-agent: Googlebot
+Allow: /
+User-agent: Yisouspider
+Allow: /
+
+# ── 国内主流 AI 平台 ──
+# 豆包 / 字节跳动
+User-agent: Bytespider
+Allow: /
+User-agent: ByteDanceSpider
+Allow: /
+User-agent: Doubao
+Allow: /
+# DeepSeek
+User-agent: DeepSeekBot
+Allow: /
+# 文心一言 / 百度
+User-agent: Baiduspider-ai
+Allow: /
+User-agent: ERNIEBot
+Allow: /
+# 通义千问 / 阿里
+User-agent: Qwenbot
+Allow: /
+User-agent: AliSearchSpider
+Allow: /
+User-agent: Tongyi
+Allow: /
+# Kimi / 月之暗面
+User-agent: MoonshotBot
+Allow: /
+User-agent: Kimi-Bot
+Allow: /
+# 腾讯元宝 / 混元
+User-agent: TencentHunyuanBot
+Allow: /
+User-agent: YuanbaoBot
+Allow: /
+# 智谱清言
+User-agent: ChatGLM-Spider
+Allow: /
+# 海外 AI（便于英文站与海外客户检索）
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://qianglun.netlify.app/sitemap.xml

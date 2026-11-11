@@ -1,19 +1,55 @@
-# Netlify 部署配置
+# Netlify 部署配置 · 强纶新材中文官网
 # 纯静态站点：无需构建命令，直接发布仓库根目录
 [build]
   publish = "."
   command = ""
 
-# 简单的安全与缓存头
+# 安全与通用头
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-# 找不到的路径回到首页（以后做单页应用时有用）
+# 图片长缓存
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 样式与脚本
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# 收录相关文件
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+# 省略 .html 后缀也能访问（/about → /about.html）
+[[redirects]]
+  from = "/:page"
+  to = "/:page.html"
+  status = 200
+  force = false
+
+# 其余未匹配路径返回 404 页面
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "/404.html"
+  status = 404
