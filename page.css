@@ -290,3 +290,7 @@ a.row-i:hover h4{color:var(--champ-ink)}
 .ticks{list-style:none;margin:16px 0 0;display:grid;gap:9px}
 .ticks li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:14px;color:var(--graphite);align-items:start}
 .ticks svg{width:15px;height:15px;color:var(--champ);margin-top:4px}
+
+/* 表格脚注 */
+.art-body .tnote{margin:10px 0 26px;font-size:13px;color:var(--muted);line-height:1.7}
+.art-body .tbl-wrap{margin:26px 0 0}
