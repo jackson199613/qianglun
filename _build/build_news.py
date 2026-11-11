@@ -9,7 +9,7 @@ from common import w, ENDCTA
 NEWS = [
  dict(slug="news-1", cat="企业新闻",
    title="创新驱动 装备向新｜强纶新材入围第十五届中国创新创业大赛新材料全国赛",
-   date="2026-11-10", img="img/expo-forum2026.webp", cap="公司技术团队参加新材料与技术论坛",
+   date="2026-11-10", img="img/expo-booth-a57.webp", cap="强纶新材展台产品陈列",
    sum="公司以新材料方向项目入围全国赛，是对强纶持续研发投入与成果转化能力的又一次认可。",
    src="来源：公司官网", link="",
    body=["第十五届中国创新创业大赛新材料行业赛结果公布，福建强纶新材料股份有限公司入围全国赛。",
@@ -96,6 +96,15 @@ w('news.html', head(
     <button class="on" data-v="all">全部</button><button data-v="企业新闻">企业新闻</button><button data-v="行业资讯">行业资讯</button><button data-v="展会活动">展会活动</button>
   </nav>
   <div class="g3">{cards}</div>
+  <div class="sec-h" style="margin:80px 0 24px"><h2>展会与交流</h2><p>公司每年参加国内外过滤分离、湿法冶金与新材料领域的专业展会与技术交流活动。</p></div>
+  <div class="gal">
+    <figure><img src="img/expo-filtech2024.webp" alt="2024 年德国科隆 FILTECH 过滤展" loading="lazy"><figcaption>FILTECH 科隆 · 2024</figcaption></figure>
+    <figure><img src="img/expo-hydromet14.webp" alt="第十四届全国湿法冶金工程技术交流会" loading="lazy"><figcaption>全国湿法冶金交流会</figcaption></figure>
+    <figure><img src="img/expo-booth-a57.webp" alt="强纶新材展台产品陈列" loading="lazy"><figcaption>展台产品陈列</figcaption></figure>
+    <figure><img src="img/expo-booth-brand.webp" alt="福建品牌展区强纶展位" loading="lazy"><figcaption>福建品牌展区</figcaption></figure>
+    <figure><img src="img/expo-forum2026.webp" alt="新材料与技术论坛交流现场" loading="lazy"><figcaption>新材料技术论坛</figcaption></figure>
+  </div>
+
   <div class="note" style="margin-top:44px"><b>媒体报道</b>：公司相关报道见于龙岩市新罗区人民政府网、《闽西日报》、《海峡通讯》及龙岩高新区（经开区）等平台。</div>
 </div></section>"""
  + ENDCTA + footer())

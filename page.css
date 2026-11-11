@@ -294,3 +294,7 @@ a.row-i:hover h4{color:var(--champ-ink)}
 /* 表格脚注 */
 .art-body .tnote{margin:10px 0 26px;font-size:13px;color:var(--muted);line-height:1.7}
 .art-body .tbl-wrap{margin:26px 0 0}
+
+/* 正文内联链接 */
+.card a.ilink,.prose a.ilink{color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:1px;font-weight:500}
+.card a.ilink:hover,.prose a.ilink:hover{border-bottom-width:2px}

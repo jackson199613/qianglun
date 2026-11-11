@@ -15,7 +15,7 @@ IND = [
              ("净化设备 · 收油系统","p-equipment.html","纯物理预除油，最大单套 600 m³/h，油份可回收复用")],
       kpis=[("10–60","μm","过滤精度区间"),("480","℃","滤材可用温度"),("600","m³/h","最大单套处理量"),("20","+","行业客户")],
       cases="广东芳源、衢州华友、江西铜业、格林美、湖南邦普、中国恩菲、紫金铜业等"),
- dict(f="a-glass.html", en="GLASS", zh="玻璃深加工", img="img/yarn-glassbelt.webp", hero="img/yarn-glassbelt.webp",
+ dict(f="a-glass.html", gal=[("img/sleeve-03.webp","钢化炉生产线现场"),("img/sleeve-04.webp","辊道包覆套管现场"),("img/sleeve-07.webp","扁平套管卷"),("img/tg-knit2.webp","针织金属套管")], en="GLASS", zh="玻璃深加工", img="img/yarn-glassbelt.webp", hero="img/yarn-glassbelt.webp",
       claim="钢化炉里的每一次接触，<em>都不能划伤玻璃</em>",
       pain="钢化炉陶瓷辊道、测温探头、热风管路与钢化齿条长期处于高温，常规包覆材料易老化、掉屑，直接造成玻璃划伤与良品率下降。",
       sol="100% 不锈钢纤维编织的套管、织带与模布，长期耐温 350℃、短时峰值 1100℃，柔软不掉屑，直接包覆在高温接触面上。",
@@ -47,7 +47,7 @@ IND = [
              ("过滤元器件","p-element.html","尾气微粒过滤与高温气体除尘元件")],
       kpis=[("1–100","Ω","米电阻可调"),("1000","芯","最大芯数"),("350–850","℃","耐温范围")],
       cases="汽车座椅加热、SCR 加热系统、尾气微粒过滤"),
- dict(f="a-textile.html", en="SMART TEXTILE", zh="功能纺织与智能穿戴", img="img/yarn-wearable.webp", hero="img/yarn-wearable.webp",
+ dict(f="a-textile.html", gal=[("img/yarn-rfid.webp","RFID 耐水洗标签"),("img/yarn-heatpad.webp","金属纤维发热片"),("img/yarn-wearable.webp","智能穿戴应用")], en="SMART TEXTILE", zh="功能纺织与智能穿戴", img="img/yarn-wearable.webp", hero="img/yarn-wearable.webp",
       claim="把金属<em>织进衣服里</em>",
       pain="智能穿戴的发热与信号传输要求材料柔软、耐水洗、弯折寿命长，普通金属丝难以兼顾。",
       sol="金属纤维可纺可织，制成导电纱、信号线、发热织物与吸音材料，兼具透气性与抗静电功能；公司金属纱线在电热面料领域市占率全国第一，发热服已用于冬奥会并出口俄罗斯等国家。",
@@ -89,6 +89,7 @@ w('applications.html', head(
  + ENDCTA + footer())
 
 for n, i in enumerate(IND):
+    gal = ('<div class="sec-h" style="margin:84px 0 24px"><h2>现场与产品实拍</h2></div><div class="gal">' + ''.join(f'<figure><img src="{g[0]}" alt="{g[1]}" loading="lazy"><figcaption>{g[1]}</figcaption></figure>' for g in i['gal']) + '</div>') if i.get('gal') else ''
     prod_cards = "".join(f'<a class="card rv" href="{u}"><h3>{t}</h3><p>{d}</p><span class="more">了解产品线<svg class="i"><use href="#i-arrow"/></svg></span></a>' for t, u, d in i['prods'])
     kpi = [(a, b, c) for a, b, c in i['kpis']]
     w(i['f'], head(
@@ -113,6 +114,7 @@ for n, i in enumerate(IND):
     </div>
   </div>
 
+  {gal}
   <div class="sec-h" style="margin:84px 0 26px"><h2>推荐产品</h2></div>
   <div class="g3">{prod_cards}</div>
 

@@ -77,6 +77,16 @@ w('p-element.html', head(
   </div>
   <p class="tnote">* 上表为典型工程配置示例，单根滤芯面积、总过滤面积、文丘里管尺寸等均按设备数量与工况核算；请提供设备编号、工艺单元、介质与温度，由工程师出具配置表。</p>
 
+  <div class="sec-h" style="margin:88px 0 24px"><h2>产品与交付实拍</h2><p>从折波滤芯、板式滤件到大直径滤盘，按设备接口成套配做并整箱交付。</p></div>
+  <div class="gal">
+    <figure><img src="img/cart-04.webp" alt="金属纤维折波滤芯批量" loading="lazy"><figcaption>折波滤芯批量</figcaption></figure>
+    <figure><img src="img/cart-02.webp" alt="折波滤芯成品" loading="lazy"><figcaption>折波滤芯成品</figcaption></figure>
+    <figure><img src="img/cart-05.webp" alt="大幅面板式滤件" loading="lazy"><figcaption>板式滤件</figcaption></figure>
+    <figure><img src="img/cart-06.webp" alt="大直径金属纤维滤盘" loading="lazy"><figcaption>大直径滤盘</figcaption></figure>
+    <figure><img src="img/media-08.webp" alt="大口径滤芯组装" loading="lazy"><figcaption>大口径滤芯组</figcaption></figure>
+    <figure><img src="img/media-07.webp" alt="滤芯木箱包装发货" loading="lazy"><figcaption>包装与发货</figcaption></figure>
+  </div>
+
   <div class="g2 wide" style="margin-top:84px">
     <div class="rv"><h2 style="font-family:'Noto Serif SC',serif;font-size:26px;font-weight:900;margin-bottom:20px">选型建议</h2>
       <div class="prose">
@@ -193,6 +203,21 @@ w('p-equipment.html', head(
     <figure><img src="img/fts-scene-02.webp" alt="收油系统安装现场" loading="lazy"><figcaption>安装调试</figcaption></figure>
     <figure><img src="img/fts-scene-03.webp" alt="过滤与除油联合装置" loading="lazy"><figcaption>联合装置</figcaption></figure>
     <figure><img src="img/media-10.webp" alt="前置过滤器" loading="lazy"><figcaption>前置过滤器</figcaption></figure>
+    <figure><img src="img/fts-bamo-02.webp" alt="广西巴莫 160 m³/h 槽式收油系统" loading="lazy"><figcaption>槽式槽体 · 160 m³/h</figcaption></figure>
+    <figure><img src="img/fts-bamo-03.webp" alt="槽式收油系统槽体与管路" loading="lazy"><figcaption>槽体与管路</figcaption></figure>
+    <figure><img src="img/fts-huayou-02.webp" alt="广西华友 600 m³/h 收油系统全景" loading="lazy"><figcaption>600 m³/h 系统全景</figcaption></figure>
+    <figure><img src="img/fts-huayou-03.webp" alt="收油系统泵组与进出液管路" loading="lazy"><figcaption>泵组与管路</figcaption></figure>
+    <figure><img src="img/fts-huayou-04.webp" alt="大流量槽式收油系统安装现场" loading="lazy"><figcaption>大流量安装现场</figcaption></figure>
+    <figure><img src="img/fts-tank-02.webp" alt="罐式收油系统单机" loading="lazy"><figcaption>罐式收油系统</figcaption></figure>
+    <figure><img src="img/fts-tank-03.webp" alt="多台罐式收油系统并列运行" loading="lazy"><figcaption>多机并列运行</figcaption></figure>
+    <figure><img src="img/fts-site-05.webp" alt="萃取车间收油系统机组" loading="lazy"><figcaption>萃取车间机组</figcaption></figure>
+    <figure><img src="img/fts-site-06.webp" alt="收油系统与前置过滤器配套" loading="lazy"><figcaption>过滤 + 除油配套</figcaption></figure>
+  </div>
+
+  <div class="sec-h" style="margin:80px 0 24px"><h2>自制与发运</h2><p>罐体、槽体与内件自厂加工组装，整机出厂前完成试压与试运行，撬装机组到场接管即可投用。</p></div>
+  <div class="gal" style="grid-template-columns:repeat(2,1fr)">
+    <figure><img src="img/fts-ship-02.webp" alt="大型罐体车间内吊装" loading="lazy"><figcaption>罐体吊装</figcaption></figure>
+    <figure><img src="img/fts-ship-01.webp" alt="收油系统整机出厂装车" loading="lazy"><figcaption>整机出厂装车</figcaption></figure>
   </div>
 
   <div class="sec-h" style="margin:80px 0 24px"><h2>部分业绩</h2><p>已为新能源与有色冶炼行业 20 余家企业提供收油系统及过滤服务。</p></div>

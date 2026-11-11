@@ -130,6 +130,10 @@ w('culture.html', head(
         <figure><img src="img/team-loyalty2025.webp" alt="2025 年年终会忠诚奖" loading="lazy"><figcaption>年终会 · 忠诚奖</figcaption></figure>
         <figure><img src="img/team-build2021.webp" alt="公司团建活动" loading="lazy"><figcaption>公司团建</figcaption></figure>
         <figure><img src="img/team-yarn2026.webp" alt="纱线事业部团建活动" loading="lazy"><figcaption>事业部活动</figcaption></figure>
+        <figure><img src="img/team-cadre2024.webp" alt="2024 年优秀干部表彰" loading="lazy"><figcaption>优秀干部表彰</figcaption></figure>
+        <figure><img src="img/team-purify.webp" alt="净化事业部团建活动" loading="lazy"><figcaption>净化事业部活动</figcaption></figure>
+        <figure><img src="img/team-thermo.webp" alt="热动事业部团建活动" loading="lazy"><figcaption>热动事业部活动</figcaption></figure>
+        <figure><img src="img/team-dragon2025.webp" alt="2025 年端午节员工慰问" loading="lazy"><figcaption>端午节慰问</figcaption></figure>
       </div>
     </div>
   </div>
