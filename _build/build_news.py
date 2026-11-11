@@ -1,33 +1,85 @@
 # -*- coding: utf-8 -*-
-"""新闻动态列表 + 新闻详情模板 + 人才招聘 2 页"""
+"""新闻动态：列表 + 每条独立详情页；人才招聘 2 页"""
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, crumb, page_hero, footer, SITE
 from common import w, ENDCTA
 
+# slug, 分类, 标题, 日期, 配图, 列表摘要, 来源, 正文段落
 NEWS = [
- ("企业新闻","创新驱动 装备向新｜强纶新材入围第十五届中国创新创业大赛新材料全国赛","2026-11-10","img/expo-forum2026.webp",
-  "公司以新材料方向项目入围全国赛，是对强纶持续研发投入与成果转化能力的又一次认可。"),
- ("企业新闻","从“省内唯一”到“国家级认可”，强纶新材再获殊荣","2026-10-29","img/plant-02.webp",
-  "作为福建省内唯一专注金属功能纤维及制品研发生产的企业，公司获评国家级专精特新“小巨人”。"),
- ("行业资讯","龙岩高新区推动行业标准体系建设实现多点突破——以科创赋能产业能级跃升","2026-07-14","img/media-03.webp",
-  "《闽西日报》报道龙岩高新区（经开区）厚植企业创新沃土，强纶作为国家标准起草单位参与其中。"),
- ("企业新闻","喜讯｜福建强纶新材料股份有限公司获评中国航发商发合格供应商","2026-06-18","img/media-09.webp",
-  "公司通过航发商发供应商审核，进一步巩固在航空航天特种材料领域的配套能力。"),
- ("展会活动","2026（第七届）军民两用降噪、减振、吸能新材料与技术论坛","2026-06-05","img/expo-forum2026.webp",
-  "公司携金属纤维减震与吸能材料参会，与军工及科研院所展开技术交流。"),
- ("展会活动","第十四届全国湿法冶金工程技术交流会","2026-05-20","img/expo-hydromet14.webp",
-  "强纶收油系统在湿法冶金行业的应用成果受到与会企业关注。"),
- ("行业资讯","产品有活力 工业动能足——龙岩优质工业品调查报道","2026-08-27","img/plant-05.webp",
-  "《闽西日报》走访龙岩优质工业品企业，报道强纶金属纤维产品的市场表现。"),
- ("展会活动","2024 年德国科隆过滤展 FILTECH","2024-11-12","img/expo-filtech2024.webp",
-  "公司以 FUJIAN QL METAL FIBER 名义参展国际过滤行业专业展会，对接海外客户。"),
+ dict(slug="news-1", cat="企业新闻",
+   title="创新驱动 装备向新｜强纶新材入围第十五届中国创新创业大赛新材料全国赛",
+   date="2026-11-10", img="img/expo-forum2026.webp", cap="公司技术团队参加新材料与技术论坛",
+   sum="公司以新材料方向项目入围全国赛，是对强纶持续研发投入与成果转化能力的又一次认可。",
+   src="来源：公司官网", link="",
+   body=["第十五届中国创新创业大赛新材料行业赛结果公布，福建强纶新材料股份有限公司入围全国赛。",
+         "强纶新材创立于 2002 年，是国内规模领先、福建省内唯一专注金属功能纤维及制品研发生产的高新技术企业，2025 年获评国家级专精特新“小巨人”企业。公司自主研发复合拉拔核心工艺，打通金属材料与纺织行业壁垒，牵头开辟“柔性金属纤维及其功能性纺织品”新兴赛道。",
+         "近三年，公司研发投入占企业收入 12% 以上，累计授权专利 57 项，参与制修订国家标准 5 项、行业标准 1 项。依托强纶新材料创新研究院的六个研究室与五大制研平台，公司在滤材滤器、流体净化、电热材料、多孔材料、特种纺织五大方向持续攻关。",
+         "此前，公司还曾入围第十一届中国创新创业大赛全国赛，并获 2022 年第十一届中国创新创业大赛（福建赛区）暨第十届福建创新创业大赛优胜奖。"]),
+ dict(slug="news-2", cat="企业新闻",
+   title="从“省内唯一”到“国家级认可”，强纶新材再获殊荣",
+   date="2026-10-29", img="img/plant-02.webp", cap="强纶新材生产车间",
+   sum="作为福建省内唯一专注金属功能纤维及制品研发生产的企业，公司获评国家级专精特新“小巨人”。",
+   src="来源：公司官网", link="",
+   body=["福建强纶新材料股份有限公司获评国家级专精特新“小巨人”企业。公司此前已于 2023 年获评福建省专精特新中小企业（第一批）。",
+         "公司是国内规模领先、福建省内唯一专注金属功能纤维及制品研发生产的高新技术企业，同时持有国家高新技术企业、国家知识产权优势企业等资质，并建有省级新型研发机构、省级企业技术中心与省级博士后创新实践基地。",
+         "在产品层面，公司金属纱线在电热面料领域市占率全国第一，金属烧结毡稳居黏胶行业国内首位；自研针刺毡已成功应用于长征五号 B、长征五号遥五运载火箭发动机，国产化熔体滤芯批量供应国内大型石化、化纤龙头企业。"]),
+ dict(slug="news-3", cat="企业新闻",
+   title="喜讯｜福建强纶新材料股份有限公司获评中国航发商发合格供应商",
+   date="2026-06-18", img="img/media-09.webp", cap="金属纤维烧结滤芯产品",
+   sum="公司通过航发商发供应商审核，进一步巩固在航空航天特种材料领域的配套能力。",
+   src="来源：公司官网", link="",
+   body=["福建强纶新材料股份有限公司通过中国航发商用航空发动机有限责任公司供应商审核，获评合格供应商。",
+         "航空航天领域对材料的耐温、耐腐蚀与批次一致性要求极高。公司作为国内最早配套航天工程的金属纤维毡供应商，已建立覆盖来料检验、过程控制、出厂检验的完整质量控制流程，并通过 ISO 9001 质量管理体系认证，认证范围覆盖金属纤维及金属线、耐高温金属膜滤料、多层金属烧结网、金属过滤元件产品的设计、生产和售后服务。",
+         "公司在该领域的产品包括金属纤维烧结毡、针刺毡以及燃油过滤、液压系统过滤等元件。"]),
+ dict(slug="news-4", cat="行业资讯",
+   title="龙岩高新区厚植企业创新沃土，推动行业标准体系建设实现多点突破",
+   date="2026-07-14", img="img/media-03.webp", cap="金属纤维烧结毡",
+   sum="《闽西日报》报道龙岩高新区（经开区）以科创赋能产业能级跃升，强纶作为国家标准起草单位参与其中。",
+   src="来源：《闽西日报》2026 年 07 月 14 日", link="",
+   body=["《闽西日报》报道龙岩高新区（经开区）厚植企业创新沃土、推动行业标准体系建设实现多点突破、全域覆盖，以科创赋能产业能级跃升。",
+         "强纶新材是全国颗粒表征与分检及筛网标准化技术委员会委员单位、第八届全国分离机械标准化技术委员单位，累计参与制修订国家标准 5 项、行业标准 1 项：GB/T 20100—2016《不锈钢纤维烧结滤毡》、GB/T 17492—2019《工业用金属丝编织网 技术要求和检验》、GB/T 21648—2023《金属丝编织密纹网》、GB/T 45969—2025《颗粒表征 术语》、GB/T 5330—2025《工业用金属丝编织方孔筛网》，以及行业标准 JB/T 13511—2018。",
+         "上述标准的主要起草人均包含公司董事长兼总工黄朝强。"]),
+ dict(slug="news-5", cat="行业资讯",
+   title="产品有活力 工业动能足——龙岩优质工业品调查报道",
+   date="2026-08-27", img="img/plant-05.webp", cap="强纶新材机加工车间",
+   sum="《闽西日报》走访龙岩优质工业品企业，报道强纶金属纤维产品的市场表现。",
+   src="来源：《闽西日报》2026 年 08 月 27 日", link="",
+   body=["《闽西日报》开展龙岩优质工业品调查报道，走访本地具有代表性的制造企业。",
+         "强纶新材主营金属纤维及其制品，现已形成金属纤维、烧结滤材、金属纱线、编织物、电热服饰等系列产品，兼具导电、耐火、柔性、防切割、减震等性能，广泛服务于航空航天、石油化工、化纤冶金、能源交通等领域。",
+         "公司现有员工 200 余人，自有工业用地 40 余亩，产品覆盖化纤、石油化工、玻璃制造、节能环保、新能源与航空航天等行业。"]),
+ dict(slug="news-6", cat="行业资讯",
+   title="最新一期《海峡通讯》报道：聚焦龙岩专精特新企业发展",
+   date="2026-06-30", img="img/lab-01.webp", cap="强纶新材料与应用实验室",
+   sum="《海峡通讯》聚焦龙岩专精特新企业发展，强纶新材作为代表企业之一接受报道。",
+   src="来源：《海峡通讯》", link="",
+   body=["《海峡通讯》刊发专题报道，聚焦龙岩专精特新企业的发展情况。",
+         "强纶新材依托强纶新材料创新研究院开展研发，研究院设有流体净化、氢能源、金属橡胶、电化学、金属学、多孔介质燃烧六个研究室，并整合金属复合丝拉拔、压制烧结、纺纱编织、电化学材料加工、精密机械加工五大制研平台。",
+         "公司与厦门大学、同济大学、龙岩学院、闽江学院、安徽理工大学等院校及科研院所开展产学研合作，建有省级博士后创新实践基地与研究生专业实践基地。"]),
+ dict(slug="news-7", cat="展会活动",
+   title="第十四届全国湿法冶金工程技术交流会",
+   date="2026-05-20", img="img/expo-hydromet14.webp", cap="第十四届全国湿法冶金工程技术交流会现场",
+   sum="强纶收油系统在湿法冶金行业的应用成果受到与会企业关注。",
+   src="来源：公司参展记录", link="",
+   body=["公司参加第十四届全国湿法冶金工程技术交流会，展示面向镍钴湿法冶金与化工萃取工艺的强纶收油系统（FTS 功能纤维除油系统）。",
+         "强纶收油系统以表面改性的亲油疏水金属纤维为聚结材料，通过“前置过滤器 + 油水分离器”实现油水分离。系统采用纯物理方式除油，不添加破乳药剂，不产生化学污泥，分离出的油份可回收复用。",
+         "目前公司已为广东芳源、福建常青、衢州华友、江西铜业、格林美、湖南邦普、河南荣佳钪钒等 20 余家新能源与有色冶炼企业提供收油系统及过滤服务，最大单套处理量达 600 m³/h。"]),
+ dict(slug="news-8", cat="展会活动",
+   title="2024 年德国科隆过滤展 FILTECH",
+   date="2024-11-12", img="img/expo-filtech2024.webp", cap="FUJIAN QL METAL FIBER 参展德国科隆 FILTECH",
+   sum="公司以 FUJIAN QL METAL FIBER 名义参展国际过滤行业专业展会，对接海外客户。",
+   src="来源：公司参展记录", link="",
+   body=["公司参加 2024 年德国科隆 FILTECH 过滤展，以 FUJIAN QL METAL FIBER CO., LTD 名义设展，面向国际客户展示金属纤维烧结毡、烧结滤芯与过滤元件产品。",
+         "FILTECH 是过滤与分离领域的国际专业展会。公司产品可广泛应用于化工与石油化工、聚合物、合成纤维、冶金、流化、药品、食品饮料、高温空气/气体过滤、水过滤、航空与汽车等行业。",
+         "海外客户亦可通过公司阿里国际站了解产品并建立联系。"]),
 ]
-cards = "".join(f"""<article class="mcard rv" data-tag="{c}">
-  <a href="news-detail.html" class="im"><img src="{img}" alt="{t}" loading="lazy"></a>
-  <div class="bd"><div class="cat">{c} · <span class="num">{d}</span></div><h3>{t}</h3><p>{s}</p>
-  <a class="more" href="news-detail.html">阅读全文<svg class="i"><use href="#i-arrow"/></svg></a></div>
-</article>""" for c, t, d, img, s in NEWS)
+
+# ───────── 列表页
+cards = "".join(f"""<article class="mcard rv" data-tag="{n['cat']}">
+  <a href="{n['slug']}.html" class="im"><img src="{n['img']}" alt="{n['title']}" loading="lazy"></a>
+  <div class="bd"><div class="cat">{n['cat']} · <span class="num">{n['date']}</span></div><h3>{n['title']}</h3><p>{n['sum']}</p>
+  <a class="more" href="{n['slug']}.html">阅读全文<svg class="i"><use href="#i-arrow"/></svg></a></div>
+</article>""" for n in NEWS)
 
 w('news.html', head(
     "新闻动态 | 企业新闻 · 行业资讯 · 展会活动 — 强纶新材",
@@ -48,34 +100,41 @@ w('news.html', head(
 </div></section>"""
  + ENDCTA + footer())
 
-NEWS_SCHEMA = '{"@context":"https://schema.org","@type":"NewsArticle","headline":"创新驱动 装备向新｜强纶新材入围第十五届中国创新创业大赛新材料全国赛","datePublished":"2026-11-10","publisher":{"@type":"Organization","name":"福建强纶新材料股份有限公司"},"image":"%s/img/expo-forum2026.webp"}' % SITE
-w('news-detail.html', head(
-    "强纶新材入围第十五届中国创新创业大赛新材料全国赛 | 新闻动态",
-    "公司以新材料方向项目入围第十五届中国创新创业大赛全国赛，是对强纶持续研发投入与成果转化能力的又一次认可。",
-    "强纶新材,中国创新创业大赛,新材料全国赛,企业新闻",
-    "news-detail.html", schema=NEWS_SCHEMA, og_img="img/expo-forum2026.webp")
- + header('news.html')
- + crumb([("新闻动态", "news.html"), ("企业新闻", "news.html"), ("入围中国创新创业大赛全国赛", None)])
- + """<article class="sec" style="padding-top:132px"><div class="wrap art-wrap">
+# ───────── 每条独立详情页
+for i, n in enumerate(NEWS):
+    prev_n = NEWS[i-1] if i > 0 else None
+    next_n = NEWS[i+1] if i < len(NEWS)-1 else None
+    nav = '<nav class="art-nav">'
+    nav += f'<a href="{prev_n["slug"]}.html">← {prev_n["title"][:22]}…</a>' if prev_n else '<a href="news.html">← 返回新闻动态</a>'
+    nav += f'<a href="{next_n["slug"]}.html">{next_n["title"][:22]}… →</a>' if next_n else '<a href="news.html">返回新闻动态 →</a>'
+    nav += '</nav>'
+    paras = "".join(f'<p{" class=\"lede\"" if k==0 else ""}>{t}</p>' for k, t in enumerate(n['body']))
+    sc = ('{"@context":"https://schema.org","@type":"NewsArticle","headline":"%s","datePublished":"%s",'
+          '"publisher":{"@type":"Organization","name":"福建强纶新材料股份有限公司"},"image":"%s/%s","mainEntityOfPage":"%s/%s.html"}'
+          % (n['title'].replace('"', "'"), n['date'], SITE, n['img'], SITE, n['slug']))
+    w(f"{n['slug']}.html", head(
+        f"{n['title']} | 新闻动态 — 强纶新材",
+        n['sum'],
+        f"强纶新材,{n['cat']},{n['title'][:14]}",
+        f"{n['slug']}.html", schema=sc, og_img=n['img'])
+     + header('news.html')
+     + crumb([("新闻动态", "news.html"), (n['cat'], "news.html"), (n['title'][:16] + ("…" if len(n['title']) > 16 else ""), None)])
+     + f"""<article class="sec" style="padding-top:132px"><div class="wrap art-wrap">
   <div class="art-head rv">
-    <div class="idx"><b>企业新闻</b>NEWS</div>
-    <h1>创新驱动 装备向新｜强纶新材入围第十五届中国创新创业大赛新材料全国赛</h1>
-    <div class="art-meta"><span class="num">2026-11-10</span><i>·</i><span>强纶新材</span></div>
+    <div class="idx"><b>{n['cat']}</b>NEWS</div>
+    <h1>{n['title']}</h1>
+    <div class="art-meta"><span class="num">{n['date']}</span><i>·</i><span>{n['src']}</span></div>
   </div>
-  <figure class="art-fig rv"><img src="img/expo-forum2026.webp" alt="强纶新材参加新材料技术论坛"><figcaption>公司技术团队参加新材料与技术论坛</figcaption></figure>
-  <div class="prose art-body rv">
-    <p class="lede">近日，第十五届中国创新创业大赛新材料行业赛结果公布，福建强纶新材料股份有限公司以新材料方向项目入围全国赛。</p>
-    <p>强纶新材创立于 2002 年，是国内规模领先、福建省内唯一专注金属功能纤维及制品研发生产的高新技术企业，2025 年获评国家级专精特新“小巨人”企业。公司自主研发复合拉拔核心工艺，打通金属材料与纺织行业壁垒，牵头开辟“柔性金属纤维及其功能性纺织品”新兴赛道。</p>
-    <p>近三年，公司研发投入占企业收入 12% 以上，累计授权专利 57 项，参与制修订国家标准 5 项、行业标准 1 项。依托强纶新材料创新研究院的六个研究室与五大制研平台，公司在滤材滤器、流体净化、电热材料、多孔材料、特种纺织五大方向持续攻关。</p>
-    <p>公司表示，将以本次入围为契机，继续推进金属纤维关键材料的国产化与产业化，发展新质生产力，助力区域与行业高质量发展。</p>
-  </div>
+  <figure class="art-fig rv"><img src="{n['img']}" alt="{n['cap']}"><figcaption>{n['cap']}</figcaption></figure>
+  <div class="prose art-body rv">{paras}</div>
   <div class="art-foot rv">
-    <nav class="art-nav"><a href="news.html">← 返回新闻动态</a><a href="about.html">了解强纶 →</a></nav>
+    <div class="buyrow"><a class="pill pill-ink" href="about.html">了解强纶<svg class="i"><use href="#i-arrow"/></svg></a><a class="pill pill-line" href="contact.html#inq">联系我们</a></div>
+    {nav}
   </div>
 </div></article>"""
- + ENDCTA + footer())
+     + ENDCTA + footer())
 
-# ════════ 人才招聘
+# ───────── 人才招聘
 JOBS = [
  ("材料研发工程师","研发中心 · 龙岩","全职","金属材料 / 材料加工工程相关专业，硕士及以上优先；负责超细金属纤维制备工艺与多孔材料性能研究。"),
  ("过滤应用工程师","技术中心 · 龙岩","全职","熟悉过滤分离原理与工况分析，负责客户选型支持、样品测试与现场试验。"),
@@ -159,4 +218,4 @@ w('job-detail.html', head(
   </div>
 </div></section>"""
  + ENDCTA + footer())
-print('新闻 / 招聘完成')
+print(f'新闻 {len(NEWS)} 条独立详情页 + 招聘完成')
