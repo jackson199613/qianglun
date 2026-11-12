@@ -3,7 +3,7 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, crumb, page_hero, footer, SITE
-from common import w, anav, ENDCTA
+from common import w, anav, ENDCTA, vr_block
 
 
 
@@ -51,6 +51,7 @@ w('about.html', head(
     <article class="card rv d3"><span class="n">04</span><h3>元件与设备</h3><p>熔体 / 水 / 除尘滤芯、滤盘，直至收油系统等成套净化装备。</p></article>
   </div>
 </div></section>"""
+ + vr_block("img/plant-02.webp", "线上走一遍厂区与研究院", "VR 全景支持在电脑与手机上自由漫游车间、实验室与成品区，不便到场时也能先看清生产现场。")
  + ENDCTA + footer())
 
 # ───────────────────────────── 2. 发展历程

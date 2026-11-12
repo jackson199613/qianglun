@@ -429,6 +429,25 @@
 </section>
 
 <!-- 11 询盘区 -->
+<section class="sec alt vrsec" id="vr"><div class="wrap vr2">
+  <div class="rv">
+    <div class="idx"><b>VR</b>PANORAMA</div>
+    <h2 class="vr-h">线上走一遍工厂</h2>
+    <p class="vr-p">不便到场时，用 VR 全景漫游车间、实验室与成品区，设备布局与生产环境一目了然。</p>
+    <a class="pill pill-ink vr-go" data-vr href="#" hidden>进入全景漫游<svg class="i"><use href="#i-arrow"/></svg></a>
+    <p class="vr-tip">全景链接由甲方提供，后台填入后此处自动嵌入；链接到期可随时更换或取消本板块。</p>
+  </div>
+  <figure class="vrframe rv" data-vr-embed>
+    <img src="img/plant-07.webp" alt="线上走一遍工厂" loading="lazy">
+    <span class="vrbadge"><svg class="i"><use href="#i-arrow"/></svg>VR 全景</span>
+  </figure>
+</div></section>
+<section class="sec"><div class="wrap"><div class="sec-h"><h2>企业视频</h2><p>后台上传后自动转码多档清晰度，电脑与手机按网络自适应播放。</p></div><figure class="vidbox rv">
+  <video controls playsinline preload="none" poster="hero-felt.webp" data-src="" aria-label="强纶新材企业视频"></video>
+  <span class="vidtip">视频待甲方提供，上传后自动转码多档清晰度，按网络自适应播放</span>
+  <figcaption>企业视频 · 从金属到纤维，再到成套装备</figcaption>
+</figure>
+</div></section>
 <section class="sec cta" id="contact">
   <div class="wrap">
     <div class="rv">
@@ -501,6 +520,19 @@ window.addEventListener('error',function(){document.querySelectorAll('.rv,#scale
   pb.forEach((b,i)=>b.onclick=()=>{go(i);auto()});auto();
   document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(tm):auto());
 
+
+  /* VR 全景与视频：后台填入地址后自动生效 */
+  document.querySelectorAll('[data-vr]').forEach(function(a){
+    var u=a.getAttribute('data-vr'); if(!u) return;
+    a.href=u; a.target='_blank'; a.rel='noopener'; a.hidden=false;
+    var box=document.querySelector('[data-vr-embed]');
+    if(box){var f=document.createElement('iframe');f.src=u;f.loading='lazy';f.allowFullscreen=true;f.setAttribute('title','VR 全景');box.appendChild(f);box.classList.add('on');}
+    var t=document.querySelector('.vr-tip'); if(t) t.hidden=true;
+  });
+  document.querySelectorAll('.vidbox video[data-src]').forEach(function(v){
+    var u=v.getAttribute('data-src'); if(!u) return;
+    v.src=u; v.preload='metadata'; v.closest('.vidbox').classList.add('on');
+  });
   /* 搜索 */
   const sb=$('#search');
   $('#searchBtn').onclick=()=>{sb.hidden=!sb.hidden;if(!sb.hidden)$('#q').focus()};

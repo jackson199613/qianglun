@@ -3,7 +3,7 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, crumb, page_hero, footer
-from common import w, ENDCTA, rnav
+from common import w, ENDCTA, rnav, vr_block
 
 # ════════ 核心技术平台（4 个方向）
 PLAT = [
@@ -83,8 +83,9 @@ w('lab.html', head(
     <figure><img src="img/lab-02.webp" alt="中试基地" loading="lazy"><figcaption>中试基地</figcaption></figure>
     <figure><img src="img/plant-08.webp" alt="检测与试验设备" loading="lazy"><figcaption>检测与试验设备</figcaption></figure>
   </div>
-  <div class="note" style="margin-top:34px"><b>VR 全景展示位置已预留</b>：甲方提供第三方 VR 全景链接后，由后台嵌入本页与首页；链接到期可更换或取消该板块。</div>
+
 </div></section>"""
+ + vr_block("img/lab-01.webp", "实验室与检测区全景", "无需到场即可查看实验室布局、检测设备与样品处理区，配合检测能力清单一起看更直观。")
  + ENDCTA + footer())
 
 # ════════ 检测能力

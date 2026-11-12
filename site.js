@@ -44,6 +44,29 @@
       b.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   });
+  /* VR 全景：填入链接后自动嵌入 */
+  d.querySelectorAll('[data-vr]').forEach(function (a) {
+    var url = a.getAttribute('data-vr');
+    if (!url) return;
+    a.href = url; a.target = '_blank'; a.rel = 'noopener'; a.hidden = false;
+    var box = d.querySelector('[data-vr-embed]');
+    if (box) {
+      var f = d.createElement('iframe');
+      f.src = url; f.loading = 'lazy'; f.allowFullscreen = true;
+      f.setAttribute('title', 'VR 全景');
+      box.appendChild(f); box.classList.add('on');
+    }
+    var tip = d.querySelector('.vr-tip'); if (tip) tip.hidden = true;
+  });
+
+  /* 视频：后台填入地址后自动可播 */
+  d.querySelectorAll('.vidbox video[data-src]').forEach(function (v) {
+    var src = v.getAttribute('data-src');
+    if (!src) return;
+    v.src = src; v.preload = 'metadata';
+    v.closest('.vidbox').classList.add('on');
+  });
+
   /* 长表折叠 */
   d.querySelectorAll('.foldbtn[data-fold]').forEach(function (b) {
     var t = d.getElementById(b.getAttribute('data-fold'));

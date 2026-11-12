@@ -3,7 +3,7 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, crumb, footer, SITE
-from common import w, ENDCTA
+from common import w, ENDCTA, video_block
 from build_lines import faq_block
 
 schema = '{"@context":"https://schema.org","@type":"Product","name":"金属纤维烧结毡 25KIA3","image":"%s/img/media-05.webp","description":"绝对过滤等级 25μm 的不锈钢金属纤维烧结毡，厚度 0.61mm，过滤率 80%%，气泡点压 1480Pa，200Pa 透气值 350。","brand":{"@type":"Brand","name":"强纶新材"},"manufacturer":{"@type":"Organization","name":"福建强纶新材料股份有限公司"},"material":"316L 不锈钢纤维","sku":"25KIA3"}' % SITE
@@ -89,5 +89,6 @@ document.querySelectorAll('.pd-thumbs button').forEach(function(b){
   });
 });
 </script>"""
+ + '<section class="sec"><div class="wrap"><div class="sec-h"><h2>产品视频</h2><p>后台上传后自动转码多档清晰度，电脑与手机按网络自适应播放。</p></div>' + video_block("img/media-01.webp", "25KIA3 金属纤维烧结毡", "25KIA3 产品视频 · 结构与使用说明") + '</div></section>'
  + ENDCTA + footer())
 print('详情页模板完成')
