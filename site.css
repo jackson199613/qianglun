@@ -232,7 +232,7 @@ svg.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;stro
 /* ---------- 关于 ---------- */
 .about{background:var(--paper);padding-top:0}
 .band{position:relative;height:min(64vh,540px);overflow:hidden}
-.band i{position:absolute;inset:-12% 0;background:url('building.webp') center 62%/cover;will-change:transform}
+.band i{position:absolute;inset:-12% 0;background:url('building-v2.webp') center 62%/cover;will-change:transform}
 .band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(245,243,238,1) 0%,rgba(245,243,238,0) 30%),linear-gradient(90deg,rgba(14,15,17,.45),transparent 50%)}
 .band .tag{position:absolute;left:max(40px,calc((100vw - var(--wrap))/2 + 40px));top:120px;z-index:2;color:#fff}
 .band .tag small{display:block;font-size:12px;letter-spacing:.3em;opacity:.85}
@@ -367,7 +367,7 @@ body.go .hero h1 em{animation:shine 2.4s ease .9s 1 both}
 /* ---------- 进站过场 ---------- */
 #intro{position:fixed;inset:0;z-index:9999;background:#050506;color:#fff;overflow:hidden;--r:0px;-webkit-mask-image:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 1px));mask-image:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 1px))}
 #intro canvas{position:absolute;inset:0;width:100%;height:100%}
-#intro .ph{position:absolute;inset:0;background:url('building.webp') center/cover;opacity:0;transform:scale(1.18);filter:blur(22px) brightness(.6) saturate(.7);transition:opacity .9s ease,transform 2.4s cubic-bezier(.2,.7,.2,1),filter 1.4s ease}
+#intro .ph{position:absolute;inset:0;background:url('inq-yarn.webp') center/cover;opacity:0;transform:scale(1.18);filter:blur(22px) brightness(.6) saturate(.7);transition:opacity .9s ease,transform 2.4s cubic-bezier(.2,.7,.2,1),filter 1.4s ease}
 #intro .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,6,.85),rgba(5,5,6,.35) 50%,rgba(5,5,6,.85)),linear-gradient(0deg,rgba(5,5,6,.9),transparent 55%)}
 #intro.s2 .ph{opacity:1;transform:scale(1.02);filter:blur(0) brightness(.85) saturate(.85)}
 #intro .sweep{position:absolute;inset:-20% -60%;background:linear-gradient(100deg,transparent 42%,rgba(255,236,150,.0) 44%,rgba(255,236,150,.35) 50%,rgba(255,236,150,0) 56%,transparent 58%);transform:translateX(-70%);opacity:0;pointer-events:none}

@@ -47,7 +47,7 @@ IND = [
              ("过滤元器件","p-element.html","尾气微粒过滤与高温气体除尘元件")],
       kpis=[("1–100","Ω","米电阻可调"),("1000","芯","最大芯数"),("350–850","℃","耐温范围")],
       cases="汽车座椅加热、SCR 加热系统、尾气微粒过滤"),
- dict(f="a-textile.html", gal=[("img/yarn-rfid.webp","RFID 耐水洗标签"),("img/yarn-heatpad.webp","金属纤维发热片"),("img/yarn-thread.webp","金属纤维缝纫线")], en="SMART TEXTILE", zh="功能纺织与智能穿戴", img="img/yarn-wearable.webp", hero="img/ind-wear.webp",
+ dict(f="a-textile.html", gal=[("img/yarn-rfid.webp","RFID 耐水洗标签"),("img/yarn-heatpad.webp","金属纤维发热片"),("img/yarn-thread.webp","金属纤维缝纫线"),("prod-heatwire.webp","金属纤维发热线")], en="SMART TEXTILE", zh="功能纺织与智能穿戴", img="img/yarn-wearable.webp", hero="img/ind-wear.webp",
       claim="把金属<em>织进衣服里</em>",
       pain="智能穿戴的发热与信号传输要求材料柔软、耐水洗、弯折寿命长，普通金属丝难以兼顾。",
       sol="金属纤维可纺可织，制成导电纱、信号线、发热织物与吸音材料，兼具透气性与抗静电功能；公司金属纱线在电热面料领域市占率全国第一，发热服已用于冬奥会并出口俄罗斯等国家。",

@@ -41,7 +41,7 @@
   var W,H,dpr=Math.min(2,window.devicePixelRatio||1),T0=performance.now(),done=false,raf;
   function size(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
   size();addEventListener('resize',size);
-  var img=new Image(),imgOK=false;img.onload=function(){imgOK=true};img.src='building.webp';
+  var img=new Image(),imgOK=false;img.onload=function(){imgOK=true};img.src='inq-yarn.webp';
   /* 纤维：从四周飞入、旋向中心汇聚 */
   var N=Math.round(Math.min(1100,W*H/1400)),F=[];
   for(var k=0;k<N;k++){
@@ -239,7 +239,7 @@
     </div>
 
     <div class="rd3">
-      <div class="inst rv"><i style="background-image:url('building.webp')"></i><div><small class="num">R&amp;D CENTER</small><b>强纶新材料创新研究院</b><span>龙岩高新区 · 新材料创新创业园</span></div></div>
+      <div class="inst rv"><i style="background-image:url('building-v2.webp')"></i><div><small class="num">R&amp;D CENTER</small><b>强纶新材料创新研究院</b><span>龙岩高新区 · 新材料创新创业园</span></div></div>
       <a class="kpi rv d1" href="patents.html"><b class="num">57</b><h4>授权专利</h4><p>发明 11 · 实用新型 44 · 外观 2</p></a>
       <a class="kpi rv d2" href="lab.html"><b class="num">6</b><h4>研究室</h4><p>流体净化 · 氢能源 · 金属橡胶等</p></a>
       <a class="kpi rv d3" href="patents.html"><b class="num">5<sup>+1</sup></b><h4>参与标准</h4><p>国家标准 5 项 · 行业标准 1 项</p></a>
