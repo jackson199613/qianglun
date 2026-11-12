@@ -233,7 +233,7 @@ w('p-equipment.html', head(
     <thead><tr><th>客户</th><th>配置 / 通量</th></tr></thead>
     <tbody>{case_rows}</tbody>
   </table></div>
-  <button class="foldbtn" data-fold="caseTbl" data-more="展开全部 23 家" data-less="收起">展开全部 23 家</button>
+  <button class="foldbtn" data-fold="caseTbl" data-more="展开全部 24 家" data-less="收起">展开全部 24 家</button>
   <p class="tnote">* 以上为公开可披露的合作信息，具体工艺参数与方案细节依保密约定不予展示。</p>
 </div></section>
 
