@@ -193,7 +193,10 @@ w('p-equipment.html', head(
   </table></div>
   <p class="tnote">油水分离通常分「预除油」与「深度除油」两个环节：预除油以最低运行成本去除并回收非溶解油；深度除油（吸附树脂、活性炭、蒸发、催化氧化等）保证液体指标合格。根据萃取剂、混合方式与工艺不同，溶解度一般在 5—40 ppm。</p>
 
-  <div class="sec-h" style="margin:84px 0 10px"><h2>现场与应用</h2><p>按处理量与现场条件分为槽式、罐式与配套三类部署方式，以下为部分已投运项目。</p></div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-h" style="margin:0 0 10px"><h2>现场与应用</h2><p>按处理量与现场条件分为槽式、罐式与配套三类部署方式，以下为部分已投运项目。</p></div>
 
   <h3 class="galh">槽式 · 大流量</h3>
   <div class="gal">
@@ -226,13 +229,16 @@ w('p-equipment.html', head(
   </div>
 
   <div class="sec-h" style="margin:80px 0 24px"><h2>部分业绩</h2><p>已为新能源与有色冶炼行业 20 余家企业提供收油系统及过滤服务。</p></div>
-  <div class="tbl-wrap"><table class="tbl">
+  <div class="tbl-wrap tbl-fold" id="caseTbl"><table class="tbl">
     <thead><tr><th>客户</th><th>配置 / 通量</th></tr></thead>
     <tbody>{case_rows}</tbody>
   </table></div>
+  <button class="foldbtn" data-fold="caseTbl" data-more="展开全部 23 家" data-less="收起">展开全部 23 家</button>
   <p class="tnote">* 以上为公开可披露的合作信息，具体工艺参数与方案细节依保密约定不予展示。</p>
+</div></section>
 
-  <div class="g2 wide" style="margin-top:84px">
+<section class="sec tight"><div class="wrap">
+  <div class="g2 wide">
     <div class="rv"><h2 style="font-family:'Noto Serif SC',serif;font-size:26px;font-weight:900;margin-bottom:20px">选型建议</h2>
       <div class="prose">
         <p><strong>按处理量</strong>：小流量（≤30 m³/h）优先罐式收油系统，可撬装、即插即用；大流量工况采用槽式，占地更紧凑、投资更低；已有澄清槽 / 槽体可利用时，选槽体改造方案降低投资。</p>

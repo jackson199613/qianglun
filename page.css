@@ -311,3 +311,9 @@ a.row-i:hover h4{color:var(--champ-ink)}
 @media(max-width:700px){.leadfig img{aspect-ratio:16/9}}
 
 .ph.has-bg .ph-lead{max-width:38em}
+
+/* 长表折叠 */
+.tbl-fold tbody tr:nth-child(n+9){display:none}
+.tbl-fold.open tbody tr:nth-child(n+9){display:table-row}
+.foldbtn{margin:18px 0 0;background:none;border:0;border-bottom:1px solid var(--gold);padding:0 2px 3px;font:inherit;font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;letter-spacing:.02em;transition:border-color .3s}
+.foldbtn:hover{border-bottom-width:2px}

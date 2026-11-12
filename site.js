@@ -44,6 +44,18 @@
       b.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   });
+  /* 长表折叠 */
+  d.querySelectorAll('.foldbtn[data-fold]').forEach(function (b) {
+    var t = d.getElementById(b.getAttribute('data-fold'));
+    if (!t) { b.hidden = true; return; }
+    var rows = t.querySelectorAll('tbody tr').length;
+    if (rows <= 8) { b.hidden = true; return; }
+    b.addEventListener('click', function () {
+      var on = t.classList.toggle('open');
+      b.textContent = on ? b.getAttribute('data-less') : b.getAttribute('data-more');
+    });
+  });
+
   /* 筛选（产品/新闻等列表页通用：data-filter 控制 data-tag） */
   d.querySelectorAll('[data-filter]').forEach(function (bar) {
     var items = d.querySelectorAll(bar.getAttribute('data-filter'));

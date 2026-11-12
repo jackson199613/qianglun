@@ -99,6 +99,13 @@ rows = [("10KIA3",10,0.3,75,3700,110),("15KIA3",15,0.37,75,2470,190),("20KIA3",2
         ("15KIC2",15,0.4,72,2470,150),("20KIC2",20,0.4,72,1850,200),("25KIC4",25,0.5,72,1480,280)]
 trs = "".join(f'<tr><td><b>{a}</b></td><td class="num">{b}</td><td class="num">{c}</td><td class="num">{d}</td><td class="num">{e}</td><td class="num">{f}</td></tr>' for a,b,c,d,e,f in rows)
 
+rows = [("10KIA3",10,0.3,75,3700,110),("15KIA3",15,0.37,75,2470,190),("20KIA3",20,0.45,80,1850,300),
+        ("25KIA3",25,0.61,80,1480,350),("30KIA3",30,0.63,80,1230,500),("40KIA3",40,0.66,78,925,620),
+        ("60KIA3",60,0.7,86,620,1200),("10KIA3K",10,1.1,85,3500,140),("15KIA3K",15,1.1,85,2400,250),
+        ("20KIA3K",20,1.1,85,1700,350),("25KIA3K",25,1.1,85,1400,470),("10KIC4",10,0.4,72,3700,100),
+        ("15KIC2",15,0.4,72,2470,150),("20KIC2",20,0.4,72,1850,200),("25KIC4",25,0.5,72,1480,280)]
+trs = "".join(f'<tr><td><b>{a}</b></td><td class="num">{b}</td><td class="num">{c}</td><td class="num">{d}</td><td class="num">{e}</td><td class="num">{f}</td></tr>' for a,b,c,d,e,f in rows)
+
 w('p-felt.html', head(
     "金属纤维烧结毡 | 精度 10–60μm 多层梯度孔滤材 — 强纶新材",
     "不锈钢金属纤维烧结毡，绝对过滤精度 10–60μm，孔隙率高、纳污量大、压损小、可清洗再生，耐 480℃，用于化纤熔体、黏胶过滤与高温气体除尘。",
@@ -146,19 +153,16 @@ w('p-felt.html', head(
   <p class="tnote">* 各型号气泡点与透气值不同，上表为常规区间值；实际以出厂检验报告为准。可按客户要求定制加强、加厚、密集网等特殊规格。</p>
 
   <div class="sec-h" style="margin:92px 0 24px"><h2>纤维与毡类产品形态</h2><p>同一套复合拉拔与烧结工艺，可交付从纤维原料到成品毡件的完整形态，按设备与工况定制。</p></div>
-  <figure class="leadfig rv"><img src="img/sh-pad.webp" alt="金属纤维减震垫" loading="lazy"><figcaption>从纤维原料到成品毡件 · 图为金属纤维缠绕压制成型的减震垫</figcaption></figure>
-
   <div class="g3">
     <article class="card rv"><span class="n">01</span><h3>毡用金属纤维</h3><p>不锈钢、镍、钛、铁铬铝、铜等材质，提供<strong>长纤维、车削纤维与纤维棉条</strong>三种形态，作为烧结毡、针刺毡的原料直接供货。</p></article>
-    <article class="card rv d1"><span class="n">02</span><h3>纺织用金属纤维</h3><p>直径低至 2μm，可纺可织，用于混纺纱线、机织布与针织套管等纺织制品，另见<a class="ilink" href="p-yarn.html">金属纤维纱线</a>。</p></article>
-    <article class="card rv d2"><span class="n">03</span><h3>KK / KKF 机用毡</h3><p>为黏胶行业 KK、KKF 滤机配套的大幅面烧结毡。公司研制出国内<strong>首张及最大规格 KKF 滤机烧结毡</strong>，可按设备型号与护网尺寸定制。</p></article>
-    <article class="card rv"><span class="n">04</span><h3>滤芯用毡</h3><p>按滤芯结构裁切与成型的烧结毡，配内支撑网、外保护网与冲孔网制成熔体滤芯、水滤芯、除尘滤芯，见<a class="ilink" href="p-element.html">过滤元器件</a>。</p></article>
-    <article class="card rv d1"><span class="n">05</span><h3>燃烧器用毡</h3><p>用于多孔介质燃烧器的耐高温金属纤维毡，燃烧面温度分布均匀、热强度高，配套燃烧器用金属纤维布一并供货。</p></article>
-    <article class="card rv d2"><span class="n">06</span><h3>制氢设备气体扩散层用毡</h3><p>面向电解水制氢的多孔金属纤维扩散层，兼顾导电、导气与机械支撑，由创新研究院氢能源研究室与同济大学团队共同开发。</p></article>
-    <article class="card rv"><span class="n">07</span><h3>金属纤维减震垫</h3><p>以金属纤维缠绕压制成型的弹性阻尼元件，耐高温、耐油、无老化，用于高温或强腐蚀环境下常规橡胶减震件无法胜任的场合。</p></article>
-    <article class="card rv d1"><span class="n">08</span><h3>微丝产品</h3><p>以单丝直径更细的金属微丝为基材的制品，可制成微丝减震垫等弹性元件，按客户图纸与载荷要求定制。</p></article>
-    <article class="card rv d2"><span class="n">09</span><h3>定制加工</h3><p>加强毡、加厚毡、密集网以及异形裁切、折波、焊接成型均可定制；提供设备型号、尺寸与工况即可出方案，<a class="ilink" href="contact.html#inq">提交定制需求</a>。</p></article>
+    <article class="card rv d1"><span class="n">02</span><h3>KK / KKF 机用毡</h3><p>为黏胶行业 KK、KKF 滤机配套的大幅面烧结毡。公司研制出国内<strong>首张及最大规格 KKF 滤机烧结毡</strong>，可按设备型号与护网尺寸定制。</p></article>
+    <article class="card rv d2"><span class="n">03</span><h3>滤芯用毡</h3><p>按滤芯结构裁切与成型的烧结毡，配内支撑网、外保护网与冲孔网制成熔体滤芯、水滤芯、除尘滤芯，见<a class="ilink" href="p-element.html">过滤元器件</a>。</p></article>
+    <article class="card rv"><span class="n">04</span><h3>燃烧器用毡</h3><p>用于多孔介质燃烧器的耐高温金属纤维毡，燃烧面温度分布均匀、热强度高，配套燃烧器用金属纤维布一并供货。</p></article>
+    <article class="card rv d1"><span class="n">05</span><h3>制氢设备气体扩散层用毡</h3><p>面向电解水制氢的多孔金属纤维扩散层，兼顾导电、导气与机械支撑，由创新研究院氢能源研究室与同济大学团队共同开发。</p></article>
+    <article class="card rv d2"><span class="n">06</span><h3>金属纤维减震垫</h3><p>以金属纤维缠绕压制成型的弹性阻尼元件，耐高温、耐油、无老化，用于常规橡胶减震件无法胜任的高温或强腐蚀环境。</p></article>
   </div>
+  <figure class="leadfig rv"><img src="img/sh-pad.webp" alt="金属纤维减震垫" loading="lazy"><figcaption>金属纤维减震垫 · 由极细金属丝缠绕压制成型的弹性阻尼元件</figcaption></figure>
+  <p class="note rv" style="margin-top:26px">此外还可供应<strong>纺织用金属纤维</strong>（直径低至 2μm，用于混纺纱线与织物，见<a class="ilink" href="p-yarn.html">金属纤维纱线</a>）、<strong>微丝制品</strong>，以及加强毡、加厚毡、密集网与异形裁切、折波、焊接成型等定制加工，<a class="ilink" href="contact.html#inq">提交工况即可出方案</a>。</p>
 
   <div class="g2 wide" style="margin-top:84px">
     <div class="rv"><h2 style="font-family:'Noto Serif SC',serif;font-size:26px;font-weight:900;margin-bottom:20px">主要用途</h2>
