@@ -146,6 +146,8 @@ w('p-felt.html', head(
   <p class="tnote">* 各型号气泡点与透气值不同，上表为常规区间值；实际以出厂检验报告为准。可按客户要求定制加强、加厚、密集网等特殊规格。</p>
 
   <div class="sec-h" style="margin:92px 0 24px"><h2>纤维与毡类产品形态</h2><p>同一套复合拉拔与烧结工艺，可交付从纤维原料到成品毡件的完整形态，按设备与工况定制。</p></div>
+  <figure class="leadfig rv"><img src="img/sh-pad.webp" alt="金属纤维减震垫" loading="lazy"><figcaption>从纤维原料到成品毡件 · 图为金属纤维缠绕压制成型的减震垫</figcaption></figure>
+
   <div class="g3">
     <article class="card rv"><span class="n">01</span><h3>毡用金属纤维</h3><p>不锈钢、镍、钛、铁铬铝、铜等材质，提供<strong>长纤维、车削纤维与纤维棉条</strong>三种形态，作为烧结毡、针刺毡的原料直接供货。</p></article>
     <article class="card rv d1"><span class="n">02</span><h3>纺织用金属纤维</h3><p>直径低至 2μm，可纺可织，用于混纺纱线、机织布与针织套管等纺织制品，另见<a class="ilink" href="p-yarn.html">金属纤维纱线</a>。</p></article>

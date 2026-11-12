@@ -15,7 +15,7 @@ w('selector.html', head(
  + crumb([("选型中心", None)])
  + page_hero("01", "SELECTOR", "选型指南",
              "四步，<em>找到对的过滤方案</em>",
-             "依次选择介质、工况温度、工作压力与过滤精度，系统即时给出推荐产品线；工程师将按您的条件复核并给出正式选型表。")
+             "依次选择介质、工况温度、工作压力与过滤精度，系统即时给出推荐产品线；工程师将按您的条件复核并给出正式选型表。", bg="img/ph-select.webp")
  + f"""<section class="sec"><div class="wrap">{snav(0)}
   <div class="sel" id="sel">
     <div class="sel-q">
@@ -108,7 +108,7 @@ w('specs.html', head(
  + crumb([("选型中心", "selector.html"), ("参数对照表", None)])
  + page_hero("02", "SPECS", "参数对照表",
              "一张表，<em>看懂精度与通量的取舍</em>",
-             "气泡点压反映最大孔径——越高孔径越细、精度越高；200Pa 透气值反映通过能力——越大压损越小、流量越大。两者通常此消彼长，选型即是在二者之间取平衡。")
+             "气泡点压反映最大孔径——越高孔径越细、精度越高；200Pa 透气值反映通过能力——越大压损越小、流量越大。两者通常此消彼长，选型即是在二者之间取平衡。", bg="img/ph-select.webp")
  + f"""<section class="sec"><div class="wrap">{snav(1)}
   <nav class="pillbar" data-filter=".tbl tbody tr" aria-label="系列筛选">
     <button class="on" data-v="all">全部系列</button><button data-v="KIA3">KIA3 标准系列</button><button data-v="KIA3K">KIA3K 加厚系列</button><button data-v="KIC">KIC 系列</button>

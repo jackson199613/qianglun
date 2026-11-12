@@ -53,7 +53,7 @@ w('products.html', head(
  + page_hero("01", "PRODUCTS", "产品总览",
              "一根纤维，<em>五条产品线</em>",
              "从金属纤维出发，向下游延伸到纱线织物、烧结滤材、过滤元件，直到成套净化设备。每条产品线均可按工况参数定制，并提供样品测试。",
-             [("5", "条", "产品线"), ("2", "μm", "最细纤维直径"), ("10–60", "μm", "烧结毡精度"), ("600", "m³/h", "最大单套处理量")])
+             [("5", "条", "产品线"), ("2", "μm", "最细纤维直径"), ("10–60", "μm", "烧结毡精度"), ("600", "m³/h", "最大单套处理量")], bg="img/hero-main.webp")
  + f"""<section class="sec"><div class="wrap">
   <div class="sec-h row"><div><h2>按<em>产品线</em>浏览</h2><p>也可按应用行业、材质与过滤精度快速筛选。</p></div>
     <a class="pill pill-line" href="selector.html">不确定选哪条？按工况选型<svg class="i"><use href="#i-arrow"/></svg></a></div>

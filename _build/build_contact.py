@@ -65,7 +65,7 @@ w('contact.html', head(
  + crumb([("联系我们", None)])
  + page_hero("01", "CONTACT", "联系我们",
              "把工况发过来，<em>剩下的交给工程师</em>",
-             "提供介质、温度、压力与过滤精度，并可上传图纸或参数文件；我们会在 1 个工作日内回复初步选型建议。")
+             "提供介质、温度、压力与过滤精度，并可上传图纸或参数文件；我们会在 1 个工作日内回复初步选型建议。", bg="img/ph-contact.webp")
  + f"""<section class="sec"><div class="wrap">
   <div class="g2 r5-7 wide">
     <div class="rv">
@@ -102,7 +102,7 @@ w('sample.html', head(
  + crumb([("联系我们", "contact.html"), ("样品申请", None)])
  + page_hero("02", "SAMPLE", "样品申请",
              "先拿样品，<em>在你的产线上验证</em>",
-             "可提供免费小样（运费到付），标准现货样品一般 1–3 天寄出；工况复杂的项目可安排技术人员入厂试验。")
+             "可提供免费小样（运费到付），标准现货样品一般 1–3 天寄出；工况复杂的项目可安排技术人员入厂试验。", bg="img/ph-contact.webp")
  + """<section class="sec"><div class="wrap">
   <div class="g2 r5-7 wide">
     <div class="rv">

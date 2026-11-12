@@ -165,8 +165,7 @@ w('jobs.html', head(
  + page_hero("01", "CAREERS", "人才招聘",
              "在车间里做研发，<em>在工况里找答案</em>",
              "强纶新材料创新研究院不同于其他科研院所，“特”在研发源于车间实践、创新应用于航空航天等高端先进领域。我们需要愿意把材料做到产线上的人。",
-             [("200","+","员工人数"),("12","%+","研发投入占收入"),("6","个","研究室"),("5","大","制研平台")],
-             bg="img/team-build2021.webp")
+             [("200","+","员工人数"),("12","%+","研发投入占收入"),("6","个","研究室"),("5","大","制研平台")], bg="img/ph-jobs.webp")
  + f"""<section class="sec"><div class="wrap">
   <div class="sec-h row"><div><h2>在招岗位</h2><p>以下岗位长期开放，欢迎投递。</p></div>
     <a class="pill pill-line" href="mailto:hr@qlfiber.com">投递简历<svg class="i"><use href="#i-arrow"/></svg></a></div>

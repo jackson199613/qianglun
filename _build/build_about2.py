@@ -83,7 +83,7 @@ w('honors.html', head(
  + crumb([("关于强纶", "about.html"), ("资质荣誉", None)])
  + page_hero("05", "HONORS", "资质荣誉",
              "资质不是墙上的纸，<em>是工况里的底气</em>",
-             "从国家级专精特新“小巨人”到标准化技术委员单位，公司在技术、知识产权与行业话语权上持续积累。")
+             "从国家级专精特新“小巨人”到标准化技术委员单位，公司在技术、知识产权与行业话语权上持续积累。", bg="img/ph-honor.webp")
  + f"""<section class="sec"><div class="wrap">{anav(4)}
   <div class="g4" style="margin-bottom:10px">
     <div class="card rv"><span class="n">8</span><h3>国家级</h3><p>含专精特新“小巨人”、高新技术企业、知识产权优势企业及标委会单位</p></div>
@@ -151,7 +151,7 @@ w('investor.html', head(
  + page_hero("07", "INVESTOR", "投资者关系",
              "证券代码 <em>872336</em>",
              "公司于 2017 年 11 月在全国中小企业股份转让系统（新三板）挂牌，持续以规范治理与信息披露回应投资者关切。",
-             [("872336", "", "证券代码"), ("2017", ".11", "挂牌时间"), ("4275", "万", "注册资本（元）")])
+             [("872336", "", "证券代码"), ("2017", ".11", "挂牌时间"), ("4275", "万", "注册资本（元）")], bg="img/ph-investor.webp")
  + f"""<section class="sec"><div class="wrap">{anav(6)}
   <div class="g2 wide">
     <div class="prose rv">

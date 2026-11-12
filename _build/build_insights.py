@@ -27,7 +27,7 @@ w('insights.html', head(
  + crumb([("技术专栏", None)])
  + page_hero("01", "INSIGHTS", "技术文章",
              "工程师写给<em>工程师</em>的文章",
-             "不讲概念，只讲工况。这里整理的是客户在选型、调试与运行中真正会遇到的问题，以及我们给出的判断依据。")
+             "不讲概念，只讲工况。这里整理的是客户在选型、调试与运行中真正会遇到的问题，以及我们给出的判断依据。", bg="img/ph-insights.webp")
  + f"""<section class="sec"><div class="wrap">{inav(0)}
   <nav class="pillbar" data-filter=".row-i" aria-label="文章分类">
     <button class="on" data-v="all">全部</button><button data-v="选型">选型</button><button data-v="对比">对比</button><button data-v="应用">应用</button><button data-v="原理">原理</button>
@@ -80,7 +80,7 @@ w('faq.html', head(
  + crumb([("技术专栏", "insights.html"), ("常见问题库", None)])
  + page_hero("02", "FAQ", "常见问题库",
              "采购前，<em>先读懂这几点</em>",
-             "把工程师整理的高频问题按产品线分类，直接给出答案。没有找到您关心的问题，欢迎直接联系我们。")
+             "把工程师整理的高频问题按产品线分类，直接给出答案。没有找到您关心的问题，欢迎直接联系我们。", bg="img/ph-insights.webp")
  + f"""<section class="sec"><div class="wrap">{inav(1)}
   <nav class="pillbar" data-filter=".qa" aria-label="问题分类">
     <button class="on" data-v="all">全部</button>{"".join(f'<button data-v="{c}">{c}</button>' for c in groups)}
@@ -121,7 +121,7 @@ w('encyclopedia.html', head(
  + crumb([("技术专栏", "insights.html"), ("术语百科", None)])
  + page_hero("03", "ENCYCLOPEDIA", "术语百科",
              "金属纤维这个行业，<em>词汇并不通用</em>",
-             "同一个产品，在金属行业与纺织行业有不同叫法。这里按中英文对照整理金属纤维相关术语，便于跨行业沟通与海外询盘对接。")
+             "同一个产品，在金属行业与纺织行业有不同叫法。这里按中英文对照整理金属纤维相关术语，便于跨行业沟通与海外询盘对接。", bg="img/ph-insights.webp")
  + f"""<section class="sec"><div class="wrap">{inav(2)}
   <div class="rows">{enc_rows}</div>
   <div class="note" style="margin-top:40px">过滤参数类术语（过滤精度、孔隙率、透气度、气泡点压等）见<a href="glossary.html" style="border-bottom:2px solid var(--gold)">选型中心 · 名词解释</a>。</div>

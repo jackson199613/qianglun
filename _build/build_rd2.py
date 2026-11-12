@@ -42,7 +42,7 @@ w('patents.html', head(
  + page_hero("05", "PATENTS", "专利与标准",
              "<em>57 项</em>专利，<em>6 项</em>标准",
              "作为国家知识产权优势企业与全国颗粒表征与分检及筛网标准化技术委员会委员单位，强纶不仅做产品，也参与定义行业的度量方式。",
-             [("57","项","授权专利"),("11","项","发明专利"),("5","项","参与国家标准"),("1","项","参与行业标准")])
+             [("57","项","授权专利"),("11","项","发明专利"),("5","项","参与国家标准"),("1","项","参与行业标准")], bg="img/ph-rd.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(4)}
   <div class="sec-h row"><div><h2>专利墙</h2><p>可按专利类型与授权年份筛选。</p></div></div>
   <div class="g4" style="margin-bottom:30px">
@@ -102,7 +102,7 @@ w('coop.html', head(
  + crumb([("科研创新", "rd.html"), ("产学研合作", None)])
  + page_hero("06", "COOPERATION", "产学研合作",
              "把高校的理论，<em>放进车间验证</em>",
-             "公司与多所高校及科研院所保持长期合作：既有联合攻关的具体课题，也有共建平台、实践基地与孵化器。")
+             "公司与多所高校及科研院所保持长期合作：既有联合攻关的具体课题，也有共建平台、实践基地与孵化器。", bg="img/ph-rd.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(5)}
   <div class="g4" style="margin-bottom:34px">
     <div class="card rv"><span class="n">11</span><h3>合作项目</h3><p>覆盖材料、装备、新能源与标准化</p></div>
@@ -139,7 +139,7 @@ w('achievements.html', head(
  + page_hero("07", "ACHIEVEMENTS", "科研成果",
              "立项之后，<em>要能变成产品</em>",
              "公司承担的省市级科技计划项目大多与在产产品线直接相关——立项课题的目标，就是解决产线上已经遇到的问题。",
-             [("4","项","省级科技计划项目"),("2","项","市级科技计划项目"),("57","项","授权专利"),("12","%+","研发投入占收入")])
+             [("4","项","省级科技计划项目"),("2","项","市级科技计划项目"),("57","项","授权专利"),("12","%+","研发投入占收入")], bg="img/ph-rd.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(6)}
   <div class="sec-h"><h2>省级科技计划项目</h2></div>
   <div class="tbl-wrap"><table class="tbl">

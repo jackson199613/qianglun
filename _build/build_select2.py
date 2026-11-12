@@ -35,7 +35,7 @@ w('glossary.html', head(
  + crumb([("选型中心", "selector.html"), ("名词解释", None)])
  + page_hero("03", "GLOSSARY", "名词解释",
              "把参数表上的词，<em>一个个讲清楚</em>",
-             "选型沟通中最容易产生误解的，往往不是产品本身，而是对同一个参数的不同理解。以下是强纶参数表与方案中常用术语的统一口径。")
+             "选型沟通中最容易产生误解的，往往不是产品本身，而是对同一个参数的不同理解。以下是强纶参数表与方案中常用术语的统一口径。", bg="img/ph-select.webp")
  + f"""<section class="sec"><div class="wrap">{snav(2)}
   <div class="rows">{rows}</div>
   <div class="note" style="margin-top:40px"><b>没找到想了解的术语？</b> 可在<a href="faq.html" style="border-bottom:2px solid var(--gold)">常见问题库</a>查找，或直接<a href="contact.html#inq" style="border-bottom:2px solid var(--gold)">联系工程师</a>。</div>
@@ -82,7 +82,7 @@ w('downloads.html', head(
  + crumb([("选型中心", "selector.html"), ("资料下载中心", None)])
  + page_hero("04", "DOWNLOADS", "资料下载中心",
              "手册、参数表、报告与证书，<em>都在这里</em>",
-             "产品手册与技术数据表可直接下载；检测报告与资质证书需留下联系方式，由工程师核对用途后发送，以便追溯资料流向。")
+             "产品手册与技术数据表可直接下载；检测报告与资质证书需留下联系方式，由工程师核对用途后发送，以便追溯资料流向。", bg="img/ph-download.webp")
  + f"""<section class="sec"><div class="wrap">{snav(3)}
   <div class="note" style="margin-bottom:10px"><b>关于下载方式</b>：网站后台支持「直接下载」与「留资下载」两种模式。为保护客户信息与资料版本一致性，检测报告与认证证书默认采用留资下载，提交后由专人发送最新版本。</div>
   {blocks}
