@@ -24,16 +24,23 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# 样式与脚本
+# 样式与脚本：文件名不带版本号，必须每次回源校验（ETag 命中则返回 304，几乎不耗流量）
+# 否则改版后回访用户会被旧样式卡住最长 7 天
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# HTML 同理
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # 收录相关文件
 [[headers]]
