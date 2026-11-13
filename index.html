@@ -442,11 +442,24 @@
     <span class="vrbadge"><svg class="i"><use href="#i-arrow"/></svg>VR 全景</span>
   </figure>
 </div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><h2>企业视频</h2><p>后台上传后自动转码多档清晰度，电脑与手机按网络自适应播放。</p></div><figure class="vidbox rv">
-  <video controls playsinline preload="none" poster="hero-felt.webp" data-src="" aria-label="强纶新材企业视频"></video>
-  <span class="vidtip">视频待甲方提供，上传后自动转码多档清晰度，按网络自适应播放</span>
-  <figcaption>企业视频 · 从金属到纤维，再到成套装备</figcaption>
-</figure>
+<section class="film" id="film"><div class="wrap">
+  <div class="idx rv"><b>FILM</b>企业宣传片</div>
+  <h2 class="rv">三分四十七秒，看完<em>强纶</em></h2>
+  <p class="flead rv">从一根 2μm 的不锈钢金属纤维出发，到烧结毡、织物、过滤元器件与成套净化装备——这条路公司走了二十余年。</p>
+  <figure class="player rv" data-player>
+    <video playsinline controls preload="none" poster="img/film-poster.webp" aria-label="福建强纶新材料企业宣传片">
+      <source src="video/qlfiber-film-1080p.mp4" type="video/mp4">
+      您的浏览器不支持视频播放，请<a href="video/qlfiber-film-1080p.mp4">下载观看</a>。
+    </video>
+    <button type="button" class="cover" aria-label="播放企业宣传片">
+      <img src="img/film-poster.webp" alt="强纶新材企业宣传片封面" loading="lazy">
+      <span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="fmeta">
+        <b>03:47</b>
+        <span class="fchips"><i>中英双语字幕</i><i>1080P</i><i>福建强纶新材料股份有限公司</i></span>
+      </span>
+    </button>
+  </figure>
 </div></section>
 <section class="sec cta" id="contact">
   <div class="wrap">
@@ -523,6 +536,19 @@ window.addEventListener('error',function(){document.querySelectorAll('.rv,#scale
   pb.forEach((b,i)=>b.onclick=()=>{go(i);auto()});auto();
   document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(tm):auto());
 
+
+  /* 企业宣传片：点击封面开始播放 */
+  document.querySelectorAll('[data-player]').forEach(function (p) {
+    var v = p.querySelector('video'), c = p.querySelector('.cover');
+    if (!v || !c) return;
+    c.addEventListener('click', function () {
+      p.classList.add('playing');
+      v.preload = 'auto';
+      var r = v.play();
+      if (r && r.catch) r.catch(function () {});
+    });
+    v.addEventListener('ended', function () { p.classList.remove('playing'); });
+  });
 
   /* 页脚社交入口：移动端点一下展开二维码 */
   document.querySelectorAll('.sq').forEach(function (el) {

@@ -44,6 +44,19 @@
       b.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   });
+  /* 企业宣传片：点击封面开始播放 */
+  d.querySelectorAll('[data-player]').forEach(function (p) {
+    var v = p.querySelector('video'), c = p.querySelector('.cover');
+    if (!v || !c) return;
+    c.addEventListener('click', function () {
+      p.classList.add('playing');
+      v.preload = 'auto';
+      var r = v.play();
+      if (r && r.catch) r.catch(function () {});
+    });
+    v.addEventListener('ended', function () { p.classList.remove('playing'); });
+  });
+
   /* 页脚社交入口：移动端点一下展开二维码 */
   document.querySelectorAll('.sq').forEach(function (el) {
     el.addEventListener('click', function (e) {

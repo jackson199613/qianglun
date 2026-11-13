@@ -60,3 +60,31 @@ def video_block(poster, title, cap):
   <figcaption>{cap}</figcaption>
 </figure>
 '''
+
+
+FILM_SRC = "video/qlfiber-film-1080p.mp4"
+FILM_POSTER = "img/film-poster.webp"
+
+def film_block(h2='三分四十七秒，看完<em>强纶</em>',
+               lead='从一根 2μm 的不锈钢金属纤维出发，到烧结毡、织物、过滤元器件与成套净化装备——这条路公司走了二十余年。',
+               prefix=''):
+    return f'''<section class="film" id="film"><div class="wrap">
+  <div class="idx rv"><b>FILM</b>企业宣传片</div>
+  <h2 class="rv">{h2}</h2>
+  <p class="flead rv">{lead}</p>
+  <figure class="player rv" data-player>
+    <video playsinline controls preload="none" poster="{prefix}{FILM_POSTER}" aria-label="福建强纶新材料企业宣传片">
+      <source src="{prefix}{FILM_SRC}" type="video/mp4">
+      您的浏览器不支持视频播放，请<a href="{prefix}{FILM_SRC}">下载观看</a>。
+    </video>
+    <button type="button" class="cover" aria-label="播放企业宣传片">
+      <img src="{prefix}{FILM_POSTER}" alt="强纶新材企业宣传片封面" loading="lazy">
+      <span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="fmeta">
+        <b>03:47</b>
+        <span class="fchips"><i>中英双语字幕</i><i>1080P</i><i>福建强纶新材料股份有限公司</i></span>
+      </span>
+    </button>
+  </figure>
+</div></section>
+'''
