@@ -44,6 +44,22 @@
       b.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   });
+  /* 页脚社交入口：移动端点一下展开二维码 */
+  document.querySelectorAll('.sq').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      if (!window.matchMedia('(hover: none)').matches) return;   // 桌面用悬停
+      var pop = el.querySelector('.pop');
+      if (!pop) return;
+      if (el.tagName === 'A') return;                            // 抖音等有链接的，直接跳转
+      e.preventDefault();
+      document.querySelectorAll('.sq.on').forEach(function (o) { if (o !== el) o.classList.remove('on'); });
+      el.classList.toggle('on');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sq')) document.querySelectorAll('.sq.on').forEach(function (o) { o.classList.remove('on'); });
+  });
+
   /* VR 全景：填入链接后自动嵌入 */
   d.querySelectorAll('[data-vr]').forEach(function (a) {
     var url = a.getAttribute('data-vr');

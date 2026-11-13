@@ -487,7 +487,11 @@
     <div>
       <a class="brand" href="#top"><img src="https://www.qlfiber.com/assets/images/logo.png" alt="强纶新材 logo" width="42" height="42"><span><strong>强纶新材</strong><small>QIANGLUN · SINCE 2002</small></span></a>
       <p>专注金属纤维及其制品、过滤成套装备研发、生产、销售与技术服务。</p>
-      <div class="fqr"><div><i><svg class="i"><use href="#i-wechat"/></svg></i>公众号</div><div><i><svg class="i"><use href="#i-msg"/></svg></i>视频号</div><div><i><svg class="i"><use href="#i-play"/></svg></i>抖音</div></div>
+      <div class="fqr">
+        <button type="button" class="sq" aria-label="公众号"><i><svg class="i"><use href="#i-wechat"/></svg></i>公众号<span class="pop tbd"><b>微信公众号</b><em>二维码待甲方提供，提供后扫码即可关注</em></span></button>
+        <button type="button" class="sq" aria-label="视频号"><i><svg class="i"><use href="#i-msg"/></svg></i>视频号<span class="pop"><img src="img/qr-channels.webp" alt="强纶新材视频号二维码" loading="lazy"><b>微信视频号</b><em>微信扫一扫打开</em></span></button>
+        <a class="sq" href="https://www.douyin.com/user/MS4wLjABAAAA0PFr_Jq_GxWs3z0qsuOEAX0AYbqEWlcrNGrXj_38tgIQrK6fG3V1MWPy_QD-iqcW" target="_blank" rel="noopener" aria-label="抖音"><i><svg class="i"><use href="#i-play"/></svg></i>抖音<span class="pop"><img src="img/qr-douyin.webp" alt="强纶新材抖音二维码" loading="lazy"><b>抖音号</b><em>点击前往主页 · 或扫码打开</em></span></a>
+      </div>
     </div>
     <div><h5>产品中心</h5><ul><li><a href="p-yarn.html">金属纤维纱线</a></li><li><a href="p-felt.html">金属纤维烧结毡</a></li><li><a href="p-fabric.html">金属纤维织物</a></li><li><a href="p-element.html">过滤元器件</a></li><li><a href="p-equipment.html">净化设备 · 收油系统</a></li></ul></div>
     <div><h5>应用方案</h5><ul><li><a href="a-filtration.html">过滤分离</a></li><li><a href="a-glass.html">玻璃深加工</a></li><li><a href="a-emi.html">电磁屏蔽与防静电</a></li><li><a href="a-aero.html">航空航天</a></li><li><a href="a-auto.html">汽车</a></li><li><a href="a-textile.html">智能穿戴</a></li></ul></div>
@@ -520,6 +524,22 @@ window.addEventListener('error',function(){document.querySelectorAll('.rv,#scale
   pb.forEach((b,i)=>b.onclick=()=>{go(i);auto()});auto();
   document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(tm):auto());
 
+
+  /* 页脚社交入口：移动端点一下展开二维码 */
+  document.querySelectorAll('.sq').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      if (!window.matchMedia('(hover: none)').matches) return;   // 桌面用悬停
+      var pop = el.querySelector('.pop');
+      if (!pop) return;
+      if (el.tagName === 'A') return;                            // 抖音等有链接的，直接跳转
+      e.preventDefault();
+      document.querySelectorAll('.sq.on').forEach(function (o) { if (o !== el) o.classList.remove('on'); });
+      el.classList.toggle('on');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sq')) document.querySelectorAll('.sq.on').forEach(function (o) { o.classList.remove('on'); });
+  });
 
   /* VR 全景与视频：后台填入地址后自动生效 */
   document.querySelectorAll('[data-vr]').forEach(function(a){
