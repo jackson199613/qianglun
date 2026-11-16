@@ -70,6 +70,21 @@
 .slot b{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:300;font-size:58px;line-height:1;color:#c3b9a6}
 .slot h4{font-size:17px;font-weight:500;margin-top:14px}
 .slot p{font-size:13px;color:var(--muted);margin-top:6px}
+.slot.on{border:1px solid var(--line,#e2e4e7);background:#fff;box-shadow:0 1px 0 rgba(16,18,21,.03)}
+.slot.on b{color:var(--ink);font-weight:400}
+.slot.on b small{font-size:26px;margin-left:2px;color:var(--champ-ink,#b38b1d)}
+.slot .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.slot .tags i{font-style:normal;font-size:11.5px;color:var(--muted);background:#f5f6f7;
+  border:1px solid #e6e8ea;border-radius:20px;padding:3px 10px;line-height:1.5}
+.stdtbl{margin-top:26px;overflow-x:auto}
+.stdtbl table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+.stdtbl caption{text-align:left;font-size:12px;letter-spacing:.1em;color:var(--muted);padding-bottom:12px}
+.stdtbl th,.stdtbl td{text-align:left;padding:13px 16px;border-bottom:1px solid #e6e8ea}
+.stdtbl thead th{background:var(--ink);color:#fff;font-weight:500;font-size:12.5px;letter-spacing:.08em;border-bottom:0}
+.stdtbl thead th:first-child{border-radius:4px 0 0 0}
+.stdtbl thead th:last-child{border-radius:0 4px 0 0}
+.stdtbl td:first-child{font-family:"Barlow Condensed",sans-serif;font-size:16px;letter-spacing:.02em;white-space:nowrap}
+.stdtbl tbody tr:hover{background:#fcfbf5}
 .slot em{display:inline-block;font-style:normal;font-size:11.5px;letter-spacing:.1em;color:var(--champ-ink);border:1px solid rgba(179,139,29,.4);border-radius:20px;padding:2px 10px;margin-top:14px}
 .tl{position:relative;margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
 .tl .e{padding:28px 26px 0 0;position:relative}
@@ -284,9 +299,23 @@
       <div class="hon rv d3"><span class="yr">2026</span><div class="seal"><svg class="i"><use href="#i-rocket"/></svg></div><h4>中国航发商发<br>合格供应商</h4><p>进入航空发动机供应体系</p></div>
     </div>
     <div class="slots">
-      <div class="slot rv"><b class="num">— —</b><h4>授权专利</h4><p>发明专利 / 实用新型数量与代表专利名称</p><em>资料待客户提供</em></div>
-      <div class="slot rv d1"><b class="num">— —</b><h4>参与制定标准</h4><p>国家、行业或团体标准名称与编号</p><em>资料待客户提供</em></div>
-      <div class="slot rv d2"><b class="num">— —</b><h4>研发团队</h4><p>研发人员规模、核心带头人与合作院校</p><em>资料待客户提供</em></div>
+      <div class="slot on rv"><b class="num">57</b><h4>授权专利</h4><p>发明专利 11 项 · 实用新型 44 项 · 外观设计 2 项</p><span class="tags"><i>金属纤维成型</i><i>梯度烧结结构</i><i>聚结除油</i><i>导电纺织</i></span></div>
+      <div class="slot on rv d1"><b class="num">5<small>+1</small></b><h4>参与制定标准</h4><p>国家标准 5 项 · 行业标准 1 项，主要起草人均含董事长兼总工黄朝强</p><span class="tags"><i>GB/T 20100</i><i>GB/T 17492</i><i>GB/T 21648</i><i>GB/T 45969</i><i>GB/T 5330</i><i>JB/T 13511</i></span></div>
+      <div class="slot on rv d2"><b class="num">5</b><h4>研发团队</h4><p>核心研发 5 人，设 6 个研究室、5 大研制平台，产学研合作 13 项</p><span class="tags"><i>同济大学</i><i>厦门大学</i><i>龙岩学院</i><i>闽江学院</i><i>黄埔材料研究院</i><i>安徽理工大学</i></span></div>
+</div>
+    <div class="stdtbl rv">
+      <table>
+        <caption>参与制定的国家标准与行业标准</caption>
+        <thead><tr><th>编号</th><th>标准名称</th><th>类别</th></tr></thead>
+        <tbody>
+          <tr><td>GB/T 20100—2016</td><td>不锈钢纤维烧结滤毡</td><td>国家标准</td></tr>
+          <tr><td>GB/T 17492—2019</td><td>工业用金属丝编织网 技术要求和检验</td><td>国家标准</td></tr>
+          <tr><td>GB/T 21648—2023</td><td>金属丝编织密纹网</td><td>国家标准</td></tr>
+          <tr><td>GB/T 45969—2025</td><td>颗粒表征 术语</td><td>国家标准</td></tr>
+          <tr><td>GB/T 5330—2025</td><td>工业用金属丝编织方孔筛网</td><td>国家标准</td></tr>
+          <tr><td>JB/T 13511—2018</td><td>分离机械用柔性非织造过滤介质过滤性能测试方法</td><td>行业标准</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -294,11 +323,13 @@
 <!-- 研发历程 -->
 <section class="sec" id="road">
   <div class="wrap">
-    <div class="sh rv"><div><div class="idx"><b>05</b>MILESTONES · 研发历程</div><h2>二十余年，<br>一步一个<em>微米</em></h2></div><p>以下为已公开的关键节点，其余里程碑待客户补充后完善。</p></div>
+    <div class="sh rv"><div><div class="idx"><b>05</b>MILESTONES · 研发历程</div><h2>二十余年，<br>一步一个<em>微米</em></h2></div><p>从一家金属纤维工厂，到设 6 个研究室、参与 6 项国家与行业标准制定的材料企业。</p></div>
     <div class="tl rv">
       <div class="e gold"><b class="num">2002</b><h4>强纶创立</h4><p>扎根福建龙岩，开始专注金属纤维领域。</p></div>
-      <div class="e tbd"><b class="num">—</b><h4>新三板挂牌</h4><p>证券代码 872336。挂牌时间待补充。</p></div>
-      <div class="e tbd"><b class="num">—</b><h4>国家级资质认定</h4><p>"小巨人"、高新技术企业等认定时间待补充。</p></div>
+      <div class="e"><b class="num">2017</b><h4>股改更名与新三板挂牌</h4><p>2017 年 6 月完成股份制改造并更名为福建强纶新材料股份有限公司，同年 11 月在全国中小企业股份转让系统挂牌，证券代码 872336。</p></div>
+      <div class="e"><b class="num">2020</b><h4>针刺毡应用于运载火箭发动机</h4><p>自研金属纤维针刺毡应用于长征五号 B、长征五号遥五运载火箭发动机。</p></div>
+      <div class="e"><b class="num">2021</b><h4>国家高新技术企业</h4><p>通过国家高新技术企业认定；2023 年获评省级专精特新"小巨人"。</p></div>
+      <div class="e"><b class="num">2025</b><h4>国家级专精特新"小巨人"</h4><p>由工业和信息化部认定，近三年研发投入占营业收入 12% 以上。</p></div>
       <div class="e gold"><b class="num">2026</b><h4>航发商发合格供应商</h4><p>金属纤维材料进入航空发动机供应体系。</p></div>
     </div>
   </div>
