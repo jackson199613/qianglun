@@ -168,7 +168,7 @@ w('jobs.html', head(
              [("200","+","员工人数"),("12","%+","研发投入占收入"),("6","个","研究室"),("5","大","制研平台")], bg="img/ph-jobs.webp")
  + f"""<section class="sec"><div class="wrap">
   <div class="sec-h row"><div><h2>在招岗位</h2><p>以下岗位长期开放，欢迎投递。</p></div>
-    <a class="pill pill-line" href="mailto:hr@qlfiber.com">投递简历<svg class="i"><use href="#i-arrow"/></svg></a></div>
+    <a class="pill pill-line" href="mailto:3756335070@qq.com">投递简历<svg class="i"><use href="#i-arrow"/></svg></a></div>
   <nav class="pillbar" data-filter=".row-i" aria-label="部门筛选">
     <button class="on" data-v="all">全部</button><button data-v="研发中心">研发中心</button><button data-v="技术中心">技术中心</button><button data-v="净化事业部">净化事业部</button><button data-v="营销中心">营销中心</button><button data-v="质量部">质量部</button>
   </nav>
@@ -180,7 +180,7 @@ w('jobs.html', head(
     <article class="card rv d2"><h3>员工关怀</h3><p>设立忠诚奖、优秀员工与优秀干部评选，各事业部定期组织团建与文体活动。</p></article>
   </div>
 
-  <div class="note" style="margin-top:46px"><b>投递方式</b>：简历请发送至 <a href="mailto:hr@qlfiber.com" style="border-bottom:2px solid var(--gold)">hr@qlfiber.com</a>，或致电 0597-2799968 咨询。公司地址：福建省龙岩市龙岩经济技术开发区黄邦路 11 号。<br><small style="color:var(--muted)">* 岗位列表由公司后台自主发布与下架，以最新发布为准。</small></div>
+  <div class="note" style="margin-top:46px"><b>投递方式</b>：简历请发送至 <a href="mailto:3756335070@qq.com" style="border-bottom:2px solid var(--gold)">3756335070@qq.com</a> 或 <a href="mailto:qianglun2026@gmail.com" style="border-bottom:2px solid var(--gold)">qianglun2026@gmail.com</a>，或致电 0597-2799968 咨询。公司地址：福建省龙岩市龙岩经济技术开发区黄邦路 11 号。<br><small style="color:var(--muted)">* 岗位列表由公司后台自主发布与下架，以最新发布为准。</small></div>
 </div></section>"""
  + ENDCTA + footer())
 
@@ -222,7 +222,7 @@ w('job-detail.html', head(
     </ul>
   </div>
   <div class="art-foot rv">
-    <div class="buyrow"><a class="pill pill-ink" href="mailto:hr@qlfiber.com">投递简历<svg class="i"><use href="#i-arrow"/></svg></a><a class="pill pill-line" href="tel:05972799968">0597-2799968</a></div>
+    <div class="buyrow"><a class="pill pill-ink" href="mailto:3756335070@qq.com">投递简历<svg class="i"><use href="#i-arrow"/></svg></a><a class="pill pill-line" href="tel:05972799968">0597-2799968</a></div>
     <nav class="art-nav"><a href="jobs.html">← 返回岗位列表</a><a href="culture.html">企业文化 →</a></nav>
   </div>
 </div></section>"""

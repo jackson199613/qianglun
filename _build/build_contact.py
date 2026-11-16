@@ -60,7 +60,7 @@ w('contact.html', head(
     "福建强纶新材料股份有限公司联系方式：电话 181 5982 1773 / 0597-2799968，地址福建省龙岩市龙岩经济技术开发区黄邦路 11 号；可在线提交工况询盘并上传图纸。",
     "强纶联系方式,强纶电话,强纶地址,工况询盘,金属纤维询价",
     "contact.html",
-    schema='{"@context":"https://schema.org","@type":"ContactPage","mainEntity":{"@type":"Organization","name":"福建强纶新材料股份有限公司","telephone":"+86-18159821773","email":"info@qlfiber.com","address":{"@type":"PostalAddress","streetAddress":"龙岩经济技术开发区黄邦路11号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"}}}')
+    schema='{"@context":"https://schema.org","@type":"ContactPage","mainEntity":{"@type":"Organization","name":"福建强纶新材料股份有限公司","telephone":"+86-18159821773","email":"3756335070@qq.com","address":{"@type":"PostalAddress","streetAddress":"龙岩经济技术开发区黄邦路11号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"}}}')
  + header('contact.html')
  + crumb([("联系我们", None)])
  + page_hero("01", "CONTACT", "联系我们",
@@ -73,8 +73,8 @@ w('contact.html', head(
       <div class="ct-list">
         <div><small>销售与技术咨询</small><a class="num" href="tel:{TEL_RAW}">{TEL}</a></div>
         <div><small>公司总机</small><a class="num" href="tel:05972799968">0597-2799968</a></div>
-        <div><small>企业邮箱</small><span>info@qlfiber.com</span></div>
-        <div><small>招聘邮箱</small><a href="mailto:hr@qlfiber.com">hr@qlfiber.com</a></div>
+        <div><small>企业邮箱</small><span><a href="mailto:3756335070@qq.com">3756335070@qq.com</a><br><a href="mailto:qianglun2026@gmail.com">qianglun2026@gmail.com</a></span></div>
+        <div><small>招聘投递</small><span><a href="mailto:3756335070@qq.com">3756335070@qq.com</a><br><a href="mailto:qianglun2026@gmail.com">qianglun2026@gmail.com</a></span></div>
         <div><small>公司地址</small><span>{ADDR}</span></div>
         <div><small>英文名称</small><span>FUJIAN QL METAL FIBER CO., LTD</span></div>
       </div>
