@@ -53,14 +53,14 @@ w('lab.html', head(
     "研发中心与实验室 | 强纶新材料创新研究院",
     "强纶新材料创新研究院设有流体净化、氢能源、金属橡胶、电化学、金属学、多孔介质燃烧六个研究室，拥有省级新型研发机构、省级企业技术中心与博士后创新实践基地。",
     "强纶研究院,研发中心,实验室,省级新型研发机构,博士后创新实践基地",
-    "lab.html", og_img="img/lab-01.webp")
+    "lab.html", og_img="img/lab-wide-01.webp")
  + header('rd.html')
  + crumb([("科研创新", "rd.html"), ("研发中心与实验室", None)])
  + page_hero("03", "R&D CENTER", "研发中心与实验室",
              "研发源于车间实践，<em>创新用于高端领域</em>",
              "强纶新材料创新研究院不同于其他科研院所：研发从车间里的真实问题出发，成果应用于航空航天等高端先进领域，拥有高端研究团队、创业团队、中试基地以及多维测试中心。",
              [("6","个","研究室"),("5","大","制研平台"),("12","%+","研发投入占收入"),("200","+","员工人数")],
-             bg="img/lab-02.webp")
+             bg="img/lab-wide-01.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(2)}
   <div class="sec-h"><h2>六个研究室</h2><p>每个研究室由一位技术带头人负责，覆盖从基础材料到应用装备的完整链条。</p></div>
   <div class="g3">{room_cards}</div>
@@ -77,15 +77,24 @@ w('lab.html', head(
     </tbody>
   </table></div>
 
-  <div class="sec-h" style="margin:86px 0 26px"><h2>实验室与中试</h2></div>
-  <div class="gal c3">
-    <figure><img src="img/lab-01.webp" alt="强纶实验室" loading="lazy"><figcaption>材料与应用实验室</figcaption></figure>
-    <figure><img src="img/lab-02.webp" alt="中试基地" loading="lazy"><figcaption>中试基地</figcaption></figure>
-    <figure><img src="img/plant-08.webp" alt="检测与试验设备" loading="lazy"><figcaption>检测与试验设备</figcaption></figure>
+  <div class="sec-h" style="margin:86px 0 26px"><h2>实验室实景</h2>
+    <p>材料与应用实验室、样品前处理区、仪器分析区与电镜室，以下均为实拍。</p></div>
+  <div class="gal bento">
+    <figure class="big"><img src="img/lab-wide-01.webp" alt="强纶材料与应用实验室全景" loading="lazy"><figcaption>材料与应用实验室</figcaption></figure>
+    <figure><img src="img/lab-chem-02.webp" alt="分析天平与试剂区" loading="lazy"><figcaption>分析天平与试剂区</figcaption></figure>
+    <figure><img src="img/lab-op-01.webp" alt="检测数据采集工作站" loading="lazy"><figcaption>检测数据采集工作站</figcaption></figure>
+  </div>
+  <div class="gal c3" style="margin-top:14px">
+    <figure><img src="img/lab-chem-01.webp" alt="通风橱与样品前处理区" loading="lazy"><figcaption>通风橱与样品前处理</figcaption></figure>
+    <figure><img src="img/lab-chem-03.webp" alt="滴定与比色分析区" loading="lazy"><figcaption>滴定与比色分析</figcaption></figure>
+    <figure><img src="img/lab-chem-04.webp" alt="化学分析实验台" loading="lazy"><figcaption>化学分析实验台</figcaption></figure>
+    <figure><img src="img/lab-chem-05.webp" alt="试剂与耗材储备区" loading="lazy"><figcaption>试剂与耗材储备</figcaption></figure>
+    <figure><img src="img/lab-wide-02.webp" alt="实验室洁净区" loading="lazy"><figcaption>实验室洁净区</figcaption></figure>
+    <figure><img src="img/lab-op-02.webp" alt="仪器操作与数据读取" loading="lazy"><figcaption>仪器操作与数据读取</figcaption></figure>
   </div>
 
 </div></section>"""
- + vr_block("img/lab-01.webp", "实验室与检测区全景", "无需到场即可查看实验室布局、检测设备与样品处理区，配合检测能力清单一起看更直观。")
+ + vr_block("img/lab-wide-02.webp", "实验室与检测区全景", "无需到场即可查看实验室布局、检测设备与样品处理区，配合检测能力清单一起看更直观。")
  + ENDCTA + footer())
 
 # ════════ 检测能力
@@ -93,7 +102,7 @@ w('testing.html', head(
     "检测能力 | 检测项目 · 设备清单 · 报告类型 — 强纶新材",
     "强纶可出具的检测项目：绝对过滤等级、过滤效率、孔隙率、气泡点压强、透气度、厚度与面密度等，并可按订单约定提供 ROHS 等第三方检测报告。",
     "过滤材料检测,气泡点检测,透气度检测,孔隙率,检测报告,ROHS",
-    "testing.html")
+    "testing.html", og_img="img/eq-sem.webp")
  + header('rd.html')
  + crumb([("科研创新", "rd.html"), ("检测能力", None)])
  + page_hero("04", "TESTING", "检测能力",
@@ -117,6 +126,47 @@ w('testing.html', head(
     </tbody>
   </table></div>
 
+  <div class="sec-h" style="margin:86px 0 26px"><h2>检测设备</h2>
+    <p>以下为公司自有的主要分析设备，均为实拍。复杂课题可联合高校院所共同攻关。</p></div>
+  <div class="g2 wide">
+    <div class="rv">
+      <figure class="eqfig"><img src="img/sem-screen.webp" alt="扫描电镜下的金属纤维形貌与能谱分析" loading="lazy">
+        <figcaption><b>形貌与成分同步分析</b>电镜下可直接读出纤维直径、搭接形态与烧结结合点，配合能谱判定元素组成。</figcaption></figure>
+    </div>
+    <div class="rv d1">
+      <div class="eqlist">
+        <div class="eq"><img src="img/eq-sem.webp" alt="KYKY-EM8000F 扫描电子显微镜" loading="lazy">
+          <div><h4>扫描电子显微镜</h4><span class="mod">KYKY-EM8000F</span>
+            <p>纤维直径与直径分布、三维搭接形貌、烧结结合点质量、多层毡的断面梯度结构。</p></div></div>
+        <div class="eq"><img src="img/eq-afs.webp" alt="GGX-810 原子荧光光度计" loading="lazy">
+          <div><h4>原子荧光光度计</h4><span class="mod">GGX-810</span>
+            <p>金属元素含量分析，用于材质判定、杂质控制与来料验证。</p></div></div>
+        <div class="eq"><img src="img/eq-sem-col.webp" alt="电镜镜筒与探测器" loading="lazy">
+          <div><h4>电镜镜筒与探测器</h4><span class="mod">二次电子 / 背散射</span>
+            <p>不同探测模式分别用于表面形貌与成分衬度观察。</p></div></div>
+        <div class="eq"><img src="img/sem-sample.webp" alt="电镜样品仓装样" loading="lazy">
+          <div><h4>样品制备与装载</h4><span class="mod">样品仓</span>
+            <p>纤维与毡材的取样、固定与导电处理，直接影响成像质量与结果可比性。</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-h" style="margin:86px 0 26px"><h2>线材检测报告</h2>
+    <p>以金属纤维线为例，下列报告均已出具，可按订单需要提供。</p></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>报告名称</th><th>检测内容</th><th>出具方</th></tr></thead>
+    <tbody>
+      <tr><td><b>ROHS 四项</b>（1000×3 / 275×3 / 100×3）</td><td>铅、镉、汞、六价铬限值，2026.05.16</td><td>第三方机构</td></tr>
+      <tr><td><b>材质报告</b>（275×3，316L）</td><td>材质成分验证，2026.05.13；另备英文版</td><td>第三方机构</td></tr>
+      <tr><td><b>拉伸试验报告</b></td><td>金属纤维线抗拉强度与断裂伸长</td><td>本公司实验室</td></tr>
+      <tr><td><b>水洗前后电阻</b></td><td>水洗循环前后的电阻变化，验证导电持久性</td><td>本公司实验室</td></tr>
+      <tr><td><b>远红外性能报告</b></td><td>远红外发射率，用于发热与功能纺织应用</td><td>第三方机构</td></tr>
+      <tr><td><b>红外反射能谱</b></td><td>红外波段反射特性</td><td>第三方机构</td></tr>
+      <tr><td><b>磁性报告</b></td><td>磁性能表征，用于屏蔽与特殊工况选型</td><td>第三方机构</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tnote" style="margin-top:14px">以上为金属纤维线的既有报告清单。其他产品线的报告可按订单约定出具或委托第三方检测。</p>
+
   <div class="g2 wide" style="margin-top:82px">
     <div class="prose rv">
       <h3 style="margin-top:0">报告类型</h3>
@@ -128,7 +178,7 @@ w('testing.html', head(
     </div>
     <div class="rv d1">
       <div class="note"><b>外部技术支持</b><br>与天津大学、上海化工研究院、中南大学、厦门大学、同济大学等院校保持长期合作交流，复杂课题可联合攻关。</div>
-      <div class="gal c3" style="grid-template-columns:1fr;margin-top:20px"><figure><img src="img/plant-08.webp" alt="检测与试验设备" loading="lazy"><figcaption>检测与试验设备</figcaption></figure></div>
+      <div class="gal c3" style="grid-template-columns:1fr;margin-top:20px"><figure><img src="img/lab-op-02.webp" alt="仪器操作与数据读取" loading="lazy"><figcaption>仪器操作与数据读取</figcaption></figure></div>
     </div>
   </div>
 </div></section>"""
