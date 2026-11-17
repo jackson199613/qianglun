@@ -4,7 +4,7 @@
 SITE = "https://qianglun.netlify.app"
 TEL_RAW = "18159821773"
 TEL = "181 5982 1773"
-ADDR = "福建省龙岩市龙岩经济技术开发区黄邦路 11 号"
+ADDR = "福建省龙岩市东肖镇经济技术开发区黄邦路 11 号"
 ICP = "闽ICP备2022016209号-1"
 LOGO = "https://www.qlfiber.com/assets/images/logo.png"
 

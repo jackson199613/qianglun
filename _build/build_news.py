@@ -180,7 +180,7 @@ w('jobs.html', head(
     <article class="card rv d2"><h3>员工关怀</h3><p>设立忠诚奖、优秀员工与优秀干部评选，各事业部定期组织团建与文体活动。</p></article>
   </div>
 
-  <div class="note" style="margin-top:46px"><b>投递方式</b>：简历请发送至 <a href="mailto:3756335070@qq.com" style="border-bottom:2px solid var(--gold)">3756335070@qq.com</a> 或 <a href="mailto:qianglun2026@gmail.com" style="border-bottom:2px solid var(--gold)">qianglun2026@gmail.com</a>，或致电 0597-2799968 咨询。公司地址：福建省龙岩市龙岩经济技术开发区黄邦路 11 号。<br><small style="color:var(--muted)">* 岗位列表由公司后台自主发布与下架，以最新发布为准。</small></div>
+  <div class="note" style="margin-top:46px"><b>投递方式</b>：简历请发送至 <a href="mailto:3756335070@qq.com" style="border-bottom:2px solid var(--gold)">3756335070@qq.com</a> 或 <a href="mailto:qianglun2026@gmail.com" style="border-bottom:2px solid var(--gold)">qianglun2026@gmail.com</a>，或致电 0597-2799968 咨询。公司地址：福建省龙岩市东肖镇经济技术开发区黄邦路 11 号。<br><small style="color:var(--muted)">* 岗位列表由公司后台自主发布与下架，以最新发布为准。</small></div>
 </div></section>"""
  + ENDCTA + footer())
 
