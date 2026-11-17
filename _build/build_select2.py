@@ -58,7 +58,16 @@ DL = [
    ("收油系统选型与参数表", "罐式 / 槽式 / 槽体改造型谱与主要参数", "PDF"),
  ]),
  ("检测报告", [
-   ("金属纤维线 ROHS 四项检测报告", "275×3 规格，2026.05.16 出具", "PDF"),
+   ("ROHS 四项检测报告（275×3）", "铅、镉、汞、六价铬限值 · 华测检测认证集团 CTI · 2026.05.16", "PDF", "rohs275"),
+   ("ROHS 四项检测报告（1000×3）", "铅、镉、汞、六价铬限值 · 华测检测认证集团 CTI · 2026.05.16", "PDF", "rohs1000"),
+   ("ROHS 四项检测报告（100×3）", "铅、镉、汞、六价铬限值 · 华测检测认证集团 CTI · 2026.05.16", "PDF", "rohs100"),
+   ("316L 材质报告（275×3）", "牌号化学成分鉴定 · 华测检测认证集团 CTI · 2026.05.22", "PDF", "mat316l"),
+   ("316L 材质报告 · 英文版", "Material Test Report，海外客户与出口项目使用", "PDF", "mat316len"),
+   ("金属纤维线拉伸试验报告", "275×3 抗拉强度与断裂伸长 · 上海复达检测技术集团", "PDF", "tensile"),
+   ("水洗前后电阻检测报告", "水洗循环前后电阻变化，验证导电持久性 · 斯坦德检测集团", "PDF", "reswash"),
+   ("远红外性能检测报告", "远红外发射率，依据 GB/T 30127-2013", "PDF", "farir"),
+   ("红外反射能谱报告", "275×3 红外波段反射特性 · 上海复达检测技术集团", "PDF", "irref"),
+   ("磁性能检测报告", "100×3 磁性能表征 · 上海复达检测技术集团", "PDF", "magnetic"),
    ("产品检验报告样本", "出厂检验项目与格式示例", "PDF"),
  ]),
  ("资质证书", [
@@ -70,7 +79,15 @@ DL = [
 ]
 blocks = ""
 for cat, items in DL:
-    lis = "".join(f'<div class="dl-i" data-tag="{cat}"><svg class="i"><use href="#i-doc"/></svg><div><h4>{t}</h4><p>{d}</p></div><span class="sz">{e}</span><a class="btn" href="contact.html#inq"><svg class="i"><use href="#i-dl"/></svg>留资获取</a></div>' for t, d, e in items)
+    def _li(it):
+        t, d, e = it[0], it[1], it[2]
+        key = it[3] if len(it) > 3 else None
+        rdy = '<span class="rdy">现可下载</span>' if key else ''
+        href = f'contact.html?doc={key}#inq' if key else 'contact.html#inq'
+        return (f'<div class="dl-i{" has" if key else ""}" data-tag="{cat}"><svg class="i"><use href="#i-doc"/></svg>'
+                f'<div><h4>{t}{rdy}</h4><p>{d}</p></div><span class="sz">{e}</span>'
+                f'<a class="btn" href="{href}"><svg class="i"><use href="#i-dl"/></svg>留资获取</a></div>')
+    lis = "".join(_li(it) for it in items)
     blocks += f'<h3 class="rv" style="font-family:\'Noto Serif SC\',serif;font-size:22px;font-weight:700;margin:50px 0 6px">{cat} <span style="font-family:\'Barlow Condensed\',sans-serif;color:var(--champ);font-size:18px">{len(items)}</span></h3><div class="dl-list">{lis}</div>'
 
 w('downloads.html', head(
@@ -86,7 +103,7 @@ w('downloads.html', head(
  + f"""<section class="sec"><div class="wrap">{snav(3)}
   <div class="note" style="margin-bottom:10px"><b>关于下载方式</b>：网站后台支持「直接下载」与「留资下载」两种模式。为保护客户信息与资料版本一致性，检测报告与认证证书默认采用留资下载，提交后由专人发送最新版本。</div>
   {blocks}
-  <div class="note warn" style="margin-top:44px"><b>说明</b>：上述资料文件待甲方确认最终版本后由后台上传，上传后本页即可直接下载。涉及具体客户的设备数据表、工程配置表属于项目保密资料，不在公开下载范围内。</div>
+  <div class="note warn" style="margin-top:44px"><b>说明</b>：标注「现可下载」的 10 份检测报告已可索取，填写联系方式后立即下载；其余资料待甲方确认最终版本后由后台上传。涉及具体客户的设备数据表、工程配置表属于项目保密资料，不在公开下载范围内。</div>
 </div></section>"""
  + ENDCTA + footer())
 print('名词解释 / 资料下载 完成')

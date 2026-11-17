@@ -3,6 +3,8 @@
 
 User-agent: *
 Allow: /
+# 检测报告等资料走留资索取，不直接收录
+Disallow: /files/
 
 # ── 搜索引擎 ──
 User-agent: Baiduspider

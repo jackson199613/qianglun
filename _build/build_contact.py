@@ -5,7 +5,14 @@ sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, crumb, page_hero, footer, SITE, TEL, TEL_RAW, ADDR
 from common import w, ENDCTA
 
-INQ_FORM = """<form class="form" id="inqForm" novalidate>
+QL_DOCS_JS = """<script>window.QL_DOCS={"rohs1000": {"f": "rohs-1000x3-2026.pdf", "t": "ROHS 四项检测报告（金属纤维线 1000×3）"}, "rohs275": {"f": "rohs-275x3-2026.pdf", "t": "ROHS 四项检测报告（金属纤维线 275×3）"}, "rohs100": {"f": "rohs-100x3-2026.pdf", "t": "ROHS 四项检测报告（金属纤维线 100×3）"}, "mat316l": {"f": "material-316l-cn.pdf", "t": "316L 材质报告（275×3）"}, "mat316len": {"f": "material-316l-en.pdf", "t": "316L Material Test Report（英文版）"}, "tensile": {"f": "tensile-275x3.pdf", "t": "金属纤维线拉伸试验报告（275×3）"}, "reswash": {"f": "resistance-wash.pdf", "t": "水洗前后电阻检测报告"}, "farir": {"f": "far-infrared.pdf", "t": "远红外性能检测报告"}, "irref": {"f": "ir-reflectance.pdf", "t": "红外反射能谱报告（275×3）"}, "magnetic": {"f": "magnetic.pdf", "t": "磁性能检测报告（100×3）"}};</script>"""
+
+INQ_FORM = QL_DOCS_JS + """<form class="form" id="inqForm" name="inquiry" method="POST"
+  data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
+  <input type="hidden" name="form-name" value="inquiry">
+  <input type="hidden" name="doc" id="inqDoc">
+  <p hidden><label>请勿填写：<input name="bot-field"></label></p>
+  <div class="docnote" id="docNote" hidden></div>
   <h3>工况询盘</h3>
   <p class="hint">带 * 为必填。提交后信息将推送至企业微信与指定邮箱，工程师在 1 个工作日内回复。</p>
   <label>姓名 *<input name="name" required autocomplete="name"></label>
@@ -29,7 +36,7 @@ INQ_FORM = """<form class="form" id="inqForm" novalidate>
   <label class="full">上传图纸或参数文件<input name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.zip,.rar,.jpg,.png" multiple></label>
   <label class="full">补充说明<textarea name="msg" placeholder="现用滤材型号、设备接口、更换周期、遇到的问题等"></textarea></label>
   <button class="pill pill-ink" type="submit">提交询盘<svg class="i"><use href="#i-arrow"/></svg></button>
-  <p class="ok" id="inqOk">提交成功（演示）。正式上线后询盘将实时推送至企业微信与邮箱，并可在后台查看。</p>
+  <p class="ok" id="inqOk"></p>
 </form>
 <script>
 (function(){
@@ -46,11 +53,49 @@ INQ_FORM = """<form class="form" id="inqForm" novalidate>
     var sel=f.elements[names[k]]; if(!sel)return;
     [].forEach.call(sel.options,function(o){ if(o.text.replace(/\\s/g,'')===map[k][v].replace(/\\s/g,'')) sel.value=o.value||o.text; });
   });
+  // 资料索取：从 ?doc= 带入要索取的文件
+  var DOCS=window.QL_DOCS||{};
+  var dk=p.get('doc'), doc=dk&&DOCS[dk]?DOCS[dk]:null;
+  if(doc){
+    f.elements.doc.value=doc.t;
+    var dn=document.getElementById('docNote');
+    dn.hidden=false;
+    dn.innerHTML='您正在索取：<b>《'+doc.t+'》</b><br><span>填写联系方式后即可下载，我们也会把文件发到您的邮箱。</span>';
+    var m=f.elements.msg; if(m&&!m.value) m.value='索取资料：'+doc.t;
+  }
+  function done(okText,cls){
+    var o=document.getElementById('inqOk');
+    o.className='ok'+(cls?' '+cls:''); o.innerHTML=okText; o.style.display='block';
+    o.scrollIntoView({behavior:'smooth',block:'center'});
+  }
   f.addEventListener('submit',function(e){
     e.preventDefault();
     if(!f.elements.name.value.trim()||!f.elements.tel.value.trim()){alert('请填写姓名与手机');return;}
-    document.getElementById('inqOk').style.display='block';
-    f.scrollIntoView({behavior:'smooth',block:'center'});
+    var btn=f.querySelector('button[type=submit]'), lab=btn?btn.innerHTML:'';
+    if(btn){btn.disabled=true;btn.innerHTML='提交中…';}
+    var fd=new FormData(f); fd.set('form-name','inquiry');
+    fetch('/',{method:'POST',body:fd}).then(function(r){
+      if(!r.ok) throw new Error(r.status);
+      if(btn){btn.disabled=false;btn.innerHTML=lab;}
+      if(doc){
+        done('提交成功，正在为您下载 <b>《'+doc.t+'》</b>。如果浏览器没有自动开始，'
+           +'<a href="files/'+doc.f+'" download>点这里下载</a>。工程师会在 1 个工作日内与您联系。','ok-doc');
+        var a=document.createElement('a'); a.href='files/'+doc.f; a.download=doc.f;
+        document.body.appendChild(a); a.click(); a.remove();
+      } else {
+        done('提交成功，询盘已送达。工程师将在 1 个工作日内与您联系。');
+      }
+      f.reset();
+    }).catch(function(){
+      if(btn){btn.disabled=false;btn.innerHTML=lab;}
+      var body=[]; new FormData(f).forEach(function(v,k){
+        if(v instanceof File||k==='form-name'||k==='bot-field'||!String(v).trim())return;
+        body.push(k+'：'+v);});
+      done('这次没能从页面提交。已为您打开邮件草稿，发送即可；也可直接写信至 '
+         +'<a href="mailto:3756335070@qq.com">3756335070@qq.com</a>。您填写的内容没有丢失。','warn');
+      location.href='mailto:3756335070@qq.com?subject='+encodeURIComponent('官网询盘 '+(f.elements.company.value||f.elements.name.value))
+        +'&body='+encodeURIComponent(body.join(String.fromCharCode(10)));
+    });
   });
 })();
 </script>"""
@@ -115,7 +160,10 @@ w('sample.html', head(
       <div class="note" style="margin-top:26px"><b>提高效率的小建议</b><br>如能同时提供现用滤材型号、设备接口尺寸或图纸，我们可以直接寄出可对比验证的规格，减少一轮来回。</div>
     </div>
     <div class="rv d1">
-      <form class="form" id="smpForm" novalidate>
+      <form class="form" id="smpForm" name="sample" method="POST"
+          data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="form-name" value="sample">
+        <p hidden><label>请勿填写：<input name="bot-field"></label></p>
         <h3>样品申请</h3>
         <p class="hint">带 * 为必填。提交后由专人联系确认规格与寄送方式。</p>
         <label>姓名 *<input name="name" required autocomplete="name"></label>
@@ -129,13 +177,32 @@ w('sample.html', head(
         <label class="full">收件信息 *<textarea name="addr" required placeholder="收件人、电话、详细地址"></textarea></label>
         <label class="full">上传图纸或参数文件<input name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.zip,.rar,.jpg,.png" multiple></label>
         <button class="pill pill-ink" type="submit">提交申请<svg class="i"><use href="#i-arrow"/></svg></button>
-        <p class="ok" id="smpOk">提交成功（演示）。正式上线后申请将推送至企业微信与邮箱。</p>
+        <p class="ok" id="smpOk"></p>
       </form>
       <script>
       (function(){var f=document.getElementById('smpForm');if(!f)return;
+        var o=document.getElementById('smpOk');
+        function done(h,c){o.className='ok'+(c?' '+c:'');o.innerHTML=h;o.style.display='block';
+          o.scrollIntoView({behavior:'smooth',block:'center'});}
         f.addEventListener('submit',function(e){e.preventDefault();
           if(!f.elements.name.value.trim()||!f.elements.tel.value.trim()||!f.elements.company.value.trim()||!f.elements.addr.value.trim()){alert('请填写姓名、手机、公司与收件信息');return;}
-          document.getElementById('smpOk').style.display='block';f.scrollIntoView({behavior:'smooth',block:'center'});});})();
+          var btn=f.querySelector('button[type=submit]'),lab=btn?btn.innerHTML:'';
+          if(btn){btn.disabled=true;btn.innerHTML='提交中…';}
+          var fd=new FormData(f); fd.set('form-name','sample');
+          fetch('/',{method:'POST',body:fd}).then(function(r){
+            if(!r.ok) throw new Error(r.status);
+            if(btn){btn.disabled=false;btn.innerHTML=lab;}
+            done('申请已提交，专人会在 1 个工作日内联系您确认规格与寄送方式。'); f.reset();
+          }).catch(function(){
+            if(btn){btn.disabled=false;btn.innerHTML=lab;}
+            var body=[]; new FormData(f).forEach(function(v,k){
+              if(v instanceof File||k==='form-name'||k==='bot-field'||!String(v).trim())return;
+              body.push(k+'：'+v);});
+            done('这次没能从页面提交。已为您打开邮件草稿，发送即可；也可直接写信至 '
+               +'<a href="mailto:3756335070@qq.com">3756335070@qq.com</a>。您填写的内容没有丢失。','warn');
+            location.href='mailto:3756335070@qq.com?subject='+encodeURIComponent('样品申请 '+f.elements.company.value)
+              +'&body='+encodeURIComponent(body.join(String.fromCharCode(10)));
+          });});})();
       </script>
     </div>
   </div>

@@ -77,7 +77,10 @@
       <div class="note" style="margin-top:26px"><b>提高效率的小建议</b><br>如能同时提供现用滤材型号、设备接口尺寸或图纸，我们可以直接寄出可对比验证的规格，减少一轮来回。</div>
     </div>
     <div class="rv d1">
-      <form class="form" id="smpForm" novalidate>
+      <form class="form" id="smpForm" name="sample" method="POST"
+          data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="form-name" value="sample">
+        <p hidden><label>请勿填写：<input name="bot-field"></label></p>
         <h3>样品申请</h3>
         <p class="hint">带 * 为必填。提交后由专人联系确认规格与寄送方式。</p>
         <label>姓名 *<input name="name" required autocomplete="name"></label>
@@ -91,13 +94,32 @@
         <label class="full">收件信息 *<textarea name="addr" required placeholder="收件人、电话、详细地址"></textarea></label>
         <label class="full">上传图纸或参数文件<input name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.zip,.rar,.jpg,.png" multiple></label>
         <button class="pill pill-ink" type="submit">提交申请<svg class="i"><use href="#i-arrow"/></svg></button>
-        <p class="ok" id="smpOk">提交成功（演示）。正式上线后申请将推送至企业微信与邮箱。</p>
+        <p class="ok" id="smpOk"></p>
       </form>
       <script>
       (function(){var f=document.getElementById('smpForm');if(!f)return;
+        var o=document.getElementById('smpOk');
+        function done(h,c){o.className='ok'+(c?' '+c:'');o.innerHTML=h;o.style.display='block';
+          o.scrollIntoView({behavior:'smooth',block:'center'});}
         f.addEventListener('submit',function(e){e.preventDefault();
           if(!f.elements.name.value.trim()||!f.elements.tel.value.trim()||!f.elements.company.value.trim()||!f.elements.addr.value.trim()){alert('请填写姓名、手机、公司与收件信息');return;}
-          document.getElementById('smpOk').style.display='block';f.scrollIntoView({behavior:'smooth',block:'center'});});})();
+          var btn=f.querySelector('button[type=submit]'),lab=btn?btn.innerHTML:'';
+          if(btn){btn.disabled=true;btn.innerHTML='提交中…';}
+          var fd=new FormData(f); fd.set('form-name','sample');
+          fetch('/',{method:'POST',body:fd}).then(function(r){
+            if(!r.ok) throw new Error(r.status);
+            if(btn){btn.disabled=false;btn.innerHTML=lab;}
+            done('申请已提交，专人会在 1 个工作日内联系您确认规格与寄送方式。'); f.reset();
+          }).catch(function(){
+            if(btn){btn.disabled=false;btn.innerHTML=lab;}
+            var body=[]; new FormData(f).forEach(function(v,k){
+              if(v instanceof File||k==='form-name'||k==='bot-field'||!String(v).trim())return;
+              body.push(k+'：'+v);});
+            done('这次没能从页面提交。已为您打开邮件草稿，发送即可；也可直接写信至 '
+               +'<a href="mailto:3756335070@qq.com">3756335070@qq.com</a>。您填写的内容没有丢失。','warn');
+            location.href='mailto:3756335070@qq.com?subject='+encodeURIComponent('样品申请 '+f.elements.company.value)
+              +'&body='+encodeURIComponent(body.join(String.fromCharCode(10)));
+          });});})();
       </script>
     </div>
   </div>
