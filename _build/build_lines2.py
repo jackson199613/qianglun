@@ -11,7 +11,7 @@ w('p-fabric.html', head(
     "金属纤维织物 | 编织套管 · 机织带 · 机织布 — 强纶新材",
     "100% 316L 不锈钢纤维编织的套管、机织带与机织布，长期耐温 350℃、短时峰值 1100℃，柔软导电、缓冲吸音，用于玻璃深加工、钢化炉与防静电。",
     "金属纤维织物,不锈钢编织套管,金属纤维机织带,耐高温套管,玻璃成型包覆,防静电织带",
-    "p-fabric.html", og_img="img/sleeve-01.webp")
+    "p-fabric.html", og_img="img/jl-fabric.webp")
  + header('products.html')
  + crumb([("产品中心", "products.html"), ("金属纤维织物", None)])
  + page_hero("03", "METAL FIBER FABRIC", "金属纤维织物",
@@ -39,11 +39,12 @@ w('p-fabric.html', head(
         <figure><img src="img/tg-braid.webp" alt="斜编金属套管" loading="lazy"><figcaption>编织套管</figcaption></figure>
         <figure><img src="img/tg-knit.webp" alt="针织金属套管" loading="lazy"><figcaption>针织套管</figcaption></figure>
         <figure><img src="img/tg-belt.webp" alt="金属纤维织带" loading="lazy"><figcaption>金属织带</figcaption></figure>
-        <figure><img src="img/sleeve-07.webp" alt="金属纤维扁平套管卷" loading="lazy"><figcaption>扁平套管卷</figcaption></figure>
+        <figure><img src="img/jl-sleeve-flat.webp" alt="金属纤维编织套管卷" loading="lazy"><figcaption>编织套管卷</figcaption></figure>
         <figure><img src="img/tg-knit2.webp" alt="针织金属纤维套管" loading="lazy"><figcaption>针织套管</figcaption></figure>
-        <figure><img src="img/sleeve-02.webp" alt="金属纤维织带盘" loading="lazy"><figcaption>织带盘装</figcaption></figure>
-        <figure><img src="img/sleeve-05.webp" alt="金属纤维窄幅织带" loading="lazy"><figcaption>窄幅织带</figcaption></figure>
+        <figure><img src="img/jl-tape-spool.webp" alt="金属纤维织带盘" loading="lazy"><figcaption>织带盘装</figcaption></figure>
+        <figure><img src="img/jl-tape.webp" alt="金属纤维织带卷" loading="lazy"><figcaption>金属纤维织带</figcaption></figure>
         <figure><img src="img/tg-rope.webp" alt="金属纤维绳盘" loading="lazy"><figcaption>金属纤维绳</figcaption></figure>
+        <figure><img src="img/jl-fabric.webp" alt="金属纤维编织布" loading="lazy"><figcaption>金属纤维布</figcaption></figure>
         <figure><img src="img/yarn-glassbelt.webp" alt="玻璃制造中使用的金属织带" loading="lazy"><figcaption>玻璃成型现场</figcaption></figure>
       </div>
       {cta_row('金属纤维织物')}

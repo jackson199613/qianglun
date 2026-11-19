@@ -6,24 +6,24 @@ from layout import head, header, crumb, footer, SITE
 from common import w, ENDCTA, video_block
 from build_lines import faq_block
 
-schema = '{"@context":"https://schema.org","@type":"Product","name":"金属纤维烧结毡 25KIA3","image":"%s/img/media-05.webp","description":"绝对过滤等级 25μm 的不锈钢金属纤维烧结毡，厚度 0.61mm，过滤率 80%%，气泡点压 1480Pa，200Pa 透气值 350。","brand":{"@type":"Brand","name":"强纶新材"},"manufacturer":{"@type":"Organization","name":"福建强纶新材料股份有限公司"},"material":"316L 不锈钢纤维","sku":"25KIA3"}' % SITE
+schema = '{"@context":"https://schema.org","@type":"Product","name":"金属纤维烧结毡 25KIA3","image":"%s/img/jl-felt.webp","description":"绝对过滤等级 25μm 的不锈钢金属纤维烧结毡，厚度 0.61mm，过滤率 80%%，气泡点压 1480Pa，200Pa 透气值 350。","brand":{"@type":"Brand","name":"强纶新材"},"manufacturer":{"@type":"Organization","name":"福建强纶新材料股份有限公司"},"material":"316L 不锈钢纤维","sku":"25KIA3"}' % SITE
 
 w('p-detail.html', head(
     "金属纤维烧结毡 25KIA3 | 产品详情 — 强纶新材",
     "25KIA3 金属纤维烧结毡：绝对过滤等级 25μm，厚度 0.61mm，过滤率 80%，气泡点压 1480Pa，200Pa 透气值 350，材质 316L，可定制加强加厚规格。",
     "25KIA3,金属纤维烧结毡,25微米烧结毡,烧结毡参数,过滤精度25μm",
-    "p-detail.html", schema=schema, og_img="img/media-05.webp")
+    "p-detail.html", schema=schema, og_img="img/jl-felt.webp")
  + header('products.html')
  + crumb([("产品中心", "products.html"), ("金属纤维烧结毡", "p-felt.html"), ("25KIA3", None)])
  + """<section class="sec" style="padding-top:132px"><div class="wrap">
   <div class="pd">
     <div class="pd-media rv">
-      <figure class="pd-main"><img id="pdMain" src="img/media-05.webp" alt="金属纤维烧结毡 25KIA3"></figure>
+      <figure class="pd-main"><img id="pdMain" src="img/jl-felt.webp" alt="金属纤维烧结毡 25KIA3"></figure>
       <div class="pd-thumbs">
-        <button class="on" data-src="img/media-05.webp" aria-label="产品图"><img src="img/media-05.webp" alt=""></button>
-        <button data-src="img/media-03.webp" aria-label="大幅面毡"><img src="img/media-03.webp" alt=""></button>
+        <button class="on" data-src="img/jl-felt.webp" aria-label="产品图"><img src="img/jl-felt.webp" alt=""></button>
+        <button data-src="img/jl-felt-stack.webp" aria-label="烧结毡叠放"><img src="img/jl-felt-stack.webp" alt=""></button>
         <button data-src="img/media-01.webp" aria-label="烧结滤片"><img src="img/media-01.webp" alt=""></button>
-        <button data-src="img/media-02.webp" aria-label="烧结网"><img src="img/media-02.webp" alt=""></button>
+        <button data-src="img/jl-mesh.webp" aria-label="烧结网"><img src="img/jl-mesh.webp" alt=""></button>
       </div>
       <p class="tnote">电镜图与产品视频位置已预留，资料到位后由后台上传，前台自动转码为多档清晰度播放。</p>
     </div>

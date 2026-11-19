@@ -7,27 +7,27 @@ from common import w, ENDCTA
 
 LINES = [
  dict(id="yarn", file="p-yarn.html", en="METAL FIBER YARN", zh="金属纤维纱线",
-      img="img/yarn-fabric.webp", tags="纺织",
+      img="img/jl-yarn-blend.webp", tags="纺织",
       core="100% 316L 不锈钢 · 纤维直径低至 2μm",
       use="防静电织物 · 电磁屏蔽 · 导电发热",
       desc="由金属纤维捻搓、纺纱而成的线材，兼具金属的导电导热耐高温与纺织纤维的柔韧性，可直接用于机织、针织与缝制。"),
  dict(id="felt", file="p-felt.html", en="SINTERED FIBER FELT", zh="金属纤维烧结毡",
-      img="img/media-05.webp", tags="过滤 耐高温",
+      img="img/jl-felt.webp", tags="过滤 耐高温",
       core="多层梯度孔结构 · 精度 10–60μm",
       use="化纤熔体 · 黏胶过滤 · 高温气体除尘",
       desc="微米级金属纤维无纺后高温层压烧结，形成三维网络梯度孔隙，纳污量大、压损小、可清洗再生。"),
  dict(id="fabric", file="p-fabric.html", en="METAL FIBER FABRIC", zh="金属纤维织物",
-      img="img/sleeve-01.webp", tags="耐高温 纺织",
+      img="img/jl-fabric.webp", tags="耐高温 纺织",
       core="100% 不锈钢纤维编织 · 耐温 350–1100℃",
       use="玻璃深加工 · 汽车玻璃成型 · 印刷",
       desc="金属纤维机织带、编织套管、针织套管与机织布，耐高温、柔软透气、导电防静电，是玻璃成型的理想缓冲包覆材料。"),
  dict(id="element", file="p-element.html", en="FILTER ELEMENTS", zh="过滤元器件",
-      img="img/cart-01.webp", tags="过滤 成套",
+      img="img/jl-cartridge-set.webp", tags="过滤 成套",
       core="烧结毡/烧结网为滤材 · 整体烧结成型",
       use="化纤 · 石化 · 高温烟气过滤",
       desc="熔体滤芯、水滤芯、除尘滤芯与叶片滤盘，机械强度高、耐高温耐腐蚀、孔径分布均匀，可清洗再生、可焊接机加工。"),
  dict(id="equipment", file="p-equipment.html", en="PURIFICATION EQUIPMENT", zh="净化设备 · 收油系统",
-      img="img/fts-site-bamo.webp", tags="油水分离 成套",
+      img="img/fts-render-tank.webp", tags="油水分离 成套",
       core="前置过滤器 + 油水分离器 · 最大单套 600 m³/h",
       use="镍钴湿法冶金 · 化工萃取 · 资源再生",
       desc="以表面改性亲油疏水金属纤维为聚结材料的 FTS 收油系统，纯物理除油、不加破乳药剂，油份可回收复用。"),
@@ -47,7 +47,7 @@ w('products.html', head(
     "产品中心 | 金属纤维纱线 · 烧结毡 · 织物 · 过滤元器件 · 净化设备",
     "强纶五条产品线：金属纤维纱线、金属纤维烧结毡、金属纤维织物、过滤元器件与净化设备（收油系统），可按产品线、应用行业、材质与精度筛选。",
     "金属纤维产品,不锈钢纤维纱线,金属纤维烧结毡,烧结滤芯,滤盘,收油系统,油水分离设备",
-    "products.html", schema=schema, og_img="img/media-05.webp")
+    "products.html", schema=schema, og_img="img/jl-felt.webp")
  + header('products.html')
  + crumb([("产品中心", None)])
  + page_hero("01", "PRODUCTS", "产品总览",

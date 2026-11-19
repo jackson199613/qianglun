@@ -23,7 +23,7 @@ w('p-yarn.html', head(
     "金属纤维纱线 | 导电纱 · 发热线 · 缝纫线 — 强纶新材",
     "100% 316L 不锈钢金属纤维纱线，纤维直径低至 2μm，可混纺芳纶/涤纶/PPS/棉，用于防静电、电磁屏蔽、智能穿戴发热与汽车座椅加热。",
     "金属纤维纱线,不锈钢纤维纱,导电纱,发热线,缝纫线,防静电纱线,电磁屏蔽",
-    "p-yarn.html", og_img="img/yarn-fabric.webp")
+    "p-yarn.html", og_img="img/jl-yarn-blend.webp")
  + header('products.html')
  + crumb([("产品中心", "products.html"), ("金属纤维纱线", None)])
  + page_hero("01", "METAL FIBER YARN", "金属纤维纱线",
@@ -112,14 +112,14 @@ w('p-felt.html', head(
     "金属纤维烧结毡 | 精度 10–60μm 多层梯度孔滤材 — 强纶新材",
     "不锈钢金属纤维烧结毡，绝对过滤精度 10–60μm，孔隙率高、纳污量大、压损小、可清洗再生，耐 480℃，用于化纤熔体、黏胶过滤与高温气体除尘。",
     "金属纤维烧结毡,不锈钢纤维烧结毡,烧结滤毡,KKF滤机毡,熔体过滤,精度10微米",
-    "p-felt.html", og_img="img/media-05.webp")
+    "p-felt.html", og_img="img/jl-felt.webp")
  + header('products.html')
  + crumb([("产品中心", "products.html"), ("金属纤维烧结毡", None)])
  + page_hero("02", "SINTERED FIBER FELT", "金属纤维烧结毡",
              "三维网络梯度孔，<em>纳污量大、升压慢</em>",
              "由微米级金属纤维无纺成网后经高温层压烧结而成。多层结构形成由粗到细的孔隙梯度，既能控制极高的过滤精度，又比单层获得更大的纳污量。",
              [("10–60", "μm", "绝对过滤精度"), ("72–86", "%", "过滤率"), ("480", "℃", "可用温度"), ("0.3–1.1", "mm", "厚度范围")],
-             bg="img/media-03.webp")
+             bg="img/jl-felt-stack.webp")
  + f"""<section class="sec"><div class="wrap">
   <div class="g2 r7-5 wide">
     <div class="prose rv">
@@ -137,10 +137,10 @@ w('p-felt.html', head(
     </div>
     <aside class="rv d1">
       <div class="gal" style="grid-template-columns:1fr 1fr">
-        <figure><img src="img/media-05.webp" alt="金属纤维烧结毡" loading="lazy"><figcaption>烧结毡</figcaption></figure>
-        <figure><img src="img/media-03.webp" alt="金属纤维烧结毡板材" loading="lazy"><figcaption>大幅面毡</figcaption></figure>
+        <figure><img src="img/jl-felt.webp" alt="金属纤维烧结毡" loading="lazy"><figcaption>烧结毡</figcaption></figure>
+        <figure><img src="img/jl-felt-fan.webp" alt="多规格金属纤维烧结毡" loading="lazy"><figcaption>多规格烧结毡</figcaption></figure>
         <figure><img src="img/media-01.webp" alt="金属纤维烧结滤片" loading="lazy"><figcaption>烧结滤片</figcaption></figure>
-        <figure><img src="img/media-02.webp" alt="烧结网与滤片" loading="lazy"><figcaption>烧结网</figcaption></figure>
+        <figure><img src="img/jl-mesh.webp" alt="多层金属烧结网" loading="lazy"><figcaption>烧结网</figcaption></figure>
       </div>
       {cta_row('烧结毡')}
     </aside>

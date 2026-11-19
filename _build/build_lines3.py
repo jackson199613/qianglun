@@ -11,7 +11,7 @@ w('p-element.html', head(
     "过滤元器件 | 烧结滤芯 · 叶片滤盘 · 折波滤芯 — 强纶新材",
     "金属纤维烧结滤芯、烧结网滤盘、折波滤芯与耐高温金属滤袋，机械强度高、耐高温耐腐蚀、孔径分布均匀，可清洗再生、可焊接机加工。",
     "金属纤维滤芯,烧结滤芯,叶片滤盘,折波滤芯,熔体滤芯,除尘滤芯,水滤芯",
-    "p-element.html", og_img="img/cart-01.webp")
+    "p-element.html", og_img="img/jl-cartridge-set.webp")
  + header('products.html')
  + crumb([("产品中心", "products.html"), ("过滤元器件", None)])
  + page_hero("04", "FILTER ELEMENTS", "过滤元器件",
@@ -36,10 +36,10 @@ w('p-element.html', head(
     </div>
     <aside class="rv d1">
       <div class="gal" style="grid-template-columns:1fr 1fr">
-        <figure><img src="img/cart-01.webp" alt="金属纤维折波滤芯" loading="lazy"><figcaption>折波滤芯</figcaption></figure>
-        <figure><img src="img/cart-03.webp" alt="滤芯批量生产" loading="lazy"><figcaption>批量供货</figcaption></figure>
-        <figure><img src="img/media-06.webp" alt="烧结滤芯组件" loading="lazy"><figcaption>滤芯组件</figcaption></figure>
-        <figure><img src="img/media-10.webp" alt="过滤器装置" loading="lazy"><figcaption>过滤器装置</figcaption></figure>
+        <figure><img src="img/jl-cartridge-pleat.webp" alt="金属纤维折波滤芯" loading="lazy"><figcaption>折波滤芯</figcaption></figure>
+        <figure><img src="img/jl-cartridge-set.webp" alt="金属纤维滤芯系列" loading="lazy"><figcaption>滤芯系列</figcaption></figure>
+        <figure><img src="img/jl-cartridge-sinter.webp" alt="金属纤维烧结滤芯" loading="lazy"><figcaption>烧结滤芯</figcaption></figure>
+        <figure><img src="img/jl-disc.webp" alt="金属纤维叶片滤盘" loading="lazy"><figcaption>叶片滤盘</figcaption></figure>
       </div>
       {cta_row('过滤元器件')}
     </aside>
