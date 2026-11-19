@@ -8,7 +8,7 @@ from common import w, anav, ENDCTA, vr_block, film_block
 
 
 # ───────────────────────────── 1. 企业简介
-schema_org = '{"@context":"https://schema.org","@type":"Organization","name":"福建强纶新材料股份有限公司","alternateName":["强纶新材","FUJIAN QL METAL FIBER CO., LTD"],"url":"%s/","logo":"https://www.qlfiber.com/assets/images/logo.png","foundingDate":"2002-12","numberOfEmployees":{"@type":"QuantitativeValue","value":200},"tickerSymbol":"872336","address":{"@type":"PostalAddress","streetAddress":"龙岩市东肖镇经济技术开发区黄邦路11号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"},"telephone":"+86-18159821773","description":"国内规模领先、福建省内唯一专注金属功能纤维及制品研发生产的高新技术企业，国家级专精特新“小巨人”企业。"}' % SITE
+schema_org = '{"@context":"https://schema.org","@type":"Organization","name":"福建强纶新材料股份有限公司","alternateName":["强纶新材","FUJIAN QL METAL FIBER CO., LTD"],"url":"%s/","logo":"https://www.qlfiber.com/assets/images/logo.png","foundingDate":"2002-12","numberOfEmployees":{"@type":"QuantitativeValue","value":200},"tickerSymbol":"872336","address":{"@type":"PostalAddress","streetAddress":"龙岩市东肖镇经济技术开发区黄邦路11号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"},"telephone":"+86-15359927344","description":"国内规模领先、福建省内唯一专注金属功能纤维及制品研发生产的高新技术企业，国家级专精特新“小巨人”企业。"}' % SITE
 
 w('about.html', head(
     "企业简介 | 福建强纶新材料股份有限公司",
