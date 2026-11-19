@@ -114,6 +114,26 @@
   .subnav{top:68px}
 }
 @media (max-width:600px){.tl{grid-template-columns:1fr}}
+
+/* 07 检测实证 */
+.trg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.tr{background:var(--white,#fff);border:1px solid var(--line,#e3e5e8);border-radius:14px;padding:26px 26px 22px;display:flex;flex-direction:column}
+.tr .k{font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+.tr h4{font-family:"Noto Serif SC",serif;font-size:20px;font-weight:700;margin:10px 0 8px}
+.tr .v{font-family:"Barlow Condensed",sans-serif;font-size:34px;font-weight:600;line-height:1.1;color:var(--ink)}
+.tr .v small{font-size:15px;color:var(--muted);font-weight:500;margin-left:4px}
+.tr p{font-size:14.5px;line-height:1.75;color:var(--muted);margin:10px 0 0}
+.tr ul{list-style:none;padding:0;margin:12px 0 0;font-size:14px;line-height:1.9}
+.tr ul li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line,#e3e5e8)}
+.tr ul li b{font-weight:600;color:var(--ink)}
+.tr .src{margin-top:auto;padding-top:16px;font-size:12.5px;color:var(--muted)}
+.tr .dl{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tr .dl a{font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--ink);color:var(--ink);text-decoration:none}
+.tr .dl a:hover{background:var(--ink);color:#fff}
+.tr.wide{grid-column:span 2}
+.tr-note{margin-top:28px;font-size:13px;color:var(--muted);line-height:1.8}
+@media(max-width:980px){.trg{grid-template-columns:1fr 1fr}.tr.wide{grid-column:span 2}}
+@media(max-width:640px){.trg{grid-template-columns:1fr}.tr.wide{grid-column:auto}}
 </style>
 <link rel="stylesheet" href="theme-v4.css">
 </head>
@@ -191,7 +211,7 @@
 
 <nav class="subnav" aria-label="本页导航">
   <div class="wrap">
-    <a class="on" href="#inst">研发平台</a><a href="#tech">核心技术</a><a href="#scale-sec">纤维精度</a><a href="#ip">知识产权与资质</a><a href="#road">研发历程</a><a href="#coop">合作研发</a>
+    <a class="on" href="#inst">研发平台</a><a href="#tech">核心技术</a><a href="#scale-sec">纤维精度</a><a href="#ip">知识产权与资质</a><a href="#road">研发历程</a><a href="#coop">合作研发</a><a href="#tests">检测实证</a>
   </div>
 </nav>
 
@@ -348,6 +368,80 @@
       <h3>有特殊工况？<br><em>和强纶工程师聊聊</em></h3>
       <div class="bt"><a class="pill pill-gold" href="index.html#select">按工况选型<svg class="i"><use href="#i-arrow"/></svg></a><a class="pill pill-wl" href="index.html#contact">提交研发需求</a></div>
     </div>
+  </div>
+</section>
+
+<!-- 检测实证 -->
+<section class="sec" id="tests">
+  <div class="wrap">
+    <div class="sh rv"><div><div class="idx"><b>07</b>TEST REPORTS · 检测实证</div><h2>第三方检测，<br>让<em>数据</em>说话</h2></div><p>金属纤维线送华测检测（CTI）、斯坦德检测、上海复达检测等第三方机构检测的 10 份报告摘要：材质、环保、导电耐洗、高温力学与磁性能一目了然。报告均为委托检测、对来样负责，完整报告留下联系方式即可下载。</p></div>
+    <div class="trg rv">
+      <article class="tr wide">
+        <div class="k">Material · 材质成分</div>
+        <h4>316L 牌号化学成分全部达标</h4>
+        <div class="v">ASTM A276 316L<small>275×3 金属纤维线</small></div>
+        <ul>
+          <li><span>碳 C（≤0.030%）</span><b>0.0282%</b></li>
+          <li><span>铬 Cr（16.0–18.0%）</span><b>16.50%</b></li>
+          <li><span>镍 Ni（10.0–14.0%）</span><b>11.02%</b></li>
+          <li><span>钼 Mo（2.00–3.00%）</span><b>2.04%</b></li>
+        </ul>
+        <div class="src">华测检测认证集团 CTI · ICP-OES / 碳硫分析 · 2026.05.22</div>
+        <div class="dl"><a href="contact.html?doc=mat316l#inq">中文报告</a><a href="contact.html?doc=mat316len#inq">英文报告</a></div>
+      </article>
+      <article class="tr">
+        <div class="k">RoHS · 环保</div>
+        <h4>铅、镉、汞、六价铬均未检出</h4>
+        <div class="v">N.D.<small>三种规格</small></div>
+        <p>100×3、275×3、1000×3 三个规格分别检测，四项有害物质全部低于方法检出限（铅镉汞 2 mg/kg，六价铬 0.10 μg/cm²）。</p>
+        <div class="src">华测检测认证集团 CTI · IEC 62321 · 2026.05.16</div>
+        <div class="dl"><a href="contact.html?doc=rohs100#inq">100×3</a><a href="contact.html?doc=rohs275#inq">275×3</a><a href="contact.html?doc=rohs1000#inq">1000×3</a></div>
+      </article>
+      <article class="tr">
+        <div class="k">Wash durability · 耐水洗导电</div>
+        <h4>水洗后电阻几乎不变</h4>
+        <div class="v">7.98 → 8.08<small>Ω</small></div>
+        <p>同一样品水洗前后电阻仅变化约 1.3%：导电来自金属本体而非涂层，洗不掉。</p>
+        <div class="src">斯坦德检测集团 · GB/T 351、GB/T 5713 · 2026.05.26</div>
+        <div class="dl"><a href="contact.html?doc=reswash#inq">下载报告</a></div>
+      </article>
+      <article class="tr">
+        <div class="k">High-temp tensile · 高温力学</div>
+        <h4>常温到 1000 ℃ 拉伸实测</h4>
+        <ul>
+          <li><span>室温</span><b>268 MPa</b></li>
+          <li><span>650 ℃</span><b>172 MPa</b></li>
+          <li><span>800 ℃</span><b>25.8 MPa</b></li>
+          <li><span>1000 ℃</span><b>3.8 MPa</b></li>
+        </ul>
+        <div class="src">上海复达检测技术集团 · 电子万能试验机 · 275×3 · 2026.06.12</div>
+        <div class="dl"><a href="contact.html?doc=tensile#inq">下载报告</a></div>
+      </article>
+      <article class="tr">
+        <div class="k">Magnetism · 磁性能</div>
+        <h4>近乎无磁</h4>
+        <div class="v">μr 1.019</div>
+        <p>最大相对磁导率 1.019，接近空气（1.0）；饱和磁感应强度仅 5.28×10⁻³ T，适合对磁干扰敏感的场合。</p>
+        <div class="src">上海复达检测技术集团 · VSM · 100×3 · 2026.06.12</div>
+        <div class="dl"><a href="contact.html?doc=magnetic#inq">下载报告</a></div>
+      </article>
+      <article class="tr">
+        <div class="k">Far infrared · 远红外</div>
+        <h4>远红外辐射温升 3.5 ℃</h4>
+        <div class="v">+3.5<small>℃</small></div>
+        <p>依据 GB/T 30127-2013，远红外辐射温升 3.5 ℃（标准要求 ≥1.4 ℃，单项符合）；远红外发射率实测 0.73。</p>
+        <div class="src">第三方委托检验 · GB/T 30127-2013 · 2026.06.06</div>
+        <div class="dl"><a href="contact.html?doc=farir#inq">下载报告</a></div>
+      </article>
+      <article class="tr wide">
+        <div class="k">IR reflectance · 红外反射</div>
+        <h4>红外反射能谱</h4>
+        <p>采用衰减全反射傅里叶变换红外光谱（ATR-FTIR）测得 275×3 金属纤维线在红外波段的反射能谱实测曲线，供红外相关应用评估。</p>
+        <div class="src">上海复达检测技术集团 · ATR-FTIR · 2026.06.12</div>
+        <div class="dl"><a href="contact.html?doc=irref#inq">下载报告</a></div>
+      </article>
+    </div>
+    <p class="tr-note rv">* 以上为委托检测结果，仅对来样负责，数据用于选型参考；批量供货以出厂检验报告为准。更多报告与证书见 <a href="downloads.html" style="color:inherit;text-decoration:underline">资料下载中心</a>。</p>
   </div>
 </section>
 </main>
