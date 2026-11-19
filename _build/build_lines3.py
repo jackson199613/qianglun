@@ -216,7 +216,7 @@ w('p-equipment.html', head(
 
   <h3 class="galh">配套与车间</h3>
   <div class="gal">
-    <figure><img src="img/media-10.webp" alt="前置过滤器" loading="lazy"><figcaption>前置过滤器</figcaption></figure>
+    <figure><img src="img/fts-scene-03.webp" alt="前置过滤器与收油罐联合装置" loading="lazy"><figcaption>前置过滤器 + 收油罐</figcaption></figure>
     <figure><img src="img/fts-site-06.webp" alt="收油系统与前置过滤器配套" loading="lazy"><figcaption>过滤 + 除油配套</figcaption></figure>
     <figure><img src="img/fts-huayou-03.webp" alt="大流量槽式收油系统安装现场" loading="lazy"><figcaption>安装现场</figcaption></figure>
     <figure><img src="img/fts-scene-01.webp" alt="湿法冶金萃取车间应用现场" loading="lazy"><figcaption>湿法冶金车间</figcaption></figure>

@@ -6,7 +6,7 @@ from layout import head, header, crumb, page_hero, footer, SITE
 from common import w, ENDCTA
 
 IND = [
- dict(f="a-filtration.html", gal=[("img/fts-site-huayou.webp","大流量槽体方案"),("img/fts-bamo-03.webp","槽体与管路"),("img/fts-tank-02.webp","罐式收油系统"),("img/fts-scene-03.webp","过滤与除油联合装置")], en="FILTRATION", zh="过滤分离", img="img/media-10.webp", hero="img/fts-scene-01.webp",
+ dict(f="a-filtration.html", gal=[("img/fts-site-huayou.webp","大流量槽体方案"),("img/fts-bamo-03.webp","槽体与管路"),("img/fts-tank-02.webp","罐式收油系统"),("img/fts-scene-03.webp","过滤与除油联合装置")], en="FILTRATION", zh="过滤分离", img="app-filter.webp", hero="img/fts-scene-01.webp",
       claim="高温、高粘、强腐蚀，<em>常规滤材扛不住的地方</em>",
       pain="化纤熔体与黏胶工况下，传统滤纸滤布不耐高温高压、金属网易堵塞易碎；萃取料液中的微米级乳化油又会污染后端树脂与膜。",
       sol="以金属纤维烧结毡/烧结网为滤材的滤芯、滤盘与成套过滤器，配合 FTS 收油系统完成预除油，形成「除油 + 精滤」的完整链条。",
