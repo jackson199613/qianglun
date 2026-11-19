@@ -62,10 +62,10 @@ def video_block(poster, title, cap):
 '''
 
 
-FILM_SRC = "video/qlfiber-film-1080p.mp4"
-FILM_POSTER = "img/film-poster.webp"
+FILM_SRC = "video/qlfiber-film-2026-1080p.mp4"
+FILM_POSTER = "img/film-poster-2026.webp"
 
-def film_block(h2='三分四十七秒，看完<em>强纶</em>',
+def film_block(h2='三分四十三秒，看完<em>强纶</em>',
                lead='从一根 2μm 的不锈钢金属纤维出发，到烧结毡、织物、过滤元器件与成套净化装备——这条路公司走了二十余年。',
                prefix=''):
     return f'''<section class="film" id="film"><div class="wrap">
@@ -81,7 +81,7 @@ def film_block(h2='三分四十七秒，看完<em>强纶</em>',
       <img src="{prefix}{FILM_POSTER}" alt="强纶新材企业宣传片封面" loading="lazy">
       <span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
       <span class="fmeta">
-        <b>03:47</b>
+        <b>03:43</b>
         <span class="fchips"><i>中英双语字幕</i><i>1080P</i><i>福建强纶新材料股份有限公司</i></span>
       </span>
     </button>
