@@ -36,8 +36,8 @@ w('about.html', head(
     </div>
     <aside class="rv d1">
       <div class="gal c3" style="grid-template-columns:1fr;gap:14px;margin:0">
-        <figure style="aspect-ratio:4/3"><img src="img/plant-02.webp" alt="强纶新材激光加工设备" loading="lazy"><figcaption>智能加工设备</figcaption></figure>
-        <figure style="aspect-ratio:4/3"><img src="img/lab-01.webp" alt="强纶新材实验室" loading="lazy"><figcaption>材料与应用实验室</figcaption></figure>
+        <figure style="aspect-ratio:4/3"><img src="img/plant-cnc-film.webp" alt="强纶新材数控加工车间" loading="lazy"><figcaption>智能加工设备</figcaption></figure>
+        <figure style="aspect-ratio:4/3"><img src="img/lab-wide-01.webp" alt="强纶新材材料与应用实验室" loading="lazy"><figcaption>材料与应用实验室</figcaption></figure>
       </div>
       <div class="note" style="margin-top:22px"><b>英文名称</b><br>FUJIAN QL METAL FIBER CO., LTD<br><br><b>注册地址</b><br>福建省龙岩市东肖镇经济技术开发区黄邦路 11 号<br><br><b>统一社会信用代码</b><br>91350800753119639E</div>
     </aside>

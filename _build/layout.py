@@ -37,7 +37,7 @@ ICONS = """<svg width="0" height="0" style="position:absolute" aria-hidden="true
 </defs></svg>"""
 
 
-def head(title, desc, keywords="", canonical="", extra_css="", schema="", og_img="img/plant-02.webp"):
+def head(title, desc, keywords="", canonical="", extra_css="", schema="", og_img="img/plant-cnc-film.webp"):
     cn = f'<link rel="canonical" href="{SITE}/{canonical}">' if canonical else ""
     kw = f'<meta name="keywords" content="{keywords}">' if keywords else ""
     sc = f'<script type="application/ld+json">{schema}</script>' if schema else ""
