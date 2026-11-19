@@ -4,6 +4,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, crumb, page_hero, footer, NAV, SITE, ADDR, TEL
 from common import w, ENDCTA
+from news_data import NEWS
 
 # 站内搜索索引
 INDEX = [
@@ -45,11 +46,8 @@ INDEX = [
   ("为什么金属纤维的屏蔽能力不会被洗掉","article-6.html","涂层导电与本体导电的区别，混纺织物屏蔽率 99% 以上，可机洗","技术"),
   ("发热线怎么定米电阻：从电压和功率反推","article-7.html","R=U²/P 计算方法，60/100/275/1000 芯与 1—100Ω/m 米电阻","技术"),
   ("金属纤维烧结毡 vs 金属丝网：强度、精度与再生性","article-8.html","深层过滤与表面过滤、纳污量与反洗性能对比，典型滤芯配置","技术"),
- ("新闻动态","news.html","企业新闻、行业资讯与展会活动","关于"),
- ("入围中国创新创业大赛全国赛","news-1.html","2026 年公司以新材料方向项目入围第十五届中国创新创业大赛全国赛","新闻"),
- ("获评国家级专精特新小巨人","news-2.html","福建省内唯一专注金属功能纤维及制品研发生产的企业获国家级认可","新闻"),
- ("中国航发商发合格供应商","news-3.html","公司通过航发商发供应商审核，巩固航空航天特种材料配套能力","新闻"),
- ("德国科隆 FILTECH 过滤展","news-8.html","公司以 FUJIAN QL METAL FIBER 名义参展国际过滤行业专业展会","新闻"),
+ ("新闻动态","news.html","企业新闻、展会活动与媒体报道","关于"),
+ *[(n["title"], n["slug"]+".html", n["sum"], "新闻") for n in NEWS],
  ("人才招聘","jobs.html","材料研发、过滤应用、设备设计、海外销售等岗位","关于"),
  ("联系我们","contact.html","电话 181 5982 1773 / 0597-2799968，工况询盘与图纸上传","联系"),
  ("样品申请","sample.html","免费小样，运费到付，现货样品 1–3 天寄出","联系"),
@@ -153,7 +151,7 @@ GROUPS = [
  ("选型中心", [("选型指南","selector.html"),("参数对照表","specs.html"),("名词解释","glossary.html"),("资料下载中心","downloads.html")]),
  ("技术专栏", [("技术文章","insights.html"),("常见问题库","faq.html"),("术语百科","encyclopedia.html"),("烧结毡和滤布怎么选","article-1.html"),("气泡点压与透气值","article-2.html"),("化纤熔体过滤精度","article-3.html"),("预除油的经济账","article-4.html"),("玻璃线金属纤维套管","article-5.html"),("屏蔽能力为何不会被洗掉","article-6.html"),("发热线米电阻计算","article-7.html"),("烧结毡 vs 金属丝网","article-8.html"),("问答详情（示例）","qa.html")]),
  ("关于强纶", [("企业简介","about.html"),("发展历程","history.html"),("制造能力","manufacturing.html"),("质量体系","quality.html"),("资质荣誉","honors.html"),("企业文化与社会责任","culture.html"),("投资者关系","investor.html")]),
- ("新闻动态", [("新闻列表","news.html"),("创新创业大赛全国赛","news-1.html"),("国家级专精特新小巨人","news-2.html"),("中国航发商发合格供应商","news-3.html"),("行业标准体系建设报道","news-4.html"),("龙岩优质工业品调查报道","news-5.html"),("《海峡通讯》专题报道","news-6.html"),("全国湿法冶金工程技术交流会","news-7.html"),("德国科隆 FILTECH 过滤展","news-8.html")]),
+ ("新闻动态", [("新闻列表","news.html")] + [(n["title"], n["slug"]+".html") for n in NEWS]),
  ("人才招聘", [("岗位列表","jobs.html"),("岗位详情（示例）","job-detail.html")]),
  ("联系与询盘", [("联系我们","contact.html"),("样品申请","sample.html")]),
  ("全站通用", [("站内搜索","search.html"),("隐私政策与法律声明","privacy.html"),("网站地图","sitemap.html"),("404 页面","404.html")]),
