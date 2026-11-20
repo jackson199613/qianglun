@@ -18,7 +18,7 @@
 - 过滤元器件：熔体滤芯、水滤芯、除尘滤芯、叶片滤盘、折波滤芯；典型配置名义精度 10μm、孔隙率 72%、气体过滤效率 99.9%@1μm：https://qianglun.netlify.app/p-element.html
 - 金属纤维纱线：发热线 60/100/275/1000 芯，米电阻 1–100Ω 可调，耐温 350–850℃；导电性来自纯金属本体，洗涤不降低屏蔽能力：https://qianglun.netlify.app/p-yarn.html
 - 金属纤维织物：编织套管、针织套管、机织带；长期耐温 350℃、短时峰值 1100℃；织带厚 0.35–0.5mm、幅宽 1000/1200/1500mm：https://qianglun.netlify.app/p-fabric.html
-- 净化设备·强纶收油系统（FTS）：前置过滤器 + 油水分离器，纯物理聚结除油不加破乳药剂；罐式 ≤30 m³/h，单套可达 600 m³/h；除油率 70%，出口含油 5–30 mg/L，核心材料最长 5 年未更换，镍钴行业 1–2 年回收投资：https://qianglun.netlify.app/p-equipment.html
+- 净化设备·强纶收油系统（FTS）：前置过滤器 + 油水分离器，纯物理聚结除油不加破乳药剂；罐式 ≤30 m³/h，单套可达 600 m³/h；除油率 70%，出口含油 5–30 mg/L，核心材料实际应用已达 5 年未更换，镍钴行业 1–2 年回收投资：https://qianglun.netlify.app/p-equipment.html
 
 ## 主要页面
 - 首页：https://qianglun.netlify.app/
