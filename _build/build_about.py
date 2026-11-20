@@ -97,14 +97,14 @@ w('manufacturing.html', head(
     "制造能力 | 强纶新材",
     "自有工业用地 40 余亩，覆盖金属复合丝拉拔、压制烧结、纺纱编织、电化学材料加工与精密机械加工五大制研平台，员工 200 余人。",
     "强纶制造能力,金属纤维生产,拉拔工艺,烧结工艺,厂房设备",
-    "manufacturing.html", og_img="img/plant-05.webp")
+    "manufacturing.html", og_img="img/mfg-hero-loom.webp")
  + header('about.html')
  + crumb([("关于强纶", "about.html"), ("制造能力", None)])
  + page_hero("03", "MANUFACTURING", "制造能力",
              "把金属棒，<em>一路拉到 2 微米</em>",
              "核心工艺是复合拉拔：将金属棒逐级拉拔成金属细丝，再拉拔成金属纤维，最细可至 2μm，比头发丝细约 35 倍；随后通过捻搓、纺纱、编织、烧结等工序制成纱线、织物、烧结毡与过滤元件。",
              [("40", "亩", "自有工业用地"), ("1800", "㎡", "厂房面积"), ("200", "+", "员工人数"), ("5", "大", "制研平台")],
-             bg="img/plant-05.webp")
+             bg="img/mfg-hero-loom.webp")
  + f"""<section class="sec"><div class="wrap">{anav(2)}
   <div class="sec-h"><h2>五大制研平台</h2><p>强纶新材料创新研究院整合强纶新材、金纶新材料、金山粉末、柔银新材料、龙象机械等资源，形成互补的制造与中试能力。</p></div>
   <div class="g3">
@@ -116,18 +116,20 @@ w('manufacturing.html', head(
     <article class="card rv d2"><span class="n">06</span><h3>中试与成果转化</h3><p>研发源于车间实践，中试基地与多维测试中心支撑新工艺从实验室到量产。</p></article>
   </div>
 
-  <div class="sec-h" style="margin:90px 0 32px"><h2>厂区与设备</h2><p>激光切割、冲压、数控车、摇臂钻、带锯、焊接与检测装备，支撑从滤材到成套设备的自制能力。</p></div>
+  <div class="sec-h" style="margin:90px 0 32px"><h2>厂区与设备</h2><p>从金属纤维生产线、真空烧结炉到丝网织造、激光切割、数控车削、冲压与焊接，关键工序均在厂内完成。</p></div>
   <div class="gal">
-    <figure><img src="img/plant-02-hd.webp" alt="激光切割设备" loading="lazy"><figcaption>激光切割</figcaption></figure>
-    <figure><img src="img/plant-03-hd.webp" alt="冲压设备" loading="lazy"><figcaption>冲压成型</figcaption></figure>
-    <figure><img src="img/plant-05-hd.webp" alt="机加工车间" loading="lazy"><figcaption>机加工车间</figcaption></figure>
-    <figure><img src="img/plant-06-hd.webp" alt="数控加工设备" loading="lazy"><figcaption>数控加工</figcaption></figure>
-    <figure><img src="img/plant-07-hd.webp" alt="摇臂钻与加工设备" loading="lazy"><figcaption>钻削加工</figcaption></figure>
-    <figure><img src="img/plant-08-hd.webp" alt="带锯与下料设备" loading="lazy"><figcaption>下料切割</figcaption></figure>
-    <figure><img src="img/plant-09-hd.webp" alt="装配车间" loading="lazy"><figcaption>装配车间</figcaption></figure>
-    <figure><img src="img/plant-01-hd.webp" alt="零部件与备件货架" loading="lazy"><figcaption>零部件库</figcaption></figure>
-    <figure><img src="img/plant-10-hd.webp" alt="检测与工装设备区" loading="lazy"><figcaption>工装与检测区</figcaption></figure>
-    <figure><img src="img/plant-04-hd.webp" alt="物料与备件仓储" loading="lazy"><figcaption>物料仓储</figcaption></figure>
+    <figure><img src="img/mfg-draw-line.webp" alt="金属纤维生产线" loading="lazy"><figcaption>金属纤维生产线</figcaption></figure>
+    <figure><img src="img/mfg-draw-unit.webp" alt="金属纤维生产设备" loading="lazy"><figcaption>纤维生产设备</figcaption></figure>
+    <figure><img src="img/mfg-sinter-01.webp" alt="大型真空烧结炉" loading="lazy"><figcaption>真空烧结炉</figcaption></figure>
+    <figure><img src="img/mfg-sinter-03.webp" alt="真空烧结设备" loading="lazy"><figcaption>真空烧结设备</figcaption></figure>
+    <figure><img src="img/mfg-loom-01.webp" alt="金属丝网织造设备" loading="lazy"><figcaption>金属丝网织造</figcaption></figure>
+    <figure><img src="img/mfg-web-02.webp" alt="金属丝网织造细节" loading="lazy"><figcaption>织造细节</figcaption></figure>
+    <figure><img src="img/mfg-laser-cut.webp" alt="激光切割加工" loading="lazy"><figcaption>激光切割</figcaption></figure>
+    <figure><img src="img/mfg-lathe.webp" alt="数控车削加工" loading="lazy"><figcaption>数控车削</figcaption></figure>
+    <figure><img src="img/mfg-press.webp" alt="冲压设备" loading="lazy"><figcaption>冲压成型</figcaption></figure>
+    <figure><img src="img/mfg-weld.webp" alt="焊接装配" loading="lazy"><figcaption>焊接装配</figcaption></figure>
+    <figure><img src="img/mfg-store-02.webp" alt="成品仓储" loading="lazy"><figcaption>成品仓储</figcaption></figure>
+    <figure><img src="img/mfg-qc-office.webp" alt="质检与生产管理" loading="lazy"><figcaption>质检与生产管理</figcaption></figure>
   </div>
 
   <div class="g2 wide" style="margin-top:90px">
