@@ -46,7 +46,7 @@ w('about.html', head(
   <div class="sec-h" style="margin:96px 0 40px"><h2>覆盖材料到系统的<em>完整链条</em></h2><p>从一根金属纤维出发，向下游延伸到纱线织物、烧结滤材、过滤元件，直到成套净化设备。</p></div>
   <div class="g4">
     <article class="card rv"><span class="n">01</span><h3>金属纤维</h3><p>复合拉拔制备，直径低至 2μm，不锈钢 / 镍 / 钛 / 铁铬铝 / 铜多材质。</p></article>
-    <article class="card rv d1"><span class="n">02</span><h3>纱线与织物</h3><p>导电纱、缝纫线、发热线、编织带、套管与机织布，可纺可织。</p></article>
+    <article class="card rv d1"><span class="n">02</span><h3>纱线与织物</h3><p>导电纱、缝纫线、金属纤维线、编织带、套管与机织布，可纺可织。</p></article>
     <article class="card rv d2"><span class="n">03</span><h3>烧结滤材</h3><p>多层梯度孔结构高温烧结，精度 10–60μm，耐温耐腐蚀可再生。</p></article>
     <article class="card rv d3"><span class="n">04</span><h3>元件与设备</h3><p>熔体 / 水 / 除尘滤芯、滤盘，直至收油系统等成套净化装备。</p></article>
   </div>
@@ -110,7 +110,7 @@ w('manufacturing.html', head(
   <div class="g3">
     <article class="card rv"><span class="n">01</span><h3>金属复合丝拉拔</h3><p>复合拉拔核心工艺，制备 2–100μm 各规格金属纤维，材质覆盖 316L / 304 / 铁铬铝 / 镍 / 钛 / 铜等。</p></article>
     <article class="card rv d1"><span class="n">02</span><h3>压制烧结</h3><p>粉末压制与真空高温烧结，制备多层梯度孔烧结毡、烧结网及传动元件。</p></article>
-    <article class="card rv d2"><span class="n">03</span><h3>纺纱编织</h3><p>金属纤维可纺可织，制成纱线、缝纫线、发热线、机织带、套管与机织布。</p></article>
+    <article class="card rv d2"><span class="n">03</span><h3>纺纱编织</h3><p>金属纤维可纺可织，制成纱线、缝纫线、金属纤维线、机织带、套管与机织布。</p></article>
     <article class="card rv"><span class="n">04</span><h3>电化学材料加工</h3><p>面向多孔材料、新能源与氢能方向的材料加工与表面改性。</p></article>
     <article class="card rv d1"><span class="n">05</span><h3>精密机械加工</h3><p>滤芯骨架、过滤器壳体与成套设备的精密加工、焊接与装配。</p></article>
     <article class="card rv d2"><span class="n">06</span><h3>中试与成果转化</h3><p>研发源于车间实践，中试基地与多维测试中心支撑新工艺从实验室到量产。</p></article>

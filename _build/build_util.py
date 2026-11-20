@@ -9,7 +9,7 @@ from news_data import NEWS
 # 站内搜索索引
 INDEX = [
  ("金属纤维烧结毡","p-felt.html","绝对过滤精度 10–60μm，多层梯度孔，纳污量大、升压慢、可清洗再生，耐 480℃","产品"),
- ("金属纤维纱线","p-yarn.html","发热线、缝纫线、混纺纱，米电阻 1–100Ω，耐温 350–850℃，防静电电磁屏蔽","产品"),
+ ("金属纤维纱线","p-yarn.html","金属纤维线、缝纫线、混纺纱，米电阻 1–100Ω，耐温 350–850℃，防静电电磁屏蔽","产品"),
  ("金属纤维织物","p-fabric.html","编织套管、针织套管、机织带与机织布，长期耐温 350℃、短时 1100℃，玻璃成型包覆","产品"),
  ("过滤元器件","p-element.html","熔体滤芯、水滤芯、除尘滤芯、叶片滤盘与折波滤芯，整体烧结成型","产品"),
  ("净化设备 · 收油系统","p-equipment.html","FTS 功能纤维除油系统，纯物理聚结除油，最大单套 600 m³/h，除油率 70%","产品"),
@@ -44,7 +44,7 @@ INDEX = [
   ("预除油为什么能省下深度除油的钱","article-4.html","溶解油与非溶解油、聚结除油原理，除油率 70%、1—2 年回收","技术"),
   ("玻璃钢化炉上的金属纤维套管，解决的是哪三个问题","article-5.html","划伤、掉屑与老化；350℃ 长期、1100℃ 短时，封边处理建议","技术"),
   ("为什么金属纤维的屏蔽能力不会被洗掉","article-6.html","涂层导电与本体导电的区别，混纺织物屏蔽率 99% 以上，可机洗","技术"),
-  ("发热线怎么定米电阻：从电压和功率反推","article-7.html","R=U²/P 计算方法，60/100/275/1000 芯与 1—100Ω/m 米电阻","技术"),
+  ("金属纤维线怎么定米电阻：从电压和功率反推","article-7.html","R=U²/P 计算方法，100/275/1000 芯与 1—100Ω/m 米电阻","技术"),
   ("金属纤维烧结毡 vs 金属丝网：强度、精度与再生性","article-8.html","深层过滤与表面过滤、纳污量与反洗性能对比，典型滤芯配置","技术"),
  ("新闻动态","news.html","企业新闻、展会活动与媒体报道","关于"),
  *[(n["title"], n["slug"]+".html", n["sum"], "新闻") for n in NEWS],
@@ -65,7 +65,7 @@ w('search.html', head(
              "例如：化纤熔体过滤精度、烧结毡能否清洗、收油系统处理量、2μm 纤维。")
  + """<section class="sec" style="padding-top:0"><div class="wrap">
   <div class="sbox"><svg class="i"><use href="#i-search"/></svg><input id="sq" type="search" placeholder="输入关键词后按回车" aria-label="站内搜索"></div>
-  <p class="shot">热门：<a href="#" data-q="过滤精度">过滤精度</a><a href="#" data-q="烧结毡">烧结毡</a><a href="#" data-q="收油系统">收油系统</a><a href="#" data-q="2μm">2μm 超细纤维</a><a href="#" data-q="清洗">能否清洗再用</a><a href="#" data-q="发热线">发热线</a></p>
+  <p class="shot">热门：<a href="#" data-q="过滤精度">过滤精度</a><a href="#" data-q="烧结毡">烧结毡</a><a href="#" data-q="收油系统">收油系统</a><a href="#" data-q="2μm">2μm 超细纤维</a><a href="#" data-q="清洗">能否清洗再用</a><a href="#" data-q="金属纤维线">金属纤维线</a></p>
   <p class="scount" id="scount"></p>
   <div class="rows" id="sres"></div>
 </div></section>
@@ -149,7 +149,7 @@ GROUPS = [
  ("产品中心", [("产品总览","products.html"),("金属纤维纱线","p-yarn.html"),("金属纤维烧结毡","p-felt.html"),("金属纤维织物","p-fabric.html"),("过滤元器件","p-element.html"),("净化设备 · 收油系统","p-equipment.html"),("产品详情（示例 25KIA3）","p-detail.html")]),
  ("应用方案", [("方案总览","applications.html"),("过滤分离","a-filtration.html"),("玻璃深加工","a-glass.html"),("电磁屏蔽与防静电","a-emi.html"),("航空航天与特种材料","a-aero.html"),("汽车","a-auto.html"),("功能纺织与智能穿戴","a-textile.html"),("其他应用","a-other.html")]),
  ("选型中心", [("选型指南","selector.html"),("参数对照表","specs.html"),("名词解释","glossary.html"),("资料下载中心","downloads.html")]),
- ("技术专栏", [("技术文章","insights.html"),("常见问题库","faq.html"),("术语百科","encyclopedia.html"),("烧结毡和滤布怎么选","article-1.html"),("气泡点压与透气值","article-2.html"),("化纤熔体过滤精度","article-3.html"),("预除油的经济账","article-4.html"),("玻璃线金属纤维套管","article-5.html"),("屏蔽能力为何不会被洗掉","article-6.html"),("发热线米电阻计算","article-7.html"),("烧结毡 vs 金属丝网","article-8.html"),("问答详情（示例）","qa.html")]),
+ ("技术专栏", [("技术文章","insights.html"),("常见问题库","faq.html"),("术语百科","encyclopedia.html"),("烧结毡和滤布怎么选","article-1.html"),("气泡点压与透气值","article-2.html"),("化纤熔体过滤精度","article-3.html"),("预除油的经济账","article-4.html"),("玻璃线金属纤维套管","article-5.html"),("屏蔽能力为何不会被洗掉","article-6.html"),("金属纤维线米电阻计算","article-7.html"),("烧结毡 vs 金属丝网","article-8.html"),("问答详情（示例）","qa.html")]),
  ("关于强纶", [("企业简介","about.html"),("发展历程","history.html"),("制造能力","manufacturing.html"),("质量体系","quality.html"),("资质荣誉","honors.html"),("企业文化与社会责任","culture.html"),("投资者关系","investor.html")]),
  ("新闻动态", [("新闻列表","news.html")] + [(n["title"], n["slug"]+".html") for n in NEWS]),
  ("人才招聘", [("岗位列表","jobs.html"),("岗位详情（示例）","job-detail.html")]),

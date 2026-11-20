@@ -41,8 +41,14 @@
 .subnav a{flex:none;padding:16px 18px;font-size:14px;color:var(--muted);border-bottom:2px solid transparent;transition:color .25s,border-color .25s}
 .subnav a:hover{color:var(--ink)}
 .subnav a.on{color:var(--ink);border-color:var(--champ)}
-.inst{display:grid;grid-template-columns:7fr 5fr;gap:70px;align-items:center}
-.inst .im{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/9.6;background:#111 url('building-v2.webp') center 60%/cover}
+.inst{display:grid;grid-template-columns:1fr;gap:44px;min-height:0;color:inherit;overflow:visible;border-radius:0}
+.inst::after{display:none}
+.inst>div{padding:0}
+.inst li b{display:inline;font-size:inherit;margin:0}
+.inst .im span{color:#fff}
+.inst>.rv.d1{display:grid;grid-template-columns:5fr 6fr;gap:70px;align-items:start}
+.inst>.rv.d1 ul{margin-top:0}
+.inst .im{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:2576/1150;background:#111 url('img/campus-gate.webp') center/cover}
 .inst .im span{position:absolute;left:18px;top:18px;background:rgba(14,15,17,.75);color:#fff;font-size:12.5px;padding:7px 14px;border-radius:40px;backdrop-filter:blur(6px)}
 .inst h3{font-family:"Noto Serif SC",serif;font-size:clamp(26px,2.5vw,36px);font-weight:900;line-height:1.35}
 .inst p{color:var(--graphite);margin-top:18px}
@@ -106,7 +112,7 @@
 .pill-wl{border-color:rgba(255,255,255,.4);color:#fff}.pill-wl:hover{background:#fff;color:var(--ink)}
 @media (max-width:980px){
   .ph{padding:110px 0 70px}
-  .ph-g,.inst,.tech{grid-template-columns:1fr;gap:36px}
+  .ph-g,.inst,.tech,.inst>.rv.d1{grid-template-columns:1fr;gap:36px}
   .tech.rev .tech-im{order:0}
   .tech{padding:64px 0}
   .slots,.coop{grid-template-columns:1fr}
@@ -222,8 +228,8 @@
     <div class="inst">
       <div class="im rv"><span>龙岩高新区 · 强纶新材料创新研究院</span></div>
       <div class="rv d1">
-        <h3>让研发、生产与应用<br>在同一园区闭环</h3>
-        <p>研究院与生产基地同址，新工艺从实验到量产的路径更短，客户现场反馈也能更快回到研发端。</p>
+        <div><h3>让研发、生产与应用<br>在同一园区闭环</h3>
+        <p>研究院与生产基地同址，新工艺从实验到量产的路径更短，客户现场反馈也能更快回到研发端。</p></div>
         <ul>
           <li><b class="num">01</b>超细纤维与超级不锈钢等基础材料研究</li>
           <li><b class="num">02</b>烧结成型、过滤结构等工艺攻关</li>
@@ -273,8 +279,8 @@
       <div class="tech-im"><i style="background-image:url('prod-heatline.webp')"></i><span class="k">CONDUCTIVE &amp; HEATING</span></div>
       <div>
         <div class="n">04</div><h3>导电与发热应用</h3>
-        <p class="d">利用不锈钢纤维导电、耐高温、柔软可织造的特性，开发导电纱、导电线与发热线等功能材料，拓展防静电、电磁屏蔽与智能穿戴等应用。</p>
-        <ul class="pts"><li><svg class="i"><use href="#i-check"/></svg>导电纱与导电线</li><li><svg class="i"><use href="#i-check"/></svg>柔性导电发热线、耐高温发热丝</li><li><svg class="i"><use href="#i-check"/></svg>面向智能穿戴与电子领域</li></ul>
+        <p class="d">利用不锈钢纤维导电、耐高温、柔软可织造的特性，开发导电纱、导电线与金属纤维线等功能材料，拓展防静电、电磁屏蔽与智能穿戴等应用。</p>
+        <ul class="pts"><li><svg class="i"><use href="#i-check"/></svg>导电纱与导电线</li><li><svg class="i"><use href="#i-check"/></svg>柔性导电金属纤维线、耐高温发热丝</li><li><svg class="i"><use href="#i-check"/></svg>面向智能穿戴与电子领域</li></ul>
         <div class="tags"><span>防静电</span><span>电磁屏蔽</span><span>智能穿戴</span></div>
       </div>
     </div>
