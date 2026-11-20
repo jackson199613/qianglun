@@ -124,7 +124,7 @@ w('specs.html', head(
   <div class="tbl-wrap"><table class="tbl">
     <thead><tr><th>产品线</th><th>常用材质</th><th>精度 / 规格区间</th><th>耐温</th></tr></thead>
     <tbody>
-      <tr><td><b>金属纤维纱线</b></td><td>316L / 304 / 铁铬铝；可混纺芳纶、涤纶、PPS、棉</td><td>纤维直径 2–100μm；金属纤维线 100/275/1000 芯；米电阻 1–100Ω</td><td class="num">350–850℃</td></tr>
+      <tr><td><b>金属纤维纱线</b></td><td>316L / 304 / 铁铬铝；可混纺芳纶、涤纶、PPS、棉</td><td>纤维直径 2–100μm；金属纤维线 100/275/1000；米电阻 1–100Ω</td><td class="num">350–850℃</td></tr>
       <tr><td><b>金属纤维烧结毡</b></td><td>316L、铁铬铝、镍、钛、哈氏合金、蒙乃尔、双相合金</td><td>绝对精度 10–60μm；厚度 0.3–1.1mm</td><td class="num">≤480℃</td></tr>
       <tr><td><b>金属纤维织物</b></td><td>100% 316L（可定制铁铬铝）</td><td>织带厚 0.35–0.5mm；幅宽 1000/1200/1500mm</td><td class="num">350℃ 长期 / 1100℃ 短时</td></tr>
       <tr><td><b>过滤元器件</b></td><td>316L 滤材 + 304 骨架与支撑网</td><td>名义精度 10μm 起；孔隙率约 72%；可折波、定制接口</td><td class="num">≤480℃</td></tr>
