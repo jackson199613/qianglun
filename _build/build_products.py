@@ -28,7 +28,7 @@ LINES = [
       desc="熔体滤芯、水滤芯、除尘滤芯与叶片滤盘，机械强度高、耐高温耐腐蚀、孔径分布均匀，可清洗再生、可焊接机加工。"),
  dict(id="equipment", file="p-equipment.html", en="PURIFICATION EQUIPMENT", zh="净化设备 · 收油系统",
       img="img/fts-render-tank.webp", tags="油水分离 成套",
-      core="前置过滤器 + 油水分离器 · 最大单套 600 m³/h",
+      core="前置过滤器 + 油水分离器 · 单套可达 600 m³/h",
       use="镍钴湿法冶金 · 化工萃取 · 资源再生",
       desc="以表面改性亲油疏水金属纤维为聚结材料的 FTS 收油系统，纯物理除油、不加破乳药剂，油份可回收复用。"),
 ]
@@ -53,7 +53,7 @@ w('products.html', head(
  + page_hero("01", "PRODUCTS", "产品总览",
              "一根纤维，<em>五条产品线</em>",
              "从金属纤维出发，向下游延伸到纱线织物、烧结滤材、过滤元件，直到成套净化设备。每条产品线均可按工况参数定制，并提供样品测试。",
-             [("5", "条", "产品线"), ("2", "μm", "最细纤维直径"), ("10–60", "μm", "烧结毡精度"), ("600", "m³/h", "最大单套处理量")], bg="img/hero-main.webp")
+             [("5", "条", "产品线"), ("2", "μm", "纤维直径低至"), ("10–60", "μm", "烧结毡精度"), ("600", "m³/h", "单套处理量可达")], bg="img/hero-main.webp")
  + f"""<section class="sec"><div class="wrap">
   <div class="sec-h row"><div><h2>按<em>产品线</em>浏览</h2><p>也可按应用行业、材质与过滤精度快速筛选。</p></div>
     <a class="pill pill-line" href="selector.html">不确定选哪条？按工况选型<svg class="i"><use href="#i-arrow"/></svg></a></div>
@@ -71,7 +71,7 @@ w('products.html', head(
       <tr><td><b>金属纤维烧结毡</b></td><td>316L 不锈钢、铁铬铝、镍、钛、哈氏合金等</td><td>绝对精度 10–60μm；厚度 0.3–1.1mm</td><td class="num">≤480℃</td><td>化纤、石化、黏胶、高温气体除尘</td></tr>
       <tr><td><b>金属纤维织物</b></td><td>100% 316L 不锈钢纤维</td><td>织带厚 0.35–0.5mm；幅宽 1000/1200/1500mm</td><td class="num">350℃ 长期 · 1100℃ 短时</td><td>玻璃深加工、钢化炉、印刷、防静电</td></tr>
       <tr><td><b>过滤元器件</b></td><td>316L 滤材 + 304 骨架 / 支撑网</td><td>名义精度 10μm 起；可折波、可定制接口</td><td class="num">≤480℃</td><td>化纤熔体、石化、水处理、除尘</td></tr>
-      <tr><td><b>净化设备 · 收油系统</b></td><td>改性金属纤维聚结芯 + 碳钢/不锈钢壳体</td><td>罐式 ≤30 m³/h；槽式按需；最大单套 600 m³/h</td><td class="num">按工况</td><td>镍钴湿法冶金、化工萃取、资源再生</td></tr>
+      <tr><td><b>净化设备 · 收油系统</b></td><td>改性金属纤维聚结芯 + 碳钢/不锈钢壳体</td><td>罐式 ≤30 m³/h；槽式按需；单套可达 600 m³/h</td><td class="num">按工况</td><td>镍钴湿法冶金、化工萃取、资源再生</td></tr>
     </tbody>
   </table></div>
   <p class="tnote">* 具体过滤精度、孔隙率、透气值、耐温等实测参数，以各产品详情页与检测报告为准；非标规格支持定制。</p>

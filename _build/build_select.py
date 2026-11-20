@@ -58,7 +58,7 @@ w('selector.html', head(
     melt:{{title:'金属纤维烧结毡 / 叶片滤盘',img:'img/jl-felt.webp',desc:'适合高粘度聚合物熔体过滤，过滤面积大、可清洗再生，常用于化纤与薄膜生产线。',alt:['金属纤维烧结毡','熔体滤芯','叶片滤盘'],url:'p-felt.html'}},
     gas:{{title:'除尘滤芯 / 耐高温金属滤袋',img:'img/jl-cartridge-pleat.webp',desc:'高温气体除尘与气固分离，耐温耐腐蚀、可反吹清灰、可反复再生。',alt:['除尘滤芯','烧结毡','金属滤袋'],url:'p-element.html'}},
     liquid:{{title:'金属纤维烧结滤芯',img:'img/jl-cartridge-sinter.webp',desc:'水与料液精滤，整体烧结成型、机械强度高，可清洗再生。',alt:['水滤芯','折波滤芯','烧结毡'],url:'p-element.html'}},
-    oil:{{title:'净化设备 · 强纶收油系统',img:'img/fts-render-tank.webp',desc:'纯物理聚结除油，不加破乳药剂，油份可回收复用；最大单套 600 m³/h。',alt:['罐式收油系统','槽式收油系统','槽体改造'],url:'p-equipment.html'}}
+    oil:{{title:'净化设备 · 强纶收油系统',img:'img/fts-render-tank.webp',desc:'纯物理聚结除油，不加破乳药剂，油份可回收复用；单套可达 600 m³/h。',alt:['罐式收油系统','槽式收油系统','槽体改造'],url:'p-equipment.html'}}
   }};
   var $=function(id){{return document.getElementById(id)}};
   function render(){{
@@ -108,7 +108,7 @@ w('specs.html', head(
  + crumb([("选型中心", "selector.html"), ("参数对照表", None)])
  + page_hero("02", "SPECS", "参数对照表",
              "一张表，<em>看懂精度与通量的取舍</em>",
-             "气泡点压反映最大孔径——越高孔径越细、精度越高；200Pa 透气值反映通过能力——越大压损越小、流量越大。两者通常此消彼长，选型即是在二者之间取平衡。", bg="img/ph-select.webp")
+             "气泡点压反映大孔孔径——越高孔径越细、精度越高；200Pa 透气值反映通过能力——越大压损越小、流量越大。两者通常此消彼长，选型即是在二者之间取平衡。", bg="img/ph-select.webp")
  + f"""<section class="sec"><div class="wrap">{snav(1)}
   <nav class="pillbar" data-filter=".tbl tbody tr" aria-label="系列筛选">
     <button class="on" data-v="all">全部系列</button><button data-v="KIA3">KIA3 标准系列</button><button data-v="KIA3K">KIA3K 加厚系列</button><button data-v="KIC">KIC 系列</button>
@@ -128,7 +128,7 @@ w('specs.html', head(
       <tr><td><b>金属纤维烧结毡</b></td><td>316L、铁铬铝、镍、钛、哈氏合金、蒙乃尔、双相合金</td><td>绝对精度 10–60μm；厚度 0.3–1.1mm</td><td class="num">≤480℃</td></tr>
       <tr><td><b>金属纤维织物</b></td><td>100% 316L（可定制铁铬铝）</td><td>织带厚 0.35–0.5mm；幅宽 1000/1200/1500mm</td><td class="num">350℃ 长期 / 1100℃ 短时</td></tr>
       <tr><td><b>过滤元器件</b></td><td>316L 滤材 + 304 骨架与支撑网</td><td>名义精度 10μm 起；孔隙率约 72%；可折波、定制接口</td><td class="num">≤480℃</td></tr>
-      <tr><td><b>净化设备 · 收油系统</b></td><td>改性金属纤维聚结芯</td><td>罐式 ≤30 m³/h；最大单套 600 m³/h；除油率 70%；出口含油 5–30 mg/L</td><td>按工况</td></tr>
+      <tr><td><b>净化设备 · 收油系统</b></td><td>改性金属纤维聚结芯</td><td>罐式 ≤30 m³/h；单套可达 600 m³/h；除油率 70%；出口含油 5–30 mg/L</td><td>按工况</td></tr>
     </tbody>
   </table></div>
 </div></section>"""

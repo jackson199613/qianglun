@@ -156,9 +156,9 @@ w('achievements.html', head(
 
   <div class="sec-h" style="margin:82px 0 24px"><h2>代表性成果转化</h2></div>
   <div class="g3">
-    <article class="card rv"><h3>航天配套针刺毡</h3><p>自研金属纤维针刺毡成功应用于长征五号 B、长征五号遥五运载火箭发动机，公司是国内最早配套航天工程的金属纤维毡供应商。</p></article>
-    <article class="card rv d1"><h3>KKF 滤机烧结毡</h3><p>先后研制出国内首张 KKF 滤机烧结毡、最大规格 KKF 滤机烧结毡，以及首张国产金属纤维针刺毡。</p></article>
-    <article class="card rv d2"><h3>收油系统产业化</h3><p>纯物理功能纤维除油系统已在镍钴湿法冶金行业规模化应用，最大单套处理量 600 m³/h。</p></article>
+    <article class="card rv"><h3>航天配套针刺毡</h3><p>自研金属纤维针刺毡成功应用于长征五号 B、长征五号遥五运载火箭发动机，公司是较早配套航天工程的金属纤维毡供应商。</p></article>
+    <article class="card rv d1"><h3>KKF 滤机烧结毡</h3><p>先后研制出国内首张 KKF 滤机烧结毡、大规格 KKF 滤机烧结毡，以及首张国产金属纤维针刺毡。</p></article>
+    <article class="card rv d2"><h3>收油系统产业化</h3><p>纯物理功能纤维除油系统已在镍钴湿法冶金行业规模化应用，单套处理量可达 600 m³/h。</p></article>
   </div>
   <div class="note" style="margin-top:40px"><b>奖项</b>：2022 年福建省百万职工「五小」创新大赛一等奖、2019 年三等奖；龙岩市专利奖三等奖；第八届龙岩市科技创新创业大赛三等奖；入围第十一届、第十五届中国创新创业大赛全国赛。</div>
 </div></section>"""
