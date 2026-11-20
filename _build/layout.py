@@ -81,7 +81,7 @@ def header(active=""):
   </div>
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="强纶新材 首页">
-      <img src="{LOGO}" alt="强纶新材 logo" width="42" height="42">
+      <span class="bm"><img src="{LOGO}" alt="强纶新材 logo" width="42" height="42"><i class="reg">®</i></span>
       <span><strong>强纶新材</strong><small>QLfiber · SINCE 2002</small></span>
     </a>
     <nav class="menu" id="menu">{items}</nav>
@@ -133,7 +133,7 @@ def footer():
     return f"""<footer>
   <div class="wrap ft">
     <div>
-      <a class="brand" href="index.html"><img src="{LOGO}" alt="" width="42" height="42"><span><strong>强纶新材</strong><small>QLfiber · SINCE 2002</small></span></a>
+      <a class="brand" href="index.html"><span class="bm"><img src="{LOGO}" alt="" width="42" height="42"><i class="reg">®</i></span><span><strong>强纶新材</strong><small>QLfiber · SINCE 2002</small></span></a>
       <p>福建强纶新材料股份有限公司，专注金属纤维及其制品、过滤成套装备的研发、生产、销售与技术服务。</p>
       <div class="fqr">
         <button type="button" class="sq" aria-label="公众号"><i><svg class="i brand"><use href="#i-wechat"/></svg></i>公众号<span class="pop"><img src="img/qr-mp.webp" alt="强纶新材公众号二维码" loading="lazy"><b>公众号</b><em>微信扫一扫关注</em></span></button>

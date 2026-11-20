@@ -26,6 +26,10 @@ svg.i.brand{fill:currentColor;stroke:none}
 .nav{display:flex;align-items:center;height:88px;gap:36px;transition:height .4s}
 #hdr.solid .nav{height:72px}
 .brand{display:flex;align-items:center;gap:12px}
+.bm{position:relative;display:inline-flex;flex:none}
+.bm .reg{position:absolute;top:-4px;right:-10px;font-style:normal;font-size:12px;font-weight:700;line-height:1;color:#c0021c;font-family:Arial,sans-serif}
+.ft .bm .reg{color:#e8e6e1}
+#intro .bm-x .reg{font-size:20px;top:-6px;right:-18px;color:#fff}
 .brand img{width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px var(--line)}
 .brand strong{display:block;font-family:"Noto Serif SC",serif;font-size:19px;letter-spacing:.18em;font-weight:900;line-height:1.15}
 .brand small{display:block;font-size:9.5px;letter-spacing:.42em;color:var(--muted)}
