@@ -8,7 +8,7 @@ from common import w, ENDCTA, rnav, vr_block
 # ════════ 核心技术平台（4 个方向）
 PLAT = [
  ("01","超细纤维制备","复合拉拔核心工艺，将金属棒逐级拉拔成丝、再拉成纤维，细至 2μm，比头发丝细约 35 倍。材质覆盖 316L、304、铁铬铝、镍、钛、铜等。",
-  "img/media-01.webp","纤维纱线 · 烧结毡",["直径低至 2μm 稳定量产","可按客户要求生产 4–100μm","直条与压花两种交货状态"]),
+  "img/media-01.webp","纤维纱线 · 烧结毡",["直径低至 2μm 批量生产","可按客户要求生产 4–100μm","直条与压花两种交货状态"]),
  ("02","烧结成型","多层梯度孔结构高温层压烧结，使纤维交点扩散结合形成整体刚性，兼顾过滤精度与纳污量，可焊接、可机加工、可反复清洗再生。",
   "img/jl-felt.webp","烧结毡 · 烧结网",["绝对精度 10–60μm","孔隙率 72%–86%","耐 480℃ 环境介质","可定制加强、加厚、密集网"]),
  ("03","过滤设备","从滤材到元件再到成套装备的自制能力：滤芯骨架、过滤器壳体、收油系统的精密加工、焊接与装配，以及过滤应用试验与效果分析。",
@@ -24,7 +24,7 @@ plat_cards = "".join(f"""<article class="mcard rv">
 
 w('platforms.html', head(
     "核心技术平台 | 超细纤维制备 · 烧结成型 · 过滤设备 · 导电发热 — 强纶新材",
-    "强纶四大核心技术平台：超细纤维制备（2μm 稳定量产）、烧结成型（10–60μm 梯度孔）、过滤设备（可达 600 m³/h）与导电发热应用（米电阻 1–100Ω）。",
+    "强纶四大核心技术平台：超细纤维制备（2μm 批量生产）、烧结成型（10–60μm 梯度孔）、过滤设备（可达 600 m³/h）与导电发热应用（米电阻 1–100Ω）。",
     "超细纤维制备,复合拉拔,烧结成型,过滤设备,导电发热,核心技术",
     "platforms.html", og_img="img/media-01.webp")
  + header('rd.html')
@@ -42,7 +42,7 @@ w('platforms.html', head(
 ROOMS = [
  ("流体净化研究室","黄朝强 · 董事长兼技术总工","过滤净化方向研发，已成功研制纯物理方法将油与水分离的设备。福建省创业之星人才、全国筛标委副秘书长、中国化工学会过滤与分离行业专家。"),
  ("氢能源研究室","陈作锋 · 同济大学教授","国家高层次青年人才，研发方向为能源电催化、氢能开发以及新能源材料。"),
- ("金属橡胶研究室","张明 · 技术副总工","资深研究员、国家级科技成果评审专家，负责金属橡胶材料、减震吸能结构与航空航天发动机配套方向的研发。"),
+ ("金属橡胶研究室","张明 · 技术副总工","资深研究员、国家级科技成果评审专家，负责金属橡胶材料、减震吸能结构与航空航天领域配套方向的研发。"),
  ("电化学研究室","方惠会 · 公司董事","中南大学教授级高工，主要进行多孔材料、新能源方向的研发。"),
  ("金属学研究室","孙锦辉 · 博士","金属显微组织与强韧化、多孔金属吸油耐磨性能研究。"),
  ("多孔介质燃烧研究室","李工 · 高级工程师","原龙工高级工程师，负责低热值燃烧技术、高温除尘材料及设备研发。"),
@@ -91,6 +91,23 @@ w('lab.html', head(
     <figure><img src="img/lab-chem-05.webp" alt="试剂与耗材储备区" loading="lazy"><figcaption>试剂与耗材储备</figcaption></figure>
     <figure><img src="img/lab-wide-02.webp" alt="实验室洁净区" loading="lazy"><figcaption>实验室洁净区</figcaption></figure>
     <figure><img src="img/lab-op-02.webp" alt="仪器操作与数据读取" loading="lazy"><figcaption>仪器操作与数据读取</figcaption></figure>
+    <figure><img src="img/news/news08-2.webp" alt="实验检测" loading="lazy"><figcaption>实验检测</figcaption></figure>
+    <figure><img src="img/news/news19-0.webp" alt="研发人员实验" loading="lazy"><figcaption>研发人员实验</figcaption></figure>
+    <figure><img src="img/eq-sem.webp" alt="扫描电子显微镜" loading="lazy"><figcaption>扫描电子显微镜</figcaption></figure>
+    <figure><img src="img/lab-02.webp" alt="中试车间" loading="lazy"><figcaption>中试车间</figcaption></figure>
+    <figure><img src="img/lab-01.webp" alt="中试实验区" loading="lazy"><figcaption>中试实验区</figcaption></figure>
+    <figure><img src="img/sem-sample.webp" alt="电镜样品装载" loading="lazy"><figcaption>电镜样品装载</figcaption></figure>
+  </div>
+
+  <div class="sec-h" style="margin:86px 0 26px"><h2>研究院展厅</h2>
+    <p>展厅集中展示强纶的发展历程、科研成果与产品应用，是客户与合作伙伴来访交流的第一站。</p></div>
+  <div class="gal c3">
+    <figure><img src="img/news/news14-2.webp" alt="研究院展厅" loading="lazy"><figcaption>研究院展厅</figcaption></figure>
+    <figure><img src="img/news/news03-3.webp" alt="展厅入口" loading="lazy"><figcaption>展厅入口</figcaption></figure>
+    <figure><img src="img/news/news08-0.webp" alt="展厅中央展台" loading="lazy"><figcaption>中央展台</figcaption></figure>
+    <figure><img src="img/news/news17-0.webp" alt="展厅讲解" loading="lazy"><figcaption>展厅讲解</figcaption></figure>
+    <figure><img src="img/news/news17-1.webp" alt="产品展柜" loading="lazy"><figcaption>产品展柜</figcaption></figure>
+    <figure><img src="img/news/news17-3.webp" alt="来访交流" loading="lazy"><figcaption>来访交流</figcaption></figure>
   </div>
 
 </div></section>"""
@@ -100,7 +117,7 @@ w('lab.html', head(
 # ════════ 检测能力
 w('testing.html', head(
     "检测能力 | 检测项目 · 设备清单 · 报告类型 — 强纶新材",
-    "强纶可出具的检测项目：绝对过滤等级、过滤效率、孔隙率、气泡点压强、透气度、厚度与面密度等，并可按订单约定提供 ROHS 等第三方检测报告。",
+    "强纶可开展的检测项目：绝对过滤等级、过滤效率、孔隙率、气泡点压强、透气度、厚度与面密度、力学与电性能等。",
     "过滤材料检测,气泡点检测,透气度检测,孔隙率,检测报告,ROHS",
     "testing.html", og_img="img/eq-sem.webp")
  + header('rd.html')
@@ -114,15 +131,15 @@ w('testing.html', head(
     <thead><tr><th>检测项目</th><th>说明</th><th>适用产品</th></tr></thead>
     <tbody>
       <tr><td><b>绝对过滤等级</b></td><td>滤材能够基本全部拦截的颗粒尺寸，单位 μm</td><td>烧结毡、烧结网、滤芯</td></tr>
-      <tr><td><b>过滤效率</b></td><td>对指定粒径颗粒的拦截比例，如气体过滤 99.9% @ 1μm</td><td>烧结毡、滤芯</td></tr>
-      <tr><td><b>孔隙率</b></td><td>孔隙体积占总体积百分比，典型值 72%–86%</td><td>烧结毡、多孔材料</td></tr>
-      <tr><td><b>平均起泡压强</b></td><td>反映平均孔径水平，偏差通常 ±10%</td><td>烧结毡、滤芯</td></tr>
+      <tr><td><b>过滤效率</b></td><td>对指定粒径颗粒的拦截比例</td><td>烧结毡、滤芯</td></tr>
+      <tr><td><b>孔隙率</b></td><td>孔隙体积占总体积的百分比</td><td>烧结毡、多孔材料</td></tr>
+      <tr><td><b>平均起泡压强</b></td><td>反映平均孔径水平</td><td>烧结毡、滤芯</td></tr>
       <tr><td><b>初始起泡压强</b></td><td>反映单个大孔孔径，用于判断是否存在缺陷孔</td><td>烧结毡、滤芯</td></tr>
-      <tr><td><b>透气度</b></td><td>规定压差下单位面积通气量，如 71 L/min/dm² @ 200Pa</td><td>烧结毡、织物</td></tr>
+      <tr><td><b>透气度</b></td><td>规定压差下单位面积的通气量</td><td>烧结毡、织物</td></tr>
       <tr><td><b>厚度与面密度</b></td><td>厚度 mm 与单位面积克重</td><td>烧结毡、织物、织带</td></tr>
       <tr><td><b>力学性能</b></td><td>强力、耐压、耐磨等</td><td>纱线、织物、滤芯</td></tr>
       <tr><td><b>电性能</b></td><td>米电阻；如需精确电阻指标可提供试样实测</td><td>导电纱、金属纤维线、织物</td></tr>
-      <tr><td><b>第三方检测</b></td><td>ROHS 四项等，由第三方机构出具（如金属纤维线 275×3，2026.05.16）</td><td>按订单约定</td></tr>
+      <tr><td><b>第三方检测</b></td><td>按客户要求委托第三方机构检测</td><td>按订单约定</td></tr>
     </tbody>
   </table></div>
 
@@ -151,30 +168,14 @@ w('testing.html', head(
     </div>
   </div>
 
-  <div class="sec-h" style="margin:86px 0 26px"><h2>线材检测报告</h2>
-    <p>以金属纤维线为例，下列报告均已出具，可按订单需要提供。</p></div>
-  <div class="tbl-wrap"><table class="tbl">
-    <thead><tr><th>报告名称</th><th>检测内容</th><th>出具方</th></tr></thead>
-    <tbody>
-      <tr><td><b>ROHS 四项</b>（1000×3 / 275×3 / 100×3）</td><td>铅、镉、汞、六价铬限值，2026.05.16</td><td>第三方机构</td></tr>
-      <tr><td><b>材质报告</b>（275×3，316L）</td><td>材质成分验证，2026.05.13；另备英文版</td><td>第三方机构</td></tr>
-      <tr><td><b>拉伸试验报告</b></td><td>金属纤维线抗拉强度与断裂伸长</td><td>本公司实验室</td></tr>
-      <tr><td><b>水洗前后电阻</b></td><td>水洗循环前后的电阻变化，验证导电持久性</td><td>本公司实验室</td></tr>
-      <tr><td><b>远红外性能报告</b></td><td>远红外发射率，用于发热与功能纺织应用</td><td>第三方机构</td></tr>
-      <tr><td><b>红外反射能谱</b></td><td>红外波段反射特性</td><td>第三方机构</td></tr>
-      <tr><td><b>磁性报告</b></td><td>磁性能表征，用于屏蔽与特殊工况选型</td><td>第三方机构</td></tr>
-    </tbody>
-  </table></div>
-  <p class="tnote" style="margin-top:14px">以上为金属纤维线的既有报告清单。其他产品线的报告可按订单约定出具或委托第三方检测。</p>
-
   <div class="g2 wide" style="margin-top:82px">
     <div class="prose rv">
       <h3 style="margin-top:0">报告类型</h3>
       <p><strong>出厂检验报告</strong>：随货交付，含该批次的精度、气泡点、透气值、厚度与外观检验结果，可追溯到批次号与工艺参数。</p>
       <p><strong>型式检验报告</strong>：针对新型号或新工艺的完整性能验证。</p>
-      <p><strong>第三方检测报告</strong>：按客户或出口要求，委托第三方机构检测并出具，如 ROHS 四项。</p>
+      <p><strong>第三方检测</strong>：按客户或出口要求，委托第三方机构检测。</p>
       <h3>过滤应用试验</h3>
-      <p>公司可进行过滤应用试验，为客户设计过滤技术方案并分析产品应用效果；对液体情况复杂的客户，可免费提供前期实验设备及技术人员入厂试验。</p>
+      <p>公司可进行过滤应用试验，为客户设计过滤技术方案并分析产品应用效果；对场景复杂的客户，可提供前期实验设备及技术人员入厂试验。</p>
     </div>
     <div class="rv d1">
       <div class="note"><b>外部技术支持</b><br>与天津大学、上海化工研究院、中南大学、厦门大学、同济大学等院校保持长期合作交流，复杂课题可联合攻关。</div>

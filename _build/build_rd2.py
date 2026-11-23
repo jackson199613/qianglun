@@ -31,6 +31,12 @@ def yr(d): return d.split('.')[0]
 years = sorted({yr(d) for _, _, d in PAT}, reverse=True)
 pat_rows = "".join(f'<tr data-tag="{t} Y{yr(d)}"><td class="num">{n}</td><td>{t}</td><td class="num">{d}</td></tr>' for n, t, d in PAT)
 cnt = {"发明": 11, "实用新型": 44, "外观设计": 2}
+def _cert(kind, n):
+    return (f'<figure class="cert"><div class="paper"><span class="emb"></span><b>{kind}专利证书</b>'
+            f'<i>国家知识产权局</i><span class="ln"></span><span class="ln s"></span><span class="seal"></span></div>'
+            f'<figcaption><b class="num">{n}</b> 项{kind}专利</figcaption></figure>')
+cert_tiles = _cert("发明", 11) + _cert("实用新型", 44) + _cert("外观设计", 2) + (
+    '<figure class="cert all"><div class="paper"><b class="big num">57</b><i>项授权专利</i></div><figcaption>累计授权专利</figcaption></figure>')
 
 w('patents.html', head(
     "专利与标准 | 授权专利 57 项 · 国标 5 项 — 强纶新材",
@@ -42,24 +48,11 @@ w('patents.html', head(
  + page_hero("05", "PATENTS", "专利与标准",
              "<em>57 项</em>专利，<em>6 项</em>标准",
              "作为国家知识产权优势企业与全国颗粒表征与分检及筛网标准化技术委员会委员单位，强纶不仅做产品，也参与定义行业的度量方式。",
-             [("57","项","授权专利"),("11","项","发明专利"),("5","项","参与国家标准"),("1","项","参与行业标准")], bg="img/ph-rd.webp")
+             [("57","项","授权专利"),("11","项","发明专利"),("5","项","参与国家标准"),("1","项","参与行业标准")], bg="img/en-ph-rd.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(4)}
-  <div class="sec-h row"><div><h2>专利墙</h2><p>可按专利类型与授权年份筛选。</p></div></div>
-  <div class="g4" style="margin-bottom:30px">
-    <div class="card rv"><span class="n">11</span><h3>发明专利</h3><p>核心工艺与材料体系</p></div>
-    <div class="card rv d1"><span class="n">44</span><h3>实用新型</h3><p>结构、装置与工装</p></div>
-    <div class="card rv d2"><span class="n">2</span><h3>外观设计</h3><p>产品外观</p></div>
-    <div class="card rv d3"><span class="n">57</span><h3>合计</h3><p>截至 2025 年 10 月</p></div>
-  </div>
-  <nav class="pillbar" data-filter=".tbl tbody tr" aria-label="专利筛选">
-    <button class="on" data-v="all">全部</button><button data-v="发明">发明</button><button data-v="实用新型">实用新型</button><button data-v="外观设计">外观设计</button>
-    {"".join(f'<button data-v="Y{y}">{y}</button>' for y in years[:6])}
-  </nav>
-  <div class="tbl-wrap"><table class="tbl">
-    <caption>授权专利清单 · 共 57 项</caption>
-    <thead><tr><th>授权专利号</th><th>专利类型</th><th class="num">授权日期</th></tr></thead>
-    <tbody>{pat_rows}</tbody>
-  </table></div>
+  <div class="sec-h"><h2>专利墙</h2><p>截至 2025 年 10 月，公司累计获得授权专利 57 项，覆盖金属纤维成型、梯度烧结结构、聚结除油与导电纺织等方向。</p></div>
+  <div class="patwall rv">{cert_tiles}</div>
+  <p class="tnote">专利证书原件可在来访交流时查阅。</p>
 
   <div class="sec-h" style="margin:86px 0 24px"><h2>参与制修订的标准</h2></div>
   <div class="tbl-wrap"><table class="tbl">
@@ -78,31 +71,31 @@ w('patents.html', head(
  + ENDCTA + footer())
 
 # ════════ 产学研合作
-COOP = [
- ("钨丝拉拔工艺技术研发","龙岩学院化学与材料学院"),
- ("超细金属纤维基聚合物电磁屏蔽复合材料的研发与应用","闽江学院、内蒙古工业大学"),
+COOP = [  # 2026.11.23 客户要求：知名院校在前，闽江学院排在龙岩学院前
+ ("福厦泉国家自主创新示范区先进核反应堆用关键材料研制与应用协同创新平台","厦门大学"),
+ ("《新型一体化催化电极的制备及其电解槽研发与产业化》","同济大学、闽西职业技术学院"),
+ ("广龙联合金属橡胶研发中心","广东粤港澳大湾区黄埔材料研究院"),
  ("颗粒与筛网联合实验","中机研标准技术研究院（北京）有限公司"),
  ("三元锂电池镍再生工作液深度脱油技术研究","安徽理工大学"),
- ("共建「研究生专业实践基地」","龙岩学院"),
- ("广龙联合金属橡胶研发中心","广东粤港澳大湾区黄埔材料研究院"),
- ("福厦泉国家自主创新示范区先进核反应堆用关键材料研制与应用协同创新平台","厦门大学"),
- ("共建孵化器合作","集美大学产业技术研究院、龙岩拓鼎科技有限公司"),
- ("《新型一体化催化电极的制备及其电解槽研发与产业化》","同济大学、闽西职业技术学院"),
  ("校企产学研合作框架协议","厦门理工学院"),
  ("行星减速器用铁基粉末冶金传动齿轮高可靠性技术研究及测试体系开发","厦门理工学院"),
+ ("共建孵化器合作","集美大学产业技术研究院、龙岩拓鼎科技有限公司"),
+ ("超细金属纤维基聚合物电磁屏蔽复合材料的研发与应用","闽江学院、内蒙古工业大学"),
+ ("钨丝拉拔工艺技术研发","龙岩学院化学与材料学院"),
+ ("共建「研究生专业实践基地」","龙岩学院"),
 ]
 coop_rows = "".join(f'<div class="row-i"><span class="dt">产学研</span><div><h4>{t}</h4><p>合作机构：{o}</p></div></div>' for t, o in COOP)
 
 w('coop.html', head(
-    "产学研合作 | 厦门大学 · 同济大学 · 龙岩学院 — 强纶新材",
-    "强纶与厦门大学、同济大学、龙岩学院、闽江学院、安徽理工大学、粤港澳大湾区黄埔材料研究院等院校及科研院所开展 11 项产学研合作与共建平台。",
-    "产学研合作,厦门大学,同济大学,龙岩学院,联合实验室,共建平台",
+    "产学研合作 | 厦门大学 · 同济大学 · 闽江学院 — 强纶新材",
+    "强纶与厦门大学、同济大学、粤港澳大湾区黄埔材料研究院、安徽理工大学、厦门理工学院、闽江学院、龙岩学院等院校及科研院所开展 11 项产学研合作与共建平台。",
+    "产学研合作,厦门大学,同济大学,闽江学院,联合实验室,共建平台",
     "coop.html")
  + header('rd.html')
  + crumb([("科研创新", "rd.html"), ("产学研合作", None)])
  + page_hero("06", "COOPERATION", "产学研合作",
              "把高校的理论，<em>放进车间验证</em>",
-             "公司与多所高校及科研院所保持长期合作：既有联合攻关的具体课题，也有共建平台、实践基地与孵化器。", bg="img/ph-rd.webp")
+             "公司与多所高校及科研院所保持长期合作：既有联合攻关的具体课题，也有共建平台、实践基地与孵化器。", bg="img/en-ph-rd.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(5)}
   <div class="g4" style="margin-bottom:34px">
     <div class="card rv"><span class="n">11</span><h3>合作项目</h3><p>覆盖材料、装备、新能源与标准化</p></div>
@@ -139,7 +132,7 @@ w('achievements.html', head(
  + page_hero("07", "ACHIEVEMENTS", "科研成果",
              "立项之后，<em>要能变成产品</em>",
              "公司承担的省市级科技计划项目大多与在产产品线直接相关——立项课题的目标，就是解决产线上已经遇到的问题。",
-             [("4","项","省级科技计划项目"),("2","项","市级科技计划项目"),("57","项","授权专利"),("12","%+","研发投入占收入")], bg="img/ph-rd.webp")
+             [("4","项","省级科技计划项目"),("2","项","市级科技计划项目"),("57","项","授权专利"),("12","%+","研发投入占收入")], bg="img/en-ph-rd.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(6)}
   <div class="sec-h"><h2>省级科技计划项目</h2></div>
   <div class="tbl-wrap"><table class="tbl">
@@ -156,7 +149,7 @@ w('achievements.html', head(
 
   <div class="sec-h" style="margin:82px 0 24px"><h2>代表性成果转化</h2></div>
   <div class="g3">
-    <article class="card rv"><h3>航天配套针刺毡</h3><p>自研金属纤维针刺毡成功应用于长征五号 B、长征五号遥五运载火箭发动机，公司是较早配套航天工程的金属纤维毡供应商。</p></article>
+    <article class="card rv"><h3>航空航天领域配套</h3><p>自主研发的金属纤维毡制品已应用于航空航天领域。</p></article>
     <article class="card rv d1"><h3>KKF 滤机烧结毡</h3><p>先后研制出国内首张 KKF 滤机烧结毡、大规格 KKF 滤机烧结毡，以及首张国产金属纤维针刺毡。</p></article>
     <article class="card rv d2"><h3>收油系统产业化</h3><p>纯物理功能纤维除油系统已在镍钴湿法冶金行业规模化应用，单套处理量可达 600 m³/h。</p></article>
   </div>

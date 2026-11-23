@@ -8,7 +8,7 @@ from common import w, anav, ENDCTA, vr_block, film_block
 
 
 # ───────────────────────────── 1. 企业简介
-schema_org = '{"@context":"https://schema.org","@type":"Organization","name":"福建强纶新材料股份有限公司","alternateName":["强纶新材","FUJIAN QL METAL FIBER CO., LTD"],"url":"%s/","logo":"https://www.qlfiber.com/assets/images/logo.png","foundingDate":"2002-12","numberOfEmployees":{"@type":"QuantitativeValue","value":200},"tickerSymbol":"872336","address":{"@type":"PostalAddress","streetAddress":"龙岩市东肖镇经济技术开发区黄邦路11号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"},"telephone":"+86-15359927344","description":"国内规模领先、福建省内唯一专注金属功能纤维及制品研发生产的高新技术企业，国家级专精特新“小巨人”企业。"}' % SITE
+schema_org = '{"@context":"https://schema.org","@type":"Organization","name":"福建强纶新材料股份有限公司","alternateName":["强纶新材","FUJIAN QL METAL FIBER CO., LTD"],"url":"%s/","logo":"https://qianglun.netlify.app/img/logo.png","foundingDate":"2002-12","numberOfEmployees":{"@type":"QuantitativeValue","value":200},"tickerSymbol":"872336","address":{"@type":"PostalAddress","streetAddress":"龙岩市东肖镇经济技术开发区黄邦路11号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"},"telephone":"+86-15359927344","description":"国内规模领先、福建省内唯一专注金属功能纤维及制品研发生产的高新技术企业，国家级专精特新“小巨人”企业。"}' % SITE
 
 w('about.html', head(
     "企业简介 | 福建强纶新材料股份有限公司",
@@ -29,7 +29,7 @@ w('about.html', head(
       <h3>五大技术方向</h3>
       <p>紧扣国家新材料产业战略布局，公司聚焦<strong>滤材滤器、流体净化、电热材料、多孔材料、特种纺织</strong>五大方向持续攻关，突破多项“卡脖子”技术，实现关键产品进口替代。现已形成金属纤维、烧结滤材、金属纱线、编织物、电热服饰等十大系列产品，兼具导电、耐火、柔性、防切割、减震等性能，广泛服务于航空航天、石油化工、化纤冶金、能源交通等关键领域。</p>
       <h3>核心产品的市场位置</h3>
-      <p>金属纱线在电热面料领域应用广泛，金属烧结毡长期服务黏胶行业。作为较早配套航天工程的金属纤维毡供应商，自研针刺毡成功应用于<strong>长征五号 B、长征五号遥五</strong>运载火箭发动机；国产化熔体滤芯批量供应国内大型石化、化纤龙头企业，先后研制出 KKF 滤机烧结毡、大规格 KKF 滤机烧结毡以及国产金属纤维针刺毡。</p>
+      <p>金属纱线在电热面料领域应用广泛，金属烧结毡长期服务黏胶行业。金属纤维毡制品已应用于航空航天领域；国产化熔体滤芯批量供应国内大型石化、化纤龙头企业，先后研制出 KKF 滤机烧结毡、大规格 KKF 滤机烧结毡以及国产金属纤维针刺毡。</p>
       <h3>创新与标准</h3>
       <p>公司建有省级新型研发机构、省级企业技术中心等科研平台，配备高端精密检测设备，与厦门大学、厦门理工学院等高校深化产学研协同创新。公司是全国颗粒表征与分检及筛网标委会委员单位，参与制修订 <strong>5 项国家标准、1 项行业标准</strong>，累计授权专利 <strong>57 项</strong>（发明 11 项、实用新型 44 项、外观 2 项）。</p>
       <p>展望未来，公司坚持“协调创新、联合创业、利益共享”的经营理念，深耕先进金属功能新材料研发与产业化，着力发展新质生产力、助力区域和行业高质量发展。</p>
@@ -45,9 +45,9 @@ w('about.html', head(
 
   <div class="sec-h" style="margin:96px 0 40px"><h2>覆盖材料到系统的<em>完整链条</em></h2><p>从一根金属纤维出发，向下游延伸到纱线织物、烧结滤材、过滤元件，直到成套净化设备。</p></div>
   <div class="g4">
-    <article class="card rv"><span class="n">01</span><h3>金属纤维</h3><p>复合拉拔制备，直径低至 2μm，不锈钢 / 镍 / 钛 / 铁铬铝 / 铜多材质。</p></article>
+    <article class="card rv"><span class="n">01</span><h3>金属纤维</h3><p>复合拉拔制备的微米级纤维，不锈钢、镍、钛、铁铬铝、铜等多种材质。</p></article>
     <article class="card rv d1"><span class="n">02</span><h3>纱线与织物</h3><p>导电纱、缝纫线、金属纤维线、编织带、套管与机织布，可纺可织。</p></article>
-    <article class="card rv d2"><span class="n">03</span><h3>烧结滤材</h3><p>多层梯度孔结构高温烧结，精度 10–60μm，耐温耐腐蚀可再生。</p></article>
+    <article class="card rv d2"><span class="n">03</span><h3>烧结滤材</h3><p>多层梯度孔结构高温烧结，耐温、耐腐蚀、可清洗再生。</p></article>
     <article class="card rv d3"><span class="n">04</span><h3>元件与设备</h3><p>熔体 / 水 / 除尘滤芯、滤盘，直至收油系统等成套净化装备。</p></article>
   </div>
 </div></section>"""
@@ -59,10 +59,10 @@ TL = [
     ("2002.12", "公司成立", "龙岩强龙金属纤维有限公司成立，注册资本 3800 万元，深耕金属纤维制品及滤材领域。", False),
     ("2017.06", "完成股份制改造", "更名为福建强纶新材料股份有限公司。", False),
     ("2017.11", "新三板挂牌", "强纶新材正式在全国中小企业股份转让系统挂牌，股票代码 872336。", True),
-    ("2020", "配套国家航天工程", "公司针刺毡产品成功应用于长征五号 B、长征五号遥五运载火箭发动机。", True),
+    ("2020", "产品进入航空航天领域", "自主研发的金属纤维毡制品成功应用于航空航天领域。", True),
     ("2021", "获评国家高新技术企业", "持续夯实研发体系，建立省级企业技术中心与新型研发机构。", False),
-    ("2023", "省级专精特新“小巨人”", "获评福建省专精特新中小企业（首批）。", False),
-    ("2025", "国家级专精特新“小巨人”", "获评国家级专精特新“小巨人”企业。", True),
+    ("2023", "福建省专精特新中小企业", "入选福建省首批专精特新中小企业。", False),
+    ("2025", "国家级专精特新“小巨人”企业", "在省级专精特新的基础上，入选工业和信息化部第七批国家级专精特新“小巨人”企业。", True),
     ("2026.09", "拓展新赛道", "完成经营范围升级，拓展储能、先进金属材料方向；完成定向增发，注册资本增至 4275 万元。", True),
 ]
 tl_html = "".join(
@@ -71,8 +71,8 @@ tl_html = "".join(
 
 w('history.html', head(
     "发展历程 | 强纶新材",
-    "2002 年创立至今：2017 股改并新三板挂牌 872336、2020 产品应用于长征五号 B 火箭发动机、2021 国家高新技术企业、2025 国家级专精特新“小巨人”。",
-    "强纶发展历程,强纶大事记,872336挂牌,长征五号",
+    "2002 年创立至今：2017 股改并新三板挂牌 872336、2020 产品进入航空航天领域、2021 国家高新技术企业、2025 国家级专精特新“小巨人”。",
+    "强纶发展历程,强纶大事记,872336挂牌,专精特新小巨人",
     "history.html")
  + header('about.html')
  + crumb([("关于强纶", "about.html"), ("发展历程", None)])
@@ -102,7 +102,7 @@ w('manufacturing.html', head(
  + crumb([("关于强纶", "about.html"), ("制造能力", None)])
  + page_hero("03", "MANUFACTURING", "制造能力",
              "把金属棒，<em>一路拉到 2 微米</em>",
-             "核心工艺是复合拉拔：将金属棒逐级拉拔成金属细丝，再拉拔成金属纤维，细至 2μm，比头发丝细约 35 倍；随后通过捻搓、纺纱、编织、烧结等工序制成纱线、织物、烧结毡与过滤元件。",
+             "核心工艺是复合拉拔：将金属棒逐级拉拔成金属细丝，再拉拔成金属纤维，细至微米级；随后通过捻搓、纺纱、编织、烧结等工序制成纱线、织物、烧结毡与过滤元件。",
              [("40", "亩", "自有工业用地"), ("1800", "㎡", "厂房面积"), ("200", "+", "员工人数"), ("5", "大", "制研平台")],
              bg="img/mfg-hero-loom.webp")
  + f"""<section class="sec"><div class="wrap">{anav(2)}
@@ -113,7 +113,7 @@ w('manufacturing.html', head(
     <article class="card rv d2"><span class="n">03</span><h3>纺纱编织</h3><p>金属纤维可纺可织，制成纱线、缝纫线、金属纤维线、机织带、套管与机织布。</p></article>
     <article class="card rv"><span class="n">04</span><h3>电化学材料加工</h3><p>面向多孔材料、新能源与氢能方向的材料加工与表面改性。</p></article>
     <article class="card rv d1"><span class="n">05</span><h3>精密机械加工</h3><p>滤芯骨架、过滤器壳体与成套设备的精密加工、焊接与装配。</p></article>
-    <article class="card rv d2"><span class="n">06</span><h3>中试与成果转化</h3><p>研发源于车间实践，中试基地与多维测试中心支撑新工艺从实验室到量产。</p></article>
+    <article class="card rv d2"><span class="n">06</span><h3>中试与成果转化</h3><p>研发源于车间实践，中试基地与多维测试中心支撑新工艺从实验室走向批量生产。</p></article>
   </div>
 
   <div class="sec-h" style="margin:90px 0 32px"><h2>厂区与设备</h2><p>从金属纤维生产线、真空烧结炉到丝网织造、激光切割、数控车削、冲压与焊接，关键工序均在厂内完成。</p></div>
@@ -137,7 +137,7 @@ w('manufacturing.html', head(
       <h3 style="margin-top:0">产品自制范围</h3>
       <p>从纤维到成品的关键工序均在厂内完成：纤维制备、梳理成条、纺纱织造、无纺成毡、真空烧结、折波成型、骨架加工、焊接装配、压力试验与出厂检验。这保证了<strong>精度一致性</strong>与<strong>交期可控</strong>，也使非标定制成为常态能力而非例外。</p>
       <h3>非标定制</h3>
-      <p>可按客户的过滤精度、工况温度、介质、尺寸与接口等参数定制；液体工况复杂的客户，公司可<strong>免费提供前期实验设备并派技术人员入厂试验</strong>，用实测数据确定方案后再定型。</p>
+      <p>可按客户的过滤精度、使用温度、介质、尺寸与接口等参数定制；液体情况复杂的客户，公司可<strong>免费提供前期实验设备并派技术人员入厂试验</strong>，用实测数据确定方案后再定型。</p>
     </div>
     <div class="rv d1">
       <div class="gal c3" style="grid-template-columns:1fr 1fr">

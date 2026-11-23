@@ -6,19 +6,56 @@ TEL_RAW = "15359927344"
 TEL = "153 5992 7344"
 ADDR = "福建省龙岩市东肖镇经济技术开发区黄邦路 11 号"
 ICP = "闽ICP备2022016209号-1"
-LOGO = "https://www.qlfiber.com/assets/images/logo.png"
 
 # 栏目 → (标题, 链接)   合同附件一（一）栏目与页面清单
+LOGO = "img/logo.png"
+CO = "福建强纶新材料股份有限公司"
+CO_EN = "FUJIAN QL METAL FIBER CO., LTD."
+
+# 主导航：(名称, 链接, [(子栏目, 链接)])
 NAV = [
-    ("科研创新", "rd.html"),
-    ("产品中心", "products.html"),
-    ("应用方案", "applications.html"),
-    ("选型中心", "selector.html"),
-    ("技术专栏", "insights.html"),
-    ("关于强纶", "about.html"),
-    ("新闻动态", "news.html"),
-    ("联系我们", "contact.html"),
+    ("首页", "index.html", []),
+    ("关于强纶", "about.html", [("企业简介", "about.html"), ("发展历程", "history.html"), ("制造能力", "manufacturing.html"),
+                            ("质量体系", "quality.html"), ("资质荣誉", "honors.html"), ("企业文化", "culture.html"), ("投资者关系", "investor.html")]),
+    ("产品中心", "products.html", [("净化事业部", "p-equipment.html"), ("机加工事业部", "p-element.html"), ("滤材事业部", "p-felt.html"),
+                             ("纱线事业部", "p-yarn.html"), ("热动事业部", "p-fabric.html")]),
+    ("应用领域", "applications.html", [("过滤分离", "a-filtration.html"), ("玻璃深加工", "a-glass.html"), ("电磁屏蔽与防静电", "a-emi.html"),
+                                ("航空航天与特种材料", "a-aero.html"), ("汽车", "a-auto.html"), ("功能纺织与智能穿戴", "a-textile.html"), ("其他应用", "a-other.html")]),
+    ("科研创新", "rd.html", [("科研总览", "rd.html"), ("研发中心与实验室", "lab.html"), ("检测能力", "testing.html"),
+                         ("专利与标准", "patents.html"), ("产学研合作", "coop.html"), ("科研成果", "achievements.html")]),
+    ("技术支持", "selector.html", [("选型指南", "selector.html"), ("技术文章", "insights.html"), ("常见问题", "faq.html"), ("名词解释", "glossary.html")]),
+    ("新闻动态", "news.html", []),
+    ("联系我们", "contact.html", [("联系方式", "contact.html"), ("样品申请", "sample.html"), ("人才招聘", "jobs.html")]),
 ]
+
+# 子页 → 所属主栏目（用于高亮）
+SECTION = {}
+for _n, _h, _subs in NAV:
+    SECTION[_h] = _h
+    for _sn, _sh in _subs:
+        SECTION.setdefault(_sh, _h)
+SECTION.update({"job-detail.html": "contact.html", "search.html": "", "sitemap.html": "", "privacy.html": ""})
+
+
+def brand_html(href="index.html"):
+    return f'''<a class="brand" href="{href}" aria-label="{CO} 首页">
+      <span class="bm"><img src="{LOGO}" alt="强纶新材 logo" width="56" height="56"><i class="reg">®</i></span>
+      <span class="bt"><strong>{CO}</strong><small>{CO_EN}</small></span>
+    </a>'''
+
+
+def menu_html(active=""):
+    cur = SECTION.get(active, active)
+    out = []
+    for name, href, subs in NAV:
+        on = " on" if href == cur else ""
+        if subs:
+            sub = "".join(f'<a href="{sh}">{sn}</a>' for sn, sh in subs)
+            out.append(f'<div class="mi has{on}"><a class="mt" href="{href}">{name}</a><button class="mx" type="button" aria-label="展开{name}"></button><div class="dd">{sub}</div></div>')
+        else:
+            out.append(f'<div class="mi{on}"><a class="mt" href="{href}">{name}</a></div>')
+    return "".join(out)
+
 
 ICONS = """<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -60,6 +97,7 @@ def head(title, desc, keywords="", canonical="", extra_css="", schema="", og_img
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="page.css">
 <link rel="stylesheet" href="theme-v4.css">
+<link rel="stylesheet" href="v5.css">
 {extra_css}
 {sc}
 </head>
@@ -68,33 +106,25 @@ def head(title, desc, keywords="", canonical="", extra_css="", schema="", og_img
 
 
 def header(active=""):
-    items = "".join(
-        f'<a href="{href}"{" class=\"on\"" if href == active else ""}>{name}</a>'
-        for name, href in NAV
-    )
     return f"""<header id="hdr" class="solid">
   <div class="util">
     <div class="wrap">
-      <span>福建强纶新材料股份有限公司 · 新三板 <b class="num">872336</b></span>
-      <nav><a href="https://yarn.qlfiber.com/" target="_blank" rel="noopener">纱线事业部</a><a href="https://shop143818143.taobao.com/" target="_blank" rel="noopener">淘宝官方店</a><a href="https://shop68071416lu466.1688.com/" target="_blank" rel="noopener">1688 工厂店</a><a href="jobs.html">人才招聘</a><a href="https://qlfiber.en.alibaba.com/" target="_blank" rel="noopener" class="en">English</a></nav>
+      <span>新三板挂牌企业 · 证券代码 <b class="num">872336</b></span>
+      <nav><a href="https://yarn.qlfiber.com/" target="_blank" rel="noopener">纱线事业部官网</a><a href="https://shop143818143.taobao.com/" target="_blank" rel="noopener">淘宝官方店</a><a href="https://shop68071416lu466.1688.com/" target="_blank" rel="noopener">1688 工厂店</a><a href="jobs.html">人才招聘</a><a href="tel:{TEL_RAW}">销售热线 {TEL}</a><a href="https://qlfiber-en.netlify.app/" target="_blank" rel="noopener" class="en">English</a></nav>
     </div>
   </div>
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="强纶新材 首页">
-      <span class="bm"><img src="{LOGO}" alt="强纶新材 logo" width="42" height="42"><i class="reg">®</i></span>
-      <span><strong>强纶新材</strong><small>QLfiber · SINCE 2002</small></span>
-    </a>
-    <nav class="menu" id="menu">{items}</nav>
+    {brand_html()}
+    <nav class="menu" id="menu">{menu_html(active)}</nav>
     <div class="nav-r">
       <button class="icon-b" id="searchBtn" aria-label="站内搜索"><svg class="i"><use href="#i-search"/></svg></button>
-      <a class="tel" href="tel:{TEL_RAW}"><svg class="i"><use href="#i-phone"/></svg><span class="num">{TEL}</span></a>
-      <a class="pill pill-ink" href="contact.html#inq">在线询价<svg class="i"><use href="#i-arrow"/></svg></a>
+      <a class="pill pill-gold" href="contact.html#inq">在线询价<svg class="i"><use href="#i-arrow"/></svg></a>
       <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
     </div>
   </div>
   <div class="search" id="search" hidden>
-    <div class="wrap"><svg class="i"><use href="#i-search"/></svg><input id="q" type="search" placeholder="搜索产品、工况或技术问题，例如：化纤熔体过滤精度" aria-label="站内搜索"><button class="icon-b" id="searchX" aria-label="关闭搜索"><svg class="i"><use href="#i-x"/></svg></button></div>
-    <div class="wrap hot">热门：<a href="selector.html">按工况选型</a><a href="p-felt.html">烧结毡</a><a href="p-element.html">烧结滤芯</a><a href="p-equipment.html">收油系统</a><a href="rd.html">2μm 超细纤维</a></div>
+    <div class="wrap"><svg class="i"><use href="#i-search"/></svg><input id="q" type="search" placeholder="搜索产品、应用场景或技术问题" aria-label="站内搜索"><button class="icon-b" id="searchX" aria-label="关闭搜索"><svg class="i"><use href="#i-x"/></svg></button></div>
+    <div class="wrap hot">热门：<a href="p-equipment.html">收油系统</a><a href="p-element.html">烧结滤芯</a><a href="p-felt.html">烧结毡</a><a href="p-yarn.html">金属纤维线</a><a href="p-fabric.html">耐高温套管</a></div>
   </div>
 </header>"""
 
@@ -130,53 +160,26 @@ def page_hero(idx, en, zh, h1, lead, kpis=None, bg=""):
 
 
 def footer():
+    cols = ""
+    for name, href, subs in NAV[1:6]:
+        cols += f'<div><h5><a href="{href}">{name}</a></h5><ul>' + "".join(f'<li><a href="{sh}">{sn}</a></li>' for sn, sh in subs) + "</ul></div>"
     return f"""<footer>
   <div class="wrap ft">
-    <div>
-      <a class="brand" href="index.html"><span class="bm"><img src="{LOGO}" alt="" width="42" height="42"><i class="reg">®</i></span><span><strong>强纶新材</strong><small>QLfiber · SINCE 2002</small></span></a>
-      <p>福建强纶新材料股份有限公司，专注金属纤维及其制品、过滤成套装备的研发、生产、销售与技术服务。</p>
+    <div class="fbrand">
+      {brand_html()}
+      <p>专注金属纤维及其制品、过滤成套装备的研发、生产、销售与技术服务。</p>
+      <ul class="fct"><li>销售热线 <a class="num" href="tel:{TEL_RAW}">{TEL}</a></li><li>企业邮箱 <a href="mailto:hcq@jl-jiber.com">hcq@jl-jiber.com</a></li><li>{ADDR}</li></ul>
       <div class="fqr">
         <button type="button" class="sq" aria-label="公众号"><i><svg class="i brand"><use href="#i-wechat"/></svg></i>公众号<span class="pop"><img src="img/qr-mp.webp" alt="强纶新材公众号二维码" loading="lazy"><b>公众号</b><em>微信扫一扫关注</em></span></button>
         <button type="button" class="sq" aria-label="视频号"><i><svg class="i brand"><use href="#i-channels"/></svg></i>视频号<span class="pop"><img src="img/qr-channels.webp" alt="强纶新材视频号二维码" loading="lazy"><b>视频号</b><em>微信扫一扫打开</em></span></button>
         <a class="sq" href="https://www.douyin.com/user/MS4wLjABAAAA0PFr_Jq_GxWs3z0qsuOEAX0AYbqEWlcrNGrXj_38tgIQrK6fG3V1MWPy_QD-iqcW" target="_blank" rel="noopener" aria-label="抖音"><i><svg class="i brand"><use href="#i-douyin"/></svg></i>抖音<span class="pop"><img src="img/qr-douyin.webp" alt="强纶新材抖音二维码" loading="lazy"><b>抖音</b><em>点击前往主页，或扫码</em></span></a>
       </div></div>
-    <div><h5>产品中心</h5><ul>
-      <li><a href="p-yarn.html">金属纤维纱线</a></li>
-      <li><a href="p-felt.html">金属纤维烧结毡</a></li>
-      <li><a href="p-fabric.html">金属纤维织物</a></li>
-      <li><a href="p-element.html">过滤元器件</a></li>
-      <li><a href="p-equipment.html">净化设备 · 收油系统</a></li>
-    </ul></div>
-    <div><h5>应用方案</h5><ul>
-      <li><a href="a-filtration.html">过滤分离</a></li>
-      <li><a href="a-glass.html">玻璃深加工</a></li>
-      <li><a href="a-emi.html">电磁屏蔽与防静电</a></li>
-      <li><a href="a-aero.html">航空航天与特种材料</a></li>
-      <li><a href="a-auto.html">汽车</a></li>
-      <li><a href="a-textile.html">功能纺织与智能穿戴</a></li>
-    </ul></div>
-    <div><h5>科研与支持</h5><ul>
-      <li><a href="rd.html">科研创新</a></li>
-      <li><a href="patents.html">专利与标准</a></li>
-      <li><a href="selector.html">选型中心</a></li>
-      <li><a href="specs.html">参数对照表</a></li>
-      <li><a href="downloads.html">资料下载</a></li>
-      <li><a href="faq.html">常见问题</a></li>
-    </ul></div>
-    <div><h5>关于强纶</h5><ul>
-      <li><a href="about.html">企业简介</a></li>
-      <li><a href="history.html">发展历程</a></li>
-      <li><a href="honors.html">资质荣誉</a></li>
-      <li><a href="culture.html">企业文化</a></li>
-      <li><a href="investor.html">投资者关系</a></li>
-      <li><a href="jobs.html">人才招聘</a></li>
-    </ul></div>
+    {cols}
   </div>
   <div class="wrap fb">
-    <span>© 2026 福建强纶新材料股份有限公司 版权所有 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">{ICP}</a></span>
+    <span>© 2026 {CO} 版权所有 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">{ICP}</a></span>
     <span><a href="sitemap.html">网站地图</a> · <a href="privacy.html">隐私政策</a> · <a href="privacy.html#legal">法律声明</a></span>
   </div>
-  <div class="huge" aria-hidden="true">QIANGLUN</div>
 </footer>
 
 <div class="float">

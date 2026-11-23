@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, crumb, page_hero, footer, SITE, TEL, TEL_RAW, ADDR
 from common import w, ENDCTA
 
-QL_DOCS_JS = """<script>window.QL_DOCS={"rohs1000": {"f": "rohs-1000x3-2026.pdf", "t": "ROHS 四项检测报告（金属纤维线 1000×3）"}, "rohs275": {"f": "rohs-275x3-2026.pdf", "t": "ROHS 四项检测报告（金属纤维线 275×3）"}, "rohs100": {"f": "rohs-100x3-2026.pdf", "t": "ROHS 四项检测报告（金属纤维线 100×3）"}, "mat316l": {"f": "material-316l-cn.pdf", "t": "316L 材质报告（275×3）"}, "mat316len": {"f": "material-316l-en.pdf", "t": "316L Material Test Report（英文版）"}, "tensile": {"f": "tensile-275x3.pdf", "t": "金属纤维线拉伸试验报告（275×3）"}, "reswash": {"f": "resistance-wash.pdf", "t": "水洗前后电阻检测报告"}, "farir": {"f": "far-infrared.pdf", "t": "远红外性能检测报告"}, "irref": {"f": "ir-reflectance.pdf", "t": "红外反射能谱报告（275×3）"}, "magnetic": {"f": "magnetic.pdf", "t": "磁性能检测报告（100×3）"}};</script>"""
+QL_DOCS_JS = ""  # 2026.11.23：资料下载与检测报告已下线
 
 INQ_FORM = QL_DOCS_JS + """<form class="form" id="inqForm" name="inquiry" method="POST"
   data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
@@ -13,7 +13,7 @@ INQ_FORM = QL_DOCS_JS + """<form class="form" id="inqForm" name="inquiry" method
   <input type="hidden" name="doc" id="inqDoc">
   <p hidden><label>请勿填写：<input name="bot-field"></label></p>
   <div class="docnote" id="docNote" hidden></div>
-  <h3>工况询盘</h3>
+  <h3>在线询价</h3>
   <p class="hint">带 * 为必填。提交后信息将推送至企业微信与指定邮箱，工程师在 1 个工作日内回复。</p>
   <label>姓名 *<input name="name" required autocomplete="name"></label>
   <label>手机 *<input name="tel" type="tel" required autocomplete="tel"></label>
@@ -21,12 +21,11 @@ INQ_FORM = QL_DOCS_JS + """<form class="form" id="inqForm" name="inquiry" method
   <label>邮箱<input name="email" type="email" autocomplete="email"></label>
   <label>产品类别
     <select name="cat">
-      <option>金属纤维烧结毡</option><option>过滤元器件（滤芯 / 滤盘）</option><option>金属纤维纱线</option>
-      <option>金属纤维织物</option><option>净化设备 · 收油系统</option><option>不确定 / 请工程师推荐</option>
+      <option>净化事业部 · 收油系统</option><option>机加工事业部 · 滤芯与金属构件</option><option>滤材事业部 · 金属烧结毡</option><option>纱线事业部 · 金属纤维纱线</option><option>热动事业部 · 耐高温套管与织带</option><option>不确定 / 请工程师推荐</option>
     </select></label>
   <label>过滤介质
     <select name="medium"><option>聚合物熔体</option><option>气体 / 烟气</option><option>液体 / 料液</option><option>含油废水 / 萃取液</option><option>其他</option></select></label>
-  <label>工况温度
+  <label>使用温度
     <select name="temp"><option>≤ 150 ℃</option><option>150 – 400 ℃</option><option>&gt; 400 ℃</option><option>不确定</option></select></label>
   <label>工作压力
     <select name="pressure"><option>低压 · ≤ 1 MPa</option><option>中压 · 1 – 5 MPa</option><option>高压 · &gt; 5 MPa</option><option>常压 / 不确定</option></select></label>
@@ -48,13 +47,14 @@ INQ_FORM = QL_DOCS_JS + """<form class="form" id="inqForm" name="inquiry" method
            p:{lp:'低压 · ≤ 1 MPa',mp:'中压 · 1 – 5 MPa',hp:'高压 · > 5 MPa',np:'常压 / 不确定'},
            a:{coarse:'粗滤 · > 20 μm',mid:'中精度 · 5 – 20 μm',fine:'高精度 · < 5 μm',unk:'不确定'}};
   var names={m:'medium',t:'temp',p:'pressure',a:'acc'};
+  var cq=p.get('cat'); if(cq){var cs=f.querySelector('[name=cat]'); if(cs){[].forEach.call(cs.options,function(o,i){if(o.text.indexOf(cq)===0)cs.selectedIndex=i});}}
   Object.keys(names).forEach(function(k){
     var v=p.get(k); if(!v||!map[k][v])return;
     var sel=f.elements[names[k]]; if(!sel)return;
     [].forEach.call(sel.options,function(o){ if(o.text.replace(/\\s/g,'')===map[k][v].replace(/\\s/g,'')) sel.value=o.value||o.text; });
   });
   // 资料索取：从 ?doc= 带入要索取的文件
-  var DOCS=window.QL_DOCS||{};
+  var DOCS={};
   var dk=p.get('doc'), doc=dk&&DOCS[dk]?DOCS[dk]:null;
   if(doc){
     f.elements.doc.value=doc.t;
@@ -101,16 +101,16 @@ INQ_FORM = QL_DOCS_JS + """<form class="form" id="inqForm" name="inquiry" method
 </script>"""
 
 w('contact.html', head(
-    "联系我们 | 电话 · 地址 · 工况询盘 — 强纶新材",
-    "福建强纶新材料股份有限公司联系方式：电话 153 5992 7344 / 0597-2799968，地址福建省龙岩市东肖镇经济技术开发区黄邦路 11 号；可在线提交工况询盘并上传图纸。",
-    "强纶联系方式,强纶电话,强纶地址,工况询盘,金属纤维询价",
+    "联系我们 | 电话 · 地址 · 在线询价 — 强纶新材",
+    "福建强纶新材料股份有限公司联系方式：电话 153 5992 7344 / 0597-2799968，地址福建省龙岩市东肖镇经济技术开发区黄邦路 11 号；可在线提交在线询价并上传图纸。",
+    "强纶联系方式,强纶电话,强纶地址,在线询价,金属纤维询价",
     "contact.html",
     schema='{"@context":"https://schema.org","@type":"ContactPage","mainEntity":{"@type":"Organization","name":"福建强纶新材料股份有限公司","telephone":"+86-15359927344","email":"hcq@jl-jiber.com","address":{"@type":"PostalAddress","streetAddress":"龙岩市东肖镇经济技术开发区黄邦路11号","addressLocality":"龙岩市","addressRegion":"福建省","addressCountry":"CN"}}}')
  + header('contact.html')
  + crumb([("联系我们", None)])
  + page_hero("01", "CONTACT", "联系我们",
-             "把工况发过来，<em>剩下的交给工程师</em>",
-             "提供介质、温度、压力与过滤精度，并可上传图纸或参数文件；我们会在 1 个工作日内回复初步选型建议。", bg="img/ph-contact.webp")
+             "把应用场景发过来，<em>剩下的交给工程师</em>",
+             "提供介质、温度、压力与过滤精度，并可上传图纸或参数文件；我们会在 1 个工作日内回复初步选型建议。", bg="img/en-ph-contact.webp")
  + f"""<section class="sec"><div class="wrap">
   <div class="g2 r5-7 wide">
     <div class="rv">
@@ -123,7 +123,7 @@ w('contact.html', head(
         <div><small>公司地址</small><span>{ADDR}</span></div>
         <div><small>英文名称</small><span>FUJIAN QL METAL FIBER CO., LTD</span></div>
       </div>
-      <div id="wx" class="note" style="margin-top:30px"><b>企业微信</b><br>销售电话 {TEL} 微信同号，可直接添加沟通工况与报价。<br><small style="color:var(--muted)">企业微信二维码待甲方提供后由后台上传。</small></div>
+      <div id="wx" class="note" style="margin-top:30px"><b>企业微信</b><br>销售电话 {TEL} 微信同号，可直接添加沟通应用场景与报价。<br><small style="color:var(--muted)">企业微信二维码待甲方提供后由后台上传。</small></div>
       <div class="map-ph" style="margin-top:22px">
         <div>
           <b>公司位置</b>
@@ -131,7 +131,7 @@ w('contact.html', head(
           <small>地图组件待上线时接入（百度地图），当前以文字地址为准。</small>
         </div>
       </div>
-      <div class="buyrow"><a class="pill pill-line" href="sample.html">申请样品</a><a class="pill pill-line" href="selector.html">按工况选型</a></div>
+      <div class="buyrow"><a class="pill pill-line" href="sample.html">申请样品</a><a class="pill pill-line" href="selector.html">选型指南</a></div>
     </div>
     <div class="rv d1" id="inq">{INQ_FORM}</div>
   </div>
@@ -147,7 +147,7 @@ w('sample.html', head(
  + crumb([("联系我们", "contact.html"), ("样品申请", None)])
  + page_hero("02", "SAMPLE", "样品申请",
              "先拿样品，<em>在你的产线上验证</em>",
-             "可提供免费小样（运费到付），标准现货样品一般 1–3 天寄出；工况复杂的项目可安排技术人员入厂试验。", bg="img/ph-contact.webp")
+             "可提供免费小样（运费到付），标准现货样品一般 1–3 天寄出；应用场景复杂的项目可安排技术人员入厂试验。", bg="img/en-ph-contact.webp")
  + """<section class="sec"><div class="wrap">
   <div class="g2 r5-7 wide">
     <div class="rv">
@@ -171,9 +171,9 @@ w('sample.html', head(
         <label>公司 *<input name="company" required autocomplete="organization"></label>
         <label>邮箱<input name="email" type="email" autocomplete="email"></label>
         <label>申请产品
-          <select name="prod"><option>金属纤维烧结毡</option><option>过滤元器件（滤芯 / 滤盘）</option><option>金属纤维纱线</option><option>金属纤维织物</option><option>收油系统实验设备</option></select></label>
+          <select name="prod"><option>净化事业部 · 收油系统</option><option>机加工事业部 · 滤芯与金属构件</option><option>滤材事业部 · 金属烧结毡</option><option>纱线事业部 · 金属纤维纱线</option><option>热动事业部 · 耐高温套管与织带</option><option>不确定 / 请工程师推荐</option></select></label>
         <label>规格 / 型号<input name="spec" placeholder="例如 25KIA3，或现用型号"></label>
-        <label class="full">用途与工况<textarea name="use" placeholder="介质、温度、压力、精度要求，以及希望验证的内容"></textarea></label>
+        <label class="full">用途与应用场景<textarea name="use" placeholder="介质、温度、压力、精度要求，以及希望验证的内容"></textarea></label>
         <label class="full">收件信息 *<textarea name="addr" required placeholder="收件人、电话、详细地址"></textarea></label>
         <label class="full">上传图纸或参数文件<input name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.zip,.rar,.jpg,.png" multiple></label>
         <button class="pill pill-ink" type="submit">提交申请<svg class="i"><use href="#i-arrow"/></svg></button>

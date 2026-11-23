@@ -8,26 +8,26 @@ from common import w, ENDCTA, snav
 # ════════ 选型指南（介质 → 温度 → 压力 → 精度）
 w('selector.html', head(
     "选型指南 | 介质 → 温度 → 压力 → 精度 四步选型 — 强纶新材",
-    "四步确定金属纤维过滤方案：选择介质、工况温度、工作压力与过滤精度，即可得到推荐产品线与配套建议，并一键带着条件询价。",
-    "过滤选型,选型指南,过滤精度选择,烧结毡选型,滤芯选型,按工况选型",
+    "四步确定金属纤维过滤方案：选择介质、使用温度、工作压力与过滤精度，即可得到推荐产品线与配套建议，并一键带着条件询价。",
+    "过滤选型,选型指南,过滤精度选择,烧结毡选型,滤芯选型,选型指南",
     "selector.html")
  + header('selector.html')
  + crumb([("选型中心", None)])
  + page_hero("01", "SELECTOR", "选型指南",
              "四步，<em>找到对的过滤方案</em>",
-             "依次选择介质、工况温度、工作压力与过滤精度，系统即时给出推荐产品线；工程师将按您的条件复核并给出正式选型表。", bg="img/ph-select.webp")
+             "依次选择介质、使用温度、工作压力与过滤精度，系统即时给出推荐产品线；工程师将按您的条件复核并给出正式选型表。", bg="img/en-ph-quality.webp")
  + f"""<section class="sec"><div class="wrap">{snav(0)}
   <div class="sel" id="sel">
     <div class="sel-q">
       <div class="q"><div class="qh"><b class="num">01</b>过滤介质</div><div class="opts" data-k="m">
         <button data-v="melt" class="on">聚合物熔体</button><button data-v="gas">气体 / 烟气</button><button data-v="liquid">液体 / 料液</button><button data-v="oil">含油废水 / 萃取液</button></div></div>
-      <div class="q"><div class="qh"><b class="num">02</b>工况温度</div><div class="opts" data-k="t">
+      <div class="q"><div class="qh"><b class="num">02</b>使用温度</div><div class="opts" data-k="t">
         <button data-v="low" class="on">≤ 150 ℃</button><button data-v="mid">150 – 400 ℃</button><button data-v="high">&gt; 400 ℃</button></div></div>
       <div class="q"><div class="qh"><b class="num">03</b>工作压力</div><div class="opts" data-k="p">
         <button data-v="lp" class="on">低压 · ≤ 1 MPa</button><button data-v="mp">中压 · 1 – 5 MPa</button><button data-v="hp">高压 · &gt; 5 MPa</button><button data-v="np">常压 / 不确定</button></div></div>
       <div class="q"><div class="qh"><b class="num">04</b>过滤精度</div><div class="opts" data-k="a">
         <button data-v="coarse">粗滤 · &gt; 20 μm</button><button data-v="mid" class="on">中精度 · 5 – 20 μm</button><button data-v="fine">高精度 · &lt; 5 μm</button><button data-v="unk">不确定</button></div></div>
-      <p class="sel-alt">不是过滤需求？导电纱、金属纤维线、防静电织物请前往 <a href="p-yarn.html">金属纤维纱线</a> 或 <a href="p-fabric.html">金属纤维织物</a>。</p>
+      <p class="sel-alt">不是过滤需求？导电纱、金属纤维线、防静电织物请前往 <a href="p-yarn.html">纱线事业部</a> 或 <a href="p-fabric.html">热动事业部</a>。</p>
     </div>
     <div class="sel-r">
       <div class="r-im"><img id="rImg" src="img/jl-felt.webp" alt="推荐产品"></div>
@@ -38,7 +38,7 @@ w('selector.html', head(
         <div class="r-alt" id="rAlt"></div>
         <p class="r-note" id="rNote"></p>
         <a class="pill pill-gold" id="rGo" href="contact.html#inq">带着这些条件询价<svg class="i"><use href="#i-arrow"/></svg></a>
-        <p class="r-disc">* 推荐基于常见工况，仅供参考，以工程师确认的正式选型为准。</p>
+        <p class="r-disc">* 推荐基于常见应用场景，仅供参考，以工程师确认的正式选型为准。</p>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@ w('selector.html', head(
   <div class="g4">
     <article class="card rv"><span class="n">01</span><h3>介质</h3><p>决定材质与耐蚀等级。熔体看粘度与温度，萃取液看是否含油，烟气看粉尘特性。</p></article>
     <article class="card rv d1"><span class="n">02</span><h3>温度</h3><p>决定滤材体系。480℃ 以内常规不锈钢纤维可用；更高温需铁铬铝等耐热合金。</p></article>
-    <article class="card rv d2"><span class="n">03</span><h3>压力</h3><p>决定结构强度。高压工况需加厚滤材、加强骨架或改用烧结网，避免变形与穿透。</p></article>
+    <article class="card rv d2"><span class="n">03</span><h3>压力</h3><p>决定结构强度。高压应用场景需加厚滤材、加强骨架或改用烧结网，避免变形与穿透。</p></article>
     <article class="card rv d3"><span class="n">04</span><h3>精度</h3><p>决定型号档位。精度越高气泡点压越高、透气值越低，需与流量和压差一并权衡。</p></article>
   </div>
 </div></section>
@@ -55,10 +55,10 @@ w('selector.html', head(
 (function(){{
   var S={{m:'melt',t:'low',p:'lp',a:'mid'}};
   var R={{
-    melt:{{title:'金属纤维烧结毡 / 叶片滤盘',img:'img/jl-felt.webp',desc:'适合高粘度聚合物熔体过滤，过滤面积大、可清洗再生，常用于化纤与薄膜生产线。',alt:['金属纤维烧结毡','熔体滤芯','叶片滤盘'],url:'p-felt.html'}},
-    gas:{{title:'除尘滤芯 / 耐高温金属滤袋',img:'img/jl-cartridge-pleat.webp',desc:'高温气体除尘与气固分离，耐温耐腐蚀、可反吹清灰、可反复再生。',alt:['除尘滤芯','烧结毡','金属滤袋'],url:'p-element.html'}},
-    liquid:{{title:'金属纤维烧结滤芯',img:'img/jl-cartridge-sinter.webp',desc:'水与料液精滤，整体烧结成型、机械强度高，可清洗再生。',alt:['水滤芯','折波滤芯','烧结毡'],url:'p-element.html'}},
-    oil:{{title:'净化设备 · 强纶收油系统',img:'img/fts-render-tank.webp',desc:'纯物理聚结除油，不加破乳药剂，油份可回收复用；单套可达 600 m³/h。',alt:['罐式收油系统','槽式收油系统','槽体改造'],url:'p-equipment.html'}}
+    melt:{{title:'滤材事业部 · 金属纤维烧结毡',img:'img/jl-felt.webp',desc:'适合高粘度聚合物熔体过滤，过滤面积大、可清洗再生，常用于化纤与薄膜生产线。',alt:['金属纤维烧结毡','熔体滤芯','叶片滤盘'],url:'p-felt.html'}},
+    gas:{{title:'机加工事业部 · 除尘滤芯',img:'img/jl-cartridge-pleat.webp',desc:'高温气体除尘与气固分离，耐温耐腐蚀、可反吹清灰、可反复再生。',alt:['除尘滤芯','烧结毡','金属滤袋'],url:'p-element.html'}},
+    liquid:{{title:'机加工事业部 · 工业流体过滤滤芯',img:'img/jl-cartridge-sinter.webp',desc:'水与料液精滤，整体烧结成型、机械强度高，可清洗再生。',alt:['水滤芯','折波滤芯','烧结毡'],url:'p-element.html'}},
+    oil:{{title:'净化事业部 · 强纶收油系统',img:'img/fts-cover.webp',desc:'纯物理聚结除油，不加破乳药剂，油份可回收复用。',alt:['罐式收油系统','槽式收油系统','槽体改造'],url:'p-equipment.html'}}
   }};
   var $=function(id){{return document.getElementById(id)}};
   function render(){{
@@ -68,12 +68,12 @@ w('selector.html', head(
     setTimeout(function(){{im.src=r.img; im.classList.remove('fade')}},180);
     $('rAlt').innerHTML=r.alt.map(function(x){{return '<span>'+x+'</span>'}}).join('');
     var n=[];
-    if(S.t==='high') n.push('工况温度超过 400℃，建议改用铁铬铝等耐热合金纤维滤材。');
-    else if(S.t==='mid') n.push('150–400℃ 工况下常规 316L 金属纤维滤材可用，长期运行建议留出温度余量。');
-    if(S.p==='hp') n.push('高压工况建议加厚滤材（KIA3K 系列）或加强骨架，必要时改用烧结网。');
+    if(S.t==='high') n.push('使用温度超过 400℃，建议改用铁铬铝等耐热合金纤维滤材。');
+    else if(S.t==='mid') n.push('150–400℃ 应用场景下常规 316L 金属纤维滤材可用，长期运行建议留出温度余量。');
+    if(S.p==='hp') n.push('高压应用场景建议加厚滤材（KIA3K 系列）或加强骨架，必要时改用烧结网。');
     if(S.a==='fine') n.push('高精度（<5μm）需结合气泡点与透气值权衡流量与压差，建议先做样品测试。');
     if(S.a==='unk') n.push('精度不确定时，可提供现用滤材型号或下游杂质要求，由工程师反推精度档位。');
-    if(S.m==='oil') n.push('含油工况建议「预除油 + 深度除油」组合：先用收油系统回收非溶解油，再做深度处理。');
+    if(S.m==='oil') n.push('含油应用场景建议「预除油 + 深度除油」组合：先用收油系统回收非溶解油，再做深度处理。');
     $('rNote').textContent=n.join(' ');
     $('rGo').href='contact.html?m='+S.m+'&t='+S.t+'&p='+S.p+'&a='+S.a+'#inq';
   }}
@@ -108,7 +108,7 @@ w('specs.html', head(
  + crumb([("选型中心", "selector.html"), ("参数对照表", None)])
  + page_hero("02", "SPECS", "参数对照表",
              "一张表，<em>看懂精度与通量的取舍</em>",
-             "气泡点压反映大孔孔径——越高孔径越细、精度越高；200Pa 透气值反映通过能力——越大压损越小、流量越大。两者通常此消彼长，选型即是在二者之间取平衡。", bg="img/ph-select.webp")
+             "气泡点压反映大孔孔径——越高孔径越细、精度越高；200Pa 透气值反映通过能力——越大压损越小、流量越大。两者通常此消彼长，选型即是在二者之间取平衡。", bg="img/en-ph-quality.webp")
  + f"""<section class="sec"><div class="wrap">{snav(1)}
   <nav class="pillbar" data-filter=".tbl tbody tr" aria-label="系列筛选">
     <button class="on" data-v="all">全部系列</button><button data-v="KIA3">KIA3 标准系列</button><button data-v="KIA3K">KIA3K 加厚系列</button><button data-v="KIC">KIC 系列</button>
@@ -128,7 +128,7 @@ w('specs.html', head(
       <tr><td><b>金属纤维烧结毡</b></td><td>316L、铁铬铝、镍、钛、哈氏合金、蒙乃尔、双相合金</td><td>绝对精度 10–60μm；厚度 0.3–1.1mm</td><td class="num">≤480℃</td></tr>
       <tr><td><b>金属纤维织物</b></td><td>100% 316L（可定制铁铬铝）</td><td>织带厚 0.35–0.5mm；幅宽 1000/1200/1500mm</td><td class="num">350℃ 长期 / 1100℃ 短时</td></tr>
       <tr><td><b>过滤元器件</b></td><td>316L 滤材 + 304 骨架与支撑网</td><td>名义精度 10μm 起；孔隙率约 72%；可折波、定制接口</td><td class="num">≤480℃</td></tr>
-      <tr><td><b>净化设备 · 收油系统</b></td><td>改性金属纤维聚结芯</td><td>罐式 ≤30 m³/h；单套可达 600 m³/h；除油率 70%；出口含油 5–30 mg/L</td><td>按工况</td></tr>
+      <tr><td><b>净化设备 · 收油系统</b></td><td>改性金属纤维聚结芯</td><td>罐式 ≤30 m³/h；单套可达 600 m³/h；除油率 70%；出口含油 5–30 mg/L</td><td>按应用场景</td></tr>
     </tbody>
   </table></div>
 </div></section>"""
