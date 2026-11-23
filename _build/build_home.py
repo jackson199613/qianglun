@@ -83,53 +83,18 @@ schema = json.dumps({"@context": "https://schema.org", "@graph": [
 ]}, ensure_ascii=False)
 
 
-# ── 进站动画（2026.11.23 重做）：银丝汇聚成金线 → logo 与公司全称浮现 → 上下拉幕进入首页
-#    每次会话播一次；点击 / 按键 / 滚轮可跳过；?intro=1 强制重放；系统“减少动态效果”时不播
-def _lines():
-    import random
-    random.seed(7)
-    out = ""
-    for i in range(46):
-        y = random.choice([-1, 1]) * random.randint(18, 48)
-        d = round(random.uniform(0, .45), 2)
-        w = random.choice([1, 1, 1, 2])
-        o = round(random.uniform(.35, .9), 2)
-        out += f'<i style="--y:{y}vh;--d:{d}s;--w:{w}px;--o:{o}"></i>'
-    return out
-
-INTRO = f"""<div id="qlintro" aria-hidden="true" style="display:none">
-  <div class="qi-half qi-top"></div><div class="qi-half qi-bot"></div>
-  <div class="qi-stage">
-    <div class="qi-lines">{_lines()}<b></b></div>
-    <div class="qi-brand">
-      <span class="qi-mark"><img src="img/logo.png" alt=""></span>
-      <h2>福建强纶新材料股份有限公司</h2>
-      <p class="qi-en">FUJIAN QL METAL FIBER CO., LTD.</p>
-      <span class="qi-rule"></span>
-      <p class="qi-tag">金属纤维制品领跑者</p>
-    </div>
-    <div class="qi-meta"><span>SINCE 2002</span><span>新三板 872336</span><span>国家级专精特新“小巨人”企业</span></div>
-  </div>
+# ── 进站动画 v6（2026.11.23 客户：要酷炫、高端大气）：金银纤维旋流 → 汇聚成 logo 与公司全称 → 高光扫过 → 炸散、金光铺开
+#    逻辑在 intro.js；样式在 home.css（#qlintro）
+INTRO = """<div id="qlintro" aria-hidden="true" style="display:none">
+  <canvas></canvas>
+  <div class="qi-name"><span class="qi-mark"><img src="img/logo.png" alt=""></span>
+    <h2><span class="w">福建强纶新材料</span><span class="w">股份有限公司</span></h2></div>
+  <div class="qi-sub"><p class="qi-en">FUJIAN QL METAL FIBER CO., LTD.</p><span class="qi-rule"></span><p class="qi-tag">金属纤维制品领跑者</p></div>
+  <div class="qi-meta"><span>SINCE 2002</span><span>新三板 872336</span><span>国家级专精特新“小巨人”企业</span></div>
+  <div class="qi-flash"></div>
   <button type="button" class="qi-skip">跳过</button>
 </div>
-<script>
-(function(){{
-  var el=document.getElementById('qlintro'),q=/[?&]intro=1/.test(location.search),seen=false;
-  try{{seen=sessionStorage.getItem('qlIntro5')==='1'}}catch(e){{}}
-  if((seen&&!q)||matchMedia('(prefers-reduced-motion: reduce)').matches){{el.remove();return}}
-  el.style.display='';document.documentElement.classList.add('qi-lock');
-  var done=false,t1,t2;
-  function out(){{if(done)return;done=true;clearTimeout(t1);
-    try{{sessionStorage.setItem('qlIntro5','1')}}catch(e){{}}
-    el.classList.add('qi-out');document.documentElement.classList.remove('qi-lock');
-    t2=setTimeout(function(){{el.remove()}},1100)}}
-  requestAnimationFrame(function(){{el.classList.add('qi-go')}});
-  t1=setTimeout(out,3300);
-  el.querySelector('.qi-skip').onclick=out;el.addEventListener('click',out);
-  addEventListener('keydown',out,{{once:true}});addEventListener('wheel',out,{{once:true,passive:true}});
-  addEventListener('touchmove',out,{{once:true,passive:true}});
-}})();
-</script>
+<script src="intro.js"></script>
 """
 
 tabs, pans = inds_html()
