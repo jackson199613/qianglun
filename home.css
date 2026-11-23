@@ -206,3 +206,59 @@ h2.t em{font-style:normal;background:linear-gradient(transparent 58%,var(--gold)
 .ask .wrap>*{min-width:0}
 .ask input,.ask select,.ask textarea{width:100%;min-width:0;box-sizing:border-box}
 .ask form>*{min-width:0}
+
+/* =========================================================
+   进站动画 v5：银丝汇聚成金线 → 品牌浮现 → 上下拉幕
+   ========================================================= */
+html.qi-lock,html.qi-lock body{overflow:hidden}
+#qlintro{position:fixed;inset:0;z-index:9999;pointer-events:auto;font-family:"Noto Sans SC",sans-serif}
+#qlintro .qi-half{position:absolute;left:0;right:0;height:50.5%;overflow:hidden;transition:transform 1s cubic-bezier(.77,0,.18,1);
+  background:radial-gradient(70vw 46vh at 50% 50%,#fff3bf 0%,rgba(255,243,191,.35) 45%,rgba(255,255,255,0) 75%),linear-gradient(180deg,#fdfdfb 0%,#ffffff 50%,#fdfdfb 100%);
+  background-size:100% 100vh;background-repeat:no-repeat}
+#qlintro .qi-top{top:0;background-position:top}
+#qlintro .qi-bot{bottom:0;background-position:bottom}
+#qlintro .qi-top::after,#qlintro .qi-bot::after{content:"";position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#ffd400 30%,#ffb300 70%,transparent);opacity:0;transition:opacity .3s}
+#qlintro .qi-top::after{bottom:0}#qlintro .qi-bot::after{top:0}
+#qlintro.qi-out .qi-top{transform:translateY(-101%)}
+#qlintro.qi-out .qi-bot{transform:translateY(101%)}
+#qlintro.qi-out .qi-top::after,#qlintro.qi-out .qi-bot::after{opacity:1}
+#qlintro .qi-stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .45s ease,transform .6s ease}
+#qlintro.qi-out .qi-stage{opacity:0;transform:scale(1.04)}
+/* 银丝：从上下两侧汇聚到中线 */
+#qlintro .qi-lines{position:absolute;left:0;right:0;top:50%;height:0}
+#qlintro .qi-lines i{position:absolute;left:-5%;right:-5%;top:0;height:var(--w);opacity:0;
+  background:linear-gradient(90deg,transparent 0%,rgba(120,126,136,var(--o)) 18%,rgba(190,196,204,var(--o)) 50%,rgba(120,126,136,var(--o)) 82%,transparent 100%);
+  transform:translateY(var(--y)) scaleX(.2)}
+#qlintro.qi-go .qi-lines i{animation:qiConv 1.25s cubic-bezier(.65,0,.2,1) var(--d) both,qiFade .5s ease calc(var(--d) + 1.25s) forwards}
+@keyframes qiConv{0%{opacity:0;transform:translateY(var(--y)) scaleX(.2)}35%{opacity:1}100%{opacity:1;transform:translateY(0) scaleX(1)}}
+@keyframes qiFade{to{opacity:0}}
+/* 金线：汇聚后亮起并延展 */
+#qlintro .qi-lines b{position:absolute;left:50%;top:-1px;height:3px;width:0;transform:translateX(-50%);border-radius:3px;
+  background:linear-gradient(90deg,transparent,#ffe24d 15%,#ffd400 50%,#ffb300 85%,transparent);
+  box-shadow:0 0 18px rgba(255,200,0,.75),0 0 60px rgba(255,212,0,.45)}
+#qlintro.qi-go .qi-lines b{animation:qiGold 1.4s cubic-bezier(.2,.8,.2,1) 1.2s forwards}
+@keyframes qiGold{0%{width:0;opacity:0}30%{width:46vw;opacity:1}100%{width:100vw;opacity:0}}
+/* 品牌 */
+#qlintro .qi-brand{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center}
+#qlintro .qi-mark{width:92px;height:92px;border-radius:50%;background:#fff;display:grid;place-items:center;opacity:0;transform:scale(.6);
+  box-shadow:0 0 0 2px #ffd400,0 0 0 10px rgba(255,212,0,.16),0 24px 50px -20px rgba(180,130,0,.6)}
+#qlintro .qi-mark img{width:76px;height:76px;border-radius:50%}
+#qlintro h2{margin:26px 0 0;font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(22px,3.2vw,44px);letter-spacing:.16em;color:#1f2227;opacity:0;transform:translateY(14px);padding-left:.16em}
+#qlintro .qi-en{margin:10px 0 0;font-family:"Barlow Condensed",Arial,sans-serif;letter-spacing:.42em;font-size:clamp(11px,1vw,14px);color:#8a7020;opacity:0;padding-left:.42em}
+#qlintro .qi-rule{display:block;height:2px;width:0;margin:22px 0 18px;background:linear-gradient(90deg,transparent,#ffd400,transparent)}
+#qlintro .qi-tag{margin:0;font-size:clamp(15px,1.4vw,19px);letter-spacing:.5em;color:#3a3e45;opacity:0;padding-left:.5em}
+#qlintro.qi-go .qi-mark{animation:qiPop .8s cubic-bezier(.2,1.3,.3,1) 1.35s forwards}
+#qlintro.qi-go h2{animation:qiUp .8s ease 1.6s forwards}
+#qlintro.qi-go .qi-en{animation:qiIn .8s ease 1.85s forwards}
+#qlintro.qi-go .qi-rule{animation:qiRule .9s ease 1.95s forwards}
+#qlintro.qi-go .qi-tag{animation:qiIn .8s ease 2.15s forwards}
+@keyframes qiPop{to{opacity:1;transform:scale(1)}}
+@keyframes qiUp{to{opacity:1;transform:none}}
+@keyframes qiIn{to{opacity:1}}
+@keyframes qiRule{to{width:min(420px,70vw)}}
+#qlintro .qi-meta{position:absolute;left:0;right:0;bottom:7vh;display:flex;justify-content:center;gap:34px;font-size:12.5px;letter-spacing:.18em;color:#8b8f96;opacity:0}
+#qlintro.qi-go .qi-meta{animation:qiIn .8s ease 2.3s forwards}
+#qlintro .qi-skip{position:absolute;right:28px;top:24px;z-index:2;background:rgba(255,255,255,.85);border:1px solid #e1e4e8;border-radius:999px;padding:7px 18px;font-size:13px;color:#3a3e45;cursor:pointer}
+#qlintro .qi-skip:hover{border-color:#ffd400;background:#fff6c8}
+#qlintro.qi-out .qi-skip{opacity:0}
+@media(max-width:600px){#qlintro .qi-meta{flex-direction:column;gap:6px;align-items:center;bottom:6vh}#qlintro h2{letter-spacing:.08em}}
