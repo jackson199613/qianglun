@@ -55,6 +55,98 @@
     Content-Type = "text/plain; charset=utf-8"
 
 # 省略 .html 后缀也能访问（/about → /about.html）
+# 2026.11.23 检测报告下线
+[[redirects]]
+  from = "/files/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# 2026.11.23 客户反馈：撤掉重复 / 不要的页面，旧链接 301 到对应页面
+[[redirects]]
+  from = "/platforms.html"
+  to = "/rd.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/platforms"
+  to = "/rd.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/specs.html"
+  to = "/products.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/specs"
+  to = "/products.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/downloads.html"
+  to = "/products.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/downloads"
+  to = "/products.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/encyclopedia.html"
+  to = "/glossary.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/encyclopedia"
+  to = "/glossary.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/qa.html"
+  to = "/faq.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/qa"
+  to = "/faq.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p-detail.html"
+  to = "/p-felt.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p-detail"
+  to = "/p-felt.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/news-20.html"
+  to = "/news.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/news-20"
+  to = "/news.html"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/:page"
   to = "/:page.html"

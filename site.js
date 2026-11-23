@@ -15,6 +15,11 @@
     var open = menu.classList.toggle('open');
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+
+  /* 导航下拉：手机端点箭头展开子栏目 */
+  d.querySelectorAll('.mi .mx').forEach(function (b) {
+    b.addEventListener('click', function (e) { e.preventDefault(); b.parentNode.classList.toggle('open'); });
+  });
   var sBtn = d.getElementById('searchBtn'), sBox = d.getElementById('search'), sX = d.getElementById('searchX'), q = d.getElementById('q');
   if (sBtn && sBox) {
     sBtn.addEventListener('click', function () { sBox.hidden = !sBox.hidden; if (!sBox.hidden && q) q.focus(); });
@@ -71,21 +76,6 @@
   });
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.sq')) document.querySelectorAll('.sq.on').forEach(function (o) { o.classList.remove('on'); });
-  });
-
-  /* VR 全景：填入链接后自动嵌入 */
-  d.querySelectorAll('[data-vr]').forEach(function (a) {
-    var url = a.getAttribute('data-vr');
-    if (!url) return;
-    a.href = url; a.target = '_blank'; a.rel = 'noopener'; a.hidden = false;
-    var box = d.querySelector('[data-vr-embed]');
-    if (box) {
-      var f = d.createElement('iframe');
-      f.src = url; f.loading = 'lazy'; f.allowFullscreen = true;
-      f.setAttribute('title', 'VR 全景');
-      box.appendChild(f); box.classList.add('on');
-    }
-    var tip = d.querySelector('.vr-tip'); if (tip) tip.hidden = true;
   });
 
   /* 视频：后台填入地址后自动可播 */

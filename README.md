@@ -12,29 +12,15 @@
 - `netlify.toml` —— 部署配置
 - `_build/` —— 页面生成脚本（见下）
 
-## 页面是怎么生成的
-除 `index.html`、`rd.html` 外，其余页面由 `_build/` 下的脚本生成，以保证 40 多个页面的页头、页脚、面包屑与结构化数据完全一致。
-
+## 页面是怎么生成的（2026.11.23 起全部页面由脚本生成，含首页与科研总览）
 ```bash
-python3 _build/build_about.py      # 关于强纶
-python3 _build/build_about2.py
-python3 _build/build_products.py   # 产品中心
-python3 _build/build_lines.py
-python3 _build/build_lines2.py
-python3 _build/build_lines3.py
-python3 _build/build_detail.py
-python3 _build/build_apps.py       # 应用方案
-python3 _build/build_select.py     # 选型中心
-python3 _build/build_select2.py
-python3 _build/build_insights.py   # 技术专栏
-python3 _build/build_misc.py
-python3 _build/build_news.py       # 新闻 / 招聘
-python3 _build/build_contact.py    # 联系 / 样品
-python3 _build/build_util.py       # 搜索 / 404 / 隐私 / 网站地图
-python3 _build/build_rd.py         # 科研子页
-python3 _build/build_rd2.py
-python3 _build/check.py            # 全站校验：标签闭合、图片与内链
+cd _build
+for s in home divisions about about2 rdmain rd rd2 apps select select2 insights news contact util articles; do python3 build_$s.py; done
 ```
+- `divisions.py` —— 五大事业部（净化 / 机加工 / 滤材 / 纱线 / 热动）产品数据，文字取自各事业部上传资料
+- `layout.py` —— 页头（公司全称 logo、下拉导航）、页脚
+- `v5.css` —— 2026.11.23 明亮版主题（最后加载）；`home.css` —— 首页与产品树
+- 已撤页面（platforms / specs / downloads / encyclopedia / qa / p-detail / news-20）在 `netlify.toml` 做 301 跳转
 
 ⚠️ **注意**：直接手改这些生成页面的 HTML，再次运行对应脚本时会被覆盖。改内容请改 `_build/` 里的脚本，或改完后不要再运行生成脚本。`index.html` 与 `rd.html` 为手工维护，不受生成脚本影响。
 
