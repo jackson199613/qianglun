@@ -82,6 +82,56 @@ schema = json.dumps({"@context": "https://schema.org", "@graph": [
     {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]},
 ]}, ensure_ascii=False)
 
+
+# ── 进站动画（2026.11.23 重做）：银丝汇聚成金线 → logo 与公司全称浮现 → 上下拉幕进入首页
+#    每次会话播一次；点击 / 按键 / 滚轮可跳过；?intro=1 强制重放；系统“减少动态效果”时不播
+def _lines():
+    import random
+    random.seed(7)
+    out = ""
+    for i in range(46):
+        y = random.choice([-1, 1]) * random.randint(18, 48)
+        d = round(random.uniform(0, .45), 2)
+        w = random.choice([1, 1, 1, 2])
+        o = round(random.uniform(.35, .9), 2)
+        out += f'<i style="--y:{y}vh;--d:{d}s;--w:{w}px;--o:{o}"></i>'
+    return out
+
+INTRO = f"""<div id="qlintro" aria-hidden="true" style="display:none">
+  <div class="qi-half qi-top"></div><div class="qi-half qi-bot"></div>
+  <div class="qi-stage">
+    <div class="qi-lines">{_lines()}<b></b></div>
+    <div class="qi-brand">
+      <span class="qi-mark"><img src="img/logo.png" alt=""></span>
+      <h2>福建强纶新材料股份有限公司</h2>
+      <p class="qi-en">FUJIAN QL METAL FIBER CO., LTD.</p>
+      <span class="qi-rule"></span>
+      <p class="qi-tag">金属纤维制品领跑者</p>
+    </div>
+    <div class="qi-meta"><span>SINCE 2002</span><span>新三板 872336</span><span>国家级专精特新“小巨人”企业</span></div>
+  </div>
+  <button type="button" class="qi-skip">跳过</button>
+</div>
+<script>
+(function(){{
+  var el=document.getElementById('qlintro'),q=/[?&]intro=1/.test(location.search),seen=false;
+  try{{seen=sessionStorage.getItem('qlIntro5')==='1'}}catch(e){{}}
+  if((seen&&!q)||matchMedia('(prefers-reduced-motion: reduce)').matches){{el.remove();return}}
+  el.style.display='';document.documentElement.classList.add('qi-lock');
+  var done=false,t1,t2;
+  function out(){{if(done)return;done=true;clearTimeout(t1);
+    try{{sessionStorage.setItem('qlIntro5','1')}}catch(e){{}}
+    el.classList.add('qi-out');document.documentElement.classList.remove('qi-lock');
+    t2=setTimeout(function(){{el.remove()}},1100)}}
+  requestAnimationFrame(function(){{el.classList.add('qi-go')}});
+  t1=setTimeout(out,3300);
+  el.querySelector('.qi-skip').onclick=out;el.addEventListener('click',out);
+  addEventListener('keydown',out,{{once:true}});addEventListener('wheel',out,{{once:true,passive:true}});
+  addEventListener('touchmove',out,{{once:true,passive:true}});
+}})();
+</script>
+"""
+
 tabs, pans = inds_html()
 faq = "".join(f'<details class="rv"><summary>{q}</summary><p>{a}</p></details>' for q, a in FAQ)
 cats = "".join(f"<option>{d['name']} · {d['tag']}</option>" for d in DIVS)
@@ -91,7 +141,7 @@ html = head(
     "福建强纶新材料股份有限公司（证券代码 872336）创立于2002年，专注金属纤维及其制品、过滤成套装备，设净化、机加工、滤材、纱线、热动五大事业部，产品用于过滤分离、玻璃深加工、电磁屏蔽、汽车、智能穿戴与航空航天等领域。",
     "金属纤维,金属纤维制品,收油系统,烧结滤芯,叶片滤盘,金属纤维烧结毡,金属纤维线,耐高温套管,强纶新材",
     "", extra_css='<link rel="stylesheet" href="home.css">', schema=schema, og_img="img/campus-gate-bright.webp"
-) + header("index.html") + f"""
+) + INTRO + header("index.html") + f"""
 <main id="top" class="hm">
 
 <section class="hhero" aria-label="首屏">
