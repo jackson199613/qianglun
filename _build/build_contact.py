@@ -3,6 +3,7 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, crumb, page_hero, footer, SITE, TEL, TEL_RAW, ADDR
+from contacts import DEPTS, OFFICES, dept_block, PHONE_SVG
 from common import w, ENDCTA
 
 QL_DOCS_JS = ""  # 2026.11.23：资料下载与检测报告已下线
@@ -110,8 +111,14 @@ w('contact.html', head(
  + crumb([("联系我们", None)])
  + page_hero("01", "CONTACT", "联系我们",
              "把应用场景发过来，<em>剩下的交给工程师</em>",
-             "提供介质、温度、压力与过滤精度，并可上传图纸或参数文件；我们会在 1 个工作日内回复初步选型建议。", bg="img/en-ph-contact.webp")
- + f"""<section class="sec"><div class="wrap">
+             "提供介质、温度、压力与过滤精度，并可上传图纸或参数文件；我们会在 1 个工作日内回复初步选型建议。", bg="img/campus-gate-bright.webp")
+ + f"""<section class="sec cdsec"><div class="wrap">
+  <div class="sh rv"><h2>各部门<em>联系方式</em></h2><p>按产品直接联系对应事业部，咨询更快；综合业务请联系销售管理部。</p></div>
+  <div class="cdepts rv">{"".join(dept_block(d) for d in DEPTS)}
+    <div class="cdept"><h3><i>{PHONE_SVG}</i>办公地址</h3><ul class="offs">{"".join(f'<li><span class="who">{n}：</span><span>{a}</span></li>' for n, a in OFFICES)}</ul></div>
+  </div>
+</div></section>
+<section class="sec alt"><div class="wrap">
   <div class="g2 r5-7 wide">
     <div class="rv">
       <h2 style="font-family:'Noto Serif SC',serif;font-size:26px;font-weight:900;margin-bottom:24px">联系方式</h2>
@@ -147,7 +154,7 @@ w('sample.html', head(
  + crumb([("联系我们", "contact.html"), ("样品申请", None)])
  + page_hero("02", "SAMPLE", "样品申请",
              "先拿样品，<em>在你的产线上验证</em>",
-             "可提供免费小样（运费到付），标准现货样品一般 1–3 天寄出；应用场景复杂的项目可安排技术人员入厂试验。", bg="img/en-ph-contact.webp")
+             "可提供免费小样（运费到付），标准现货样品一般 1–3 天寄出；应用场景复杂的项目可安排技术人员入厂试验。", bg="img/campus-gate-bright.webp")
  + """<section class="sec"><div class="wrap">
   <div class="g2 r5-7 wide">
     <div class="rv">

@@ -31,12 +31,11 @@ def yr(d): return d.split('.')[0]
 years = sorted({yr(d) for _, _, d in PAT}, reverse=True)
 pat_rows = "".join(f'<tr data-tag="{t} Y{yr(d)}"><td class="num">{n}</td><td>{t}</td><td class="num">{d}</td></tr>' for n, t, d in PAT)
 cnt = {"发明": 11, "实用新型": 44, "外观设计": 2}
-def _cert(kind, n):
-    return (f'<figure class="cert"><div class="paper"><span class="emb"></span><b>{kind}专利证书</b>'
-            f'<i>国家知识产权局</i><span class="ln"></span><span class="ln s"></span><span class="seal"></span></div>'
-            f'<figcaption><b class="num">{n}</b> 项{kind}专利</figcaption></figure>')
-cert_tiles = _cert("发明", 11) + _cert("实用新型", 44) + _cert("外观设计", 2) + (
-    '<figure class="cert all"><div class="paper"><b class="big num">57</b><i>项授权专利</i></div><figcaption>累计授权专利</figcaption></figure>')
+# 2026.11.24 甲方2.0第21条：资料里没有专利证书扫描件，撤掉手画的“证书”图形，改为按类别统计（证书原件扫描件到位后可换成实拍）
+def _pc(n, kind, note):
+    return f'<div class="patc"><b class="num">{n}</b><span>项{kind}</span><em>{note}</em></div>'
+cert_tiles = (_pc(11, "发明专利", "国家知识产权局授权") + _pc(44, "实用新型专利", "国家知识产权局授权")
+              + _pc(2, "外观设计专利", "国家知识产权局授权") + '<div class="patc all"><b class="num">57</b><span>项授权专利</span><em>截至 2025 年 10 月</em></div>')
 
 w('patents.html', head(
     "专利与标准 | 授权专利 57 项 · 国标 5 项 — 强纶新材",
@@ -48,7 +47,7 @@ w('patents.html', head(
  + page_hero("05", "PATENTS", "专利与标准",
              "<em>57 项</em>专利，<em>6 项</em>标准",
              "作为国家知识产权优势企业与全国颗粒表征与分检及筛网标准化技术委员会委员单位，强纶不仅做产品，也参与定义行业的度量方式。",
-             [("57","项","授权专利"),("11","项","发明专利"),("5","项","参与国家标准"),("1","项","参与行业标准")], bg="img/en-ph-rd.webp")
+             [("57","项","授权专利"),("11","项","发明专利"),("5","项","参与国家标准"),("1","项","参与行业标准")], bg="img/lab-wide-01.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(4)}
   <div class="sec-h"><h2>专利墙</h2><p>截至 2025 年 10 月，公司累计获得授权专利 57 项，覆盖金属纤维成型、梯度烧结结构、聚结除油与导电纺织等方向。</p></div>
   <div class="patwall rv">{cert_tiles}</div>
@@ -95,7 +94,7 @@ w('coop.html', head(
  + crumb([("科研创新", "rd.html"), ("产学研合作", None)])
  + page_hero("06", "COOPERATION", "产学研合作",
              "把高校的理论，<em>放进车间验证</em>",
-             "公司与多所高校及科研院所保持长期合作：既有联合攻关的具体课题，也有共建平台、实践基地与孵化器。", bg="img/en-ph-rd.webp")
+             "公司与多所高校及科研院所保持长期合作：既有联合攻关的具体课题，也有共建平台、实践基地与孵化器。", bg="img/lab-wide-01.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(5)}
   <div class="g4" style="margin-bottom:34px">
     <div class="card rv"><span class="n">11</span><h3>合作项目</h3><p>覆盖材料、装备、新能源与标准化</p></div>
@@ -132,7 +131,7 @@ w('achievements.html', head(
  + page_hero("07", "ACHIEVEMENTS", "科研成果",
              "立项之后，<em>要能变成产品</em>",
              "公司承担的省市级科技计划项目大多与在产产品线直接相关——立项课题的目标，就是解决产线上已经遇到的问题。",
-             [("4","项","省级科技计划项目"),("2","项","市级科技计划项目"),("57","项","授权专利"),("12","%+","研发投入占收入")], bg="img/en-ph-rd.webp")
+             [("4","项","省级科技计划项目"),("2","项","市级科技计划项目"),("57","项","授权专利"),("12","%+","研发投入占收入")], bg="img/lab-wide-01.webp")
  + f"""<section class="sec"><div class="wrap">{rnav(6)}
   <div class="sec-h"><h2>省级科技计划项目</h2></div>
   <div class="tbl-wrap"><table class="tbl">

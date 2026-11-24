@@ -145,7 +145,7 @@ w('testing.html', head(
 
   <div class="sec-h" style="margin:86px 0 26px"><h2>检测设备</h2>
     <p>以下为公司自有的主要分析设备，均为实拍。复杂课题可联合高校院所共同攻关。</p></div>
-  <div class="g2 wide">
+  <div class="g2 wide eqrow">
     <div class="rv">
       <figure class="eqfig"><img src="img/sem-screen.webp" alt="扫描电镜下的金属纤维形貌与能谱分析" loading="lazy">
         <figcaption><b>形貌与成分同步分析</b>电镜下可直接读出纤维直径、搭接形态与烧结结合点，配合能谱判定元素组成。</figcaption></figure>
@@ -168,7 +168,7 @@ w('testing.html', head(
     </div>
   </div>
 
-  <div class="g2 wide" style="margin-top:82px">
+  <div class="g2 wide reprow" style="margin-top:82px">
     <div class="prose rv">
       <h3 style="margin-top:0">报告类型</h3>
       <p><strong>出厂检验报告</strong>：随货交付，含该批次的精度、气泡点、透气值、厚度与外观检验结果，可追溯到批次号与工艺参数。</p>
@@ -176,10 +176,10 @@ w('testing.html', head(
       <p><strong>第三方检测</strong>：按客户或出口要求，委托第三方机构检测。</p>
       <h3>过滤应用试验</h3>
       <p>公司可进行过滤应用试验，为客户设计过滤技术方案并分析产品应用效果；对场景复杂的客户，可提供前期实验设备及技术人员入厂试验。</p>
+      <div class="note" style="margin-top:22px"><b>外部技术支持</b><br>与天津大学、上海化工研究院、中南大学、厦门大学、同济大学等院校保持长期合作交流，复杂课题可联合攻关。</div>
     </div>
     <div class="rv d1">
-      <div class="note"><b>外部技术支持</b><br>与天津大学、上海化工研究院、中南大学、厦门大学、同济大学等院校保持长期合作交流，复杂课题可联合攻关。</div>
-      <div class="gal c3" style="grid-template-columns:1fr;margin-top:20px"><figure><img src="img/lab-op-02.webp" alt="仪器操作与数据读取" loading="lazy"><figcaption>仪器操作与数据读取</figcaption></figure></div>
+      <div class="gal c3 fillimg" style="grid-template-columns:1fr;margin:0"><figure><img src="img/lab-op-02.webp" alt="仪器操作与数据读取" loading="lazy"><figcaption>仪器操作与数据读取</figcaption></figure></div>
     </div>
   </div>
 </div></section>"""

@@ -139,7 +139,7 @@ svg.i.brand{fill:currentColor;stroke:none}
 .scale text.b{fill:var(--ink);font-weight:700;font-size:13px}
 .scale .note{position:absolute;left:40px;bottom:22px;font-size:11.5px;color:var(--muted)}
 .lab-mid{display:grid;grid-template-columns:5fr 7fr;gap:80px;margin-top:130px;align-items:start}
-.sem{position:sticky;top:110px;border-radius:4px;overflow:hidden;aspect-ratio:4/5;background:#111 url('img/en-micro-network.webp') center/cover}
+.sem{position:sticky;top:110px;border-radius:4px;overflow:hidden;aspect-ratio:4/5;background:#111 url('img/sem-felt-02.webp') center/cover}
 .sem::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,15,17,.8),transparent 50%)}
 .sem figcaption{position:absolute;left:28px;right:28px;bottom:26px;z-index:2;color:#fff}
 .sem figcaption small{font-size:11px;letter-spacing:.3em;color:rgba(255,255,255,.6)}

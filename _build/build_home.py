@@ -9,24 +9,24 @@ from news_data import NEWS
 ARW = '<svg class="i"><use href="#i-arrow"/></svg>'
 
 INDS = [
-    ("a-filtration.html", "img/en-filtration.webp", "过滤分离", "化纤熔体 · 石油化工 · 高温烟气 · 湿法冶金",
+    ("a-filtration.html", "img/fts-site-huayou.webp", "过滤分离", "化纤熔体 · 石油化工 · 高温烟气 · 湿法冶金",
      "熔体、料液与烟气的精密过滤，以及萃取料液的除油与油份回收。", "叶片滤盘 · 烧结滤芯 · 烧结毡 · 收油系统"),
-    ("a-glass.html", "img/en-glass.webp", "玻璃深加工", "钢化炉辊道 · 热弯成型 · 夹具与吸盘包覆",
+    ("a-glass.html", "img/yarn-glassbelt.webp", "玻璃深加工", "钢化炉辊道 · 热弯成型 · 夹具与吸盘包覆",
      "高温成型与输送时保护玻璃表面，不划伤、不留痕。", "金属纤维织带 · 编织套管 · 金属纤维布"),
-    ("a-emi.html", "img/en-emi.webp", "电磁屏蔽与防静电", "防静电工作服 · 屏蔽面料 · 设备接地",
+    ("a-emi.html", "img/yarn-cloth.webp", "电磁屏蔽与防静电", "防静电工作服 · 屏蔽面料 · 设备接地",
      "释放静电、屏蔽电磁干扰，耐水洗、效果持久。", "金属纤维纱 · 混纺纱 · 缝纫用线"),
-    ("a-aero.html", "img/en-sh-pad.webp", "航空航天与特种材料", "航空航天领域 · 特种耐温材料",
+    ("a-aero.html", "img/jlw-felt.webp", "航空航天与特种材料", "航空航天领域 · 特种耐温材料",
      "强纶金属纤维材料已应用于航空航天领域，满足耐温、减震与可靠性要求。", "金属纤维毡制品 · 金属纤维烧结毡"),
-    ("a-auto.html", "img/en-automotive.webp", "汽车", "座椅加热 · 汽车玻璃热弯成型",
+    ("a-auto.html", "img/yarn-carseat.webp", "汽车", "座椅加热 · 汽车玻璃热弯成型",
      "柔软均匀的发热线材，以及耐高温、不划伤的玻璃成型包覆材料。", "强纶金属纤维线 · 耐高温套管"),
-    ("a-textile.html", "img/en-textiles.webp", "功能纺织与智能穿戴", "发热服饰 · 电子标签 · 智能穿戴",
+    ("a-textile.html", "img/yarn-wearable.webp", "功能纺织与智能穿戴", "发热服饰 · 电子标签 · 智能穿戴",
      "导电、发热又柔软耐弯折，能直接织进、缝进衣物。", "强纶金属纤维线 · 包胶线 · 导电纱"),
-    ("a-other.html", "img/en-micro-burner.webp", "其他应用", "燃气燃烧器 · 制氢扩散层 · 吸声降噪",
+    ("a-other.html", "img/jlw-staple.webp", "其他应用", "燃气燃烧器 · 制氢扩散层 · 吸声降噪",
      "兼具导电、耐高温与多孔结构，服务氢能、燃烧与降噪等新方向。", "燃烧器用毡 · 气体扩散层用毡"),
 ]
 
 FAQ = [
-    ("强纶主要做哪些产品？", "强纶专注金属纤维及其制品，产品由净化、机加工、滤材、纱线、热动五大事业部提供：收油系统等净化装备、滤芯与滤盘、金属纤维与烧结毡、金属纤维纱线，以及耐高温金属纤维织物。"),
+    ("强纶主要做哪些产品？", "强纶专注金属纤维及其制品，产品覆盖五大类：收油系统等净化装备、滤芯与滤盘、金属纤维与烧结毡、金属纤维纱线，以及耐高温金属纤维织物。"),
     ("烧结毡和滤布怎么选？", "高温、高粘度或有腐蚀性的场合选金属纤维烧结毡：耐温耐腐蚀、可清洗再生；常温、要求不高的场合可用滤布。"),
     ("金属纤维滤芯能清洗再用吗？", "可以。金属纤维滤材耐高温、耐腐蚀，可反复清洗再生，使用寿命长。"),
     ("强纶收油系统适合什么场合？", "适合镍钴湿法冶金、化工萃取等溶液的预除油：纯物理分离不加药剂，分离出的油可回收复用。"),
@@ -63,8 +63,8 @@ def tree_html():
         lis = "".join(f'<li><a href="{d["file"]}#{p["id"]}">{p["name"]}</a></li>' for p in d["products"][:5])
         out += f'''<div class="br rv"><div class="bcard">
 <a class="im{cls}" href="{d['file']}"><img loading="lazy" src="{d['cover']}" alt="{d['name']}"></a>
-<div class="bd"><span class="no num">{d['no']} · {d['en']}</span><h3><a href="{d['file']}">{d['name']}</a></h3><p class="what">{d['what']}</p>
-<ul>{lis}</ul><a class="go" href="{d['file']}">进入{d['name']}{ARW}</a></div></div></div>'''
+<div class="bd"><span class="no">{d['name']}</span><h3><a href="{d['file']}">{d['cat']}</a></h3><p class="what">{d['what']}</p>
+<ul>{lis}</ul><a class="go" href="{d['file']}">查看全部产品{ARW}</a></div></div></div>'''
     return out
 
 
@@ -74,10 +74,10 @@ schema = json.dumps({"@context": "https://schema.org", "@graph": [
      "foundingDate": "2002-12", "tickerSymbol": "872336",
      "address": {"@type": "PostalAddress", "streetAddress": "龙岩市东肖镇经济技术开发区黄邦路11号", "addressLocality": "龙岩市", "addressRegion": "福建省", "addressCountry": "CN"},
      "telephone": "+86-15359927344", "email": "hcq@jl-jiber.com",
-     "description": "专注金属纤维及其制品、过滤成套装备研发生产的国家级专精特新“小巨人”企业，设净化、机加工、滤材、纱线、热动五大事业部，证券代码872336。"},
+     "description": "专注金属纤维及其制品、过滤成套装备研发生产的国家级专精特新“小巨人”企业，产品覆盖净化装备、滤芯、烧结毡、纱线与耐高温织物，证券代码872336。"},
     {"@type": "WebSite", "@id": f"{SITE}/#site", "url": f"{SITE}/", "name": "强纶新材中文官网", "publisher": {"@id": f"{SITE}/#org"},
      "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": f"{SITE}/search.html?q={{search_term_string}}"}, "query-input": "required name=search_term_string"}},
-    {"@type": "ItemList", "name": "强纶五大事业部", "itemListElement": [
+    {"@type": "ItemList", "name": "强纶产品中心", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "name": d["name"], "url": f"{SITE}/{d['file']}"} for i, d in enumerate(DIVS)]},
     {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]},
 ]}, ensure_ascii=False)
@@ -87,7 +87,7 @@ schema = json.dumps({"@context": "https://schema.org", "@graph": [
 #    逻辑在 intro.js；样式在 home.css（#qlintro）
 INTRO = """<div id="qlintro" aria-hidden="true" style="display:none">
   <canvas></canvas>
-  <div class="qi-name"><span class="qi-mark"><img src="img/logo.png" alt=""></span>
+  <div class="qi-name"><span class="qi-mark"><img src="img/logo-mark.png" alt=""></span>
     <h2><span class="w">福建强纶新材料</span><span class="w">股份有限公司</span></h2></div>
   <div class="qi-sub"><p class="qi-en">FUJIAN QL METAL FIBER CO., LTD.</p><span class="qi-rule"></span><p class="qi-tag">金属纤维制品领跑者</p></div>
   <div class="qi-meta"><span>SINCE 2002</span><span>新三板 872336</span><span>国家级专精特新“小巨人”企业</span></div>
@@ -103,7 +103,7 @@ cats = "".join(f"<option>{d['name']} · {d['tag']}</option>" for d in DIVS)
 
 html = head(
     "福建强纶新材料股份有限公司 | 金属纤维制品领跑者",
-    "福建强纶新材料股份有限公司（证券代码 872336）创立于2002年，专注金属纤维及其制品、过滤成套装备，设净化、机加工、滤材、纱线、热动五大事业部，产品用于过滤分离、玻璃深加工、电磁屏蔽、汽车、智能穿戴与航空航天等领域。",
+    "福建强纶新材料股份有限公司（证券代码 872336）创立于2002年，专注金属纤维及其制品、过滤成套装备，产品涵盖净化装备、滤芯、烧结毡、纱线与耐高温织物，用于过滤分离、玻璃深加工、电磁屏蔽、汽车、智能穿戴与航空航天等领域。",
     "金属纤维,金属纤维制品,收油系统,烧结滤芯,叶片滤盘,金属纤维烧结毡,金属纤维线,耐高温套管,强纶新材",
     "", extra_css='<link rel="stylesheet" href="home.css">', schema=schema, og_img="img/campus-gate-bright.webp"
 ) + INTRO + header("index.html") + f"""
@@ -114,8 +114,7 @@ html = head(
     <div>
       <div class="kick">Leading Metal Fiber Products · Since 2002</div>
       <h1><em>金属纤维制品</em><br>领跑者</h1>
-      <p class="sub">以微米之纤，成就精密过滤</p>
-      <p class="lead">二十余年专注金属纤维及其制品。从一根金属纤维，到烧结毡、滤芯滤盘、纱线织物与成套净化装备，强纶以五大事业部服务过滤分离、玻璃深加工、新能源与航空航天等领域。</p>
+      <p class="lead">二十余年专注金属纤维及其制品。从一根金属纤维，到烧结毡、滤芯滤盘、纱线织物与成套净化装备，服务过滤分离、玻璃深加工、新能源与航空航天等领域。</p>
       <div class="ctas">
         <a class="pill pill-gold" href="#industry">按行业找产品{ARW}</a>
         <a class="pill pill-line" href="products.html">产品中心</a>
@@ -125,13 +124,13 @@ html = head(
         <div><b class="num">2002</b><span>公司创立</span></div>
         <div><b class="num">872336</b><span>新三板挂牌</span></div>
         <div><b class="cn">专精特新</b><span>国家级“小巨人”</span></div>
-        <div><b class="num">5</b><span>大事业部</span></div>
+        <div><b class="num">5</b><span>大类产品</span></div>
       </div>
     </div>
     <div class="mosaic">
-      <figure><img src="img/en-hero.webp" alt="金属纤维烧结毡"><figcaption>金属纤维烧结毡</figcaption></figure>
-      <figure><img src="img/en-filtration.webp" alt="过滤分离"><figcaption>过滤分离</figcaption></figure>
-      <figure><img src="img/en-sh-yarn.webp" alt="金属纤维纱线"><figcaption>金属纤维纱线</figcaption></figure>
+      <figure><img src="img/jlw-felt.webp" alt="金属纤维烧结毡"><figcaption>金属纤维烧结毡</figcaption></figure>
+      <figure><img src="img/jlw-cart.webp" alt="金属滤芯"><figcaption>金属滤芯</figcaption></figure>
+      <figure><img src="img/jlw-yarn.webp" alt="金属纤维纱线"><figcaption>金属纤维纱线</figcaption></figure>
     </div>
   </div>
 </section>
@@ -155,11 +154,11 @@ html = head(
 
 <section class="sec soft" id="products">
   <div class="wrap">
-    <div class="head rv"><div><span class="eb">PRODUCTS · 产品中心</span><h2 class="t">一棵树，<em>五大事业部</em></h2>
-      <p class="lead2">每个事业部讲清三件事：产品是什么、有什么特点、用在哪些场景。点击进入事业部查看全部产品。</p></div>
+    <div class="head rv"><div><span class="eb">PRODUCTS · 产品中心</span><h2 class="t">从一根金属纤维，<em>到成套过滤装备</em></h2>
+      <p class="lead2">强纶以自产金属纤维为源头，延伸出烧结毡、滤芯、纱线织物与收油净化装备五类产品。选择您需要的产品类别，查看全部产品与应用场景。</p></div>
       <a class="pill pill-line" href="products.html">进入产品中心{ARW}</a></div>
     <div class="tree">
-      <div class="root rv"><a href="products.html"><img src="{LOGO}" alt="">强纶新材 · 产品中心</a></div>
+      <div class="root rv"><a href="products.html"><img src="img/logo-mark.png" alt="">强纶新材 · 产品中心</a></div>
       <div class="stem"></div>
       <div class="bar"></div>
       <div class="branches">{tree_html()}</div>
@@ -201,7 +200,7 @@ html = head(
       <p class="lead2">福建强纶新材料股份有限公司创立于 2002 年，坐落于福建龙岩，2017 年在新三板挂牌（872336）。公司自主研发复合拉拔工艺，打通从金属纤维、纱线织物、烧结毡到过滤元器件与净化装备的完整产业链。</p>
       <ul class="pts">
         <li>国家级专精特新“小巨人”企业、国家高新技术企业</li>
-        <li>五大事业部：净化、机加工、滤材、纱线、热动</li>
+        <li>产品涵盖收油净化装备、滤芯、烧结毡、金属纤维纱线与耐高温织物</li>
         <li>产品服务化纤、石化、玻璃、新能源、汽车与航空航天等领域</li>
       </ul>
       <div class="btns"><a class="pill pill-gold" href="about.html">企业简介{ARW}</a><a class="pill pill-line" href="history.html">发展历程</a><a class="pill pill-line" href="#film">观看宣传片</a></div>

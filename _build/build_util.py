@@ -11,7 +11,7 @@ from divisions import DIVS
 INDEX = [
  *[(d["name"], d["file"], d["what"] + " 产品：" + "、".join(p["name"] for p in d["products"]), "产品") for d in DIVS],
  *[(p["name"], d["file"] + "#" + p["id"], p["what"], d["name"]) for d in DIVS for p in d["products"]],
- ("产品中心","products.html","净化、机加工、滤材、纱线、热动五大事业部","产品"),
+ ("产品中心","products.html","收油净化装备、滤芯、金属纤维烧结毡、金属纤维与纱线、耐高温金属纤维制品","产品"),
  ("选型指南","selector.html","按介质、温度、压力与精度给出推荐产品","支持"),
  ("名词解释","glossary.html","过滤精度、孔隙率、透气度、气泡点压、纳污量、聚结等术语","支持"),
  ("过滤分离方案","a-filtration.html","化纤熔体、黏胶过滤、高温气体除尘与萃取液除油的完整链条","方案"),

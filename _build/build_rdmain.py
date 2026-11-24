@@ -11,19 +11,19 @@ from layout import head, header, footer, crumb, page_hero
 ARW = '<svg class="i"><use href="#i-arrow"/></svg>'
 
 TECH = [
-    ("01", "超细金属纤维制备", "img/en-sh-fiber.webp", "自主研发集束拉拔工艺，把金属拉成微米级纤维：细而均匀，比表面积大，是全部产品的起点。", "p-yarn.html", "纱线事业部"),
-    ("02", "金属纤维烧结成型", "img/en-sh-felt.webp", "金属纤维无纺铺制、叠层与真空烧结，形成梯度孔结构，兼顾过滤精度与纳污量。", "p-felt.html", "滤材事业部"),
-    ("03", "过滤元器件与净化装备", "img/fts-cover.webp", "从滤芯、滤盘到收油系统，把滤材做成能装上设备的产品与成套装备。", "p-equipment.html", "净化 · 机加工事业部"),
-    ("04", "导电与发热应用", "img/en-textiles.webp", "利用金属纤维导电、耐温、柔软可织的特性，开发导电线、包胶线与功能织物。", "p-yarn.html", "纱线 · 热动事业部"),
+    ("01", "超细金属纤维制备", "img/jlw-staple.webp", "自主研发集束拉拔工艺，把金属拉成微米级纤维：细而均匀，比表面积大，是全部产品的起点。", "p-yarn.html", "金属纤维与纱线"),
+    ("02", "金属纤维烧结成型", "img/jlw-felt.webp", "金属纤维无纺铺制、叠层与真空烧结，形成梯度孔结构，兼顾过滤精度与纳污量。", "p-felt.html", "金属纤维烧结毡"),
+    ("03", "过滤元器件与净化装备", "img/fts-cover.webp", "从滤芯、滤盘到收油系统，把滤材做成能装上设备的产品与成套装备。", "p-equipment.html", "收油净化装备 · 滤芯"),
+    ("04", "导电与发热应用", "img/yarn-wearable.webp", "利用金属纤维导电、耐温、柔软可织的特性，开发导电线、包胶线与功能织物。", "p-yarn.html", "纱线 · 耐高温金属纤维制品"),
 ]
 tech = "".join(f'''<a class="tpl rv" href="{u}"><div class="im{' contain' if 'fts' in im else ''}"><img loading="lazy" src="{im}" alt="{t}"></div>
 <div class="bd"><span class="num">{n}</span><h3>{t}</h3><p>{d}</p><em>对应：{dv}{ARW}</em></div></a>''' for n, t, im, d, u, dv in TECH)
 
 LAB = [("img/lab-wide-01.webp", "材料与应用实验室", "w"), ("img/news/news14-2.webp", "研究院展厅", "t"),
-       ("img/lab-chem-03.webp", "化学分析", ""), ("img/eq-sem.webp", "扫描电子显微镜", ""),
-       ("img/lab-op-01.webp", "检测数据采集", ""), ("img/news/news03-3.webp", "展厅入口", "w"),
-       ("img/lab-chem-05.webp", "试剂与耗材储备", ""), ("img/news/news08-2.webp", "实验检测", ""),
-       ("img/lab-wide-02.webp", "实验室洁净区", "w"), ("img/news/news17-1.webp", "展厅产品展柜", "")]
+       ("img/eq-sem.webp", "扫描电子显微镜", ""), ("img/lab-op-01.webp", "检测数据采集", ""),
+       ("img/lab-chem-05.webp", "试剂与耗材储备", ""), ("img/news/news17-1.webp", "展厅产品展柜", "t"),
+       ("img/news/news03-3.webp", "展厅入口", "w"), ("img/news/news08-2.webp", "实验检测", ""),
+       ("img/lab-wide-02.webp", "实验室洁净区", "w"), ("img/lab-chem-03.webp", "化学分析", "w")]
 labwall = "".join(f'<figure class="{c}"><img loading="lazy" src="{s}" alt="{t}"><figcaption>{t}</figcaption></figure>' for s, t, c in LAB)
 
 UNIS = ["厦门大学", "同济大学", "粤港澳大湾区黄埔材料研究院", "中机研标准技术研究院", "安徽理工大学", "厦门理工学院", "集美大学", "闽江学院", "龙岩学院"]
@@ -41,7 +41,7 @@ html = head(
     "R&amp;D", "RESEARCH &amp; DEVELOPMENT", "科研创新",
     "以研发，<em>驱动金属纤维的每一次进步</em>",
     "强纶依托强纶新材料创新研究院，围绕金属纤维“更细、更均匀、更耐用”持续攻关，打通从纤维、烧结成型到过滤元器件与净化装备的完整技术链。",
-    bg="img/en-ph-rd.webp") + f'''
+    bg="img/lab-wide-01.webp") + f'''
 <main>
 <section class="sec" style="padding-top:40px"><div class="wrap">
   {rnav(0)}
@@ -62,7 +62,7 @@ html = head(
 </div></section>
 
 <section class="sec alt"><div class="wrap">
-  <div class="sh rv"><h2>四大<em>技术方向</em></h2><p>每个技术方向都对应具体的事业部与产品，研发成果可以快速转化为客户手中的产品。</p></div>
+  <div class="sh rv"><h2>四大<em>技术方向</em></h2><p>每个技术方向都对应具体的产品，研发成果可以快速转化为客户手中的产品。</p></div>
   <div class="tpls">{tech}</div>
 </div></section>
 
@@ -75,7 +75,7 @@ html = head(
 <section class="sec wash2"><div class="wrap">
   <div class="sh rv"><h2>知识产权与<em>标准</em></h2><p>公司累计获得授权专利 57 项，参与制修订国家标准 5 项、行业标准 1 项，是全国颗粒表征与分检及筛网标准化技术委员会委员单位。</p></div>
   <div class="ipg">
-    <a class="cert all rv" href="patents.html"><div class="paper"><b class="big num">57</b><i>项授权专利</i></div><figcaption>查看专利墙 →</figcaption></a>
+    <a class="cert all rv" href="patents.html"><div class="paper"><b class="big num">57</b><i>项授权专利</i><span class="lk">查看专利墙 →</span></div></a>
     <div class="stds rv">{"".join(f'<div><b class="num">{c}</b><span>{n}</span></div>' for c, n in STD)}</div>
   </div>
 </div></section>

@@ -9,13 +9,14 @@ import json
 from common import w, ENDCTA
 from layout import head, header, footer, crumb, page_hero, SITE
 from divisions import DIVS
+from contacts import BY_KEY, dept_block
 
 ARW = '<svg class="i"><use href="#i-arrow"/></svg>'
 
 
 def divbar(cur):
-    return '<nav class="pillbar dvbar" aria-label="五大事业部">' + "".join(
-        f'<a class="pb {"on" if d["file"] == cur else ""}" href="{d["file"]}">{d["name"]}</a>' for d in DIVS) + "</nav>"
+    return '<nav class="pillbar dvbar" aria-label="产品类别">' + "".join(
+        f'<a class="pb {"on" if d["file"] == cur else ""}" href="{d["file"]}">{d["cat"]}</a>' for d in DIVS) + "</nav>"
 
 
 def faq_html(items):
@@ -36,9 +37,9 @@ def product_cards(d):
   <div class="bd">
     <h3>{p['name']}</h3>
     <div class="row"><b>是什么</b><p>{p['what']}</p></div>
-    <div class="row"><b>特点</b><ul>{feats}</ul></div>
-    <div class="row"><b>应用场景</b><div class="tags">{scenes}</div></div>
-    <a class="tlink" href="contact.html?cat={d['name']}#inq">询价 · {p['name']}{ARW}</a>
+    {f'<div class="row"><b>特点</b><ul>{feats}</ul></div>' if feats else ''}
+    {f'<div class="row"><b>应用场景</b><div class="tags">{scenes}</div></div>' if scenes else ''}
+    <a class="tlink" href="#dvcontact">咨询 · {p['name']}{ARW}</a>
   </div>
 </article>'''
     return out
@@ -86,57 +87,53 @@ def division_page(d):
     faq_schema = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in d["faq"]]}, ensure_ascii=False)
     html = head(
-        f"{d['name']} | {'、'.join(p['name'] for p in d['products'][:4])} — 强纶新材",
-        f"强纶新材{d['name']}：{d['what']}主要产品：{'、'.join(p['name'] for p in d['products'])}。",
+        f"{d['cat']} | {'、'.join(p['name'] for p in d['products'][:4])} — 强纶新材",
+        f"强纶新材{d['cat']}（{d['name']}）：{d['what']}主要产品：{'、'.join(p['name'] for p in d['products'])}。",
         ",".join([d["name"]] + [p["name"] for p in d["products"]] + ["强纶新材"]),
         d["file"], extra_css='<link rel="stylesheet" href="home.css">', schema=schema + '</script><script type="application/ld+json">' + faq_schema, og_img=d["cover"]
     ) + header(d["file"]) + crumb([("产品中心", "products.html"), (d["name"], None)]) + f'''
 <main>
-<section class="ph dvhero"><div class="wrap">
+<section class="ph dvhero dvh-c"><div class="wrap">
   <div class="dvh-t">
-    <div class="idx"><b>{d['no']}</b>{d['en']} · 产品中心</div>
-    <h1>{d['name']}</h1>
-    <p class="dvtag">{d['tag']}</p>
+    <div class="idx">{d['name']} · 产品中心</div>
+    <h1>{d['cat']}</h1>
     <p class="ph-lead">{d['what']}</p>
-    <div class="dvh-a"><a class="pill pill-gold" href="contact.html?cat={d['name']}#inq">向{d['name']}询价{ARW}</a><a class="pill pill-line" href="sample.html">申请样品</a></div>
   </div>
-  <div class="dvh-i{fit}"><img src="{d['cover']}" alt="{d['name']}"></div>
+  <div class="dvh-a"><a class="pill pill-gold" href="#dvcontact">联系{d['name']}{ARW}</a><a class="pill pill-line" href="sample.html">申请样品</a></div>
 </div></section>
 
-<section class="sec" style="padding-top:40px"><div class="wrap">
+<section class="sec dvp-sec"><div class="wrap">
   {divbar(d['file'])}
-  <div class="dvintro rv">
-    <div><h2 class="dvq"><span class="num">Q1</span>我们是谁</h2><p>{d['intro']}</p></div>
-  </div>
-</div></section>
-
-<section class="sec alt"><div class="wrap">
-  <div class="sh rv"><h2><span class="dvqn num">Q2</span>我的产品<em>是什么</em></h2><p>{d['name']}共 {len(d['products'])} 类产品，点击名称可快速定位。</p></div>
   <div class="dvtoc rv">{toc}</div>
   <div class="dvps">{product_cards(d)}</div>
 </div></section>
 
-<section class="sec"><div class="wrap">
-  <div class="sh rv"><h2><span class="dvqn num">Q3</span>我的特点<em>有哪些</em></h2></div>
+<section class="sec alt"><div class="wrap">
+  <div class="sh rv"><h2>产品<em>特点</em></h2></div>
   <div class="dvfs">{feats}</div>
 </div></section>
 
 <section class="sec wash2"><div class="wrap">
-  <div class="sh rv"><h2><span class="dvqn num">Q4</span>我的应用场景<em>是什么</em></h2><p>不确定是否适用？把您的应用场景告诉我们，工程师会给出建议。</p></div>
+  <div class="sh rv"><h2>{d.get('scenes_title','应用场景')[:2]}<em>{d.get('scenes_title','应用场景')[2:]}</em></h2><p>不确定是否适用？把您的应用场景告诉我们，工程师会给出建议。</p></div>
   <div class="dvscenes rv">{scenes}</div>
 </div></section>
 
 {FTS_EXTRA if d.get('extra') == 'fts' else ''}
 {cases_html(d)}
 
-<section class="sec alt"><div class="wrap">
+{f'''<section class="sec alt"><div class="wrap">
   <div class="sh rv"><h2>产品与<em>现场实拍</em></h2></div>
   <div class="gal rv">{gal}</div>
-</div></section>
+</div></section>''' if gal else ''}
 
 <section class="sec"><div class="wrap">
   <div class="sh rv"><h2>常见<em>问题</em></h2></div>
   {faq_html(d['faq'])}
+</div></section>
+
+<section class="sec alt" id="dvcontact"><div class="wrap">
+  <div class="sh rv"><h2>联系<em>{d['name']}</em></h2><p>直接联系负责该类产品的同事，获取选型建议、样品与报价。</p></div>
+  <div class="cdepts one rv">{dept_block(BY_KEY[d['key']])}{dept_block(BY_KEY['sales'], '销售管理部（综合咨询）')}</div>
 </div></section>
 {ENDCTA}
 </main>
@@ -151,31 +148,31 @@ def products_page():
         lis = "".join(f'<li><a href="{d["file"]}#{p["id"]}">{p["name"]}</a></li>' for p in d["products"])
         branches += f'''<div class="br rv"><div class="bcard">
 <a class="im{fit}" href="{d['file']}"><img loading="lazy" src="{d['cover']}" alt="{d['name']}"></a>
-<div class="bd"><span class="no num">{d['no']} · {d['en']}</span><h3><a href="{d['file']}">{d['name']}</a></h3><p class="what">{d['what']}</p>
-<ul>{lis}</ul><a class="go" href="{d['file']}">进入{d['name']}{ARW}</a></div></div></div>'''
+<div class="bd"><span class="no">{d['name']}</span><h3><a href="{d['file']}">{d['cat']}</a></h3><p class="what">{d['what']}</p>
+<ul>{lis}</ul><a class="go" href="{d['file']}">查看全部产品{ARW}</a></div></div></div>'''
     rows = ""
     for d in DIVS:
-        rows += f'''<a class="dvrow rv" href="{d['file']}"><span class="num">{d['no']}</span><b>{d['name']}</b><em>{d['tag']}</em><i>{'、'.join(d['scenes'][:4])}</i>{ARW}</a>'''
+        rows += f'''<a class="dvrow rv" href="{d['file']}"><span class="num">{d['no']}</span><b>{d['cat']}</b><em>{d['tag']}</em><i>{'、'.join(d['scenes'][:4])}</i>{ARW}</a>'''
     html = head(
-        "产品中心 | 净化 · 机加工 · 滤材 · 纱线 · 热动五大事业部 — 强纶新材",
+        "产品中心 | 收油净化装备 · 滤芯 · 烧结毡 · 金属纤维纱线 · 耐高温织物 — 强纶新材",
         "强纶新材产品中心：净化事业部（收油系统）、机加工事业部（滤芯、滤盘）、滤材事业部（金属纤维、烧结毡）、纱线事业部（金属纤维纱线）、热动事业部（耐高温金属纤维织物）。",
         "强纶产品中心,金属纤维制品,收油系统,金属滤芯,烧结毡,金属纤维线,耐高温套管",
-        "products.html", extra_css='<link rel="stylesheet" href="home.css">', og_img="img/en-ph-products.webp"
+        "products.html", extra_css='<link rel="stylesheet" href="home.css">', og_img="img/hero-jl-cart.webp"
     ) + header("products.html") + crumb([("产品中心", None)]) + page_hero(
         "PRODUCTS", "PRODUCT CENTER", "产品中心",
-        "一棵树，<em>五大事业部</em>",
-        "强纶的产品按五大事业部组织。每个事业部讲清三件事：产品是什么、有什么特点、用在哪些场景。",
-        bg="img/en-ph-products.webp") + f'''
+        "从一根金属纤维，<em>到成套过滤装备</em>",
+        "强纶以自产金属纤维为源头，延伸出烧结毡、滤芯、纱线织物与收油净化装备五类产品。选择产品类别，查看全部产品与应用场景。",
+        bg="img/hero-jl-cart.webp") + f'''
 <main class="hm">
 <section class="sec"><div class="wrap">
   <div class="tree">
-    <div class="root rv"><a href="products.html"><img src="img/logo.png" alt="">强纶新材 · 产品中心</a></div>
+    <div class="root rv"><a href="products.html"><img src="img/logo-mark.png" alt="">强纶新材 · 产品中心</a></div>
     <div class="stem"></div><div class="bar"></div>
     <div class="branches">{branches}</div>
   </div>
 </div></section>
 <section class="sec soft"><div class="wrap">
-  <div class="head rv"><div><span class="eb">BY DIVISION · 按事业部浏览</span><h2 class="t">不知道找哪个事业部？<br><em>按应用场景对一下</em></h2></div></div>
+  <div class="head rv"><div><span class="eb">BY SCENE · 按应用场景找产品</span><h2 class="t">不确定选哪类产品？<br><em>按应用场景对一下</em></h2></div></div>
   <div class="dvrows">{rows}</div>
 </div></section>
 <section class="sec"><div class="wrap">

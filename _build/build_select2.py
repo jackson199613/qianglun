@@ -35,7 +35,7 @@ w('glossary.html', head(
  + crumb([("选型中心", "selector.html"), ("名词解释", None)])
  + page_hero("03", "GLOSSARY", "名词解释",
              "把参数表上的词，<em>一个个讲清楚</em>",
-             "选型沟通中容易产生误解的，往往不是产品本身，而是对同一个参数的不同理解。以下是强纶参数表与方案中常用术语的统一口径。", bg="img/en-ph-quality.webp")
+             "选型沟通中容易产生误解的，往往不是产品本身，而是对同一个参数的不同理解。以下是强纶参数表与方案中常用术语的统一口径。", bg="img/mfg-qc-office.webp")
  + f"""<section class="sec"><div class="wrap">{snav(2)}
   <div class="rows">{rows}</div>
   <div class="note" style="margin-top:40px"><b>没找到想了解的术语？</b> 可在<a href="faq.html" style="border-bottom:2px solid var(--gold)">常见问题库</a>查找，或直接<a href="contact.html#inq" style="border-bottom:2px solid var(--gold)">联系工程师</a>。</div>
@@ -88,7 +88,7 @@ for cat, items in DL:
                 f'<div><h4>{t}{rdy}</h4><p>{d}</p></div><span class="sz">{e}</span>'
                 f'<a class="btn" href="{href}"><svg class="i"><use href="#i-dl"/></svg>留资获取</a></div>')
     lis = "".join(_li(it) for it in items)
-    blocks += f'<h3 class="rv" style="font-family:\'Noto Serif SC\',serif;font-size:22px;font-weight:700;margin:50px 0 6px">{cat} <span style="font-family:\'Barlow Condensed\',sans-serif;color:var(--champ);font-size:18px">{len(items)}</span></h3><div class="dl-list">{lis}</div>'
+    blocks += f'<h3 class="rv" style="font-family:\'Noto Serif SC\',serif;font-size:22px;font-weight:700;margin:50px 0 6px">{cat} <span class="hcnt">{len(items)} 项</span></h3><div class="dl-list">{lis}</div>'
 
 w('downloads.html', head(
     "资料下载中心 | 产品手册 · 技术数据表 · 检测报告 · 资质证书 — 强纶新材",
@@ -99,7 +99,7 @@ w('downloads.html', head(
  + crumb([("选型中心", "selector.html"), ("资料下载中心", None)])
  + page_hero("04", "DOWNLOADS", "资料下载中心",
              "手册、参数表、报告与证书，<em>都在这里</em>",
-             "产品手册与技术数据表可直接下载；检测报告与资质证书需留下联系方式，由工程师核对用途后发送，以便追溯资料流向。", bg="img/en-ph-resources.webp")
+             "产品手册与技术数据表可直接下载；检测报告与资质证书需留下联系方式，由工程师核对用途后发送，以便追溯资料流向。", bg="img/hero-jl-felt.webp")
  + f"""<section class="sec"><div class="wrap">{snav(3)}
   <div class="note" style="margin-bottom:10px"><b>关于下载方式</b>：网站后台支持「直接下载」与「留资下载」两种模式。为保护客户信息与资料版本一致性，检测报告与认证证书默认采用留资下载，提交后由专人发送新版本。</div>
   {blocks}

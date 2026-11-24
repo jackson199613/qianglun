@@ -39,7 +39,7 @@ SECTION.update({"job-detail.html": "contact.html", "search.html": "", "sitemap.h
 
 def brand_html(href="index.html"):
     return f'''<a class="brand" href="{href}" aria-label="{CO} 首页">
-      <span class="bm"><img src="{LOGO}" alt="强纶新材 logo" width="56" height="56"><i class="reg">®</i></span>
+      <span class="bm"><img src="{LOGO}" alt="强纶新材 logo" width="56" height="56"></span>
       <span class="bt"><strong>{CO}</strong><small>{CO_EN}</small></span>
     </a>'''
 

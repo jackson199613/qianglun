@@ -106,24 +106,20 @@ w('manufacturing.html', head(
              [("40", "亩", "自有工业用地"), ("1800", "㎡", "厂房面积"), ("200", "+", "员工人数"), ("5", "大", "制研平台")],
              bg="img/mfg-hero-loom.webp")
  + f"""<section class="sec"><div class="wrap">{anav(2)}
-  <div class="sec-h"><h2>五大制研平台</h2><p>强纶新材料创新研究院整合强纶新材、金纶新材料、金山粉末、柔银新材料、龙象机械等资源，形成互补的制造与中试能力。</p></div>
-  <div class="g3">
+  <div class="sec-h"><h2>五大制研平台</h2><p>强纶新材料创新研究院整合强纶新材、金纶新材料、金山粉末、柔银新材料、龙象机械等资源，形成互补的制造能力；研发源于车间实践，中试基地与多维测试中心支撑新工艺从实验室走向批量生产。</p></div>
+  <div class="g5">
     <article class="card rv"><span class="n">01</span><h3>金属复合丝拉拔</h3><p>复合拉拔核心工艺，制备 2–100μm 各规格金属纤维，材质覆盖 316L / 304 / 铁铬铝 / 镍 / 钛 / 铜等。</p></article>
     <article class="card rv d1"><span class="n">02</span><h3>压制烧结</h3><p>粉末压制与真空高温烧结，制备多层梯度孔烧结毡、烧结网及传动元件。</p></article>
     <article class="card rv d2"><span class="n">03</span><h3>纺纱编织</h3><p>金属纤维可纺可织，制成纱线、缝纫线、金属纤维线、机织带、套管与机织布。</p></article>
     <article class="card rv"><span class="n">04</span><h3>电化学材料加工</h3><p>面向多孔材料、新能源与氢能方向的材料加工与表面改性。</p></article>
     <article class="card rv d1"><span class="n">05</span><h3>精密机械加工</h3><p>滤芯骨架、过滤器壳体与成套设备的精密加工、焊接与装配。</p></article>
-    <article class="card rv d2"><span class="n">06</span><h3>中试与成果转化</h3><p>研发源于车间实践，中试基地与多维测试中心支撑新工艺从实验室走向批量生产。</p></article>
   </div>
 
   <div class="sec-h" style="margin:90px 0 32px"><h2>厂区与设备</h2><p>从金属纤维生产线、真空烧结炉到丝网织造、激光切割、数控车削、冲压与焊接，关键工序均在厂内完成。</p></div>
   <div class="gal">
-    <figure><img src="img/mfg-draw-line.webp" alt="金属纤维生产线" loading="lazy"><figcaption>金属纤维生产线</figcaption></figure>
     <figure><img src="img/mfg-draw-unit.webp" alt="金属纤维生产设备" loading="lazy"><figcaption>纤维生产设备</figcaption></figure>
     <figure><img src="img/mfg-sinter-01.webp" alt="大型真空烧结炉" loading="lazy"><figcaption>真空烧结炉</figcaption></figure>
-    <figure><img src="img/mfg-sinter-03.webp" alt="真空烧结设备" loading="lazy"><figcaption>真空烧结设备</figcaption></figure>
     <figure><img src="img/mfg-loom-01.webp" alt="金属丝网织造设备" loading="lazy"><figcaption>金属丝网织造</figcaption></figure>
-    <figure><img src="img/mfg-web-02.webp" alt="金属丝网织造细节" loading="lazy"><figcaption>织造细节</figcaption></figure>
     <figure><img src="img/mfg-laser-cut.webp" alt="激光切割加工" loading="lazy"><figcaption>激光切割</figcaption></figure>
     <figure><img src="img/mfg-lathe.webp" alt="数控车削加工" loading="lazy"><figcaption>数控车削</figcaption></figure>
     <figure><img src="img/mfg-press.webp" alt="冲压设备" loading="lazy"><figcaption>冲压成型</figcaption></figure>
