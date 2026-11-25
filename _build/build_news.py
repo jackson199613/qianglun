@@ -8,11 +8,11 @@ from common import w, ENDCTA
 from news_data import NEWS  # 数据见 news_data.py：以甲方《新闻原链接》表格为准
 
 # ───────── 列表页
-cards = "".join(f"""<article class="mcard rv" data-tag="{n['cat']}">
-  <a href="{n['slug']}.html" class="im"><img src="{n['img']}" alt="{n['title']}" loading="lazy"></a>
+cards = "".join(f"""<article class="mcard rv{' feat' if k == 0 else ''}" data-tag="{n['cat']}">
+  <a href="{n['slug']}.html" class="im ncv" style="--cv:url('{n['img']}')"><img src="{n['img']}" alt="{n['title']}" loading="lazy"></a>
   <div class="bd"><div class="cat">{n['cat']} · <span class="num">{n['date']}</span></div><h3>{n['title']}</h3><p>{n['sum']}</p>
   <a class="more" href="{n['slug']}.html">阅读全文<svg class="i"><use href="#i-arrow"/></svg></a></div>
-</article>""" for n in NEWS)
+</article>""" for k, n in enumerate(NEWS))
 
 w('news.html', head(
     "新闻动态 | 企业新闻 · 展会活动 · 媒体报道 — 强纶新材",
@@ -103,23 +103,51 @@ w('jobs.html', head(
     "jobs.html", og_img="img/team-build2021.webp")
  + header('')
  + crumb([("人才招聘", None)])
- + page_hero("01", "CAREERS", "人才招聘",
-             "在车间里做研发，<em>在应用场景里找答案</em>",
-             "强纶新材料创新研究院不同于其他科研院所，“特”在研发源于车间实践、创新应用于航空航天等高端先进领域。我们需要愿意把材料做到产线上的人。",
-             [("200","+","员工人数"),("12","%+","研发投入占收入"),("6","个","研究室"),("5","大","制研平台")], bg="img/mfg-hero-loom.webp")
- + f"""<section class="sec"><div class="wrap">
-  <div class="sec-h row"><div><h2>在招岗位</h2><p>以下岗位长期开放，欢迎投递。</p></div>
+ + f"""<section class="ph has-bg jobhero" style="--phbg:url('img/team-star2024.webp')"><div class="wrap">
+  <div class="idx"><b>01</b>CAREERS · 人才招聘</div>
+  <h1>企业走得远，<br>靠的是每一个强纶人</h1>
+  <p class="ph-lead">在强纶，你可以在车间里做研发、在应用场景里找答案；你的努力会被看见、被认可，也会被关心。我们欢迎来自各行各业的人才，和我们一起把金属纤维做得更远。</p>
+  <div class="ph-k"><div><b class="num">200<sup>+</sup></b><span>强纶伙伴</span></div><div><b class="num">6<sup>个</sup></b><span>研究室</span></div><div><b class="num">5<sup>大</sup></b><span>制研平台</span></div><div><b class="num">2002</b><span>一路同行至今</span></div></div>
+  <div class="jobacts"><a class="pill pill-gold" href="#openings">查看在招岗位<svg class="i"><use href="#i-arrow"/></svg></a><a class="pill pill-line" href="mailto:hcq@jl-jiber.com">投递简历</a></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sh rv"><h2>在强纶，你会得到什么</h2><p>我们更在意的，是你在这里能不能成长、能不能被认可、过得好不好。</p></div>
+  <div class="jcare">
+    <article class="rv"><i class="num">01</i><h3>真正能施展的平台</h3><p>省级企业技术中心、博士后创新实践基地，六个研究室与五大制研平台。研发源于车间实践，技术问题真实而有分量。</p></article>
+    <article class="rv"><i class="num">02</i><h3>和高校一起做研究</h3><p>与厦门大学、同济大学等高校及科研机构开展产学研合作，在项目里跟着行业前沿一起成长。</p></article>
+    <article class="rv"><i class="num">03</i><h3>岗位技能培训</h3><p>各岗位落实技能培训与规范作业，新人有人带、有标准可依，能力一步步扎实起来。</p></article>
+    <article class="rv"><i class="num">04</i><h3>付出会被看见</h3><p>设立忠诚奖、优秀员工、优秀干部评选，每一份坚守与努力都会在年度表彰中被认可。</p></article>
+    <article class="rv"><i class="num">05</i><h3>工作之外的温度</h3><p>各事业部定期组织团建与文体活动，传统节日为员工送上慰问，同事之间是并肩同行的伙伴。</p></article>
+    <article class="rv"><i class="num">06</i><h3>一起看得见的未来</h3><p>国家级专精特新“小巨人”、新三板挂牌企业。公司在往前走，每个人的舞台也在变大。</p></article>
+  </div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sh rv"><h2>强纶人的日常</h2><p>表彰、团建、节日慰问——这些都是强纶人真实的样子。</p></div>
+  <div class="gal c3 rv">
+    <figure><img src="img/team-star2024.webp" alt="2024 年优秀员工表彰" loading="lazy"><figcaption>优秀员工表彰</figcaption></figure>
+    <figure><img src="img/team-loyalty2025.webp" alt="2025 年年终会忠诚奖" loading="lazy"><figcaption>年终会 · 忠诚奖</figcaption></figure>
+    <figure><img src="img/team-cadre2024.webp" alt="2024 年优秀干部表彰" loading="lazy"><figcaption>优秀干部表彰</figcaption></figure>
+    <figure><img src="img/team-build2021.webp" alt="公司团建活动" loading="lazy"><figcaption>公司团建</figcaption></figure>
+    <figure><img src="img/team-purify.webp" alt="净化事业部团建活动" loading="lazy"><figcaption>事业部活动</figcaption></figure>
+    <figure><img src="img/team-dragon2025.webp" alt="2025 年端午节员工慰问" loading="lazy"><figcaption>端午节慰问</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="jobcall"><div class="wrap rv">
+  <h2>不论你来自哪个行业，<br>这里都有你的位置</h2>
+  <p>金属纤维能用在各行各业，强纶也需要来自各行各业的人：研发、工艺、设备、销售、质量……只要你愿意把材料做到产线上、把技术送到客户手里，欢迎加入我们。</p>
+  <a class="pill pill-ink" href="mailto:hcq@jl-jiber.com">投递简历 hcq@jl-jiber.com<svg class="i"><use href="#i-arrow"/></svg></a>
+</div></section>
+
+<section class="sec" id="openings"><div class="wrap">
+  <div class="sec-h row"><div><h2>在招岗位</h2><p>以下岗位长期开放，欢迎投递；没有合适的岗位，也欢迎直接发来简历。</p></div>
     <a class="pill pill-line" href="mailto:hcq@jl-jiber.com">投递简历<svg class="i"><use href="#i-arrow"/></svg></a></div>
   <nav class="pillbar" data-filter=".row-i" aria-label="部门筛选">
-    <button class="on" data-v="all">全部</button><button data-v="研发中心">研发中心</button><button data-v="技术中心">技术中心</button><button data-v="净化事业部">净化事业部</button><button data-v="营销中心">营销中心</button><button data-v="质量部">质量部</button>
+    <button class="on" data-v="all">全部</button><button data-v="研发中心">研发中心</button><button data-v="技术中心">技术中心</button><button data-v="净化事业部">净化事业部</button><button data-v="营销中心">营销中心</button><button data-v="质量部">质量部</button><button data-v="纱线事业部">纱线事业部</button>
   </nav>
   <div class="rows">{job_rows}</div>
-
-  <div class="g3" style="margin-top:80px">
-    <article class="card rv"><h3>为什么来强纶</h3><p>国家级专精特新“小巨人”，产品服务航空航天领域与大型石化化纤企业，技术问题真实且有分量。</p></article>
-    <article class="card rv d1"><h3>成长路径</h3><p>六个研究室与五大制研平台，设有省级企业技术中心与博士后创新实践基地，与厦门大学、同济大学等高校产学研协同。</p></article>
-    <article class="card rv d2"><h3>员工关怀</h3><p>设立忠诚奖、优秀员工与优秀干部评选，各事业部定期组织团建与文体活动。</p></article>
-  </div>
 
   <div class="note" style="margin-top:46px"><b>投递方式</b>：简历请发送至 <a href="mailto:hcq@jl-jiber.com" style="border-bottom:2px solid var(--gold)">hcq@jl-jiber.com</a>，或致电 0597-2799968 咨询。公司地址：福建省龙岩市东肖镇经济技术开发区黄邦路 11 号。<br><small style="color:var(--muted)">* 岗位列表由公司后台自主发布与下架，以当前发布为准。</small></div>
 </div></section>"""

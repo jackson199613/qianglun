@@ -28,12 +28,18 @@ def faq_html(items):
 
 def product_cards(d):
     out = ""
-    for p in d["products"]:
-        fit = " contain" if p.get("fit") == "contain" else ""
+    n = len(d["products"])
+    for k, p in enumerate(d["products"]):
+        fit = ""
+        # 3.0 第 6 条：竖卡三列；余 2 时末两张各占半行，余 1 时末张整行横排，不留空位
+        if n % 3 == 2 and k >= n - 2:
+            fit = " half"
+        elif n % 3 == 1 and k == n - 1:
+            fit = " full"
         feats = "".join(f"<li>{x}</li>" for x in p["feats"])
         scenes = "".join(f"<span>{x}</span>" for x in p["scenes"])
-        out += f'''<article class="dvp rv" id="{p['id']}">
-  <div class="im{fit}"><img loading="lazy" src="{p['img']}" alt="{p['name']}"></div>
+        out += f'''<article class="dvp rv{fit}" id="{p['id']}">
+  <div class="im"><img loading="lazy" src="{p['img']}" alt="{p['name']}"></div>
   <div class="bd">
     <h3>{p['name']}</h3>
     <div class="row"><b>是什么</b><p>{p['what']}</p></div>
@@ -104,7 +110,6 @@ def division_page(d):
 
 <section class="sec dvp-sec"><div class="wrap">
   {divbar(d['file'])}
-  <div class="dvtoc rv">{toc}</div>
   <div class="dvps">{product_cards(d)}</div>
 </div></section>
 

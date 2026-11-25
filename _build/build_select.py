@@ -66,7 +66,7 @@ w('selector.html', head(
     $('rTitle').textContent=r.title; $('rDesc').textContent=r.desc;
     var im=$('rImg'); im.classList.add('fade');
     setTimeout(function(){{im.src=r.img; im.classList.remove('fade')}},180);
-    $('rAlt').innerHTML=r.alt.map(function(x){{return '<span>'+x+'</span>'}}).join('');
+    $('rAlt').innerHTML=r.alt.map(function(x){{var u=/收油|除油/.test(x)?'p-equipment.html':/毡|网/.test(x)?'p-felt.html':/滤芯|滤盘|骨架/.test(x)?'p-element.html':/套管|绳|带|布/.test(x)?'p-fabric.html':/纱|线|纤维/.test(x)?'p-yarn.html':'products.html';return '<a href="'+u+'">'+x+'</a>'}}).join('');
     var n=[];
     if(S.t==='high') n.push('使用温度超过 400℃，建议改用铁铬铝等耐热合金纤维滤材。');
     else if(S.t==='mid') n.push('150–400℃ 应用场景下常规 316L 金属纤维滤材可用，长期运行建议留出温度余量。');

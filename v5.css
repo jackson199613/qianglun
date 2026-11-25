@@ -365,6 +365,106 @@ section.ph.dvh-c{padding:118px 0 34px}
 .rpcs.c4{grid-template-columns:repeat(4,1fr)}.rpcs.c4 .rpc h3{font-size:17px}@media(max-width:1100px){.rpcs.c4{grid-template-columns:1fr 1fr}}
 /* 第15条：其他斜体花体英文统一改为正体无衬线 */
 .hhero .kick,.it{font-family:"Barlow",Arial,sans-serif!important;font-style:normal!important;font-size:15px!important;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
-/* 产品数为单数时最后一张占满一行，不留空位 */
-@media (min-width:1101px){.dvps .dvp:last-child:nth-child(odd){grid-column:1/-1;grid-template-columns:420px 1fr}
-.dvps .dvp:last-child:nth-child(odd) .im img{max-height:300px}}
+
+
+/* ============ 2026.11.25 甲方 3.0 修改 ============ */
+/* 第1条：标题不再用两种颜色，强调字与标题同色（浅底为黑，深底随标题） */
+h1 em,h2 em,h3 em,h4 em,.t2 em,h2.t em,.hhero h1 em,.sh h2 em,.ph h1 em,section.ph h1 em,.hero h1 em,.film h2 em,.endcta h2 em,.ask h2.t em,.dk .sh h2 em,.chain-head h2 em,.cta h2 em,.end h3 em{
+  color:inherit!important;-webkit-text-fill-color:currentColor!important;background:none!important;border-bottom:0!important;font-style:normal!important;animation:none!important}
+
+/* 第6条：事业部产品卡改为上图下文竖卡，三列；图统一 4:3 */
+.dvps{grid-template-columns:repeat(6,1fr)!important;gap:22px}
+.dvps .dvp{grid-column:span 2;display:flex!important;flex-direction:column;grid-template-columns:none!important}
+.dvps .dvp.half{grid-column:span 3}
+.dvps .dvp.full{grid-column:1/-1;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+.dvp .im{aspect-ratio:4/3;min-height:0!important;background:#f5f5f3}
+.dvps .dvp.half .im{aspect-ratio:16/9}
+.dvps .dvp.full .im{aspect-ratio:auto;min-height:100%!important}
+.dvp .im img{width:100%;height:100%!important;min-height:0!important;max-height:none!important;object-fit:cover!important;padding:0!important}
+.dvp .bd{padding:22px 24px 24px}
+.dvp .row{grid-template-columns:70px 1fr}
+@media (max-width:1100px){.dvps{grid-template-columns:1fr 1fr!important}.dvps .dvp,.dvps .dvp.half{grid-column:span 1}.dvps .dvp.full{grid-column:1/-1}.dvps .dvp.half .im{aspect-ratio:4/3}}
+@media (max-width:640px){.dvps{grid-template-columns:1fr!important}.dvps .dvp.full{display:flex!important}}
+
+/* 第2/4条：其他应用 —— 金属纤维的无限可能 */
+.pan2 .full .lead2{font-size:20px!important;font-weight:700;color:#fff;margin-bottom:4px}
+.othwide{grid-column:1/-1;position:relative;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:56px 56px;border-radius:var(--r,16px);overflow:hidden;color:#fff;
+  background:linear-gradient(90deg,rgba(12,22,54,.92) 0%,rgba(12,22,54,.72) 45%,rgba(12,22,54,.25) 100%),var(--bg) center/cover no-repeat;min-height:300px;transition:transform .3s,box-shadow .3s}
+.othwide:hover{transform:translateY(-3px);box-shadow:0 24px 50px -28px rgba(10,20,60,.6)}
+.othwide>div{max-width:640px}
+.othwide .cat{font-size:14px;letter-spacing:.14em;color:#ffd54a;font-weight:600}
+.othwide h3{font-size:30px;line-height:1.35;margin:12px 0 14px;color:#fff}
+.othwide p{font-size:16px;line-height:1.85;color:rgba(255,255,255,.88);margin:0}
+.othwide .pill{flex:none}
+.othhero{--phbg-pos:center}
+.othhero.has-bg::before,.othhero.has-bg::after{display:none!important}
+.othhero{background:linear-gradient(90deg,rgba(10,20,52,.94) 0%,rgba(10,20,52,.78) 50%,rgba(10,20,52,.35) 100%),var(--phbg) center/cover no-repeat!important;color:#fff;border-bottom:0!important;padding:110px 0 96px!important}
+.othhero h1{color:#fff!important;font-size:54px!important;line-height:1.25!important}
+.othhero .idx,.othhero .idx b{color:#ffd54a!important}
+.othhero .ph-lead{color:rgba(255,255,255,.9)!important;max-width:680px;font-size:17px!important;line-height:1.9!important}
+.othdone{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:28px}
+.othdone span{font-size:14px;color:rgba(255,255,255,.7);margin-right:6px}
+.othdone a{font-size:14px;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 14px;transition:background .2s}
+.othdone a:hover{background:rgba(255,255,255,.14)}
+.oprops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.oprop{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 28px 26px}
+.oprop .num{font-family:"Barlow",Arial,sans-serif;font-weight:700;font-size:15px;color:#a87a00}
+.oprop h3{font-size:21px;margin:10px 0 8px;color:var(--ink)}
+.oprop p{margin:0;font-size:15.5px;line-height:1.8;color:var(--graphite)}
+.odirs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.odir{background:#fff;border-radius:14px;padding:22px 22px;border-left:4px solid var(--gold);display:flex;flex-direction:column;gap:6px}
+.odir b{font-size:18px;color:var(--ink)}
+.odir span{font-size:15px;color:var(--graphite);line-height:1.7}
+.othcall{position:relative;color:#fff;padding:110px 0;background:linear-gradient(180deg,rgba(9,18,48,.88),rgba(9,18,48,.94)),var(--bg) center/cover no-repeat}
+.othcall .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.othcall .eb{font-size:14px;letter-spacing:.16em;color:#ffd54a;font-weight:600}
+.othcall h2{font-size:42px;line-height:1.3;margin:14px 0 18px;color:#fff}
+.othcall p{font-size:17px;line-height:1.95;color:rgba(255,255,255,.9);margin:0}
+.othcall .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.othcall .pill-line.lt{color:#fff!important;border-color:rgba(255,255,255,.5)!important;background:transparent!important}
+.oc-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.oc-steps li{display:grid;grid-template-columns:56px 1fr;column-gap:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:22px 24px}
+.oc-steps b{grid-row:span 2;font-family:"Barlow",Arial,sans-serif;font-size:30px;color:#ffd54a;line-height:1}
+.oc-steps h3{font-size:19px;margin:0 0 4px;color:#fff}
+.oc-steps p{font-size:15px;line-height:1.7;color:rgba(255,255,255,.8)}
+.othend{text-align:center;font-size:20px;font-weight:700;color:var(--ink);margin:56px auto 0;max-width:760px;line-height:1.7}
+@media(max-width:1100px){.oprops{grid-template-columns:1fr 1fr}.odirs{grid-template-columns:1fr 1fr}.othcall .wrap{grid-template-columns:1fr;gap:36px}.othwide{flex-direction:column;align-items:flex-start;padding:40px 30px}.othhero h1{font-size:40px!important}}
+@media(max-width:640px){.oprops,.odirs{grid-template-columns:1fr}.othcall h2{font-size:30px}}
+
+/* 第12条：筛选按钮点了“没反应”——被筛掉的项目带 hidden 属性，但被卡片自身 display 覆盖，强制隐藏 */
+[hidden]{display:none!important}
+/* 第12条（同类问题）：纯展示的标签不再做成和按钮一样的胶囊，改为扁平小标签，避免误以为可点击 */
+.dvp .tags span,.clients span,.mod,span.mod,.hcnt,.case2 .tag,.row-i .tg,.rows .tg{border-radius:4px!important;border:0!important;box-shadow:none!important;cursor:default}
+.dvp .tags{gap:6px 14px!important}
+.dvp .tags span{background:none!important;padding:0!important;font-size:14px;color:var(--graphite);position:relative;padding-left:12px!important}
+.dvp .tags span::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;background:var(--gold);border-radius:1px}
+.dvscenes span{border-radius:8px!important;box-shadow:none!important;cursor:default}
+.clients span{background:#fff!important;border-left:3px solid var(--gold)!important;padding:9px 14px!important}
+.r-alt a{display:inline-flex;align-items:center;gap:4px;font-size:14px;border:1px solid var(--line);border-radius:999px;padding:5px 14px;margin:0 6px 6px 0;color:var(--ink);background:#fff;transition:border-color .2s,background .2s}
+.r-alt a::after{content:"→";font-size:12px;color:#a87a00}
+.r-alt a:hover{border-color:var(--gold);background:var(--gold-pale)}
+/* 第11条：新闻封面完整显示，不裁掉公司名；比例不一的封面用同图虚化铺底，卡片高度统一 */
+.im.ncv{aspect-ratio:16/9!important;position:relative;overflow:hidden;background:#e9e9e6!important}
+.im.ncv::before{content:"";position:absolute;inset:-24px;background:var(--cv) center/cover no-repeat;filter:blur(18px) brightness(.92) saturate(1.05);transform:scale(1.08)}
+.im.ncv img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain!important;transform:none!important}
+.mcard:hover .im.ncv img,.nc3:hover .im.ncv img{transform:none!important}
+/* 新闻列表：最新一条整行横排做头条，其余三列正好铺满 */
+@media(min-width:1101px){
+.g3 .mcard.feat{grid-column:1/-1;display:grid!important;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:stretch}
+.g3 .mcard.feat .im{aspect-ratio:16/9!important}
+.g3 .mcard.feat .bd{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
+.g3 .mcard.feat h3{font-size:28px;line-height:1.45}
+.g3 .mcard.feat p{font-size:16px;-webkit-line-clamp:4}}
+.certs{grid-template-columns:repeat(3,1fr)!important;gap:14px!important}.certs figcaption,.certs p{font-size:14px!important}
+/* 第13条：人才招聘先讲员工关怀与发展，再列岗位 */
+.jobacts{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.jcare{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.jcare article{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px 28px}
+.jcare .num{font-style:normal;font-family:"Barlow",Arial,sans-serif;font-weight:700;font-size:15px;color:#a87a00}
+.jcare h3{font-size:21px;margin:10px 0 10px;color:var(--ink)}
+.jcare p{margin:0;font-size:15.5px;line-height:1.85;color:var(--graphite)}
+.jobcall{background:#fbf7ea;border-top:1px solid #f0e4b8;border-bottom:1px solid #f0e4b8;padding:90px 0;text-align:center}
+.jobcall h2{font-size:40px;line-height:1.35;margin:0 0 18px;color:var(--ink)}
+.jobcall p{font-size:17px;line-height:1.95;color:var(--graphite);max-width:760px;margin:0 auto 30px}
+@media(max-width:1100px){.jcare{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.jcare{grid-template-columns:1fr}.jobcall h2{font-size:28px}}

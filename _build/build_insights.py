@@ -67,7 +67,7 @@ for c, q, a in FAQ_ALL: groups.setdefault(c, []).append((q, a))
 faq_blocks = ""
 for c, items in groups.items():
     qs = "".join(f'<div class="qa" data-tag="{c}"><button type="button" aria-expanded="false"><span class="n num">{i+1:02d}</span><span>{q}</span><span class="pm"><svg class="i"><use href="#i-x"/></svg></span></button><div class="ans"><div><p>{a}</p></div></div></div>' for i, (q, a) in enumerate(items))
-    faq_blocks += f'<h3 class="rv" style="font-family:\'Noto Serif SC\',serif;font-size:22px;font-weight:700;margin:52px 0 2px">{c} <span class="hcnt">{len(items)} 项</span></h3><div class="qa-list">{qs}</div>'
+    faq_blocks += f'<div class="qgrp" data-tag="{c}"><h3 class="rv" style="font-family:\'Noto Serif SC\',serif;font-size:22px;font-weight:700;margin:52px 0 2px">{c} <span class="hcnt">{len(items)} 项</span></h3><div class="qa-list">{qs}</div></div>'
 sc = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[%s]}' % ",".join(
     '{"@type":"Question","name":"%s","acceptedAnswer":{"@type":"Answer","text":"%s"}}' % (q.replace('"',"'"), a.replace('"',"'")) for c,q,a in FAQ_ALL)
 
@@ -82,7 +82,7 @@ w('faq.html', head(
              "采购前，<em>先读懂这几点</em>",
              "把工程师整理的高频问题按产品线分类，直接给出答案。没有找到您关心的问题，欢迎直接联系我们。", bg="img/hero-jl-felt.webp")
  + f"""<section class="sec"><div class="wrap">{inav(1)}
-  <nav class="pillbar" data-filter=".qa" aria-label="问题分类">
+  <nav class="pillbar" data-filter=".qgrp" aria-label="问题分类">
     <button class="on" data-v="all">全部</button>{"".join(f'<button data-v="{c}">{c}</button>' for c in groups)}
   </nav>
   {faq_blocks}

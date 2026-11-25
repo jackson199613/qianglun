@@ -1,0 +1,148 @@
+[
+{
+"src": "img/fts-cover.webp",
+"out": "img/pc-purify-tank.webp"
+},
+{
+"src": "img/fts-trough-render.webp",
+"out": "img/pc-purify-trough.webp",
+"mode": "white"
+},
+{
+"src": "img/fts-retrofit-render.webp",
+"out": "img/pc-purify-retrofit.webp",
+"mode": "white"
+},
+{
+"src": "img/jl-cartridge-pleat.webp",
+"out": "img/pc-mach-hydraulic.webp"
+},
+{
+"src": "img/jj-panel.webp",
+"out": "img/pc-mach-dust.webp",
+"mode": "poly",
+"pts": [
+[
+92,
+252
+],
+[
+125,
+214
+],
+[
+1280,
+330
+],
+[
+1280,
+610
+],
+[
+1200,
+848
+],
+[
+168,
+1090
+],
+[
+98,
+1055
+]
+],
+"desat": 0.85
+},
+{
+"src": "/home/claude/jlsite/raw/IMG_1736-17232235724.JPG",
+"out": "img/pc-mach-air.webp"
+},
+{
+"src": "/home/claude/jlsite/raw/1754-17133583904.jpg",
+"out": "img/pc-mach-fluid.webp"
+},
+{
+"src": "img/cart-02.webp",
+"out": "img/pc-mach-parts.webp",
+"mode": "tubes",
+"box": [
+30,
+160,
+495,
+418
+]
+},
+{
+"src": "img/jlw-felt.webp",
+"out": "img/pc-media-felt.webp",
+"p_hi": 226,
+"med_hi": 150
+},
+{
+"src": "/home/claude/jlsite/raw/IMG_1644-17061892760.JPG",
+"out": "img/pc-media-composite.webp"
+},
+{
+"src": "/home/claude/jlsite/raw/IMG_1595-17044160392.JPG",
+"out": "img/pc-media-alloy.webp"
+},
+{
+"src": "/home/claude/jlsite/raw/IMG_1405-16231987520.JPG",
+"out": "img/pc-yarn-fiber.webp"
+},
+{
+"src": "img/yarn-real-thread-set.webp",
+"out": "img/pc-yarn-thread.webp"
+},
+{
+"src": "/home/claude/jlsite/raw/IMG_1469-16301851051.JPG",
+"out": "img/pc-yarn-spun.webp"
+},
+{
+"src": "img/yarn-real-ptfe.webp",
+"out": "img/pc-yarn-coat.webp"
+},
+{
+"src": "img/yarn-tape-roll.webp",
+"out": "img/pc-yarn-tape.webp"
+},
+{
+"src": "img/yarn-cloth.webp",
+"out": "img/pc-yarn-cloth.webp",
+"mode": "swatch",
+"box": [
+120,
+120,
+1080,
+1080
+],
+"fit": [
+620,
+600
+]
+},
+{
+"src": "img/rd-rope.webp",
+"out": "img/pc-thermo-rope.webp"
+},
+{
+"src": "img/rd-felt.webp",
+"out": "img/pc-thermo-felt.webp"
+},
+{
+"src": "img/rd-thread.webp",
+"out": "img/pc-thermo-thread.webp"
+},
+{
+"src": "img/rd-elastic.webp",
+"out": "img/pc-thermo-elastic.webp"
+},
+{
+"src": "img/rd-braid.webp",
+"out": "img/pc-thermo-braid.webp"
+},
+{
+"src": "img/rd-tape.webp",
+"out": "img/pc-thermo-tape.webp"
+}
+]

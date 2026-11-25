@@ -2,7 +2,7 @@
 """应用方案：总览 + 7 个行业页"""
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
-from layout import head, header, crumb, page_hero, footer, SITE
+from layout import head, header, crumb, page_hero, footer, SITE, TEL, TEL_RAW
 from common import w, ENDCTA
 from divisions import DIVS
 PBY = {(d["key"], p["id"]): (d, p) for d in DIVS for p in d["products"]}
@@ -68,7 +68,7 @@ IND = [
       cases="催化剂回收、医药食品饮料过滤、燃气燃烧器、储热式热交换器多孔材料"),
 ]
 
-REL = {'a-filtration.html': {'prods': [('media', 'felt'), ('media', 'composite'), ('media', 'alloy'), ('machining', 'fluid'), ('machining', 'hydraulic'), ('machining', 'dust'), ('machining', 'air'), ('machining', 'parts'), ('purify', 'tank'), ('purify', 'trough'), ('purify', 'retrofit'), ('yarn', 'thread')], 'img': 'img/jlw-cart.webp', 'hero': 'img/hero-jl-cart.webp'}, 'a-glass.html': {'prods': [('thermo', 'elastic'), ('thermo', 'braid'), ('thermo', 'tape'), ('thermo', 'rope'), ('thermo', 'felt'), ('thermo', 'thread'), ('yarn', 'tape'), ('yarn', 'cloth')], 'img': 'img/sleeve-06.webp', 'hero': 'img/yarn-glassbelt.webp'}, 'a-emi.html': {'prods': [('yarn', 'spun'), ('yarn', 'thread'), ('yarn', 'cloth'), ('yarn', 'tape'), ('thermo', 'braid'), ('thermo', 'tape')], 'img': 'img/yarn-cloth.webp', 'hero': 'img/hero-jl-blend.webp'}, 'a-aero.html': {'prods': [('media', 'felt'), ('media', 'alloy'), ('thermo', 'felt')], 'img': 'img/jlw-felt.webp', 'hero': 'img/hero-jl-felt.webp'}, 'a-auto.html': {'prods': [('yarn', 'thread'), ('yarn', 'coat'), ('yarn', 'cloth'), ('thermo', 'rope')], 'img': 'img/yarn-carseat.webp', 'hero': 'img/hero-jl-yarn.webp'}, 'a-textile.html': {'prods': [('yarn', 'thread'), ('yarn', 'coat'), ('yarn', 'spun'), ('yarn', 'fiber'), ('yarn', 'cloth'), ('thermo', 'thread')], 'img': 'img/yarn-wearable.webp', 'hero': 'img/hero-jl-yarn.webp'}, 'a-other.html': {'prods': [('media', 'felt'), ('media', 'alloy'), ('yarn', 'fiber'), ('yarn', 'thread'), ('yarn', 'tape'), ('thermo', 'felt')], 'img': 'img/jlw-staple.webp', 'hero': 'img/hero-jl-mesh.webp'}}
+REL = {'a-filtration.html': {'prods': [('media', 'felt'), ('media', 'composite'), ('media', 'alloy'), ('machining', 'fluid'), ('machining', 'hydraulic'), ('machining', 'dust'), ('machining', 'air'), ('machining', 'parts'), ('purify', 'tank'), ('purify', 'trough'), ('purify', 'retrofit'), ('yarn', 'thread')], 'img': 'img/jlw-cart.webp', 'hero': 'img/hero-jl-cart.webp'}, 'a-glass.html': {'prods': [('thermo', 'elastic'), ('thermo', 'braid'), ('thermo', 'tape'), ('thermo', 'rope'), ('thermo', 'felt'), ('thermo', 'thread'), ('yarn', 'tape'), ('yarn', 'cloth')], 'img': 'img/sleeve-06.webp', 'hero': 'img/yarn-glassbelt.webp'}, 'a-emi.html': {'prods': [('yarn', 'spun'), ('yarn', 'thread'), ('yarn', 'cloth'), ('yarn', 'tape'), ('thermo', 'braid'), ('thermo', 'tape')], 'img': 'img/yarn-cloth.webp', 'hero': 'img/hero-jl-blend.webp'}, 'a-aero.html': {'prods': [('media', 'felt'), ('media', 'alloy'), ('thermo', 'felt')], 'img': 'img/jlw-felt.webp', 'hero': 'img/hero-jl-felt.webp'}, 'a-auto.html': {'prods': [('yarn', 'thread'), ('yarn', 'coat'), ('yarn', 'cloth'), ('thermo', 'rope')], 'img': 'img/yarn-carseat.webp', 'hero': 'img/hero-jl-yarn.webp'}, 'a-textile.html': {'prods': [('yarn', 'thread'), ('yarn', 'coat'), ('yarn', 'spun'), ('yarn', 'fiber'), ('yarn', 'cloth'), ('thermo', 'thread')], 'img': 'img/yarn-wearable.webp', 'hero': 'img/hero-jl-yarn.webp'}, 'a-other.html': {'prods': [('media', 'felt'), ('media', 'alloy'), ('yarn', 'fiber'), ('yarn', 'thread'), ('yarn', 'cloth'), ('thermo', 'felt')], 'img': 'img/other-network.webp', 'hero': 'img/other-network.webp'}}
 for _i in IND:
     _i.update(REL[_i['f']])
 
@@ -76,7 +76,11 @@ ov_cards = "".join(f"""<article class="mcard rv">
   <a href="{i['f']}" class="im"><img src="{i['img']}" alt="{i['zh']}" loading="lazy"></a>
   <div class="bd"><div class="cat">{i['en']}</div><h3>{i['zh']}</h3><p>{i['pain']}</p>
   <a class="more" href="{i['f']}">查看方案<svg class="i"><use href="#i-arrow"/></svg></a></div>
-</article>""" for i in IND)
+</article>""" for i in IND if i['f'] != 'a-other.html') + """<a class="othwide rv" href="a-other.html" style="--bg:url('img/other-network.webp')">
+  <div><span class="cat">OTHERS · 其他应用</span><h3>您的行业不在上面？也许就是下一个</h3>
+  <p>理论上，金属纤维可以用在各行各业。还有很多行业，我们暂时没有接触到、也暂时没有想到——欢迎带着需求来，和我们一起找到新的可能。</p></div>
+  <span class="pill pill-gold">探索更多可能<svg class="i"><use href="#i-arrow"/></svg></span>
+</a>"""
 
 w('applications.html', head(
     "应用方案 | 过滤分离 · 玻璃深加工 · 电磁屏蔽 · 航空航天 · 汽车 · 智能穿戴",
@@ -105,6 +109,8 @@ def rel_cards(i):
 
 
 for n, i in enumerate(IND):
+    if i['f'] == 'a-other.html':
+        continue
     kpi = [(a, b, c) for a, b, c in i['kpis']]
     names = "、".join(PBY[k][1]["name"] for k in i["prods"][:6])
     w(i['f'], head(
@@ -136,5 +142,76 @@ for n, i in enumerate(IND):
   </div>
 </div></section>"""
      + ENDCTA + footer())
+
+OTHER_PROPS = [
+    ("导电 · 导热 · 导磁", "能传导电流、热量与信号，可做加热、屏蔽、防静电与传感。"),
+    ("耐高温 · 耐腐蚀", "在高温、酸碱等严苛环境中长期稳定，不易老化。"),
+    ("多孔 · 高比表面积", "烧结成毡后孔隙连通均匀，可过滤、可分离、可承载。"),
+    ("柔软 · 可纺可织", "像纤维一样缝纫、编织、针织，能织进布料、缝进衣物。"),
+    ("可烧结 · 可成型", "做成毡、滤芯、滤盘、套管与各类异形件。"),
+    ("可复合 · 可定制", "材质、纤维直径与产品形态，可按需求组合开发。"),
+]
+OTHER_DIRS = [
+    ("燃气燃烧器", "燃烧器用金属纤维毡"), ("氢能", "制氢设备气体扩散层用毡"), ("吸声降噪", "金属纤维吸声消音材料"),
+    ("储能储热", "储热式热交换器多孔材料"), ("催化", "多孔催化材料、催化剂回收"), ("红外发热", "红外辐射发热材料"),
+    ("医药食品", "医药、食品、饮料过滤与气液分离"), ("机器人与电子", "导电刷、机器人用线"),
+]
+
+
+def other_page(n, i):
+    props = "".join(f'<div class="oprop rv"><span class="num">{k+1:02d}</span><h3>{t}</h3><p>{d}</p></div>' for k, (t, d) in enumerate(OTHER_PROPS))
+    dirs = "".join(f'<div class="odir rv"><b>{t}</b><span>{d}</span></div>' for t, d in OTHER_DIRS)
+    done = "".join(f'<a href="{x["f"]}">{x["zh"]}</a>' for x in IND if x["f"] != "a-other.html")
+    w(i['f'], head(
+        "其他应用 | 金属纤维的无限可能 — 强纶新材",
+        "金属纤维兼具导电导热、耐高温耐腐蚀、多孔与可纺可织等特性，理论上可以用在各行各业。您的行业不在我们已列出的领域？欢迎带着需求联系强纶，一起开发新的应用。",
+        "金属纤维新应用,金属纤维定制开发,金属纤维燃烧器,气体扩散层,吸声材料,强纶新材",
+        i['f'], og_img=i['img'])
+     + header('applications.html')
+     + crumb([("应用方案", "applications.html"), (i['zh'], None)])
+     + f"""<section class="ph has-bg othhero" style="--phbg:url('{i['hero']}')"><div class="wrap">
+  <div class="idx"><b>{n+1:02d}</b>{i['en']} · {i['zh']}</div>
+  <h1>金属纤维的应用，<br>远不止于此</h1>
+  <p class="ph-lead">过滤分离、玻璃深加工、电磁屏蔽、航空航天、汽车、智能穿戴——这些是我们已经走过的路。理论上，金属纤维可以用在各行各业；还有很多行业，我们暂时没有接触到，也暂时没有想到。</p>
+  <div class="othdone"><span>已走过的路</span>{done}</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sh rv"><h2>为什么说金属纤维有无限可能</h2>
+  <p>一根金属纤维，同时拥有金属与纤维两种属性。把下面这些特性组合起来，能用的地方远比我们列出的多。</p></div>
+  <div class="oprops">{props}</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sh rv"><h2>已经在探索的新方向</h2>
+  <p>除了前面六个行业，金属纤维也已经用在这些方向上。下一个方向，可能就来自您的需求。</p></div>
+  <div class="odirs">{dirs}</div>
+</div></section>
+
+<section class="othcall" style="--bg:url('{i['img']}')"><div class="wrap">
+  <div class="oc-t rv">
+    <span class="eb">YOUR INDUSTRY · 您的行业</span>
+    <h2>您的行业，也许就是下一个</h2>
+    <p>每个人都有自己的盲区：您最懂您的行业，我们最懂金属纤维。如果您觉得自己的行业也能用上金属纤维——哪怕只是一个想法——欢迎带着需求来找我们。一次交流，就可能打开一个新的应用方向。</p>
+    <div class="acts"><a class="pill pill-gold" href="contact.html#inq">提交您的应用需求<svg class="i"><use href="#i-arrow"/></svg></a><a class="pill pill-line lt" href="tel:{TEL_RAW}">电话 {TEL}</a></div>
+  </div>
+  <ol class="oc-steps rv">
+    <li><b>01</b><h3>告诉我们您的场景</h3><p>您的行业、使用环境，以及想解决的问题。</p></li>
+    <li><b>02</b><h3>一起评估可行性</h3><p>研发与工程团队从材料、形态与工艺上一起分析。</p></li>
+    <li><b>03</b><h3>共同把想法做成产品</h3><p>从材料选型到产品形态，和您一起推进。</p></li>
+  </ol>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h" style="margin:0 0 26px"><h2>可以从这些材料开始</h2><p>金属纤维、烧结毡、纱线与织物——新应用往往从这几种基础形态出发。</p></div>
+  <div class="rpcs">{rel_cards(i)}</div>
+  <p class="othend rv">每一个新需求，都会让金属纤维走得更远；这也是强纶面向未来的无限可能。</p>
+</div></section>"""
+     + ENDCTA + footer())
+
+
+for n, i in enumerate(IND):
+    if i['f'] == 'a-other.html':
+        other_page(n, i)
 
 print(f'应用方案完成：总览 + {len(IND)} 个行业页')

@@ -21,8 +21,8 @@ INDS = [
      "柔软均匀的发热线材，以及耐高温、不划伤的玻璃成型包覆材料。", "强纶金属纤维线 · 耐高温套管"),
     ("a-textile.html", "img/yarn-wearable.webp", "功能纺织与智能穿戴", "发热服饰 · 电子标签 · 智能穿戴",
      "导电、发热又柔软耐弯折，能直接织进、缝进衣物。", "强纶金属纤维线 · 包胶线 · 导电纱"),
-    ("a-other.html", "img/jlw-staple.webp", "其他应用", "燃气燃烧器 · 制氢扩散层 · 吸声降噪",
-     "兼具导电、耐高温与多孔结构，服务氢能、燃烧与降噪等新方向。", "燃烧器用毡 · 气体扩散层用毡"),
+    ("a-other.html", "img/other-network.webp", "其他应用", "您的行业，也许就是下一个",
+     "金属纤维理论上可以用在各行各业。您的行业不在上面？欢迎带着需求来，和我们一起找到新的可能。", "金属纤维 · 烧结毡 · 纱线与织物，按需开发"),
 ]
 
 FAQ = [
@@ -39,7 +39,7 @@ def news_cards():
     picks = [n for n in NEWS if n["img"] not in ("img/news/news16-0.webp", "img/news/news13-0.webp")][:3]
     out = ""
     for n in picks:
-        out += f'''<a class="nc3 rv" href="{n['slug']}.html"><div class="im"><img loading="lazy" src="{n['img']}" alt="{n['title']}"></div>
+        out += f'''<a class="nc3 rv" href="{n['slug']}.html"><div class="im ncv" style="--cv:url('{n['img']}')"><img loading="lazy" src="{n['img']}" alt="{n['title']}"></div>
 <div class="bd"><div class="meta num">{n['date'].replace('-', '.')} · {n['cat']}</div><h3>{n['title']}</h3></div></a>'''
     return out
 
@@ -51,8 +51,8 @@ def inds_html():
         pans += f'''<div class="pan2{' on' if i == 0 else ''}" tabindex="0" data-go="{u}"><i class="bg" style="background-image:url('{im}')"></i>
 <div class="vt"><b>{i+1:02d}</b>{t}</div>
 <div class="full"><div class="n">{i+1:02d} / {len(INDS):02d}</div><h3>{t}</h3>
-<p><b>应用场景</b>{sc}</p><p>{val}</p><p><b>推荐产品</b>{rec}</p>
-<a class="go" href="{u}">查看{t}方案{ARW}</a></div></div>'''
+{(f'<p class="lead2">{sc}</p><p>{val}</p>' if u == 'a-other.html' else f'<p><b>应用场景</b>{sc}</p><p>{val}</p><p><b>推荐产品</b>{rec}</p>')}
+<a class="go" href="{u}">{'探索更多可能' if u == 'a-other.html' else f'查看{t}方案'}{ARW}</a></div></div>'''
     return tabs, pans
 
 
@@ -128,9 +128,9 @@ html = head(
       </div>
     </div>
     <div class="mosaic">
-      <figure><img src="img/jlw-felt.webp" alt="金属纤维烧结毡"><figcaption>金属纤维烧结毡</figcaption></figure>
-      <figure><img src="img/jlw-cart.webp" alt="金属滤芯"><figcaption>金属滤芯</figcaption></figure>
-      <figure><img src="img/jlw-yarn.webp" alt="金属纤维纱线"><figcaption>金属纤维纱线</figcaption></figure>
+      <figure><img src="img/pc-media-felt-tall.webp" alt="金属纤维烧结毡"><figcaption>金属纤维烧结毡</figcaption></figure>
+      <figure><img src="img/pc-mach-fluid.webp" alt="金属滤芯"><figcaption>金属滤芯</figcaption></figure>
+      <figure><img src="img/pc-yarn-spun.webp" alt="金属纤维纱线"><figcaption>金属纤维纱线</figcaption></figure>
     </div>
   </div>
 </section>
