@@ -468,3 +468,4 @@ h1 em,h2 em,h3 em,h4 em,.t2 em,h2.t em,.hhero h1 em,.sh h2 em,.ph h1 em,section.
 .jobcall p{font-size:17px;line-height:1.95;color:var(--graphite);max-width:760px;margin:0 auto 30px}
 @media(max-width:1100px){.jcare{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.jcare{grid-template-columns:1fr}.jobcall h2{font-size:28px}}
+.g3 .mcard.feat[hidden],.dvps .dvp[hidden],.jcare [hidden]{display:none!important}
