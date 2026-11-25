@@ -469,3 +469,6 @@ h1 em,h2 em,h3 em,h4 em,.t2 em,h2.t em,.hhero h1 em,.sh h2 em,.ph h1 em,section.
 @media(max-width:1100px){.jcare{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.jcare{grid-template-columns:1fr}.jobcall h2{font-size:28px}}
 .g3 .mcard.feat[hidden],.dvps .dvp[hidden],.jcare [hidden]{display:none!important}
+/* 第1条补：数字单位、标题计数也不再用第二种颜色 */
+.num sup,b.num sup,.ph-k sup,.kpi sup,.facts sup,h1 span,h2 span,h3 span,h4 span,h3 .hcnt{color:inherit!important;-webkit-text-fill-color:currentColor!important}
+h3 .hcnt{background:#f1f2f4!important;opacity:.75}
