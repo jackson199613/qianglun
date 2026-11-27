@@ -9,7 +9,7 @@ REMOVED = {"platforms.html", "specs.html", "downloads.html", "encyclopedia.html"
 
 # 图片在 netlify.toml 里是长缓存。内容换了但文件名没变的图（精修产品图、首屏横幅）必须带版本号，
 # 否则看过旧图的访客（包括甲方）浏览器里还是旧图。以后再替换这些图，把 IMG_VER 改掉重新生成即可。
-IMG_VER = "20261127"
+IMG_VER = "20261127b"
 _VER_RE = re.compile(r'(img/(?:pc-|hero-jl-|sleeve-06)[A-Za-z0-9_-]*\.webp)(?!\?)')
 
 

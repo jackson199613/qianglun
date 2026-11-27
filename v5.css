@@ -493,3 +493,5 @@ img[src*="img/pc-"][src][src]{object-fit:contain!important;background:#f6f6f4!im
 .solimg:has(>img[src*="img/pc-"]){border:0}
 /* 4.0：内页首屏右侧是产品横幅时，标题不压到产品上 */
 @media(min-width:1100px){.ph.has-bg h1{max-width:840px;text-wrap:balance}.ph.has-bg .ph-lead{max-width:34em}}
+/* 4.0 追加：同一行卡片高度不同的时候，卡片底部的“咨询 / 查看”链接统一贴底对齐 */
+.dvps .dvp .bd{flex:1 1 auto}
