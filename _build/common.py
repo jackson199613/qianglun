@@ -1,15 +1,22 @@
 # -*- coding: utf-8 -*-
 """各栏目构建脚本共用的小工具"""
-import os
+import os, re
 OUT = os.path.join(os.path.dirname(__file__), '..')
 
 # 2026.11.23 客户反馈：重复 / 不要的页面不再生成（netlify.toml 里做 301 跳转）
 REMOVED = {"platforms.html", "specs.html", "downloads.html", "encyclopedia.html", "qa.html", "p-detail.html"}
 
 
+# 图片在 netlify.toml 里是长缓存。内容换了但文件名没变的图（精修产品图、首屏横幅）必须带版本号，
+# 否则看过旧图的访客（包括甲方）浏览器里还是旧图。以后再替换这些图，把 IMG_VER 改掉重新生成即可。
+IMG_VER = "20261127"
+_VER_RE = re.compile(r'(img/(?:pc-|hero-jl-|sleeve-06)[A-Za-z0-9_-]*\.webp)(?!\?)')
+
+
 def w(name, html):
     if name in REMOVED:
         return
+    html = _VER_RE.sub(lambda m: m.group(1) + '?v=' + IMG_VER, html)
     open(os.path.join(OUT, name), 'w', encoding='utf-8').write(html)
     print('  ✓', name)
 
