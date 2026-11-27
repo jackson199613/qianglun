@@ -98,6 +98,9 @@ w('applications.html', head(
 </div></section>"""
  + ENDCTA + footer())
 
+# 白底产品图整张显示（不裁切）；现场照片铺满 4:3 画框
+SOL_CONTAIN = {"img/jlw-cart.webp", "img/jlw-felt.webp", "img/media-09.webp", "img/yarn-wearable.webp"}
+
 def rel_cards(i):
     out = ""
     for k in i["prods"]:
@@ -129,7 +132,7 @@ for n, i in enumerate(IND):
       <h3>典型应用</h3>
       <p>{i['cases']}</p>
     </div>
-    <figure class="solimg rv d1"><img src="{i['img']}" alt="{i['zh']}" loading="lazy"></figure>
+    <figure class="solimg{' contain' if i['img'] in SOL_CONTAIN else ''} rv d1"><img src="{i['img']}" alt="{i['zh']}" loading="lazy"></figure>
   </div>
 
   <div class="sec-h" style="margin:72px 0 26px"><h2>相关产品</h2><p>以下产品均可用于{i['zh']}，点击查看产品详情。</p></div>

@@ -87,9 +87,10 @@ schema = json.dumps({"@context": "https://schema.org", "@graph": [
 #    逻辑在 intro.js；样式在 home.css（#qlintro）
 INTRO = """<div id="qlintro" aria-hidden="true" style="display:none">
   <canvas></canvas>
+  <div class="qi-step"><b>01</b><em>拉丝</em><span>一根金属丝，拉成微米级纤维</span></div>
   <div class="qi-name"><span class="qi-mark"><img src="img/logo-mark.png" alt=""></span>
     <h2><span class="w">福建强纶新材料</span><span class="w">股份有限公司</span></h2></div>
-  <div class="qi-sub"><p class="qi-en">FUJIAN QL METAL FIBER CO., LTD.</p><span class="qi-rule"></span><p class="qi-tag">金属纤维制品领跑者</p></div>
+  <div class="qi-sub"><p class="qi-en">FUJIAN QL METAL FIBER CO., LTD.</p><span class="qi-rule"></span><p class="qi-tag">一根金属纤维的无限可能</p></div>
   <div class="qi-meta"><span>SINCE 2002</span><span>新三板 872336</span><span>国家级专精特新“小巨人”企业</span></div>
   <div class="qi-flash"></div>
   <button type="button" class="qi-skip">跳过</button>

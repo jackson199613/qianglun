@@ -103,12 +103,14 @@ w('jobs.html', head(
     "jobs.html", og_img="img/team-build2021.webp")
  + header('')
  + crumb([("人才招聘", None)])
- + f"""<section class="ph has-bg jobhero" style="--phbg:url('img/team-star2024.webp')"><div class="wrap">
+ + f"""<section class="ph jobhero"><div class="wrap jobhero-g"><div>
   <div class="idx"><b>01</b>CAREERS · 人才招聘</div>
   <h1>企业走得远，<br>靠的是每一个强纶人</h1>
   <p class="ph-lead">在强纶，你可以在车间里做研发、在应用场景里找答案；你的努力会被看见、被认可，也会被关心。我们欢迎来自各行各业的人才，和我们一起把金属纤维做得更远。</p>
   <div class="ph-k"><div><b class="num">200<sup>+</sup></b><span>强纶伙伴</span></div><div><b class="num">6<sup>个</sup></b><span>研究室</span></div><div><b class="num">5<sup>大</sup></b><span>制研平台</span></div><div><b class="num">2002</b><span>一路同行至今</span></div></div>
   <div class="jobacts"><a class="pill pill-gold" href="#openings">查看在招岗位<svg class="i"><use href="#i-arrow"/></svg></a><a class="pill pill-line" href="mailto:hcq@jl-jiber.com">投递简历</a></div>
+  </div>
+  <figure class="jobhero-ph"><img src="img/team-build2021.webp" alt="强纶新材团建活动" width="1500" height="1125"><figcaption>未来有你，并肩同行 · 强纶团建</figcaption></figure>
 </div></section>
 
 <section class="sec"><div class="wrap">

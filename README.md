@@ -30,3 +30,9 @@ for s in home divisions about about2 rdmain rd rd2 apps select select2 insights 
 - 资料下载中心的 PDF 文件（手册、数据表、检测报告、证书）
 - 产品电镜图与产品视频
 - 百度统计代码与 ICP 备案接入
+
+## 2026.11.27 甲方《修改意见 4.0》
+- 第 1 条：进站动画重做（`intro.js` v7）。同一束纤维依次变成：一根丝（拉丝）→ 加捻成线 → 经纬织造 → 铺网烧结成毡 → 汇聚成 logo 与公司全称。标记与样式在 `_build/build_home.py` 的 INTRO 和 `home.css`。
+- 第 7 条：行业方案页左文右图比例（`v5.css` 的 `.sol2` / `.solimg`），图片统一 4:3 并限高。
+- 第 10 条：人才招聘首屏改为右侧相框照片（`.jobhero-g`），不再把合影放大做背景。
+- 第 2–6、8、9 条及全站产品图：改为甲方原图 + image2 精修，清单与指令见修图包；精修图返回后替换 `img/pc-*.webp`。
