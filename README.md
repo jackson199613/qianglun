@@ -36,3 +36,6 @@ for s in home divisions about about2 rdmain rd rd2 apps select select2 insights 
 - 第 7 条：行业方案页左文右图比例（`v5.css` 的 `.sol2` / `.solimg`），图片统一 4:3 并限高。
 - 第 10 条：人才招聘首屏改为右侧相框照片（`.jobhero-g`），不再把合影放大做背景。
 - 第 2–6、8、9 条及全站产品图：改为甲方原图 + image2 精修，清单与指令见修图包；精修图返回后替换 `img/pc-*.webp`。
+- 2026.11.27 追加：24 张 image2 精修图已替换上线（第 2–6、8、9 条）。流程：`_build/img_tools/apply_retouched.py`（编号 → 网站文件名的对照表）→ `variants.py` 的 `flatten()` 把每张图的影棚背景校平成统一的 #f6f6f4 → 输出 `img/pc-*.webp`（1440×1080）。
+  `variants.py` 另外生成不裁产品的衍生图：首页首屏拼图（`pc-media-felt-tall`、`pc-*-sq`）和内页首屏横幅（`hero-jl-cart/felt/yarn`）。
+  `v5.css` 末尾规定 `img/pc-*` 一律整件显示（contain）、图框底色与图片背景同色，任何比例的图框都不会裁掉产品。
