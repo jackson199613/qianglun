@@ -492,4 +492,4 @@ img[src*="img/pc-"][src][src]{object-fit:contain!important;background:#f6f6f4!im
 .im:has(>img[src*="img/pc-"]),figure:has(>img[src*="img/pc-"]),.solimg:has(>img[src*="img/pc-"]){background:#f6f6f4!important}
 .solimg:has(>img[src*="img/pc-"]){border:0}
 /* 4.0：内页首屏右侧是产品横幅时，标题不压到产品上 */
-@media(min-width:1100px){.ph.has-bg h1{max-width:840px}.ph.has-bg .ph-lead{max-width:34em}}
+@media(min-width:1100px){.ph.has-bg h1{max-width:840px;text-wrap:balance}.ph.has-bg .ph-lead{max-width:34em}}
