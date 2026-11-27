@@ -357,9 +357,16 @@ section.ph.dvh-c{padding:118px 0 34px}
 .rpc p{font-size:15px;line-height:1.75;color:#555;margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .rpc .more{margin-top:auto;padding-top:8px;font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px}
 .rpc .more .i{width:16px;height:16px}
-.sol2{align-items:stretch}
-.solimg{margin:0;border-radius:16px;overflow:hidden;background:#fafafa;min-height:280px}
-.solimg img{width:100%;height:100%;object-fit:cover;display:block}
+/* 4.0 第 7 条：行业方案页左文右图比例。图片统一 4:3 横幅并限高，文字加大、与图片垂直居中，不再出现“三行字配一张竖长图” */
+.sol2{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.sol2 .prose{max-width:none}
+.sol2 .prose h3{font-size:22px;margin:34px 0 12px}
+.sol2 .prose p{font-size:16.5px;line-height:1.95;color:#3d4046}
+.solimg{margin:0;border-radius:16px;overflow:hidden;background:#f6f6f4;aspect-ratio:4/3;max-height:420px;width:100%;justify-self:end;position:relative}
+.solimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.solimg.contain{background:#fff;border:1px solid var(--line)}
+.solimg.contain img{object-fit:contain;padding:18px}
+@media(max-width:960px){.sol2{grid-template-columns:1fr;gap:28px}.solimg{max-height:none}}
 @media(max-width:980px){.rpcs{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.rpcs{grid-template-columns:1fr}}
 .rpcs.c4{grid-template-columns:repeat(4,1fr)}.rpcs.c4 .rpc h3{font-size:17px}@media(max-width:1100px){.rpcs.c4{grid-template-columns:1fr 1fr}}
@@ -472,3 +479,17 @@ h1 em,h2 em,h3 em,h4 em,.t2 em,h2.t em,.hhero h1 em,.sh h2 em,.ph h1 em,section.
 /* 第1条补：数字单位、标题计数也不再用第二种颜色 */
 .num sup,b.num sup,.ph-k sup,.kpi sup,.facts sup,h1 span,h2 span,h3 span,h4 span,h3 .hcnt{color:inherit!important;-webkit-text-fill-color:currentColor!important}
 h3 .hcnt{background:#f1f2f4!important;opacity:.75}
+
+/* 4.0 第 10 条：人才招聘首屏不再把合影拉大做背景（放大后发糊、红色舞台与页面不协调），改成右侧清晰的相框照片 */
+.jobhero-g{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:56px;align-items:center}
+.jobhero-ph{margin:0;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:4/3;box-shadow:0 30px 60px -34px rgba(60,45,0,.45);border:6px solid #fff;background:#fff}
+.jobhero-ph img{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block}
+.jobhero-ph figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.92);border-radius:999px;padding:6px 14px;font-size:13px;color:#33363b}
+@media(max-width:960px){.jobhero-g{grid-template-columns:1fr;gap:28px}}
+
+/* 4.0：精修产品图（img/pc-*）背景已统一为 #f6f6f4。任何形状的图框里都整件显示、不裁切，图框底色与图片背景一致，看不出边界 */
+img[src*="img/pc-"][src][src]{object-fit:contain!important;background:#f6f6f4!important;padding:0!important}
+.im:has(>img[src*="img/pc-"]),figure:has(>img[src*="img/pc-"]),.solimg:has(>img[src*="img/pc-"]){background:#f6f6f4!important}
+.solimg:has(>img[src*="img/pc-"]){border:0}
+/* 4.0：内页首屏右侧是产品横幅时，标题不压到产品上 */
+@media(min-width:1100px){.ph.has-bg h1{max-width:840px;text-wrap:balance}.ph.has-bg .ph-lead{max-width:34em}}

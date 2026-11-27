@@ -245,6 +245,13 @@ html.qi-lock,html.qi-lock body{overflow:hidden}
 #qlintro.qi-s3 .qi-flash{animation:qiFlash .9s cubic-bezier(.4,0,.2,1) forwards}
 @keyframes qiFlash{0%{opacity:0;transform:scale(0)}25%{opacity:1}100%{opacity:1;transform:scale(400)}}
 #qlintro.qi-out{opacity:0;pointer-events:none}
+/* v7：阶段说明（拉丝 / 加捻 / 织造 / 烧结） */
+#qlintro .qi-step{position:absolute;left:0;right:0;top:calc(45vh + min(27vh,230px));display:flex;justify-content:center;align-items:baseline;gap:14px;opacity:0;transform:translateY(8px);transition:opacity .28s ease,transform .28s ease;pointer-events:none;padding:0 20px;flex-wrap:wrap}
+#qlintro .qi-step.on{opacity:1;transform:none}
+#qlintro .qi-step b{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:600;font-size:13px;letter-spacing:.18em;color:#14120e;background:#ffd400;border-radius:4px;padding:2px 8px 1px}
+#qlintro .qi-step em{font-style:normal;font-family:"Noto Serif SC","Songti SC",serif;font-weight:900;font-size:clamp(20px,2.1vw,30px);letter-spacing:.3em;color:#fff6d6}
+#qlintro .qi-step span{font-size:clamp(13px,1.15vw,16px);letter-spacing:.22em;color:rgba(230,215,170,.82)}
+#qlintro.qi-s2 .qi-step{opacity:0}
 #qlintro .qi-skip{position:absolute;right:26px;top:22px;z-index:3;background:rgba(255,255,255,.08);border:1px solid rgba(255,212,0,.45);border-radius:999px;padding:7px 18px;font-size:13px;color:#f3e3a6;cursor:pointer;letter-spacing:.1em}
 #qlintro .qi-skip:hover{background:rgba(255,212,0,.18)}
 @media(max-width:600px){#qlintro .qi-meta{flex-direction:column;gap:6px;align-items:center;bottom:5vh}}

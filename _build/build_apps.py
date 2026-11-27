@@ -8,7 +8,7 @@ from divisions import DIVS
 PBY = {(d["key"], p["id"]): (d, p) for d in DIVS for p in d["products"]}
 
 IND = [
- dict(f="a-filtration.html", gal=[("img/fts-site-huayou.webp","大流量槽体方案"),("img/fts-bamo-03.webp","槽体与管路"),("img/fts-tank-02.webp","罐式收油系统"),("img/fts-scene-03.webp","过滤与除油联合装置")], en="FILTRATION", zh="过滤分离", img="img/jlw-cart.webp", hero="img/fts-scene-01.webp",
+ dict(f="a-filtration.html", gal=[("img/fts-site-huayou.webp","大流量槽体方案"),("img/fts-bamo-03.webp","槽体与管路"),("img/fts-tank-02.webp","罐式收油系统"),("img/fts-scene-03.webp","过滤与除油联合装置")], en="FILTRATION", zh="过滤分离", img="img/pc-mach-fluid.webp", hero="img/fts-scene-01.webp",
       claim="高温、高粘、强腐蚀，<em>常规滤材扛不住的地方</em>",
       pain="化纤熔体与黏胶应用场景下，传统滤纸滤布不耐高温高压、金属网易堵塞易碎；萃取料液中的微米级乳化油又会污染后端树脂与膜。",
       sol="以金属纤维烧结毡/烧结网为滤材的滤芯、滤盘与成套过滤器，配合 FTS 收油系统完成预除油，形成「除油 + 精滤」的完整链条。",
@@ -68,7 +68,7 @@ IND = [
       cases="催化剂回收、医药食品饮料过滤、燃气燃烧器、储热式热交换器多孔材料"),
 ]
 
-REL = {'a-filtration.html': {'prods': [('media', 'felt'), ('media', 'composite'), ('media', 'alloy'), ('machining', 'fluid'), ('machining', 'hydraulic'), ('machining', 'dust'), ('machining', 'air'), ('machining', 'parts'), ('purify', 'tank'), ('purify', 'trough'), ('purify', 'retrofit'), ('yarn', 'thread')], 'img': 'img/jlw-cart.webp', 'hero': 'img/hero-jl-cart.webp'}, 'a-glass.html': {'prods': [('thermo', 'elastic'), ('thermo', 'braid'), ('thermo', 'tape'), ('thermo', 'rope'), ('thermo', 'felt'), ('thermo', 'thread'), ('yarn', 'tape'), ('yarn', 'cloth')], 'img': 'img/sleeve-06.webp', 'hero': 'img/yarn-glassbelt.webp'}, 'a-emi.html': {'prods': [('yarn', 'spun'), ('yarn', 'thread'), ('yarn', 'cloth'), ('yarn', 'tape'), ('thermo', 'braid'), ('thermo', 'tape')], 'img': 'img/yarn-cloth.webp', 'hero': 'img/hero-jl-blend.webp'}, 'a-aero.html': {'prods': [('media', 'felt'), ('media', 'alloy'), ('thermo', 'felt')], 'img': 'img/jlw-felt.webp', 'hero': 'img/hero-jl-felt.webp'}, 'a-auto.html': {'prods': [('yarn', 'thread'), ('yarn', 'coat'), ('yarn', 'cloth'), ('thermo', 'rope')], 'img': 'img/yarn-carseat.webp', 'hero': 'img/hero-jl-yarn.webp'}, 'a-textile.html': {'prods': [('yarn', 'thread'), ('yarn', 'coat'), ('yarn', 'spun'), ('yarn', 'fiber'), ('yarn', 'cloth'), ('thermo', 'thread')], 'img': 'img/yarn-wearable.webp', 'hero': 'img/hero-jl-yarn.webp'}, 'a-other.html': {'prods': [('media', 'felt'), ('media', 'alloy'), ('yarn', 'fiber'), ('yarn', 'thread'), ('yarn', 'cloth'), ('thermo', 'felt')], 'img': 'img/other-network.webp', 'hero': 'img/other-network.webp'}}
+REL = {'a-filtration.html': {'prods': [('media', 'felt'), ('media', 'composite'), ('media', 'alloy'), ('machining', 'fluid'), ('machining', 'hydraulic'), ('machining', 'dust'), ('machining', 'air'), ('machining', 'parts'), ('purify', 'tank'), ('purify', 'trough'), ('purify', 'retrofit'), ('yarn', 'thread')], 'img': 'img/pc-mach-fluid.webp', 'hero': 'img/hero-jl-cart.webp'}, 'a-glass.html': {'prods': [('thermo', 'elastic'), ('thermo', 'braid'), ('thermo', 'tape'), ('thermo', 'rope'), ('thermo', 'felt'), ('thermo', 'thread'), ('yarn', 'tape'), ('yarn', 'cloth')], 'img': 'img/sleeve-06.webp', 'hero': 'img/yarn-glassbelt.webp'}, 'a-emi.html': {'prods': [('yarn', 'spun'), ('yarn', 'thread'), ('yarn', 'cloth'), ('yarn', 'tape'), ('thermo', 'braid'), ('thermo', 'tape')], 'img': 'img/yarn-cloth.webp', 'hero': 'img/hero-jl-blend.webp'}, 'a-aero.html': {'prods': [('media', 'felt'), ('media', 'alloy'), ('thermo', 'felt')], 'img': 'img/pc-media-felt.webp', 'hero': 'img/hero-jl-felt.webp'}, 'a-auto.html': {'prods': [('yarn', 'thread'), ('yarn', 'coat'), ('yarn', 'cloth'), ('thermo', 'rope')], 'img': 'img/yarn-carseat.webp', 'hero': 'img/hero-jl-yarn.webp'}, 'a-textile.html': {'prods': [('yarn', 'thread'), ('yarn', 'coat'), ('yarn', 'spun'), ('yarn', 'fiber'), ('yarn', 'cloth'), ('thermo', 'thread')], 'img': 'img/yarn-wearable.webp', 'hero': 'img/hero-jl-yarn.webp'}, 'a-other.html': {'prods': [('media', 'felt'), ('media', 'alloy'), ('yarn', 'fiber'), ('yarn', 'thread'), ('yarn', 'cloth'), ('thermo', 'felt')], 'img': 'img/other-network.webp', 'hero': 'img/other-network.webp'}}
 for _i in IND:
     _i.update(REL[_i['f']])
 
@@ -86,7 +86,7 @@ w('applications.html', head(
     "应用方案 | 过滤分离 · 玻璃深加工 · 电磁屏蔽 · 航空航天 · 汽车 · 智能穿戴",
     "强纶金属纤维材料在七大行业的应用方案：各行业的典型痛点、推荐产品与配套服务，覆盖过滤分离、玻璃深加工、电磁屏蔽与防静电、航空航天、汽车、功能纺织与智能穿戴。",
     "金属纤维应用,过滤分离方案,玻璃深加工,电磁屏蔽,防静电,航空航天材料,智能穿戴发热",
-    "applications.html", og_img="img/jlw-cart.webp")
+    "applications.html", og_img="img/pc-mach-fluid.webp")
  + header('applications.html')
  + crumb([("应用方案", None)])
  + page_hero("01", "SOLUTIONS", "方案总览",
@@ -97,6 +97,9 @@ w('applications.html', head(
   <div class="g3">{ov_cards}</div>
 </div></section>"""
  + ENDCTA + footer())
+
+# 白底产品图整张显示（不裁切）；现场照片铺满 4:3 画框
+SOL_CONTAIN = {"img/media-09.webp", "img/yarn-wearable.webp"}
 
 def rel_cards(i):
     out = ""
@@ -129,7 +132,7 @@ for n, i in enumerate(IND):
       <h3>典型应用</h3>
       <p>{i['cases']}</p>
     </div>
-    <figure class="solimg rv d1"><img src="{i['img']}" alt="{i['zh']}" loading="lazy"></figure>
+    <figure class="solimg{' contain' if i['img'] in SOL_CONTAIN else ''} rv d1"><img src="{i['img']}" alt="{i['zh']}" loading="lazy"></figure>
   </div>
 
   <div class="sec-h" style="margin:72px 0 26px"><h2>相关产品</h2><p>以下产品均可用于{i['zh']}，点击查看产品详情。</p></div>
